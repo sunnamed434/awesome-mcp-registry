@@ -18,13 +18,15 @@ messages:
 
       REJECT criteria:
       - MCP client only (not a server)
+      - SDK or library for building MCP servers (e.g. python-sdk, typescript-sdk, csharp-sdk, go-sdk)
       - Awesome-list / aggregator / directory / registry
       - Abandoned with no functional code
       - Not actually MCP (just mentions it in passing)
       - Pure fork with no meaningful modifications
       - Tutorial/demo with no real utility
+      - Collection of multiple servers in one repo (not a single focused server)
 
-      For valid servers, categorize into exactly one domain:
+      For valid servers, categorize into EXACTLY one of these values (no other values allowed):
       databases, dev-tools, cloud, productivity, communication,
       file-systems, web-scraping, ai-ml, finance, security,
       monitoring, media, search, knowledge-base, other
@@ -54,13 +56,13 @@ messages:
         "short_description": "one-line description"
       }
 testData:
-  - repo_name: "modelcontextprotocol/servers"
-    repo_description: "Model Context Protocol Servers"
-    stars: "15000"
-    last_update: "2025-12-01"
-    language: "TypeScript"
-    topics: "mcp, model-context-protocol"
-    readme_content: "MCP servers providing reference implementations including filesystem access, Git operations, web fetching, memory with knowledge graphs, and more. Each server exposes tools via the Model Context Protocol."
+  - repo_name: "github/github-mcp-server"
+    repo_description: "GitHub's official MCP Server"
+    stars: "26000"
+    last_update: "2025-11-20"
+    language: "Go"
+    topics: "mcp, github, mcp-server"
+    readme_content: "The GitHub MCP Server provides tools for interacting with GitHub APIs, including repository management, issues, pull requests, and more. Install via npm or Docker."
     expected: '{"is_valid_mcp_server": true}'
   - repo_name: "punkpeye/awesome-mcp-servers"
     repo_description: "A collection of MCP servers."
@@ -69,6 +71,14 @@ testData:
     language: ""
     topics: "awesome-list, mcp"
     readme_content: "A curated list of awesome Model Context Protocol (MCP) servers. This list focuses on production-ready and experimental MCP servers that extend AI capabilities."
+    expected: '{"is_valid_mcp_server": false}'
+  - repo_name: "modelcontextprotocol/python-sdk"
+    repo_description: "The official Python SDK for Model Context Protocol servers and clients"
+    stars: "21000"
+    last_update: "2025-12-01"
+    language: "Python"
+    topics: "mcp, sdk, python"
+    readme_content: "The official Python SDK for the Model Context Protocol. Build MCP servers and clients with Python. pip install mcp"
     expected: '{"is_valid_mcp_server": false}'
 evaluators:
   - name: Valid JSON with required field

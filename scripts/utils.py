@@ -76,11 +76,23 @@ CATEGORY_META = {
 }
 
 
+# README generation controls
+MIN_QUALITY_SCORE = 5       # Don't show servers rated below this
+MAX_PER_CATEGORY = 20       # Show top N per category in README
+
+
 def generate_readme(servers, output_path):
     """Generate a markdown README from the list of valid servers."""
+    # Filter by minimum quality
+    qualified = [
+        s for s in servers
+        if s.get("analysis", {}).get("quality_score", 0) >= MIN_QUALITY_SCORE
+    ]
+    filtered_count = len(servers) - len(qualified)
+
     # Group by category
     by_category = {}
-    for s in servers:
+    for s in qualified:
         cat = s.get("analysis", {}).get("category", "other")
         if cat not in CATEGORY_META:
             cat = "other"
@@ -96,12 +108,12 @@ def generate_readme(servers, output_path):
             reverse=True,
         )
 
-    total = len(servers)
+    total = len(qualified)
     categories_used = [c for c in CATEGORY_META if c in by_category]
     avg_quality = 0
     if total > 0:
         avg_quality = sum(
-            s.get("analysis", {}).get("quality_score", 0) for s in servers
+            s.get("analysis", {}).get("quality_score", 0) for s in qualified
         ) / total
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -133,12 +145,14 @@ def generate_readme(servers, output_path):
         if cat not in by_category:
             continue
         cat_servers = by_category[cat]
+        shown = cat_servers[:MAX_PER_CATEGORY]
+        overflow = len(cat_servers) - len(shown)
         display_name = CATEGORY_META[cat]
         lines.append(f"## {display_name} ({len(cat_servers)})")
         lines.append("")
         lines.append("| Server | Stars | Quality | Description |")
         lines.append("|--------|-------|---------|-------------|")
-        for s in cat_servers:
+        for s in shown:
             name = s.get("full_name", s.get("name", "unknown"))
             url = s.get("url", f"https://github.com/{name}")
             stars = s.get("stars", 0)
@@ -147,25 +161,40 @@ def generate_readme(servers, output_path):
             # Escape pipes in description
             desc = desc.replace("|", "\\|")
             lines.append(f"| [{name}]({url}) | {stars} | {quality}/10 | {desc} |")
+        if overflow > 0:
+            lines.append("")
+            lines.append(
+                f"*...and {overflow} more. "
+                f"See [known_servers.json](data/known_servers.json) for the full list.*"
+            )
         lines.append("")
 
     lines.append("## How This Works")
     lines.append("")
     lines.append(
         "This registry is automatically maintained by a "
-        "[GitHub Actions workflow](.github/workflows/auto-scanner.yml) that:"
+        "[GitHub Actions workflow](.github/workflows/auto-scanner.yml) that runs weekly:"
     )
     lines.append("")
-    lines.append("1. Searches GitHub for MCP server repositories")
-    lines.append("2. Pulls entries from the [Official MCP Registry](https://registry.modelcontextprotocol.io/)")
-    lines.append("3. Analyzes each with AI (GPT-4o-mini via [GitHub Models](https://docs.github.com/en/github-models))")
-    lines.append("4. Caches results to avoid re-analysis")
-    lines.append("5. Regenerates this README with ranked results")
+    lines.append("1. **Discover** — searches GitHub and the "
+                 "[Official MCP Registry](https://registry.modelcontextprotocol.io/) for new servers")
+    lines.append("2. **Analyze** — each new repo is evaluated by AI "
+                 "(GPT-4o-mini via [GitHub Models](https://docs.github.com/en/github-models))")
+    lines.append("3. **Re-evaluate** — servers older than 90 days are re-analyzed with fresh data. "
+                 "If a project is abandoned, loses quality, or stops being relevant, "
+                 "its score drops and it falls off the list")
+    lines.append("4. **Rank** — only servers scoring "
+                 f"{MIN_QUALITY_SCORE}+/10 appear here, "
+                 f"top {MAX_PER_CATEGORY} per category, sorted by quality then stars")
     lines.append("")
-    lines.append("Runs every Sunday at 02:00 UTC. No manual curation, no PRs needed.")
+    lines.append(
+        "No manual curation, no PRs. Servers earn their spot through quality — "
+        "and lose it if they fall behind."
+    )
     lines.append("")
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    print(f"README generated: {total} servers across {len(categories_used)} categories")
+    print(f"README generated: {total} servers across {len(categories_used)} categories"
+          f" ({filtered_count} below quality threshold)")
