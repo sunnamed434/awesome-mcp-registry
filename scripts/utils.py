@@ -122,8 +122,11 @@ def generate_readme(servers, output_path):
     lines.append("# Awesome MCP Registry")
     lines.append("")
     lines.append(
-        f"> Auto-curated by AI | Updated: {today} | "
-        f"{total} servers across {len(categories_used)} categories"
+        f"![Servers](https://img.shields.io/badge/servers-{total}-blue) "
+        f"![Categories](https://img.shields.io/badge/categories-{len(categories_used)}-green) "
+        f"![Avg Quality](https://img.shields.io/badge/avg%20quality-{avg_quality:.1f}%2F10-orange) "
+        f"![Updated](https://img.shields.io/badge/updated-{today}-lightgrey) "
+        "![Auto-curated](https://img.shields.io/badge/curated%20by-AI-purple)"
     )
     lines.append("")
     lines.append(
