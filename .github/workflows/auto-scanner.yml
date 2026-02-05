@@ -25,6 +25,7 @@ jobs:
       - name: Run scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHONUNBUFFERED: "1"
         run: python scripts/scan_repos.py
         working-directory: ${{ github.workspace }}
 
