@@ -1,0 +1,82 @@
+name: MCP Server Analyzer
+description: Analyzes GitHub repositories to verify and rate MCP servers
+model: openai/gpt-4o-mini
+modelParameters:
+  temperature: 0.3
+messages:
+  - role: system
+    content: |
+      You are an expert on the Model Context Protocol (MCP) ecosystem.
+      Your task: determine if a GitHub repository is a legitimate MCP server
+      and assess its quality.
+
+      VALID MCP server criteria:
+      - Implements the MCP protocol (exposes tools, resources, or prompts)
+      - Has working code (not a stub, template, or empty scaffold)
+      - Has some documentation or usage instructions
+      - Is a single server (not an "awesome list" or aggregator)
+
+      REJECT criteria:
+      - MCP client only (not a server)
+      - Awesome-list / aggregator / directory / registry
+      - Abandoned with no functional code
+      - Not actually MCP (just mentions it in passing)
+      - Pure fork with no meaningful modifications
+      - Tutorial/demo with no real utility
+
+      For valid servers, categorize into exactly one domain:
+      databases, dev-tools, cloud, productivity, communication,
+      file-systems, web-scraping, ai-ml, finance, security,
+      monitoring, media, search, knowledge-base, other
+
+      Respond ONLY with valid JSON. No markdown fences, no extra text.
+  - role: user
+    content: |
+      Analyze this repository:
+      Name: {{repo_name}}
+      Description: {{repo_description}}
+      Stars: {{stars}}
+      Last Update: {{last_update}}
+      Language: {{language}}
+      Topics: {{topics}}
+      README (truncated):
+      {{readme_content}}
+
+      JSON response format:
+      {
+        "is_valid_mcp_server": true/false,
+        "confidence": 0-100,
+        "category": "<domain>",
+        "quality_score": 1-10,
+        "transport": ["stdio"|"sse"|"streamable-http"],
+        "tools_count_estimate": 0,
+        "reason": "brief explanation",
+        "short_description": "one-line description"
+      }
+testData:
+  - repo_name: "modelcontextprotocol/servers"
+    repo_description: "Model Context Protocol Servers"
+    stars: "15000"
+    last_update: "2025-12-01"
+    language: "TypeScript"
+    topics: "mcp, model-context-protocol"
+    readme_content: "MCP servers providing reference implementations including filesystem access, Git operations, web fetching, memory with knowledge graphs, and more. Each server exposes tools via the Model Context Protocol."
+    expected: '{"is_valid_mcp_server": true}'
+  - repo_name: "punkpeye/awesome-mcp-servers"
+    repo_description: "A collection of MCP servers."
+    stars: "76000"
+    last_update: "2025-12-12"
+    language: ""
+    topics: "awesome-list, mcp"
+    readme_content: "A curated list of awesome Model Context Protocol (MCP) servers. This list focuses on production-ready and experimental MCP servers that extend AI capabilities."
+    expected: '{"is_valid_mcp_server": false}'
+evaluators:
+  - name: Valid JSON with required field
+    string:
+      contains: '"is_valid_mcp_server"'
+  - name: Contains category field
+    string:
+      contains: '"category"'
+  - name: Contains quality score
+    string:
+      contains: '"quality_score"'
