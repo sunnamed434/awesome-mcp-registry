@@ -128,7 +128,7 @@ def generate_readme(servers, output_path):
         f"![Categories](https://img.shields.io/badge/categories-{len(categories_used)}-green) "
         f"![Avg Quality](https://img.shields.io/badge/avg%20quality-{avg_quality:.1f}%2F10-orange) "
         f"![Updated](https://img.shields.io/badge/updated-{today_badge}-lightgrey) "
-        "![Auto-curated](https://img.shields.io/badge/curated%20by-AI-purple)"
+        "![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)"
     )
     lines.append("")
     lines.append(
@@ -136,14 +136,8 @@ def generate_readme(servers, output_path):
         "[Model Context Protocol](https://modelcontextprotocol.io/) servers. "
         "Discovered from GitHub and the "
         "[Official MCP Registry](https://registry.modelcontextprotocol.io/), "
-        "analyzed and rated by AI weekly."
+        "analyzed and rated by GPT-4o-mini weekly."
     )
-    lines.append("")
-    lines.append("## Stats")
-    lines.append("")
-    lines.append(f"- **Total servers:** {total}")
-    lines.append(f"- **Categories:** {len(categories_used)}")
-    lines.append(f"- **Avg quality:** {avg_quality:.1f}/10")
     lines.append("")
 
     for cat in CATEGORY_META:
