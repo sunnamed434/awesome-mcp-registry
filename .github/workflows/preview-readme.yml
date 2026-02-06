@@ -1,0 +1,48 @@
+name: Preview README
+
+# This workflow is for testing/debugging README generation only.
+# It generates a preview without running the full scan or creating commits.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Generate README preview
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, 'scripts')
+          from utils import load_cache, generate_readme
+
+          cache = load_cache('data/known_servers.json')
+          valid = [s for s in cache['servers'] if s.get('analysis', {}).get('is_valid_mcp_server', False)]
+          generate_readme(valid, 'README-preview.md')
+          print(f'Generated preview with {len(valid)} valid servers')
+          "
+
+      - name: Display README preview in job summary
+        run: |
+          echo "# README Preview" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          cat README-preview.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload README preview
+        uses: actions/upload-artifact@v6
+        with:
+          name: readme-preview
+          path: README-preview.md
