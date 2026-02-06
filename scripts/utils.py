@@ -117,6 +117,8 @@ def generate_readme(servers, output_path):
         ) / total
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # shields.io uses hyphens as separators, so escape date hyphens with double hyphens
+    today_badge = today.replace("-", "--")
 
     lines = []
     lines.append("# Awesome MCP Registry")
@@ -125,7 +127,7 @@ def generate_readme(servers, output_path):
         f"![Servers](https://img.shields.io/badge/servers-{total}-blue) "
         f"![Categories](https://img.shields.io/badge/categories-{len(categories_used)}-green) "
         f"![Avg Quality](https://img.shields.io/badge/avg%20quality-{avg_quality:.1f}%2F10-orange) "
-        f"![Updated](https://img.shields.io/badge/updated-{today}-lightgrey) "
+        f"![Updated](https://img.shields.io/badge/updated-{today_badge}-lightgrey) "
         "![Auto-curated](https://img.shields.io/badge/curated%20by-AI-purple)"
     )
     lines.append("")
