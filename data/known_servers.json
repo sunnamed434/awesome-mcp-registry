@@ -774,7 +774,776 @@
         "reason": "The repository implements the MCP protocol for mobile automation, has working code, includes documentation, and is focused on a single server.",
         "short_description": "MCP server for mobile automation and scraping across platforms."
       }
+    },
+    {
+      "full_name": "haris-musa/excel-mcp-server",
+      "name": "excel-mcp-server",
+      "url": "https://github.com/haris-musa/excel-mcp-server",
+      "stars": 3297,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "productivity",
+        "quality_score": 9,
+        "transport": [
+          "stdio",
+          "sse",
+          "streamable-http"
+        ],
+        "tools_count_estimate": 10,
+        "reason": "The repository implements the MCP protocol for Excel file manipulation, has working code, provides documentation, and is focused on a single server.",
+        "short_description": "A Model Context Protocol server for Excel file manipulation."
+      }
+    },
+    {
+      "full_name": "IBM/mcp-context-forge",
+      "name": "mcp-context-forge",
+      "url": "https://github.com/IBM/mcp-context-forge",
+      "stars": 3249,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio",
+          "sse",
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol as a gateway and registry, has working code, includes documentation, and is focused on a single server solution.",
+        "short_description": "A feature-rich MCP gateway and registry for managing tools and resources."
+      }
+    },
+    {
+      "full_name": "modelcontextprotocol/java-sdk",
+      "name": "java-sdk",
+      "url": "https://github.com/modelcontextprotocol/java-sdk",
+      "stars": 3148,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 7,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "This repository is an SDK for building MCP servers and clients, not an MCP server itself.",
+        "short_description": "Official Java SDK for Model Context Protocol servers and clients."
+      }
+    },
+    {
+      "full_name": "microsoft/mcp",
+      "name": "mcp",
+      "url": "https://github.com/microsoft/mcp",
+      "stars": 2547,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 80,
+        "category": "other",
+        "quality_score": 5,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "This repository serves as a catalog for multiple MCP servers rather than being a single MCP server implementation.",
+        "short_description": "Catalog of official Microsoft MCP server implementations."
+      }
+    },
+    {
+      "full_name": "zcaceres/markdownify-mcp",
+      "name": "markdownify-mcp",
+      "url": "https://github.com/zcaceres/markdownify-mcp",
+      "stars": 2398,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "other",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 9,
+        "reason": "The repository implements the MCP protocol by providing tools to convert various file types to Markdown, has working code, includes documentation for setup and usage, and is focused on a single server functionality.",
+        "short_description": "A Model Context Protocol server for converting various file types to Markdown."
+      }
+    },
+    {
+      "full_name": "blazickjp/arxiv-mcp-server",
+      "name": "arxiv-mcp-server",
+      "url": "https://github.com/blazickjp/arxiv-mcp-server",
+      "stars": 2140,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 4,
+        "reason": "The repository implements the MCP protocol by providing tools for searching and accessing arXiv papers, has working code, includes documentation and usage instructions, and focuses on a single server.",
+        "short_description": "A Model Context Protocol server for searching and analyzing arXiv papers."
+      }
+    },
+    {
+      "full_name": "brightdata/brightdata-mcp",
+      "name": "brightdata-mcp",
+      "url": "https://github.com/brightdata/brightdata-mcp",
+      "stars": 2005,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "web-scraping",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server solution.",
+        "short_description": "A powerful MCP server for seamless web access."
+      }
+    },
+    {
+      "full_name": "GongRzhe/Office-Word-MCP-Server",
+      "name": "Office-Word-MCP-Server",
+      "url": "https://github.com/GongRzhe/Office-Word-MCP-Server",
+      "stars": 1547,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "productivity",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 15,
+        "reason": "The repository implements the MCP protocol for Microsoft Word document manipulation, has functional code, and provides documentation on usage.",
+        "short_description": "MCP server for creating and manipulating Microsoft Word documents."
+      }
+    },
+    {
+      "full_name": "GongRzhe/Office-PowerPoint-MCP-Server",
+      "name": "Office-PowerPoint-MCP-Server",
+      "url": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server",
+      "stars": 1491,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "productivity",
+        "quality_score": 9,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 32,
+        "reason": "The repository implements the MCP protocol for PowerPoint manipulation, has functional code, provides comprehensive documentation, and is focused on a single server.",
+        "short_description": "A MCP server for PowerPoint manipulation using python-pptx."
+      }
+    },
+    {
+      "full_name": "f/mcptools",
+      "name": "mcptools",
+      "url": "https://github.com/f/mcptools",
+      "stars": 1473,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 85,
+        "category": "other",
+        "quality_score": 7,
+        "transport": [
+          "stdio",
+          "http"
+        ],
+        "tools_count_estimate": 0,
+        "reason": "This repository is a command-line interface for interacting with MCP servers, but it does not implement an MCP server itself.",
+        "short_description": "A CLI tool for interacting with MCP servers."
+      }
+    },
+    {
+      "full_name": "modelcontextprotocol/php-sdk",
+      "name": "php-sdk",
+      "url": "https://github.com/modelcontextprotocol/php-sdk",
+      "stars": 1343,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 7,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "This repository is an SDK for building MCP servers and clients, not an actual MCP server.",
+        "short_description": "Official PHP SDK for Model Context Protocol servers and clients."
+      }
+    },
+    {
+      "full_name": "modelcontextprotocol/kotlin-sdk",
+      "name": "kotlin-sdk",
+      "url": "https://github.com/modelcontextprotocol/kotlin-sdk",
+      "stars": 1242,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 8,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "This repository is an SDK for building MCP servers and clients, not an MCP server itself.",
+        "short_description": "Official Kotlin SDK for Model Context Protocol servers and clients."
+      }
+    },
+    {
+      "full_name": "MiniMax-AI/MiniMax-MCP",
+      "name": "MiniMax-MCP",
+      "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
+      "stars": 1234,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "modelcontextprotocol/swift-sdk",
+      "name": "swift-sdk",
+      "url": "https://github.com/modelcontextprotocol/swift-sdk",
+      "stars": 1220,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "qdrant/mcp-server-qdrant",
+      "name": "mcp-server-qdrant",
+      "url": "https://github.com/qdrant/mcp-server-qdrant",
+      "stars": 1206,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "n8n-io/n8n",
+      "name": "n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "stars": 173516,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "google-gemini/gemini-cli",
+      "name": "gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "stars": 93891,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "sansan0/TrendRadar",
+      "name": "TrendRadar",
+      "url": "https://github.com/sansan0/TrendRadar",
+      "stars": 45718,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "bytedance/UI-TARS-desktop",
+      "name": "UI-TARS-desktop",
+      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "stars": 27286,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "assafelovic/gpt-researcher",
+      "name": "gpt-researcher",
+      "url": "https://github.com/assafelovic/gpt-researcher",
+      "stars": 25239,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": 23498,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "1Panel-dev/MaxKB",
+      "name": "MaxKB",
+      "url": "https://github.com/1Panel-dev/MaxKB",
+      "stars": 20064,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "microsoft/mcp-for-beginners",
+      "name": "mcp-for-beginners",
+      "url": "https://github.com/microsoft/mcp-for-beginners",
+      "stars": 14261,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 0,
+        "category": "other",
+        "quality_score": 0,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "Analysis failed: 429 Client Error: Too Many Requests for url: https://models.github.ai/inference/chat/completions",
+        "short_description": ""
+      }
+    },
+    {
+      "full_name": "ruvnet/claude-flow",
+      "name": "claude-flow",
+      "url": "https://github.com/ruvnet/claude-flow",
+      "stars": 13789,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 60,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for agent orchestration.",
+        "short_description": "Claude-Flow is an AI orchestration platform for deploying multi-agent systems."
+      }
+    },
+    {
+      "full_name": "triggerdotdev/trigger.dev",
+      "name": "trigger.dev",
+      "url": "https://github.com/triggerdotdev/trigger.dev",
+      "stars": 13583,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol by providing a platform for building AI workflows, has working code, includes documentation, and is focused on a single server.",
+        "short_description": "Trigger.dev is an open-source platform for building AI workflows in TypeScript."
+      }
+    },
+    {
+      "full_name": "czlonkowski/n8n-mcp",
+      "name": "n8n-mcp",
+      "url": "https://github.com/czlonkowski/n8n-mcp",
+      "stars": 13294,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "productivity",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 1084,
+        "reason": "The repository implements the MCP protocol, has functional code, provides documentation, and focuses on a single server for n8n workflows.",
+        "short_description": "A MCP server that integrates n8n workflow automation with AI assistants."
+      }
+    },
+    {
+      "full_name": "tadata-org/fastapi_mcp",
+      "name": "fastapi_mcp",
+      "url": "https://github.com/tadata-org/fastapi_mcp",
+      "stars": 11509,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 1,
+        "reason": "The repository implements the MCP protocol by exposing FastAPI endpoints as MCP tools, has working code, includes usage instructions, and is focused on a single server implementation.",
+        "short_description": "Expose your FastAPI endpoints as Model Context Protocol (MCP) tools."
+      }
+    },
+    {
+      "full_name": "0xJacky/nginx-ui",
+      "name": "nginx-ui",
+      "url": "https://github.com/0xJacky/nginx-ui",
+      "stars": 10583,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 80,
+        "category": "other",
+        "quality_score": 6,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "The repository is a WebUI for Nginx and does not implement the MCP protocol as a server.",
+        "short_description": "WebUI for managing Nginx configurations."
+      }
+    },
+    {
+      "full_name": "JoeanAmier/XHS-Downloader",
+      "name": "XHS-Downloader",
+      "url": "https://github.com/JoeanAmier/XHS-Downloader",
+      "stars": 10016,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "web-scraping",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 15,
+        "reason": "The repository implements the MCP protocol by providing tools to extract and download content from XiaoHongShu, has functional code, and includes documentation on its features.",
+        "short_description": "A tool for extracting and downloading content from XiaoHongShu."
+      }
+    },
+    {
+      "full_name": "yusufkaraaslan/Skill_Seekers",
+      "name": "Skill_Seekers",
+      "url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "stars": 9084,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol by converting various documentation sources into Claude AI skills, has working code, includes documentation, and is focused on a single server application.",
+        "short_description": "Automated tool to convert documentation into Claude AI skills."
+      }
+    },
+    {
+      "full_name": "D4Vinci/Scrapling",
+      "name": "Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "stars": 8937,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "web-scraping",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for web scraping.",
+        "short_description": "A powerful Python library for adaptive web scraping."
+      }
+    },
+    {
+      "full_name": "open-metadata/OpenMetadata",
+      "name": "OpenMetadata",
+      "url": "https://github.com/open-metadata/OpenMetadata",
+      "stars": 8650,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "knowledge-base",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 84,
+        "reason": "The repository implements the MCP protocol with a central metadata repository and APIs, has working code, provides documentation, and is focused on a single server solution.",
+        "short_description": "OpenMetadata is a unified metadata platform for data discovery and governance."
+      }
+    },
+    {
+      "full_name": "modelcontextprotocol/modelcontextprotocol",
+      "name": "modelcontextprotocol",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+      "stars": 7139,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 3,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "This repository contains the specification and documentation for the Model Context Protocol, but does not implement an MCP server itself.",
+        "short_description": "Specification and documentation for the Model Context Protocol"
+      }
+    },
+    {
+      "full_name": "mrexodia/ida-pro-mcp",
+      "name": "ida-pro-mcp",
+      "url": "https://github.com/mrexodia/ida-pro-mcp",
+      "stars": 5427,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides installation and usage instructions, and is focused on a single server for reverse engineering with IDA Pro.",
+        "short_description": "AI-powered reverse engineering assistant for IDA Pro using MCP."
+      }
+    },
+    {
+      "full_name": "liaokongVFX/MCP-Chinese-Getting-Started-Guide",
+      "name": "MCP-Chinese-Getting-Started-Guide",
+      "url": "https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide",
+      "stars": 3316,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 1,
+        "reason": "The repository implements the MCP protocol with a functional server example and provides usage instructions.",
+        "short_description": "A guide to quickly set up a Model Context Protocol server for web searching."
+      }
+    },
+    {
+      "full_name": "metorial/metorial",
+      "name": "metorial",
+      "url": "https://github.com/metorial/metorial",
+      "stars": 3216,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 70,
+        "category": "other",
+        "quality_score": 5,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "The repository primarily provides SDKs for connecting to MCP but does not implement a standalone MCP server itself.",
+        "short_description": "Integration platform for connecting AI models to APIs using MCP."
+      }
+    },
+    {
+      "full_name": "supermemoryai/apple-mcp",
+      "name": "apple-mcp",
+      "url": "https://github.com/supermemoryai/apple-mcp",
+      "stars": 2993,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "productivity",
+        "quality_score": 7,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 10,
+        "reason": "The repository implements the MCP protocol with various tools for Apple applications, has working code, and includes usage instructions in the README.",
+        "short_description": "Apple-native tools for enhancing productivity through the Model Context Protocol."
+      }
+    },
+    {
+      "full_name": "opensolon/solon",
+      "name": "solon",
+      "url": "https://github.com/opensolon/solon",
+      "stars": 2704,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 7,
+        "transport": [
+          "http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol and has functional code with documentation.",
+        "short_description": "Java enterprise application development framework supporting MCP."
+      }
+    },
+    {
+      "full_name": "Jpisnice/shadcn-ui-mcp-server",
+      "name": "shadcn-ui-mcp-server",
+      "url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+      "stars": 2642,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "sse"
+        ],
+        "tools_count_estimate": 10,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for AI integration with shadcn UI components.",
+        "short_description": "MCP server for integrating shadcn UI components into AI workflows."
+      }
+    },
+    {
+      "full_name": "mattzcarey/shippie",
+      "name": "shippie",
+      "url": "https://github.com/mattzcarey/shippie",
+      "stars": 2327,
+      "source": "github",
+      "last_checked": "2026-02-08",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server functionality.",
+        "short_description": "Shippie is an extendable code review and QA agent using LLMs."
+      }
     }
   ],
-  "last_scan": "2026-02-05"
+  "last_scan": "2026-02-08"
 }
