@@ -1543,7 +1543,371 @@
         "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server functionality.",
         "short_description": "Shippie is an extendable code review and QA agent using LLMs."
       }
+    },
+    {
+      "full_name": "getsentry/XcodeBuildMCP",
+      "name": "XcodeBuildMCP",
+      "url": "https://github.com/getsentry/XcodeBuildMCP",
+      "stars": 4287,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 2,
+        "reason": "The repository implements the MCP protocol, provides working code, has installation and usage instructions, and is focused on a single server for iOS and macOS projects.",
+        "short_description": "MCP server and CLI for iOS and macOS project tools."
+      }
+    },
+    {
+      "full_name": "xpzouying/xiaohongshu-mcp",
+      "name": "xiaohongshu-mcp",
+      "url": "https://github.com/xpzouying/xiaohongshu-mcp",
+      "stars": 8777,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 6,
+        "reason": "The repository implements the MCP protocol with multiple functionalities for interacting with xiaohongshu.com, has working code, and provides documentation.",
+        "short_description": "MCP server for interacting with xiaohongshu.com"
+      }
+    },
+    {
+      "full_name": "perplexityai/modelcontextprotocol",
+      "name": "modelcontextprotocol",
+      "url": "https://github.com/perplexityai/modelcontextprotocol",
+      "stars": 1950,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": "stdio",
+        "tools_count_estimate": 4,
+        "reason": "The repository implements the MCP protocol with multiple tools for AI-assisted web search and reasoning, has working code, and includes documentation for usage.",
+        "short_description": "Official MCP server implementation for the Perplexity API Platform."
+      }
+    },
+    {
+      "full_name": "MCPJam/inspector",
+      "name": "inspector",
+      "url": "https://github.com/MCPJam/inspector",
+      "stars": 1712,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 7,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, provides working code, includes documentation and usage instructions, and focuses on a single server tool for testing and debugging MCP servers.",
+        "short_description": "MCPJam Inspector is a development tool for testing MCP servers and apps."
+      }
+    },
+    {
+      "full_name": "snyk/agent-scan",
+      "name": "agent-scan",
+      "url": "https://github.com/snyk/agent-scan",
+      "stars": 1473,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "security",
+        "quality_score": 7,
+        "transport": [
+          "stdio",
+          "http"
+        ],
+        "tools_count_estimate": 0,
+        "reason": "This repository is a security scanner for MCP servers and agent skills, but it does not implement the MCP protocol itself as a server.",
+        "short_description": "Security scanner for AI agents and MCP servers."
+      }
+    },
+    {
+      "full_name": "chongdashu/unreal-mcp",
+      "name": "unreal-mcp",
+      "url": "https://github.com/chongdashu/unreal-mcp",
+      "stars": 1394,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "tcp"
+        ],
+        "tools_count_estimate": 4,
+        "reason": "The repository implements the MCP protocol for controlling Unreal Engine, has working code, and provides some documentation.",
+        "short_description": "MCP integration for controlling Unreal Engine through natural language."
+      }
+    },
+    {
+      "full_name": "refreshdotdev/web-eval-agent",
+      "name": "web-eval-agent",
+      "url": "https://github.com/refreshdotdev/web-eval-agent",
+      "stars": 1235,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 2,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "The project has been discontinued and is no longer functional.",
+        "short_description": "An MCP server that has been sunset and is no longer maintained."
+      }
+    },
+    {
+      "full_name": "basementstudio/xmcp",
+      "name": "xmcp",
+      "url": "https://github.com/basementstudio/xmcp",
+      "stars": 1200,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 85,
+        "category": "other",
+        "quality_score": 6,
+        "transport": [],
+        "tools_count_estimate": 0,
+        "reason": "This repository is a framework for building MCP servers, not an actual MCP server itself.",
+        "short_description": "Framework for building MCP servers with TypeScript."
+      }
+    },
+    {
+      "full_name": "containers/kubernetes-mcp-server",
+      "name": "kubernetes-mcp-server",
+      "url": "https://github.com/containers/kubernetes-mcp-server",
+      "stars": 1147,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio",
+          "sse"
+        ],
+        "tools_count_estimate": 10,
+        "reason": "The repository implements the MCP protocol specifically for Kubernetes and OpenShift, has working code, includes documentation, and is focused on a single server implementation.",
+        "short_description": "A powerful MCP server implementation for Kubernetes and OpenShift."
+      }
+    },
+    {
+      "full_name": "robotmcp/ros-mcp-server",
+      "name": "ros-mcp-server",
+      "url": "https://github.com/robotmcp/ros-mcp-server",
+      "stars": 1010,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol by connecting AI models with robots, has functional code, provides documentation, and is focused on a single server implementation.",
+        "short_description": "Connects AI models with robots using MCP and ROS."
+      }
+    },
+    {
+      "full_name": "QuantGeekDev/mcp-framework",
+      "name": "mcp-framework",
+      "url": "https://github.com/QuantGeekDev/mcp-framework",
+      "stars": 899,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 80,
+        "category": "other",
+        "quality_score": 7,
+        "transport": [
+          "stdio",
+          "sse",
+          "streamable-http"
+        ],
+        "tools_count_estimate": 0,
+        "reason": "This repository is a framework for building MCP servers, not an actual MCP server itself.",
+        "short_description": "A framework for building MCP servers in TypeScript."
+      }
+    },
+    {
+      "full_name": "bgauryy/octocode-mcp",
+      "name": "octocode-mcp",
+      "url": "https://github.com/bgauryy/octocode-mcp",
+      "stars": 725,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 3,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for AI-driven code research.",
+        "short_description": "MCP server for semantic code research and context generation using LLM patterns."
+      }
+    },
+    {
+      "full_name": "BigSweetPotatoStudio/HyperChat",
+      "name": "HyperChat",
+      "url": "https://github.com/BigSweetPotatoStudio/HyperChat",
+      "stars": 712,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "productivity",
+        "quality_score": 8,
+        "transport": [
+          "stdio",
+          "sse"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation and usage instructions, and is focused on a single server application.",
+        "short_description": "HyperChat is a local AI agent platform utilizing MCP for enhanced chat experiences."
+      }
+    },
+    {
+      "full_name": "Kymo-MCP/mcpcan",
+      "name": "mcpcan",
+      "url": "https://github.com/Kymo-MCP/mcpcan",
+      "stars": 646,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "sse",
+          "stdio",
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for managing MCP services.",
+        "short_description": "MCPCAN is a centralized management platform for MCP services."
+      }
+    },
+    {
+      "full_name": "tbxark/mcp-proxy",
+      "name": "mcp-proxy",
+      "url": "https://github.com/tbxark/mcp-proxy",
+      "stars": 635,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 80,
+        "category": "other",
+        "quality_score": 6,
+        "transport": [
+          "sse",
+          "streamable-http"
+        ],
+        "tools_count_estimate": 0,
+        "reason": "The repository is a proxy server that aggregates multiple MCP servers rather than a single MCP server itself.",
+        "short_description": "An MCP proxy server that aggregates multiple MCP resource servers."
+      }
+    },
+    {
+      "full_name": "obot-platform/obot",
+      "name": "obot",
+      "url": "https://github.com/obot-platform/obot",
+      "stars": 606,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol by providing hosting, registry, and gateway functionalities, along with a chat client, and has working code and documentation.",
+        "short_description": "Obot is a comprehensive platform for hosting and managing MCP servers."
+      }
+    },
+    {
+      "full_name": "truffle-ai/dexto",
+      "name": "dexto",
+      "url": "https://github.com/truffle-ai/dexto",
+      "stars": 580,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "ai-ml",
+        "quality_score": 7,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for agent applications.",
+        "short_description": "Dexto is an agent harness for building and orchestrating AI applications."
+      }
+    },
+    {
+      "full_name": "rekog-labs/MCP-Nest",
+      "name": "MCP-Nest",
+      "url": "https://github.com/rekog-labs/MCP-Nest",
+      "stars": 577,
+      "source": "github",
+      "last_checked": "2026-02-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio",
+          "sse",
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol and provides a NestJS module for creating MCP servers, with working code and documentation.",
+        "short_description": "A NestJS module for creating MCP servers to expose AI tools and resources."
+      }
     }
   ],
-  "last_scan": "2026-02-08"
+  "last_scan": "2026-02-15"
 }
