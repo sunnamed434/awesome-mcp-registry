@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-60-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--02--15-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-61-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--02--22-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -93,11 +93,12 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use) | 9091 | 7/10 | mcp-use provides tools to build MCP servers and clients easily. |
 | [truffle-ai/dexto](https://github.com/truffle-ai/dexto) | 580 | 7/10 | Dexto is an agent harness for building and orchestrating AI applications. |
 
-## Security (1)
+## Security (2)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | 6653 | 9/10 | HexStrike AI MCP Agents is an advanced MCP server for automated cybersecurity tools. |
+| [casdoor/casdoor](https://github.com/casdoor/casdoor) | 13033 | 8/10 | An AI-first Identity and Access Management (IAM) / MCP gateway and auth server. |
 
 ## Knowledge Base (1)
 
