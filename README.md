@@ -1,15 +1,16 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-61-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--02--22-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-63-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--01-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
-## Databases (2)
+## Databases (3)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [mindsdb/mindsdb](https://github.com/mindsdb/mindsdb) | 38403 | 8/10 | MindsDB is a federated query engine for AI. |
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 12733 | 8/10 | An open source MCP server for databases. |
+| [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | 1246 | 8/10 | MCP server providing read-only access to MySQL databases. |
 
 ## Dev Tools (24)
 
@@ -71,11 +72,12 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 8937 | 8/10 | A powerful Python library for adaptive web scraping. |
 | [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | 2005 | 8/10 | A powerful MCP server for seamless web access. |
 
-## AI & ML (17)
+## AI & ML (18)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [activepieces/activepieces](https://github.com/activepieces/activepieces) | 20741 | 8/10 | Activepieces is an AI automation platform with extensible MCP servers. |
+| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 16632 | 8/10 | Ruflo is an AI orchestration platform for deploying and managing multi-agent systems. |
 | [ruvnet/claude-flow](https://github.com/ruvnet/claude-flow) | 13789 | 8/10 | Claude-Flow is an AI orchestration platform for deploying multi-agent systems. |
 | [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) | 13583 | 8/10 | Trigger.dev is an open-source platform for building AI workflows in TypeScript. |
 | [GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) | 13005 | 8/10 | MCP server providing Figma data to AI coding agents. |

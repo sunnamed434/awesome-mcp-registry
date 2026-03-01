@@ -1963,7 +1963,47 @@
         "reason": "This repository is primarily an SDK for building MCP Apps rather than a standalone MCP server.",
         "short_description": "SDK for building interactive UIs for MCP tools."
       }
+    },
+    {
+      "full_name": "benborla/mcp-server-mysql",
+      "name": "mcp-server-mysql",
+      "url": "https://github.com/benborla/mcp-server-mysql",
+      "stars": 1246,
+      "source": "github",
+      "last_checked": "2026-03-01",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "databases",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 1,
+        "reason": "The repository implements the MCP protocol by providing read-only access to MySQL databases, has working code, includes detailed documentation, and is focused on a single server functionality.",
+        "short_description": "MCP server providing read-only access to MySQL databases."
+      }
+    },
+    {
+      "full_name": "ruvnet/ruflo",
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "stars": 16632,
+      "source": "github",
+      "last_checked": "2026-03-01",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 60,
+        "reason": "The repository implements the MCP protocol by providing an orchestration platform for multi-agent systems, has working code, includes documentation, and is focused on a single server.",
+        "short_description": "Ruflo is an AI orchestration platform for deploying and managing multi-agent systems."
+      }
     }
   ],
-  "last_scan": "2026-02-22"
+  "last_scan": "2026-03-01"
 }
