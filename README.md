@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-63-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--01-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-63-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--08-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
