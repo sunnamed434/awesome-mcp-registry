@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-63-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--08-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-64-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--15-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -12,7 +12,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 12733 | 8/10 | An open source MCP server for databases. |
 | [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | 1246 | 8/10 | MCP server providing read-only access to MySQL databases. |
 
-## Dev Tools (24)
+## Dev Tools (25)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
@@ -28,6 +28,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | 7286 | 8/10 | MCP Server for Ghidra enabling autonomous reverse engineering. |
 | [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | 5399 | 8/10 | MCP server for terminal control and file management. |
 | [executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright) | 5207 | 8/10 | A Model Context Protocol server for browser automation using Playwright. |
+| [CursorTouch/Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | 4706 | 8/10 | MCP server for integrating AI agents with Windows OS. |
 | [getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP) | 4287 | 8/10 | MCP server and CLI for iOS and macOS project tools. |
 | [cameroncooke/XcodeBuildMCP](https://github.com/cameroncooke/XcodeBuildMCP) | 4110 | 8/10 | An MCP server and CLI for iOS and macOS project tools. |
 | [mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp) | 3322 | 8/10 | MCP server for mobile automation and scraping across platforms. |
@@ -35,9 +36,8 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | 2327 | 8/10 | Shippie is an extendable code review and QA agent using LLMs. |
 | [chongdashu/unreal-mcp](https://github.com/chongdashu/unreal-mcp) | 1394 | 8/10 | MCP integration for controlling Unreal Engine through natural language. |
 | [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | 1147 | 8/10 | A powerful MCP server implementation for Kubernetes and OpenShift. |
-| [Kymo-MCP/mcpcan](https://github.com/Kymo-MCP/mcpcan) | 646 | 8/10 | MCPCAN is a centralized management platform for MCP services. |
 
-*...and 4 more. See [known_servers.json](data/known_servers.json) for the full list.*
+*...and 5 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
 ## Cloud (1)
 

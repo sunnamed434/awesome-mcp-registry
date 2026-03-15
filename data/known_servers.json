@@ -2003,7 +2003,27 @@
         "reason": "The repository implements the MCP protocol by providing an orchestration platform for multi-agent systems, has working code, includes documentation, and is focused on a single server.",
         "short_description": "Ruflo is an AI orchestration platform for deploying and managing multi-agent systems."
       }
+    },
+    {
+      "full_name": "CursorTouch/Windows-MCP",
+      "name": "Windows-MCP",
+      "url": "https://github.com/CursorTouch/Windows-MCP",
+      "stars": 4706,
+      "source": "github",
+      "last_checked": "2026-03-15",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 90,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for Windows automation.",
+        "short_description": "MCP server for integrating AI agents with Windows OS."
+      }
     }
   ],
-  "last_scan": "2026-03-08"
+  "last_scan": "2026-03-15"
 }
