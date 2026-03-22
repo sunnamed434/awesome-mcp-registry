@@ -2023,7 +2023,27 @@
         "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for Windows automation.",
         "short_description": "MCP server for integrating AI agents with Windows OS."
       }
+    },
+    {
+      "full_name": "stacklok/toolhive",
+      "name": "toolhive",
+      "url": "https://github.com/stacklok/toolhive",
+      "stars": 1665,
+      "source": "github",
+      "last_checked": "2026-03-22",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 4,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation and usage instructions, and is focused on managing MCP servers.",
+        "short_description": "ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers."
+      }
     }
   ],
-  "last_scan": "2026-03-15"
+  "last_scan": "2026-03-22"
 }

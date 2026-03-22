@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-64-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--15-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-65-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--22-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -72,7 +72,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 8937 | 8/10 | A powerful Python library for adaptive web scraping. |
 | [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | 2005 | 8/10 | A powerful MCP server for seamless web access. |
 
-## AI & ML (18)
+## AI & ML (19)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
@@ -89,6 +89,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | 2642 | 8/10 | MCP server for integrating shadcn UI components into AI workflows. |
 | [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | 2140 | 8/10 | A Model Context Protocol server for searching and analyzing arXiv papers. |
 | [perplexityai/modelcontextprotocol](https://github.com/perplexityai/modelcontextprotocol) | 1950 | 8/10 | Official MCP server implementation for the Perplexity API Platform. |
+| [stacklok/toolhive](https://github.com/stacklok/toolhive) | 1665 | 8/10 | ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers. |
 | [robotmcp/ros-mcp-server](https://github.com/robotmcp/ros-mcp-server) | 1010 | 8/10 | Connects AI models with robots using MCP and ROS. |
 | [bgauryy/octocode-mcp](https://github.com/bgauryy/octocode-mcp) | 725 | 8/10 | MCP server for semantic code research and context generation using LLM patterns. |
 | [obot-platform/obot](https://github.com/obot-platform/obot) | 606 | 8/10 | Obot is a comprehensive platform for hosting and managing MCP servers. |
