@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-65-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--22-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-67-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--29-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -12,7 +12,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 12733 | 8/10 | An open source MCP server for databases. |
 | [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | 1246 | 8/10 | MCP server providing read-only access to MySQL databases. |
 
-## Dev Tools (25)
+## Dev Tools (26)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
@@ -37,7 +37,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [chongdashu/unreal-mcp](https://github.com/chongdashu/unreal-mcp) | 1394 | 8/10 | MCP integration for controlling Unreal Engine through natural language. |
 | [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | 1147 | 8/10 | A powerful MCP server implementation for Kubernetes and OpenShift. |
 
-*...and 5 more. See [known_servers.json](data/known_servers.json) for the full list.*
+*...and 6 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
 ## Cloud (1)
 
@@ -45,13 +45,14 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 |--------|-------|---------|-------------|
 | [awslabs/mcp](https://github.com/awslabs/mcp) | 8064 | 9/10 | A suite of specialized MCP servers for AWS. |
 
-## Productivity (7)
+## Productivity (8)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | 3297 | 9/10 | A Model Context Protocol server for Excel file manipulation. |
 | [GongRzhe/Office-PowerPoint-MCP-Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server) | 1491 | 9/10 | A MCP server for PowerPoint manipulation using python-pptx. |
 | [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) | 13294 | 8/10 | A MCP server that integrates n8n workflow automation with AI assistants. |
+| [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) | 4754 | 8/10 | MCP server for Atlassian tools like Confluence and Jira. |
 | [Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp) | 3839 | 8/10 | A productivity-focused MCP server for structured spec-driven development. |
 | [GongRzhe/Office-Word-MCP-Server](https://github.com/GongRzhe/Office-Word-MCP-Server) | 1547 | 8/10 | MCP server for creating and manipulating Microsoft Word documents. |
 | [BigSweetPotatoStudio/HyperChat](https://github.com/BigSweetPotatoStudio/HyperChat) | 712 | 8/10 | HyperChat is a local AI agent platform utilizing MCP for enhanced chat experiences. |

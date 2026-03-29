@@ -2043,7 +2043,47 @@
         "reason": "The repository implements the MCP protocol, has working code, provides documentation and usage instructions, and is focused on managing MCP servers.",
         "short_description": "ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers."
       }
+    },
+    {
+      "full_name": "sooperset/mcp-atlassian",
+      "name": "mcp-atlassian",
+      "url": "https://github.com/sooperset/mcp-atlassian",
+      "stars": 4754,
+      "source": "github",
+      "last_checked": "2026-03-29",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "productivity",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol for Atlassian tools, has working code, provides documentation, and is focused on a single server.",
+        "short_description": "MCP server for Atlassian tools like Confluence and Jira."
+      }
+    },
+    {
+      "full_name": "alpic-ai/skybridge",
+      "name": "skybridge",
+      "url": "https://github.com/alpic-ai/skybridge",
+      "stars": 855,
+      "source": "github",
+      "last_checked": "2026-03-29",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 1,
+        "reason": "Skybridge implements the MCP protocol and provides a fullstack framework for building MCP apps with working code and documentation.",
+        "short_description": "Skybridge is a TypeScript framework for building ChatGPT and MCP Apps."
+      }
     }
   ],
-  "last_scan": "2026-03-22"
+  "last_scan": "2026-03-29"
 }
