@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-67-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--03--29-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-68-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--04--05-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -110,11 +110,12 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 |--------|-------|---------|-------------|
 | [open-metadata/OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 8650 | 8/10 | OpenMetadata is a unified metadata platform for data discovery and governance. |
 
-## Other (2)
+## Other (3)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) | 8777 | 8/10 | MCP server for interacting with xiaohongshu.com |
+| [webiny/webiny-js](https://github.com/webiny/webiny-js) | 7955 | 8/10 | Open-source CMS platform with AI-assisted development on AWS. |
 | [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | 2398 | 8/10 | A Model Context Protocol server for converting various file types to Markdown. |
 
 ## How This Works

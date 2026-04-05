@@ -2083,7 +2083,27 @@
         "reason": "Skybridge implements the MCP protocol and provides a fullstack framework for building MCP apps with working code and documentation.",
         "short_description": "Skybridge is a TypeScript framework for building ChatGPT and MCP Apps."
       }
+    },
+    {
+      "full_name": "webiny/webiny-js",
+      "name": "webiny-js",
+      "url": "https://github.com/webiny/webiny-js",
+      "stars": 7955,
+      "source": "github",
+      "last_checked": "2026-04-05",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "cms",
+        "quality_score": 8,
+        "transport": [
+          "http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol by providing an AI-assisted development feature, has working code, and includes documentation.",
+        "short_description": "Open-source CMS platform with AI-assisted development on AWS."
+      }
     }
   ],
-  "last_scan": "2026-03-29"
+  "last_scan": "2026-04-05"
 }
