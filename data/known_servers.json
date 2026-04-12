@@ -2103,7 +2103,47 @@
         "reason": "The repository implements the MCP protocol by providing an AI-assisted development feature, has working code, and includes documentation.",
         "short_description": "Open-source CMS platform with AI-assisted development on AWS."
       }
+    },
+    {
+      "full_name": "googleapis/mcp-toolbox",
+      "name": "mcp-toolbox",
+      "url": "https://github.com/googleapis/mcp-toolbox",
+      "stars": 14415,
+      "source": "github",
+      "last_checked": "2026-04-12",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "databases",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol as a server for databases, has working code, provides documentation, and is focused on a single server purpose.",
+        "short_description": "MCP Toolbox for Databases is an open source MCP server connecting AI agents to enterprise databases."
+      }
+    },
+    {
+      "full_name": "nukeop/nuclear",
+      "name": "nuclear",
+      "url": "https://github.com/nukeop/nuclear",
+      "stars": 17138,
+      "source": "github",
+      "last_checked": "2026-04-12",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "media",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol by providing a music player that can be controlled by an AI agent, has working code, and includes documentation.",
+        "short_description": "Nuclear is a free, open-source music player with an MCP server for AI control."
+      }
     }
   ],
-  "last_scan": "2026-04-05"
+  "last_scan": "2026-04-12"
 }

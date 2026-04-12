@@ -1,14 +1,15 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-68-blue) ![Categories](https://img.shields.io/badge/categories-10-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--04--05-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-70-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--04--12-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
-## Databases (3)
+## Databases (4)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [mindsdb/mindsdb](https://github.com/mindsdb/mindsdb) | 38403 | 8/10 | MindsDB is a federated query engine for AI. |
+| [googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox) | 14415 | 8/10 | MCP Toolbox for Databases is an open source MCP server connecting AI agents to enterprise databases. |
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 12733 | 8/10 | An open source MCP server for databases. |
 | [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | 1246 | 8/10 | MCP server providing read-only access to MySQL databases. |
 
@@ -103,6 +104,12 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 |--------|-------|---------|-------------|
 | [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | 6653 | 9/10 | HexStrike AI MCP Agents is an advanced MCP server for automated cybersecurity tools. |
 | [casdoor/casdoor](https://github.com/casdoor/casdoor) | 13033 | 8/10 | An AI-first Identity and Access Management (IAM) / MCP gateway and auth server. |
+
+## Media (1)
+
+| Server | Stars | Quality | Description |
+|--------|-------|---------|-------------|
+| [nukeop/nuclear](https://github.com/nukeop/nuclear) | 17138 | 8/10 | Nuclear is a free, open-source music player with an MCP server for AI control. |
 
 ## Knowledge Base (1)
 
