@@ -2143,7 +2143,27 @@
         "reason": "The repository implements the MCP protocol by providing a music player that can be controlled by an AI agent, has working code, and includes documentation.",
         "short_description": "Nuclear is a free, open-source music player with an MCP server for AI control."
       }
+    },
+    {
+      "full_name": "datagouv/datagouv-mcp",
+      "name": "datagouv-mcp",
+      "url": "https://github.com/datagouv/datagouv-mcp",
+      "stars": 1388,
+      "source": "github",
+      "last_checked": "2026-04-26",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "knowledge-base",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 1,
+        "reason": "The repository implements the MCP protocol, has functional code, provides documentation for usage, and is focused on a single server for accessing datasets.",
+        "short_description": "MCP server for exploring French national Open Data datasets via AI chatbots."
+      }
     }
   ],
-  "last_scan": "2026-04-19"
+  "last_scan": "2026-04-26"
 }

@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-70-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--04--19-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-71-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--04--26-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -111,11 +111,12 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 |--------|-------|---------|-------------|
 | [nukeop/nuclear](https://github.com/nukeop/nuclear) | 17138 | 8/10 | Nuclear is a free, open-source music player with an MCP server for AI control. |
 
-## Knowledge Base (1)
+## Knowledge Base (2)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [open-metadata/OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 8650 | 8/10 | OpenMetadata is a unified metadata platform for data discovery and governance. |
+| [datagouv/datagouv-mcp](https://github.com/datagouv/datagouv-mcp) | 1388 | 8/10 | MCP server for exploring French national Open Data datasets via AI chatbots. |
 
 ## Other (3)
 
