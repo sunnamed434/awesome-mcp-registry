@@ -2163,7 +2163,47 @@
         "reason": "The repository implements the MCP protocol, has functional code, provides documentation for usage, and is focused on a single server for accessing datasets.",
         "short_description": "MCP server for exploring French national Open Data datasets via AI chatbots."
       }
+    },
+    {
+      "full_name": "google-labs-code/stitch-skills",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "stars": 5143,
+      "source": "github",
+      "last_checked": "2026-05-03",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 90,
+        "category": "other",
+        "quality_score": 7,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 6,
+        "reason": "This repository is a library of Agent Skills designed to work with the Stitch MCP server, but it does not implement the MCP protocol itself as a server. It is more of a client-side library for skills.",
+        "short_description": "Library of Agent Skills for the Stitch MCP server."
+      }
+    },
+    {
+      "full_name": "mksglu/context-mode",
+      "name": "context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "stars": 12064,
+      "source": "github",
+      "last_checked": "2026-05-03",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server functionality.",
+        "short_description": "Context window optimization tool for AI coding agents."
+      }
     }
   ],
-  "last_scan": "2026-04-26"
+  "last_scan": "2026-05-03"
 }

@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-71-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--04--26-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-72-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--05--03-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -13,7 +13,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | 12733 | 8/10 | An open source MCP server for databases. |
 | [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | 1246 | 8/10 | MCP server providing read-only access to MySQL databases. |
 
-## Dev Tools (26)
+## Dev Tools (27)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
@@ -22,6 +22,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 26723 | 8/10 | A Model Context Protocol server for browser automation using Playwright. |
 | [jlowin/fastmcp](https://github.com/jlowin/fastmcp) | 22626 | 8/10 | FastMCP is a Python framework for building MCP servers and applications. |
 | [oraios/serena](https://github.com/oraios/serena) | 19754 | 8/10 | A coding agent toolkit providing semantic retrieval and editing capabilities. |
+| [mksglu/context-mode](https://github.com/mksglu/context-mode) | 12064 | 8/10 | Context window optimization tool for AI coding agents. |
 | [tadata-org/fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) | 11509 | 8/10 | Expose your FastAPI endpoints as Model Context Protocol (MCP) tools. |
 | [BeehiveInnovations/pal-mcp-server](https://github.com/BeehiveInnovations/pal-mcp-server) | 11007 | 8/10 | A CLI tool that orchestrates multiple AI models for enhanced workflows. |
 | [hangwin/mcp-chrome](https://github.com/hangwin/mcp-chrome) | 10278 | 8/10 | Chrome extension-based MCP server for browser automation and AI integration. |
@@ -36,9 +37,8 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | 3249 | 8/10 | A feature-rich MCP gateway and registry for managing tools and resources. |
 | [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | 2327 | 8/10 | Shippie is an extendable code review and QA agent using LLMs. |
 | [chongdashu/unreal-mcp](https://github.com/chongdashu/unreal-mcp) | 1394 | 8/10 | MCP integration for controlling Unreal Engine through natural language. |
-| [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | 1147 | 8/10 | A powerful MCP server implementation for Kubernetes and OpenShift. |
 
-*...and 6 more. See [known_servers.json](data/known_servers.json) for the full list.*
+*...and 7 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
 ## Cloud (1)
 
