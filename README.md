@@ -37,6 +37,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | 3249 | 8/10 | A feature-rich MCP gateway and registry for managing tools and resources. |
 | [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | 2327 | 8/10 | Shippie is an extendable code review and QA agent using LLMs. |
 | [chongdashu/unreal-mcp](https://github.com/chongdashu/unreal-mcp) | 1394 | 8/10 | MCP integration for controlling Unreal Engine through natural language. |
+| [nowork-studio/toprank](https://github.com/nowork-studio/toprank) | NotFair Google Ads MCP server. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. |
 
 *...and 7 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
