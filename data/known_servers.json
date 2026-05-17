@@ -243,9 +243,9 @@
       "full_name": "BeehiveInnovations/pal-mcp-server",
       "name": "pal-mcp-server",
       "url": "https://github.com/BeehiveInnovations/pal-mcp-server",
-      "stars": 11007,
+      "stars": 11540,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 85,
@@ -255,17 +255,21 @@
           "stdio"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol by providing a CLI that integrates multiple AI models and tools, has working code, and includes documentation on usage.",
-        "short_description": "A CLI tool that orchestrates multiple AI models for enhanced workflows."
-      }
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server functionality.",
+        "short_description": "A server that integrates multiple AI models into a cohesive CLI workflow."
+      },
+      "last_update": "2026-05-17T04:37:16Z",
+      "description": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
+      "language": "Python",
+      "topics": ""
     },
     {
       "full_name": "hangwin/mcp-chrome",
       "name": "mcp-chrome",
       "url": "https://github.com/hangwin/mcp-chrome",
-      "stars": 10278,
+      "stars": 11637,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -275,40 +279,48 @@
           "streamable-http"
         ],
         "tools_count_estimate": 20,
-        "reason": "The repository implements the MCP protocol as a Chrome extension server, has functional code, provides documentation, and focuses on a single server application.",
-        "short_description": "Chrome extension-based MCP server for browser automation and AI integration."
-      }
+        "reason": "The repository implements the MCP protocol as a Chrome extension, has working code, provides documentation, and focuses on a single server functionality.",
+        "short_description": "Chrome MCP Server is a Chrome extension that enables AI assistants to automate browser tasks."
+      },
+      "last_update": "2026-05-17T05:32:36Z",
+      "description": "Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.",
+      "language": "TypeScript",
+      "topics": ""
     },
     {
       "full_name": "mcp-use/mcp-use",
       "name": "mcp-use",
       "url": "https://github.com/mcp-use/mcp-use",
-      "stars": 9091,
+      "stars": 9962,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
-        "confidence": 85,
-        "category": "ai-ml",
-        "quality_score": 7,
+        "confidence": 90,
+        "category": "dev-tools",
+        "quality_score": 8,
         "transport": [
-          "streamable-http"
+          "stdio"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server.",
-        "short_description": "mcp-use provides tools to build MCP servers and clients easily."
-      }
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on being a single MCP server framework.",
+        "short_description": "Fullstack MCP framework for developing MCP Apps and Servers."
+      },
+      "last_update": "2026-05-16T15:00:35Z",
+      "description": "The fullstack MCP framework to develop MCP Apps for ChatGPT / Claude & MCP Servers for AI Agents.",
+      "language": "TypeScript",
+      "topics": "agentic-framework, ai, apps-sdk, chatgpt, claude-code, llms, mcp, mcp-apps, mcp-client, mcp-gateway, mcp-host, mcp-inspector, mcp-server, mcp-servers, mcp-tools, mcp-ui, model-context-protocol, modelcontextprotocol, openclaw, skills"
     },
     {
       "full_name": "modelcontextprotocol/inspector",
       "name": "inspector",
       "url": "https://github.com/modelcontextprotocol/inspector",
-      "stars": 8561,
+      "stars": 9782,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": false,
-        "confidence": 85,
+        "confidence": 90,
         "category": "other",
         "quality_score": 7,
         "transport": [
@@ -317,37 +329,45 @@
           "streamable-http"
         ],
         "tools_count_estimate": 0,
-        "reason": "The repository is a tool for testing and debugging MCP servers, but it does not implement the MCP protocol itself as a server.",
+        "reason": "The repository is a testing tool for MCP servers, but it does not implement the MCP protocol itself as a server.",
         "short_description": "Developer tool for testing and debugging MCP servers."
-      }
+      },
+      "last_update": "2026-05-16T21:58:10Z",
+      "description": "Visual testing tool for MCP servers",
+      "language": "TypeScript",
+      "topics": ""
     },
     {
       "full_name": "awslabs/mcp",
       "name": "mcp",
       "url": "https://github.com/awslabs/mcp",
-      "stars": 8064,
+      "stars": 9069,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
-        "confidence": 95,
+        "confidence": 85,
         "category": "cloud",
-        "quality_score": 9,
+        "quality_score": 8,
         "transport": [
           "streamable-http"
         ],
-        "tools_count_estimate": 10,
-        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on AWS MCP servers.",
-        "short_description": "A suite of specialized MCP servers for AWS."
-      }
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol with specialized servers for AWS, has working code, and provides documentation on usage.",
+        "short_description": "Open source MCP servers for AWS."
+      },
+      "last_update": "2026-05-16T17:33:02Z",
+      "description": "Open source MCP Servers for AWS",
+      "language": "Python",
+      "topics": "aws, mcp, mcp-client, mcp-clients, mcp-host, mcp-server, mcp-servers, mcp-tools, modelcontextprotocol"
     },
     {
       "full_name": "idosal/git-mcp",
       "name": "git-mcp",
       "url": "https://github.com/idosal/git-mcp",
-      "stars": 7527,
+      "stars": 8082,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -357,75 +377,91 @@
           "streamable-http"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for GitHub projects.",
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server.",
         "short_description": "GitMCP is a remote MCP server for GitHub projects that enhances AI tool access to documentation."
-      }
+      },
+      "last_update": "2026-05-17T02:22:10Z",
+      "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
+      "language": "TypeScript",
+      "topics": "agentic-ai, agents, ai, claude, copilot, cursor, git, llm, mcp"
     },
     {
       "full_name": "LaurieWired/GhidraMCP",
       "name": "GhidraMCP",
       "url": "https://github.com/LaurieWired/GhidraMCP",
-      "stars": 7286,
+      "stars": 8905,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
-        "confidence": 90,
+        "confidence": 95,
         "category": "dev-tools",
         "quality_score": 8,
         "transport": [
           "http"
         ],
         "tools_count_estimate": 3,
-        "reason": "The repository implements the MCP protocol, exposes tools for Ghidra, has working code, and provides installation instructions.",
-        "short_description": "MCP Server for Ghidra enabling autonomous reverse engineering."
-      }
+        "reason": "The repository implements the MCP protocol, has functional code, includes installation and usage instructions, and is focused on a single server for Ghidra.",
+        "short_description": "MCP server for Ghidra enabling autonomous reverse engineering."
+      },
+      "last_update": "2026-05-17T05:54:18Z",
+      "description": "MCP Server for Ghidra",
+      "language": "Java",
+      "topics": ""
     },
     {
       "full_name": "0x4m4/hexstrike-ai",
       "name": "hexstrike-ai",
       "url": "https://github.com/0x4m4/hexstrike-ai",
-      "stars": 6653,
+      "stars": 8773,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
         "category": "security",
         "quality_score": 9,
         "transport": [
-          "streamable-http"
+          "stdio"
         ],
         "tools_count_estimate": 150,
-        "reason": "The repository implements the MCP protocol, has working code, includes documentation and usage instructions, and is focused on a single server for cybersecurity automation.",
-        "short_description": "HexStrike AI MCP Agents is an advanced MCP server for automated cybersecurity tools."
-      }
+        "reason": "The repository implements the MCP protocol, has functional code, provides documentation, and focuses on a single server for cybersecurity tools.",
+        "short_description": "HexStrike AI is an advanced MCP server for automated cybersecurity tasks."
+      },
+      "last_update": "2026-05-17T04:02:44Z",
+      "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
+      "language": "Python",
+      "topics": "0x4m4, ai, ai-agents, ai-cybersecurity, ai-hacking, ai-penetration-testing, ai-security-tool, artificial-intelligence, ctf-tools, generative-ai, hexstrike, kali-linux, kali-tools, llm, llm-integration, mcp, mcp-server, mcp-tools, pentesting, pentesting-tools"
     },
     {
       "full_name": "modelcontextprotocol/registry",
       "name": "registry",
       "url": "https://github.com/modelcontextprotocol/registry",
-      "stars": 6364,
+      "stars": 6820,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": false,
-        "confidence": 95,
+        "confidence": 90,
         "category": "other",
-        "quality_score": 5,
+        "quality_score": 3,
         "transport": [],
         "tools_count_estimate": 0,
-        "reason": "This repository is a registry service for MCP servers, not an MCP server itself.",
-        "short_description": "A community driven registry service for MCP servers."
-      }
+        "reason": "The repository is a registry service for MCP servers, not a single MCP server itself.",
+        "short_description": "A community driven registry service for Model Context Protocol (MCP) servers."
+      },
+      "last_update": "2026-05-17T01:52:19Z",
+      "description": "A community driven registry service for Model Context Protocol (MCP) servers.",
+      "language": "Go",
+      "topics": "mcp, mcp-servers"
     },
     {
       "full_name": "yzfly/Awesome-MCP-ZH",
       "name": "Awesome-MCP-ZH",
       "url": "https://github.com/yzfly/Awesome-MCP-ZH",
-      "stars": 6061,
+      "stars": 7081,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-17",
       "analysis": {
         "is_valid_mcp_server": false,
         "confidence": 95,
@@ -433,9 +469,13 @@
         "quality_score": 2,
         "transport": [],
         "tools_count_estimate": 0,
-        "reason": "This repository is an aggregator of MCP resources and does not implement a single MCP server.",
-        "short_description": "A collection of MCP resources and guides, not a legitimate MCP server."
-      }
+        "reason": "The repository is an aggregator of MCP resources, clients, and servers, rather than a single focused MCP server.",
+        "short_description": "A collection of MCP resources and tools, not a legitimate MCP server."
+      },
+      "last_update": "2026-05-17T01:43:10Z",
+      "description": "MCP 资源精选， MCP指南，Claude MCP，MCP Servers, MCP Clients",
+      "language": null,
+      "topics": "claude, claude-mcp, deepseek, deepseek-mcp, mcp, mcp-clients, mcp-host, mcp-server, mcp-servers, mcp-servers-directory, mcp-tools, qwen-mcp"
     },
     {
       "full_name": "kreuzberg-dev/kreuzberg",
@@ -2243,7 +2283,47 @@
         "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server functionality.",
         "short_description": "Context window optimization tool for AI coding agents."
       }
+    },
+    {
+      "full_name": "kucherenko/jscpd",
+      "name": "jscpd",
+      "url": "https://github.com/kucherenko/jscpd",
+      "stars": 5656,
+      "source": "github",
+      "last_checked": "2026-05-17",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol with a dedicated server application, has working code, and provides documentation.",
+        "short_description": "A copy/paste detector for programming source code with MCP server capabilities."
+      }
+    },
+    {
+      "full_name": "coddingtonbear/obsidian-local-rest-api",
+      "name": "obsidian-local-rest-api",
+      "url": "https://github.com/coddingtonbear/obsidian-local-rest-api",
+      "stars": 2246,
+      "source": "github",
+      "last_checked": "2026-05-17",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "productivity",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 10,
+        "reason": "The repository implements the MCP protocol, has working code, includes documentation, and is focused on a single server for accessing Obsidian vaults.",
+        "short_description": "A secure REST API and MCP server for accessing Obsidian vaults."
+      }
     }
   ],
-  "last_scan": "2026-05-10"
+  "last_scan": "2026-05-17"
 }
