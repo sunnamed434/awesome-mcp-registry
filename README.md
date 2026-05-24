@@ -20,6 +20,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [github/github-mcp-server](https://github.com/github/github-mcp-server) | 29669 | 9/10 | GitHub's official MCP Server for AI tool integration. |
 | [upstash/context7](https://github.com/upstash/context7) | 54897 | 8/10 | Context7 Platform for up-to-date code documentation for LLMs and AI code editors. |
 | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | 32278 | 8/10 | A Model Context Protocol server for browser automation using Playwright. |
+| [Keesan12/martin-loop](https://github.com/Keesan12/martin-loop/tree/main/packages/mcp) | 15 | 8/10 | Governed MCP runtime for AI coding agents with budgets, verifier gates, and inspectable runs. |
 | [jlowin/fastmcp](https://github.com/jlowin/fastmcp) | 25093 | 8/10 | FastMCP is a Python framework for building MCP servers and applications. |
 | [oraios/serena](https://github.com/oraios/serena) | 24020 | 8/10 | A coding agent toolkit providing semantic retrieval and editing capabilities. |
 | [mksglu/context-mode](https://github.com/mksglu/context-mode) | 12064 | 8/10 | Context window optimization tool for AI coding agents. |
