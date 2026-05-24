@@ -481,9 +481,9 @@
       "full_name": "kreuzberg-dev/kreuzberg",
       "name": "kreuzberg",
       "url": "https://github.com/kreuzberg-dev/kreuzberg",
-      "stars": 5737,
+      "stars": 8376,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 85,
@@ -492,18 +492,22 @@
         "transport": [
           "http"
         ],
-        "tools_count_estimate": 50,
+        "tools_count_estimate": 10,
         "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for document intelligence.",
-        "short_description": "A polyglot document intelligence framework for extracting information from various file formats."
-      }
+        "short_description": "A polyglot document intelligence framework for extracting information from various formats."
+      },
+      "last_update": "2026-05-24T05:31:38Z",
+      "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
+      "language": "Rust",
+      "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm"
     },
     {
       "full_name": "BrowserMCP/mcp",
       "name": "mcp",
       "url": "https://github.com/BrowserMCP/mcp",
-      "stars": 5701,
+      "stars": 6550,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 85,
@@ -515,55 +519,67 @@
         "tools_count_estimate": 5,
         "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for browser automation.",
         "short_description": "Browser MCP is an MCP server that automates browser tasks using AI."
-      }
+      },
+      "last_update": "2026-05-24T02:47:59Z",
+      "description": "Browser MCP is a Model Context Provider (MCP) server that allows AI applications to control your browser",
+      "language": "TypeScript",
+      "topics": "browser-automation, browser-extension, claude, cursor, mcp, mcp-server"
     },
     {
       "full_name": "firecrawl/firecrawl-mcp-server",
       "name": "firecrawl-mcp-server",
       "url": "https://github.com/firecrawl/firecrawl-mcp-server",
-      "stars": 5414,
+      "stars": 6370,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
         "category": "web-scraping",
-        "quality_score": 9,
+        "quality_score": 8,
         "transport": [
           "sse"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol for web scraping, has working code, provides installation and usage instructions, and is focused on a single server implementation.",
-        "short_description": "Official Firecrawl MCP Server for web scraping and search."
-      }
+        "reason": "The repository implements the MCP protocol with a functional server that provides web scraping and search capabilities, includes installation instructions, and has working code.",
+        "short_description": "A powerful web scraping and search MCP server for AI agents."
+      },
+      "last_update": "2026-05-23T05:38:18Z",
+      "description": "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
+      "language": "JavaScript",
+      "topics": "batch-processing, claude, content-extraction, data-collection, firecrawl, firecrawl-ai, javascript-rendering, llm-tools, mcp, mcp-server, model-context-protocol, search-api, web-crawler, web-scraping"
     },
     {
       "full_name": "wonderwhy-er/DesktopCommanderMCP",
       "name": "DesktopCommanderMCP",
       "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-      "stars": 5399,
+      "stars": 6070,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
         "category": "dev-tools",
         "quality_score": 8,
         "transport": [
-          "streamable-http"
+          "stdio"
         ],
-        "tools_count_estimate": 10,
-        "reason": "The repository implements the MCP protocol, has functional code, provides documentation, and focuses on a single server for terminal control and file management.",
-        "short_description": "MCP server for terminal control and file management."
-      }
+        "tools_count_estimate": 5,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server functionality.",
+        "short_description": "MCP server for terminal control and file management with AI capabilities."
+      },
+      "last_update": "2026-05-23T21:33:41Z",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "language": "TypeScript",
+      "topics": "agent, ai, code-analysis, code-generation, gemini-cli-extension, mcp, terminal-ai, terminal-automation, vibe-coding"
     },
     {
       "full_name": "lharries/whatsapp-mcp",
       "name": "whatsapp-mcp",
       "url": "https://github.com/lharries/whatsapp-mcp",
-      "stars": 5298,
+      "stars": 5683,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -573,17 +589,21 @@
           "stdio"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol for WhatsApp, has functional code, provides installation instructions, and is focused on a single server.",
+        "reason": "The repository implements the MCP protocol for WhatsApp, has functional code, includes installation instructions, and is focused on a single server.",
         "short_description": "WhatsApp MCP server for managing messages and media."
-      }
+      },
+      "last_update": "2026-05-23T21:20:51Z",
+      "description": "WhatsApp MCP server",
+      "language": "Go",
+      "topics": "ai, mcp, whatsapp, whatsapp-api"
     },
     {
       "full_name": "executeautomation/mcp-playwright",
       "name": "mcp-playwright",
       "url": "https://github.com/executeautomation/mcp-playwright",
-      "stars": 5207,
+      "stars": 5531,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -593,35 +613,43 @@
           "stdio"
         ],
         "tools_count_estimate": 5,
-        "reason": "Implements the MCP protocol for browser automation, has working code, documentation, and is a single focused server.",
-        "short_description": "A Model Context Protocol server for browser automation using Playwright."
-      }
+        "reason": "Implements the MCP protocol for browser automation, has working code, and provides documentation.",
+        "short_description": "A Model Context Protocol server for automating browsers using Playwright."
+      },
+      "last_update": "2026-05-23T22:01:29Z",
+      "description": "Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE and More 🔌",
+      "language": "TypeScript",
+      "topics": ""
     },
     {
       "full_name": "appcypher/awesome-mcp-servers",
       "name": "awesome-mcp-servers",
       "url": "https://github.com/appcypher/awesome-mcp-servers",
-      "stars": 5120,
+      "stars": 5565,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": false,
-        "confidence": 0,
+        "confidence": 100,
         "category": "other",
         "quality_score": 1,
         "transport": [],
         "tools_count_estimate": 0,
         "reason": "This repository is an aggregator of MCP servers and does not implement the MCP protocol itself.",
         "short_description": "A curated list of Model Context Protocol servers."
-      }
+      },
+      "last_update": "2026-05-23T22:32:54Z",
+      "description": "Awesome MCP Servers - A curated list of Model Context Protocol servers",
+      "language": null,
+      "topics": "ai, anthropic-claude, awesome, context, mcp, model-context-protocol, servers, tool-use, tools"
     },
     {
       "full_name": "nanbingxyz/5ire",
       "name": "5ire",
       "url": "https://github.com/nanbingxyz/5ire",
-      "stars": 5005,
+      "stars": 5225,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": false,
         "confidence": 90,
@@ -629,35 +657,43 @@
         "quality_score": 7,
         "transport": [],
         "tools_count_estimate": 0,
-        "reason": "The repository is an MCP client, not a server.",
-        "short_description": "5ire is a cross-platform desktop AI assistant and MCP client."
-      }
+        "reason": "The repository is an MCP client, not a server, as it does not expose tools or resources.",
+        "short_description": "5ire is a cross-platform desktop AI assistant, MCP client."
+      },
+      "last_update": "2026-05-24T02:23:57Z",
+      "description": "5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .",
+      "language": "TypeScript",
+      "topics": "knowledge-base, llms, mcp, mcp-client, model-context-protocol"
     },
     {
       "full_name": "aipotheosis-labs/aci",
       "name": "aci",
       "url": "https://github.com/aipotheosis-labs/aci",
-      "stars": 4705,
+      "stars": 4781,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": false,
-        "confidence": 85,
+        "confidence": 80,
         "category": "other",
         "quality_score": 6,
         "transport": [],
         "tools_count_estimate": 0,
-        "reason": "This repository is primarily a tool-calling platform and directs users to another repository for the actual MCP server implementation.",
-        "short_description": "ACI.dev is a tool-calling platform that integrates with MCP servers."
-      }
+        "reason": "This repository is for the ACI.dev platform which provides a unified MCP server but does not implement the MCP server itself; it directs users to a separate repository for that purpose.",
+        "short_description": "Open-source tool-calling platform for integrating tools into AI agents."
+      },
+      "last_update": "2026-05-23T23:49:54Z",
+      "description": "ACI.dev is the open source tool-calling platform that hooks up 600+ tools into any agentic IDE or custom AI agent through direct function calling or a unified MCP server. The birthplace of VibeOps.",
+      "language": "Python",
+      "topics": "agents, ai, ai-agents, api, developer-tools, function-calling, integration, llm, mcp, oauth2, open-source, permissions, tools, vibeops"
     },
     {
       "full_name": "u14app/deep-research",
       "name": "deep-research",
       "url": "https://github.com/u14app/deep-research",
-      "stars": 4372,
+      "stars": 4588,
       "source": "github",
-      "last_checked": "2026-02-05",
+      "last_checked": "2026-05-24",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 85,
@@ -667,9 +703,13 @@
           "sse"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for deep research using LLMs.",
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for deep research using LLMs.",
         "short_description": "A server for generating in-depth research reports using various LLMs."
-      }
+      },
+      "last_update": "2026-05-24T03:47:57Z",
+      "description": "Use any LLMs (Large Language Models) for Deep Research. Support SSE API and MCP server.",
+      "language": "JavaScript",
+      "topics": "anthropic, deep-research, deep-research-api, deepresearch, deepseek, gemini, grok, mcp-server, ollama, openai"
     },
     {
       "full_name": "modelcontextprotocol/servers",
@@ -2323,7 +2363,27 @@
         "reason": "The repository implements the MCP protocol, has working code, includes documentation, and is focused on a single server for accessing Obsidian vaults.",
         "short_description": "A secure REST API and MCP server for accessing Obsidian vaults."
       }
+    },
+    {
+      "full_name": "bgauryy/octocode",
+      "name": "octocode",
+      "url": "https://github.com/bgauryy/octocode",
+      "stars": 845,
+      "source": "github",
+      "last_checked": "2026-05-24",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 95,
+        "category": "dev-tools",
+        "quality_score": 8,
+        "transport": [
+          "stdio"
+        ],
+        "tools_count_estimate": 14,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server for semantic code research.",
+        "short_description": "MCP server for semantic code research and context generation using LLM patterns."
+      }
     }
   ],
-  "last_scan": "2026-05-17"
+  "last_scan": "2026-05-24"
 }

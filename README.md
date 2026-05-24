@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-74-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--05--17-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-75-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--05--24-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -13,7 +13,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox) | 14415 | 8/10 | MCP Toolbox for Databases is an open source MCP server connecting AI agents to enterprise databases. |
 | [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | 1246 | 8/10 | MCP server providing read-only access to MySQL databases. |
 
-## Dev Tools (29)
+## Dev Tools (30)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
@@ -29,16 +29,16 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use) | 9962 | 8/10 | Fullstack MCP framework for developing MCP Apps and Servers. |
 | [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | 8905 | 8/10 | MCP server for Ghidra enabling autonomous reverse engineering. |
 | [idosal/git-mcp](https://github.com/idosal/git-mcp) | 8082 | 8/10 | GitMCP is a remote MCP server for GitHub projects that enhances AI tool access to documentation. |
+| [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | 6070 | 8/10 | MCP server for terminal control and file management with AI capabilities. |
 | [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | 5656 | 8/10 | A copy/paste detector for programming source code with MCP server capabilities. |
-| [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | 5399 | 8/10 | MCP server for terminal control and file management. |
-| [executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright) | 5207 | 8/10 | A Model Context Protocol server for browser automation using Playwright. |
+| [executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright) | 5531 | 8/10 | A Model Context Protocol server for automating browsers using Playwright. |
 | [CursorTouch/Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | 4706 | 8/10 | MCP server for integrating AI agents with Windows OS. |
 | [getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP) | 4287 | 8/10 | MCP server and CLI for iOS and macOS project tools. |
 | [cameroncooke/XcodeBuildMCP](https://github.com/cameroncooke/XcodeBuildMCP) | 4110 | 8/10 | An MCP server and CLI for iOS and macOS project tools. |
 | [mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp) | 3322 | 8/10 | MCP server for mobile automation and scraping across platforms. |
 | [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | 3249 | 8/10 | A feature-rich MCP gateway and registry for managing tools and resources. |
 
-*...and 9 more. See [known_servers.json](data/known_servers.json) for the full list.*
+*...and 10 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
 ## Cloud (1)
 
@@ -64,15 +64,15 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
-| [lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp) | 5298 | 8/10 | WhatsApp MCP server for managing messages and media. |
+| [lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp) | 5683 | 8/10 | WhatsApp MCP server for managing messages and media. |
 
 ## Web Scraping (4)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
-| [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | 5414 | 9/10 | Official Firecrawl MCP Server for web scraping and search. |
 | [JoeanAmier/XHS-Downloader](https://github.com/JoeanAmier/XHS-Downloader) | 10016 | 8/10 | A tool for extracting and downloading content from XiaoHongShu. |
 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 8937 | 8/10 | A powerful Python library for adaptive web scraping. |
+| [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | 6370 | 8/10 | A powerful web scraping and search MCP server for AI agents. |
 | [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | 2005 | 8/10 | A powerful MCP server for seamless web access. |
 
 ## AI & ML (18)
@@ -85,9 +85,9 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [ruvnet/claude-flow](https://github.com/ruvnet/claude-flow) | 13789 | 8/10 | Claude-Flow is an AI orchestration platform for deploying multi-agent systems. |
 | [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) | 13583 | 8/10 | Trigger.dev is an open-source platform for building AI workflows in TypeScript. |
 | [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | 9084 | 8/10 | Automated tool to convert documentation into Claude AI skills. |
-| [kreuzberg-dev/kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) | 5737 | 8/10 | A polyglot document intelligence framework for extracting information from various file formats. |
+| [kreuzberg-dev/kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) | 8376 | 8/10 | A polyglot document intelligence framework for extracting information from various formats. |
 | [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) | 5427 | 8/10 | AI-powered reverse engineering assistant for IDA Pro using MCP. |
-| [u14app/deep-research](https://github.com/u14app/deep-research) | 4372 | 8/10 | A server for generating in-depth research reports using various LLMs. |
+| [u14app/deep-research](https://github.com/u14app/deep-research) | 4588 | 8/10 | A server for generating in-depth research reports using various LLMs. |
 | [liaokongVFX/MCP-Chinese-Getting-Started-Guide](https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide) | 3316 | 8/10 | A guide to quickly set up a Model Context Protocol server for web searching. |
 | [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | 2642 | 8/10 | MCP server for integrating shadcn UI components into AI workflows. |
 | [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | 2140 | 8/10 | A Model Context Protocol server for searching and analyzing arXiv papers. |
