@@ -941,9 +941,9 @@
       "full_name": "haris-musa/excel-mcp-server",
       "name": "excel-mcp-server",
       "url": "https://github.com/haris-musa/excel-mcp-server",
-      "stars": 3297,
+      "stars": 3906,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -955,39 +955,45 @@
           "streamable-http"
         ],
         "tools_count_estimate": 10,
-        "reason": "The repository implements the MCP protocol for Excel file manipulation, has working code, provides documentation, and is focused on a single server.",
+        "reason": "The repository implements the MCP protocol for Excel file manipulation, has working code, provides detailed documentation, and is focused on a single server.",
         "short_description": "A Model Context Protocol server for Excel file manipulation."
-      }
+      },
+      "last_update": "2026-06-06T19:05:12Z",
+      "description": "A Model Context Protocol server for Excel file manipulation",
+      "language": "Python",
+      "topics": "ai, automation, excel, llm, mcp, mcp-server, sse, stdio, streamable-http, toolcalling"
     },
     {
       "full_name": "IBM/mcp-context-forge",
       "name": "mcp-context-forge",
       "url": "https://github.com/IBM/mcp-context-forge",
-      "stars": 3249,
+      "stars": 3834,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
         "category": "dev-tools",
         "quality_score": 8,
         "transport": [
-          "stdio",
-          "sse",
           "streamable-http"
         ],
-        "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol as a gateway and registry, has working code, includes documentation, and is focused on a single server solution.",
-        "short_description": "A feature-rich MCP gateway and registry for managing tools and resources."
-      }
+        "tools_count_estimate": 40,
+        "reason": "The repository implements the MCP protocol as a server, has working code, provides documentation, and is focused on a single server solution.",
+        "short_description": "An AI Gateway that federates MCP, A2A, and REST/gRPC APIs."
+      },
+      "last_update": "2026-06-06T21:41:34Z",
+      "description": "An AI Gateway, registry, and proxy that sits in front of any MCP, A2A, or REST/gRPC APIs, exposing a unified endpoint with centralized discovery, guardrails and management. Optimizes Agent & Tool calling, and supports plugins.",
+      "language": "Python",
+      "topics": "agents, ai, api-gateway, asyncio, authentication-middleware, devops, docker, fastapi, federation, gateway, generative-ai, jwt, kubernetes, llm-agents, mcp, model-context-protocol, observability, prompt-engineering, python, tools"
     },
     {
       "full_name": "modelcontextprotocol/java-sdk",
       "name": "java-sdk",
       "url": "https://github.com/modelcontextprotocol/java-sdk",
-      "stars": 3148,
+      "stars": 3460,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": false,
         "confidence": 90,
@@ -995,35 +1001,43 @@
         "quality_score": 7,
         "transport": [],
         "tools_count_estimate": 0,
-        "reason": "This repository is an SDK for building MCP servers and clients, not an MCP server itself.",
-        "short_description": "Official Java SDK for Model Context Protocol servers and clients."
-      }
+        "reason": "This repository is an SDK for building MCP servers and clients, not a standalone MCP server itself.",
+        "short_description": "Official Java SDK for Model Context Protocol integration."
+      },
+      "last_update": "2026-06-06T00:42:17Z",
+      "description": "The official Java SDK for Model Context Protocol servers and clients. Maintained in collaboration with Spring AI",
+      "language": "Java",
+      "topics": ""
     },
     {
       "full_name": "microsoft/mcp",
       "name": "mcp",
       "url": "https://github.com/microsoft/mcp",
-      "stars": 2547,
+      "stars": 3276,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": false,
-        "confidence": 80,
+        "confidence": 90,
         "category": "other",
         "quality_score": 5,
         "transport": [],
         "tools_count_estimate": 0,
-        "reason": "This repository serves as a catalog for multiple MCP servers rather than being a single MCP server implementation.",
+        "reason": "This repository is a catalog of MCP server implementations and does not implement the MCP protocol itself. It serves as a collection rather than a single focused server.",
         "short_description": "Catalog of official Microsoft MCP server implementations."
-      }
+      },
+      "last_update": "2026-06-07T01:19:40Z",
+      "description": "Catalog of official Microsoft MCP (Model Context Protocol) server implementations for AI-powered data access and tool integration",
+      "language": "C#",
+      "topics": ""
     },
     {
       "full_name": "zcaceres/markdownify-mcp",
       "name": "markdownify-mcp",
       "url": "https://github.com/zcaceres/markdownify-mcp",
-      "stars": 2398,
+      "stars": 2728,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -1032,38 +1046,44 @@
         "transport": [
           "stdio"
         ],
-        "tools_count_estimate": 9,
-        "reason": "The repository implements the MCP protocol by providing tools to convert various file types to Markdown, has working code, includes documentation for setup and usage, and is focused on a single server functionality.",
+        "tools_count_estimate": 10,
+        "reason": "The repository implements the MCP protocol, has functional code, includes documentation, and is focused on a single server for converting various file types to Markdown.",
         "short_description": "A Model Context Protocol server for converting various file types to Markdown."
-      }
+      },
+      "last_update": "2026-06-07T06:16:54Z",
+      "description": "A Model Context Protocol server for converting almost anything to Markdown",
+      "language": "TypeScript",
+      "topics": "ai, anthropic, anthropic-ai, anthropic-claude, markdown, mcp, model-context-protocol, ocr, tools"
     },
     {
       "full_name": "blazickjp/arxiv-mcp-server",
       "name": "arxiv-mcp-server",
       "url": "https://github.com/blazickjp/arxiv-mcp-server",
-      "stars": 2140,
+      "stars": 2828,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
         "category": "ai-ml",
         "quality_score": 8,
-        "transport": [
-          "streamable-http"
-        ],
-        "tools_count_estimate": 4,
-        "reason": "The repository implements the MCP protocol by providing tools for searching and accessing arXiv papers, has working code, includes documentation and usage instructions, and focuses on a single server.",
+        "transport": "stdio",
+        "tools_count_estimate": 3,
+        "reason": "The repository implements the MCP protocol by providing a server for searching and accessing arXiv papers, has working code, includes documentation, and is focused on a single server.",
         "short_description": "A Model Context Protocol server for searching and analyzing arXiv papers."
-      }
+      },
+      "last_update": "2026-06-06T18:28:33Z",
+      "description": "A Model Context Protocol server for searching and analyzing arXiv papers",
+      "language": "Python",
+      "topics": "ai, arxiv, claude-ai, gpt, llm, mcp-server, model-context-protocol, papers, python, research"
     },
     {
       "full_name": "brightdata/brightdata-mcp",
       "name": "brightdata-mcp",
       "url": "https://github.com/brightdata/brightdata-mcp",
-      "stars": 2005,
+      "stars": 2436,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -1073,17 +1093,21 @@
           "streamable-http"
         ],
         "tools_count_estimate": 5,
-        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server solution.",
-        "short_description": "A powerful MCP server for seamless web access."
-      }
+        "reason": "The repository implements the MCP protocol, has functional code, includes documentation, and is focused on providing web scraping tools.",
+        "short_description": "A powerful MCP server for real-time web access and data collection."
+      },
+      "last_update": "2026-06-07T06:09:32Z",
+      "description": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
+      "language": "JavaScript",
+      "topics": "ai-agents, ai-integrations, anti-bot-detection, browser-automation, data-collection, data-extraction, llm, mcp, mcp-server, modelcontextprotocol, scraping, scraping-tools, structured-data, web-crawling, web-data, web-scraping"
     },
     {
       "full_name": "GongRzhe/Office-Word-MCP-Server",
       "name": "Office-Word-MCP-Server",
       "url": "https://github.com/GongRzhe/Office-Word-MCP-Server",
-      "stars": 1547,
+      "stars": 2030,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
@@ -1093,50 +1117,62 @@
           "streamable-http"
         ],
         "tools_count_estimate": 15,
-        "reason": "The repository implements the MCP protocol for Microsoft Word document manipulation, has functional code, and provides documentation on usage.",
-        "short_description": "MCP server for creating and manipulating Microsoft Word documents."
-      }
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and focuses on a single server for manipulating Word documents.",
+        "short_description": "An MCP server for creating and manipulating Microsoft Word documents."
+      },
+      "last_update": "2026-06-06T23:28:07Z",
+      "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
+      "language": "Python",
+      "topics": ""
     },
     {
       "full_name": "GongRzhe/Office-PowerPoint-MCP-Server",
       "name": "Office-PowerPoint-MCP-Server",
       "url": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server",
-      "stars": 1491,
+      "stars": 1765,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 95,
         "category": "productivity",
         "quality_score": 9,
         "transport": [
-          "stdio"
+          "streamable-http"
         ],
         "tools_count_estimate": 32,
-        "reason": "The repository implements the MCP protocol for PowerPoint manipulation, has functional code, provides comprehensive documentation, and is focused on a single server.",
-        "short_description": "A MCP server for PowerPoint manipulation using python-pptx."
-      }
+        "reason": "The repository implements the MCP protocol for PowerPoint manipulation, has working code, provides documentation, and is focused on a single server.",
+        "short_description": "A comprehensive MCP server for PowerPoint manipulation using python-pptx."
+      },
+      "last_update": "2026-06-06T15:26:16Z",
+      "description": "A MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. This server provides tools for creating, editing, and manipulating PowerPoint presentations through the MCP protocol.",
+      "language": "Python",
+      "topics": ""
     },
     {
       "full_name": "f/mcptools",
       "name": "mcptools",
       "url": "https://github.com/f/mcptools",
-      "stars": 1473,
+      "stars": 1592,
       "source": "github",
-      "last_checked": "2026-02-08",
+      "last_checked": "2026-06-07",
       "analysis": {
         "is_valid_mcp_server": false,
-        "confidence": 85,
+        "confidence": 90,
         "category": "other",
-        "quality_score": 7,
+        "quality_score": 8,
         "transport": [
           "stdio",
           "http"
         ],
         "tools_count_estimate": 0,
-        "reason": "This repository is a command-line interface for interacting with MCP servers, but it does not implement an MCP server itself.",
+        "reason": "This repository is a command-line interface for interacting with MCP servers, not an MCP server itself.",
         "short_description": "A CLI tool for interacting with MCP servers."
-      }
+      },
+      "last_update": "2026-06-07T05:25:29Z",
+      "description": "A command-line interface for interacting with MCP (Model Context Protocol) servers using both stdio and HTTP transport.",
+      "language": "Go",
+      "topics": "mcp, mcp-server, modelcontextprotocol"
     },
     {
       "full_name": "modelcontextprotocol/php-sdk",
@@ -2465,7 +2501,27 @@
         "reason": "The repository implements the MCP protocol with a functional speech recognition toolkit, includes documentation, and is actively maintained.",
         "short_description": "Industrial-grade speech recognition toolkit with multi-language support."
       }
+    },
+    {
+      "full_name": "chopratejas/headroom",
+      "name": "headroom",
+      "url": "https://github.com/chopratejas/headroom",
+      "stars": 16123,
+      "source": "github",
+      "last_checked": "2026-06-07",
+      "analysis": {
+        "is_valid_mcp_server": true,
+        "confidence": 85,
+        "category": "ai-ml",
+        "quality_score": 8,
+        "transport": [
+          "streamable-http"
+        ],
+        "tools_count_estimate": 6,
+        "reason": "The repository implements the MCP protocol, has working code, provides documentation, and is focused on a single server functionality.",
+        "short_description": "Headroom compresses AI agent inputs to reduce token usage."
+      }
     }
   ],
-  "last_scan": "2026-05-31"
+  "last_scan": "2026-06-07"
 }

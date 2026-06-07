@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-77-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--05--31-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-78-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--07-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -35,7 +35,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright) | 5531 | 8/10 | A Model Context Protocol server for automating browsers using Playwright. |
 | [CursorTouch/Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | 4706 | 8/10 | MCP server for integrating AI agents with Windows OS. |
 | [getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP) | 4287 | 8/10 | MCP server and CLI for iOS and macOS project tools. |
-| [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | 3249 | 8/10 | A feature-rich MCP gateway and registry for managing tools and resources. |
+| [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | 3834 | 8/10 | An AI Gateway that federates MCP, A2A, and REST/gRPC APIs. |
 | [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | 2327 | 8/10 | Shippie is an extendable code review and QA agent using LLMs. |
 
 *...and 9 more. See [known_servers.json](data/known_servers.json) for the full list.*
@@ -51,12 +51,12 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp) | 4212 | 9/10 | A structured spec-driven development workflow MCP server. |
-| [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | 3297 | 9/10 | A Model Context Protocol server for Excel file manipulation. |
-| [GongRzhe/Office-PowerPoint-MCP-Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server) | 1491 | 9/10 | A MCP server for PowerPoint manipulation using python-pptx. |
+| [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | 3906 | 9/10 | A Model Context Protocol server for Excel file manipulation. |
+| [GongRzhe/Office-PowerPoint-MCP-Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server) | 1765 | 9/10 | A comprehensive MCP server for PowerPoint manipulation using python-pptx. |
 | [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) | 13294 | 8/10 | A MCP server that integrates n8n workflow automation with AI assistants. |
 | [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) | 4754 | 8/10 | MCP server for Atlassian tools like Confluence and Jira. |
 | [coddingtonbear/obsidian-local-rest-api](https://github.com/coddingtonbear/obsidian-local-rest-api) | 2246 | 8/10 | A secure REST API and MCP server for accessing Obsidian vaults. |
-| [GongRzhe/Office-Word-MCP-Server](https://github.com/GongRzhe/Office-Word-MCP-Server) | 1547 | 8/10 | MCP server for creating and manipulating Microsoft Word documents. |
+| [GongRzhe/Office-Word-MCP-Server](https://github.com/GongRzhe/Office-Word-MCP-Server) | 2030 | 8/10 | An MCP server for creating and manipulating Microsoft Word documents. |
 | [BigSweetPotatoStudio/HyperChat](https://github.com/BigSweetPotatoStudio/HyperChat) | 712 | 8/10 | HyperChat is a local AI agent platform utilizing MCP for enhanced chat experiences. |
 | [supermemoryai/apple-mcp](https://github.com/supermemoryai/apple-mcp) | 2993 | 7/10 | Apple-native tools for enhancing productivity through the Model Context Protocol. |
 
@@ -74,15 +74,16 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 8937 | 8/10 | A powerful Python library for adaptive web scraping. |
 | [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | 6370 | 8/10 | A powerful web scraping and search MCP server for AI agents. |
 | [epiral/bb-browser](https://github.com/epiral/bb-browser) | 5612 | 8/10 | CLI + MCP server for AI agents to control Chrome with your login state. |
-| [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | 2005 | 8/10 | A powerful MCP server for seamless web access. |
+| [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | 2436 | 8/10 | A powerful MCP server for real-time web access and data collection. |
 
-## AI & ML (19)
+## AI & ML (20)
 
 | Server | Stars | Quality | Description |
 |--------|-------|---------|-------------|
 | [modelscope/FunASR](https://github.com/modelscope/FunASR) | 16655 | 9/10 | Industrial-grade speech recognition toolkit with multi-language support. |
 | [activepieces/activepieces](https://github.com/activepieces/activepieces) | 22123 | 8/10 | Activepieces is an AI automation platform with extensible MCP servers. |
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 16632 | 8/10 | Ruflo is an AI orchestration platform for deploying and managing multi-agent systems. |
+| [chopratejas/headroom](https://github.com/chopratejas/headroom) | 16123 | 8/10 | Headroom compresses AI agent inputs to reduce token usage. |
 | [GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) | 14691 | 8/10 | MCP server providing Figma data to AI coding agents. |
 | [ruvnet/claude-flow](https://github.com/ruvnet/claude-flow) | 13789 | 8/10 | Claude-Flow is an AI orchestration platform for deploying multi-agent systems. |
 | [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) | 13583 | 8/10 | Trigger.dev is an open-source platform for building AI workflows in TypeScript. |
@@ -91,8 +92,8 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) | 5427 | 8/10 | AI-powered reverse engineering assistant for IDA Pro using MCP. |
 | [u14app/deep-research](https://github.com/u14app/deep-research) | 4588 | 8/10 | A server for generating in-depth research reports using various LLMs. |
 | [liaokongVFX/MCP-Chinese-Getting-Started-Guide](https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide) | 3316 | 8/10 | A guide to quickly set up a Model Context Protocol server for web searching. |
+| [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | 2828 | 8/10 | A Model Context Protocol server for searching and analyzing arXiv papers. |
 | [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | 2642 | 8/10 | MCP server for integrating shadcn UI components into AI workflows. |
-| [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | 2140 | 8/10 | A Model Context Protocol server for searching and analyzing arXiv papers. |
 | [perplexityai/modelcontextprotocol](https://github.com/perplexityai/modelcontextprotocol) | 1950 | 8/10 | Official MCP server implementation for the Perplexity API Platform. |
 | [stacklok/toolhive](https://github.com/stacklok/toolhive) | 1665 | 8/10 | ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers. |
 | [robotmcp/ros-mcp-server](https://github.com/robotmcp/ros-mcp-server) | 1010 | 8/10 | Connects AI models with robots using MCP and ROS. |
@@ -127,7 +128,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) | 8777 | 8/10 | MCP server for interacting with xiaohongshu.com |
 | [webiny/webiny-js](https://github.com/webiny/webiny-js) | 7955 | 8/10 | Open-source CMS platform with AI-assisted development on AWS. |
 | [mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp) | 5078 | 8/10 | MCP server for mobile automation and scraping across iOS and Android. |
-| [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | 2398 | 8/10 | A Model Context Protocol server for converting various file types to Markdown. |
+| [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | 2728 | 8/10 | A Model Context Protocol server for converting various file types to Markdown. |
 
 ## How This Works
 
