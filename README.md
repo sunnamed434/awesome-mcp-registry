@@ -129,6 +129,7 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 | [webiny/webiny-js](https://github.com/webiny/webiny-js) | 7955 | 8/10 | Open-source CMS platform with AI-assisted development on AWS. |
 | [mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp) | 5078 | 8/10 | MCP server for mobile automation and scraping across iOS and Android. |
 | [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | 2728 | 8/10 | A Model Context Protocol server for converting various file types to Markdown. |
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | – | 8/10 | Solana on-chain trust scoring for AI agents. Verify wallet reputation before x402 micropayments. Remote: https://intel.twzrd.xyz/mcp |
 
 ## How This Works
 
