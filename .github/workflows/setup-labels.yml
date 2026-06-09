@@ -1,0 +1,41 @@
+name: Set up labels
+
+# Creates the nomination status labels with colors + descriptions so they look
+# intentional (instead of auto-created grey). Idempotent: updates them if they
+# already exist. Run manually once from the Actions tab; safe to re-run anytime.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [
+              { name: 'server-nomination',      color: '1d76db', description: 'A community nomination of an MCP server' },
+              { name: 'status: queued',         color: 'fbca04', description: 'Waiting for the next weekly AI scan' },
+              { name: 'status: accepted',       color: '0e8a16', description: 'Evaluated by AI and listed in the registry (5+/10)' },
+              { name: 'status: below-threshold', color: 'd93f0b', description: 'Valid MCP server but scored below the 5/10 cutoff' },
+              { name: 'status: declined',       color: 'b60205', description: 'Not a qualifying MCP server, or no public repo' },
+              { name: 'status: withdrawn',      color: 'cccccc', description: 'Closed by the submitter before evaluation' },
+            ];
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            for (const l of labels) {
+              try {
+                await github.rest.issues.createLabel({ ...common, ...l });
+                core.info(`Created ${l.name}`);
+              } catch (e) {
+                if (e.status === 422) {
+                  await github.rest.issues.updateLabel({ ...common, ...l });  // already exists -> update
+                  core.info(`Updated ${l.name}`);
+                } else {
+                  core.warning(`${l.name}: ${e.message}`);
+                }
+              }
+            }
