@@ -82,21 +82,56 @@ jobs:
         with:
           script: |
             const common = { owner: context.repo.owner, repo: context.repo.repo };
-            // Conservative heuristic: an open, unlabeled issue whose title reads like
+            const MARKER = '<!-- nomination-adopted -->';
+            const contributing =
+              `https://github.com/${common.owner}/${common.repo}/blob/master/CONTRIBUTING.md`;
+            // Conservative heuristic: an open issue whose title reads like
             // "add/nominate ... mcp/server" is treated as a legacy nomination.
             const looksLikeNomination = t => /\b(add|nominat)/i.test(t) && /\b(mcp|server)\b/i.test(t);
 
+            const explainBody = (author) => {
+              const msg = [
+                "Thanks! I've tagged this as a **server nomination** and queued it. 👋",
+                "",
+                "**What that means:** this registry curates itself with AI — there's no manual PR",
+                "step. On the next weekly scan, the AI reviews your nomination, posts the result here,",
+                "and closes this issue. If it points to a public open-source GitHub repo that scores",
+                "5+/10, it's added to the README automatically. Nothing else needed from you.",
+                "",
+                `_How it works: [CONTRIBUTING.md](${contributing})._`,
+              ].join('\n');
+              return author ? `${MARKER}\n@${author} ${msg}` : `${MARKER}\n${msg}`;
+            };
+
             const issues = await github.paginate(github.rest.issues.listForRepo, {
               ...common, state: 'open', per_page: 100 });
-            let labeled = 0;
+            let labeled = 0, explained = 0;
             for (const issue of issues) {
               if (issue.pull_request) continue;  // skip PRs
               const labels = (issue.labels || []).map(l => (l.name || l));
-              if (labels.includes('server-nomination')) continue;
-              if (!looksLikeNomination(issue.title || '')) continue;
-              await github.rest.issues.addLabels({
-                ...common, issue_number: issue.number, labels: ['server-nomination'] });
-              core.info(`Adopted #${issue.number} as a nomination: ${issue.title}`);
-              labeled++;
+              const isNomination =
+                labels.includes('server-nomination') || looksLikeNomination(issue.title || '');
+              if (!isNomination) continue;
+
+              // 1) Ensure it's labeled.
+              if (!labels.includes('server-nomination')) {
+                await github.rest.issues.addLabels({
+                  ...common, issue_number: issue.number, labels: ['server-nomination'] });
+                core.info(`Labeled #${issue.number}: ${issue.title}`);
+                labeled++;
+              }
+
+              // 2) Ensure it has a one-time explanation (also covers issues labeled in an
+              //    earlier run that never got an explanation). Idempotent via the marker.
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                ...common, issue_number: issue.number, per_page: 100 });
+              const explainedAlready = comments.some(c =>
+                c.user.type === 'Bot' && (c.body || '').includes(MARKER));
+              if (!explainedAlready) {
+                const author = (issue.user && issue.user.login) || '';
+                await github.rest.issues.createComment({
+                  ...common, issue_number: issue.number, body: explainBody(author) });
+                explained++;
+              }
             }
-            core.info(`Labeled ${labeled} legacy nomination(s)`);
+            core.info(`Labeled ${labeled}, explained ${explained} nomination(s)`);
