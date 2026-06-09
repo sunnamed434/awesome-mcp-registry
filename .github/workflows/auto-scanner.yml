@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   models: read
+  issues: write   # comment on / close processed nomination issues
 
 jobs:
   scan:

@@ -1,0 +1,71 @@
+name: Validate nomination
+
+# Gives nominators instant feedback. The real AI evaluation runs in the weekly
+# Auto Scanner — this only sanity-checks that a public GitHub repo was provided.
+# It maintains a single marked comment, updating it on edits instead of spamming.
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  validate:
+    # Only act on issues created from the nomination form.
+    if: contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const MARKER = '<!-- nomination-validation -->';
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+            const m = body.match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
+
+            let msg;
+            if (!m) {
+              msg = [
+                "👋 Thanks for the nomination! I couldn't find a `https://github.com/owner/repo`",
+                "URL in it. This registry only evaluates **open-source MCP servers with a public",
+                "GitHub repository** — please edit the issue to include one.",
+              ].join(' ');
+            } else {
+              const owner = m[1];
+              const repo = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
+              try {
+                const r = await github.rest.repos.get({ owner, repo });
+                if (r.data.private) throw new Error('private');
+                msg = [
+                  `👋 Thanks! \`${owner}/${repo}\` is **queued**. The AI evaluates it on the next`,
+                  "weekly scan (Sundays), posts the verdict here, and closes this issue.",
+                  "If it scores 5+/10 it'll appear in the README automatically. No action needed.",
+                ].join(' ');
+              } catch (e) {
+                msg = [
+                  `👋 Thanks for the nomination, but \`${owner}/${repo}\` doesn't look like a`,
+                  "reachable **public** GitHub repo. Only public repos can be evaluated —",
+                  "please double-check the URL and edit the issue.",
+                ].join(' ');
+              }
+            }
+
+            const commonArgs = { owner: context.repo.owner, repo: context.repo.repo };
+            const body_out = `${MARKER}\n${msg}`;
+
+            // Reuse our own prior validation comment if one exists (avoids edit spam).
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              ...commonArgs, issue_number: issue.number, per_page: 100,
+            });
+            const existing = comments.find(c =>
+              c.user.type === 'Bot' && (c.body || '').includes(MARKER));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                ...commonArgs, comment_id: existing.id, body: body_out });
+            } else {
+              await github.rest.issues.createComment({
+                ...commonArgs, issue_number: issue.number, body: body_out });
+            }

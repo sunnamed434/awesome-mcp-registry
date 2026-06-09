@@ -1,0 +1,36 @@
+name: Lock closed threads
+
+# Closed issues/PRs are locked after a few weeks of inactivity. The delay is an
+# appeal window: if the AI got something wrong, the author still has time to
+# reply before the thread locks against drive-by spam.
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # daily
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: lock-threads
+  cancel-in-progress: false
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/lock-threads@v5
+        with:
+          issue-inactive-days: '21'
+          pr-inactive-days: '21'
+          issue-comment: >
+            This thread was automatically locked after ~3 weeks of inactivity.
+            If you still want to suggest a server, please open a fresh
+            [nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml).
+          pr-comment: >
+            This thread was automatically locked after ~3 weeks of inactivity.
+            To suggest a server, open a
+            [nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml);
+            for code contributions, open a new PR.

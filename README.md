@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-78-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--07-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-78-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--09-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
 
 An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
 
@@ -139,4 +139,12 @@ This registry is automatically maintained by a [GitHub Actions workflow](.github
 3. **Re-evaluate** — servers older than 90 days are re-analyzed with fresh data. If a project is abandoned, loses quality, or stops being relevant, its score drops and it falls off the list
 4. **Rank** — only servers scoring 5+/10 appear here, top 20 per category, sorted by quality then stars
 
-No manual curation, no PRs. Servers earn their spot through quality — and lose it if they fall behind.
+Servers are curated entirely by AI — they earn their spot through quality and lose it if they fall behind. Maintainers don't hand-pick entries.
+
+## Contributing
+
+**Don't open a pull request to add a server.** This README is generated from [`data/known_servers.json`](data/known_servers.json) on every run, so edits to it are overwritten — and such PRs are closed automatically.
+
+To suggest a server, [open a nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml). The same AI evaluates it on the next weekly run and posts the verdict; if it scores 5+/10 it appears here automatically.
+
+Code contributions (bug fixes, scanner improvements) are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).

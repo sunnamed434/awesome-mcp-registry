@@ -1,0 +1,46 @@
+name: Nominate an MCP server
+description: Suggest an MCP server for the registry. The AI evaluates it on the next weekly run — entries are never added by hand.
+title: "Nominate: owner/repo"
+labels: ["server-nomination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## How nominations work
+
+        This is an **AI-curated** registry. You don't add a server — you **nominate** one, and
+        the same AI that curates the whole list evaluates it on the next weekly scan
+        (Sundays). If it scores **5+/10** it appears in the README automatically; if not, it
+        won't. The bot will comment the verdict here and close this issue.
+
+        **Only open-source servers with a public GitHub repository are accepted** — the AI
+        reads the repo's README and metadata to score it. Hosted-only endpoints with no
+        public repo cannot be evaluated and will be declined.
+
+        Please do **not** open a pull request to add a server: the README is machine-generated
+        from `data/known_servers.json` every week, so PRs editing it are automatically closed.
+  - type: input
+    id: repo_url
+    attributes:
+      label: GitHub repository URL
+      description: The public GitHub repo of the MCP server (e.g. https://github.com/owner/repo).
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: Anything that helps — what it does, why it's useful. The AI makes the final call regardless.
+      placeholder: One or two lines about the server.
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Before you submit
+      options:
+        - label: This is a single, public, open-source MCP **server** repo (not a client, SDK, awesome-list, or aggregator).
+          required: true
+        - label: I understand the AI decides whether it's listed, and a low score means it won't appear.
+          required: true

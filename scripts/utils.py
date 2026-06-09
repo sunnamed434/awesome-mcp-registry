@@ -187,8 +187,30 @@ def generate_readme(servers, output_path):
                  f"top {MAX_PER_CATEGORY} per category, sorted by quality then stars")
     lines.append("")
     lines.append(
-        "No manual curation, no PRs. Servers earn their spot through quality — "
-        "and lose it if they fall behind."
+        "Servers are curated entirely by AI — they earn their spot through quality and lose it "
+        "if they fall behind. Maintainers don't hand-pick entries."
+    )
+    lines.append("")
+
+    lines.append("## Contributing")
+    lines.append("")
+    lines.append(
+        "**Don't open a pull request to add a server.** This README is generated from "
+        "[`data/known_servers.json`](data/known_servers.json) on every run, so edits to it are "
+        "overwritten — and such PRs are closed automatically."
+    )
+    lines.append("")
+    lines.append(
+        "To suggest a server, "
+        "[open a nomination]"
+        "(https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml). "
+        "The same AI evaluates it on the next weekly run and posts the verdict; if it scores "
+        f"{MIN_QUALITY_SCORE}+/10 it appears here automatically."
+    )
+    lines.append("")
+    lines.append(
+        "Code contributions (bug fixes, scanner improvements) are welcome — see "
+        "[CONTRIBUTING.md](CONTRIBUTING.md)."
     )
     lines.append("")
 

@@ -1,13 +1,21 @@
 import base64
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
 
 import requests
 
-from utils import load_cache, save_cache, truncate_text, parse_ai_response, generate_readme
+from utils import (
+    load_cache,
+    save_cache,
+    truncate_text,
+    parse_ai_response,
+    generate_readme,
+    MIN_QUALITY_SCORE,
+)
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -20,8 +28,15 @@ MODEL_NAME = "openai/gpt-4o-mini"
 
 MAX_NEW_ANALYSES = 40
 MAX_RE_EVALUATIONS = 10
+MAX_NOMINATIONS = 10
 STALE_AFTER_DAYS = 90
 README_TRUNCATE = 3000
+
+# Human nominations arrive as GitHub issues created from the nomination form.
+NOMINATION_LABEL = "server-nomination"
+REPO_SLUG = os.environ.get("GITHUB_REPOSITORY", "sunnamed434/awesome-mcp-registry")
+# Only mutate issues (comment/close) when running in CI; local runs are read-only.
+IS_CI = os.environ.get("GITHUB_ACTIONS", "").lower() == "true"
 
 SEARCH_QUERIES = [
     "MCP server",
@@ -281,6 +296,212 @@ def analyze_with_ai(repo_data, readme_content):
 
 
 # ---------------------------------------------------------------------------
+# Nominations (human-suggested servers via the GitHub issue form)
+# ---------------------------------------------------------------------------
+
+GITHUB_URL_RE = re.compile(r"github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)", re.IGNORECASE)
+# Owner segments that are GitHub routes, not real accounts.
+_NON_OWNER = {"sponsors", "marketplace", "settings", "topics", "orgs", "users", "about"}
+
+
+def parse_repo_full_name(text):
+    """Extract the first owner/repo from a GitHub URL in free text. Returns '' if none."""
+    if not text:
+        return ""
+    match = GITHUB_URL_RE.search(text)
+    if not match:
+        return ""
+    owner, repo = match.group(1), match.group(2)
+    repo = repo.split("#")[0].split("?")[0]
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    repo = repo.rstrip("/")
+    if not owner or not repo or owner.lower() in _NON_OWNER:
+        return ""
+    return f"{owner}/{repo}"
+
+
+def fetch_nominations():
+    """Fetch open issues labelled as nominations. Returns list of {number, title, full_name}."""
+    nominations = []
+    try:
+        resp = requests.get(
+            f"https://api.github.com/repos/{REPO_SLUG}/issues",
+            params={"labels": NOMINATION_LABEL, "state": "open", "per_page": 100},
+            headers=GITHUB_HEADERS,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        for issue in resp.json():
+            if "pull_request" in issue:
+                continue  # the issues endpoint also returns PRs; skip them
+            nominations.append({
+                "number": issue["number"],
+                "title": issue.get("title", ""),
+                "full_name": parse_repo_full_name(issue.get("body", "")),
+            })
+    except requests.RequestException as e:
+        print(f"  WARNING: Could not fetch nominations: {e}")
+    print(f"  Found {len(nominations)} open nomination(s)")
+    return nominations
+
+
+def fetch_repo_meta(full_name):
+    """Fetch live repo metadata. Returns a repo_data dict, or None if missing/inaccessible."""
+    try:
+        resp = requests.get(
+            f"https://api.github.com/repos/{full_name}",
+            headers=GITHUB_HEADERS,
+            timeout=30,
+        )
+        if resp.status_code == 404:
+            return None
+        resp.raise_for_status()
+        info = resp.json()
+        return {
+            "full_name": full_name,
+            "name": info.get("name", full_name.split("/")[-1]),
+            "url": info.get("html_url", f"https://github.com/{full_name}"),
+            "stars": info.get("stargazers_count", 0),
+            "last_update": info.get("updated_at", ""),
+            "language": info.get("language", "") or "",
+            "description": info.get("description", "") or "",
+            "topics": ", ".join(info.get("topics", [])),
+        }
+    except requests.RequestException as e:
+        print(f"  WARNING: Could not fetch metadata for {full_name}: {e}")
+        return None
+
+
+def post_issue_comment(issue_number, body):
+    """Comment on an issue. Read-only (prints intent) outside GitHub Actions."""
+    if not IS_CI:
+        print(f"  [dry-run] would comment on #{issue_number}: {body.splitlines()[0]}")
+        return
+    try:
+        resp = requests.post(
+            f"https://api.github.com/repos/{REPO_SLUG}/issues/{issue_number}/comments",
+            headers=GITHUB_HEADERS,
+            json={"body": body},
+            timeout=30,
+        )
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        print(f"  WARNING: Could not comment on #{issue_number}: {e}")
+
+
+def close_issue(issue_number):
+    """Close an issue. Read-only (prints intent) outside GitHub Actions."""
+    if not IS_CI:
+        print(f"  [dry-run] would close #{issue_number}")
+        return
+    try:
+        resp = requests.patch(
+            f"https://api.github.com/repos/{REPO_SLUG}/issues/{issue_number}",
+            headers=GITHUB_HEADERS,
+            json={"state": "closed"},
+            timeout=30,
+        )
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        print(f"  WARNING: Could not close #{issue_number}: {e}")
+
+
+def verdict_comment(full_name, analysis):
+    """Build the bot comment summarizing an AI verdict on a nominated server."""
+    valid = analysis.get("is_valid_mcp_server", False)
+    score = analysis.get("quality_score", 0)
+    reason = analysis.get("reason", "") or "no reason recorded"
+    if valid and score >= MIN_QUALITY_SCORE:
+        outcome = (f"✅ **Accepted** — `{full_name}` scored **{score}/10** and will appear in the "
+                   f"registry on the next README update.")
+    elif valid:
+        outcome = (f"⚠️ **Below threshold** — `{full_name}` is a valid MCP server but scored "
+                   f"**{score}/10** (needs {MIN_QUALITY_SCORE}+/10 to be listed). It's recorded and "
+                   f"re-evaluated automatically; if it improves it can still make the list later.")
+    else:
+        outcome = (f"❌ **Not listed** — the AI did not classify `{full_name}` as a qualifying, "
+                   f"single-purpose MCP server.")
+    return (f"{outcome}\n\n> _AI reason: {reason}_\n\n"
+            f"This verdict is automated (GPT-4o-mini). If you believe it's wrong, leave a comment — "
+            f"the thread stays open for a few weeks before it locks.")
+
+
+def process_nominations(cache):
+    """Evaluate human-nominated servers through the same AI gate, then comment and close."""
+    nominations = fetch_nominations()
+    by_name = {s["full_name"]: s for s in cache["servers"]}
+    processed = 0
+    for nom in nominations[:MAX_NOMINATIONS]:
+        num, fn = nom["number"], nom["full_name"]
+        print(f"  [{processed + 1}/{min(len(nominations), MAX_NOMINATIONS)}] "
+              f"#{num} -> {fn or '(no repo url)'}")
+
+        if not fn:
+            post_issue_comment(num,
+                "I couldn't find a GitHub repository URL in this nomination. This registry only "
+                "lists open-source MCP servers with a public GitHub repo the AI can evaluate. "
+                "Please open a new nomination with a valid `https://github.com/owner/repo` URL.")
+            close_issue(num)
+            processed += 1
+            continue
+
+        if fn in by_name:
+            print("    -> already known, returning cached verdict")
+            post_issue_comment(num, verdict_comment(fn, by_name[fn].get("analysis", {})))
+            close_issue(num)
+            processed += 1
+            continue
+
+        meta = fetch_repo_meta(fn)
+        time.sleep(1)
+        if meta is None:
+            post_issue_comment(num,
+                f"`{fn}` doesn't resolve to a public GitHub repository (it may be private, renamed, "
+                f"or deleted). Only public repos can be evaluated — feel free to re-nominate once "
+                f"it's public.")
+            close_issue(num)
+            processed += 1
+            continue
+
+        readme = fetch_readme(fn)
+        time.sleep(1)
+        try:
+            analysis = analyze_with_ai(meta, readme)
+            valid_str = "VALID" if analysis["is_valid_mcp_server"] else "REJECTED"
+            print(f"    -> {valid_str} (score {analysis.get('quality_score', 0)}/10)")
+        except Exception as e:
+            print(f"    -> ERROR: {e}")
+            post_issue_comment(num, f"Sorry — automated analysis of `{fn}` failed ({e}). "
+                                    f"It will be retried on a future run.")
+            processed += 1
+            continue  # leave the issue open so it's retried next run
+
+        entry = {
+            "full_name": fn,
+            "name": meta.get("name", ""),
+            "url": meta.get("url", f"https://github.com/{fn}"),
+            "stars": meta.get("stars", 0),
+            "source": "nominated",
+            "last_checked": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            "last_update": meta.get("last_update", ""),
+            "description": meta.get("description", ""),
+            "language": meta.get("language", ""),
+            "topics": meta.get("topics", ""),
+            "analysis": analysis,
+        }
+        cache["servers"].append(entry)
+        by_name[fn] = entry
+        post_issue_comment(num, verdict_comment(fn, analysis))
+        close_issue(num)
+        processed += 1
+        time.sleep(4)
+
+    print(f"  Processed {processed} nomination(s)")
+    return processed
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -294,27 +515,27 @@ def main():
     print("=" * 60)
 
     # 1. Load cache
-    print("\n[1/7] Loading cache...")
+    print("\n[1/8] Loading cache...")
     cache = load_cache(CACHE_PATH)
     cached_names = {s["full_name"] for s in cache["servers"]}
     print(f"  Cache contains {len(cached_names)} servers")
 
     # 2. Search GitHub
-    print("\n[2/7] Searching GitHub...")
+    print("\n[2/8] Searching GitHub...")
     github_repos = search_github()
 
     # 3. Fetch from MCP Registry
-    print("\n[3/7] Fetching from MCP Registry...")
+    print("\n[3/8] Fetching from MCP Registry...")
     registry_repos = fetch_from_registry()
 
     # 4. Merge and deduplicate
-    print("\n[4/7] Merging sources...")
+    print("\n[4/8] Merging sources...")
     all_repos = merge_sources(github_repos, registry_repos)
     new_repos = [r for r in all_repos if r["full_name"] not in cached_names]
     print(f"  New repos to analyze: {len(new_repos)}")
 
     # 5. Analyze new repos with AI
-    print(f"\n[5/7] Analyzing (max {MAX_NEW_ANALYSES} new repos)...")
+    print(f"\n[5/8] Analyzing (max {MAX_NEW_ANALYSES} new repos)...")
     analyzed = 0
     for repo in new_repos[:MAX_NEW_ANALYSES]:
         fn = repo["full_name"]
@@ -354,7 +575,7 @@ def main():
         time.sleep(4)  # Rate limit: stay under 15 req/min for Models API
 
     # 6. Re-evaluate stale entries
-    print(f"\n[6/7] Re-evaluating stale entries (older than {STALE_AFTER_DAYS} days)...")
+    print(f"\n[6/8] Re-evaluating stale entries (older than {STALE_AFTER_DAYS} days)...")
     today = datetime.now(timezone.utc)
     stale = []
     for s in cache["servers"]:
@@ -441,8 +662,12 @@ def main():
 
     print(f"  Re-evaluated {re_evaluated} stale entries ({len(stale)} total stale)")
 
-    # 7. Save and generate
-    print(f"\n[7/7] Saving results...")
+    # 7. Process human nominations (issue-form submissions) through the same AI gate
+    print(f"\n[7/8] Processing nominations (max {MAX_NOMINATIONS})...")
+    process_nominations(cache)
+
+    # 8. Save and generate
+    print(f"\n[8/8] Saving results...")
     save_cache(CACHE_PATH, cache)
 
     valid_servers = [
