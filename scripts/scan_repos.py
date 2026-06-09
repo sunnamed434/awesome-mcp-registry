@@ -388,7 +388,7 @@ def fetch_repo_meta(full_name):
         resp.raise_for_status()
         info = resp.json()
         return {
-            "full_name": full_name,
+            "full_name": info.get("full_name", full_name),  # canonical casing from GitHub
             "name": info.get("name", full_name.split("/")[-1]),
             "url": info.get("html_url", f"https://github.com/{full_name}"),
             "stars": info.get("stargazers_count", 0),
@@ -461,10 +461,30 @@ def verdict_comment(full_name, analysis):
             f"the thread stays open for a few weeks before it locks.")
 
 
+def already_known_comment(server):
+    """Friendly notice when someone nominates a server we've already evaluated."""
+    fn = server.get("full_name", "")
+    url = server.get("url", f"https://github.com/{fn}")
+    analysis = server.get("analysis", {})
+    valid = analysis.get("is_valid_mcp_server", False)
+    score = analysis.get("quality_score", 0)
+    if valid and score >= MIN_QUALITY_SCORE:
+        return (f"✅ **Already listed** — [`{fn}`]({url}) is already in the registry "
+                f"(scored {score}/10). Thanks for the suggestion — nothing to do here!")
+    if valid:
+        return (f"**Already evaluated** — [`{fn}`]({url}) is a valid MCP server but scored "
+                f"**{score}/10**, below the {MIN_QUALITY_SCORE}/10 cutoff, so it isn't listed yet. "
+                f"It's re-checked automatically; if it improves it can still make the list.")
+    return (f"**Already evaluated** — the AI previously didn't classify [`{fn}`]({url}) as a "
+            f"qualifying, single-purpose MCP server, so it isn't listed.")
+
+
 def process_nominations(cache):
     """Evaluate human-nominated servers through the same AI gate, then comment and close."""
     nominations = fetch_nominations()
-    by_name = {s["full_name"]: s for s in cache["servers"]}
+    # Case-insensitive index: GitHub repo names are case-insensitive, so a nomination
+    # typed as "Owner/Repo" must still match a cached "owner/repo".
+    by_name = {s["full_name"].lower(): s for s in cache["servers"]}
     processed = 0
     for nom in nominations[:MAX_NOMINATIONS]:
         num, fn = nom["number"], nom["full_name"]
@@ -481,9 +501,10 @@ def process_nominations(cache):
             processed += 1
             continue
 
-        if fn in by_name:
-            print("    -> already known, returning cached verdict")
-            notify(num, author, verdict_comment(fn, by_name[fn].get("analysis", {})))
+        existing = by_name.get(fn.lower())
+        if existing:
+            print("    -> already in registry, sending 'already known' notice")
+            notify(num, author, already_known_comment(existing))
             close_issue(num)
             processed += 1
             continue
@@ -513,7 +534,7 @@ def process_nominations(cache):
             continue  # leave the issue open so it's retried next run
 
         entry = {
-            "full_name": fn,
+            "full_name": meta.get("full_name", fn),  # canonical casing
             "name": meta.get("name", ""),
             "url": meta.get("url", f"https://github.com/{fn}"),
             "stars": meta.get("stars", 0),
@@ -526,7 +547,7 @@ def process_nominations(cache):
             "analysis": analysis,
         }
         cache["servers"].append(entry)
-        by_name[fn] = entry
+        by_name[entry["full_name"].lower()] = entry  # dedup repeat nominations in one run
         notify(num, author, verdict_comment(fn, analysis))
         close_issue(num)
         processed += 1
