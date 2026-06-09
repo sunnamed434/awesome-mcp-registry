@@ -367,6 +367,7 @@ def fetch_nominations():
                 "number": issue["number"],
                 "title": issue.get("title", ""),
                 "full_name": parse_repo_full_name(issue.get("body", "")),
+                "author": (issue.get("user") or {}).get("login", ""),
             })
     except requests.RequestException as e:
         print(f"  WARNING: Could not fetch nominations: {e}")
@@ -418,6 +419,11 @@ def post_issue_comment(issue_number, body):
         print(f"  WARNING: Could not comment on #{issue_number}: {e}")
 
 
+def notify(issue_number, login, body):
+    """Comment on an issue, @-mentioning the nominator so they get a notification."""
+    post_issue_comment(issue_number, f"@{login}\n\n{body}" if login else body)
+
+
 def close_issue(issue_number):
     """Close an issue. Read-only (prints intent) outside GitHub Actions."""
     if not IS_CI:
@@ -451,7 +457,7 @@ def verdict_comment(full_name, analysis):
         outcome = (f"❌ **Not listed** — the AI did not classify `{full_name}` as a qualifying, "
                    f"single-purpose MCP server.")
     return (f"{outcome}\n\n> _AI reason: {reason}_\n\n"
-            f"This verdict is automated (GPT-4o-mini). If you believe it's wrong, leave a comment — "
+            f"This verdict is automated. If you believe it's wrong, leave a comment — "
             f"the thread stays open for a few weeks before it locks.")
 
 
@@ -462,11 +468,12 @@ def process_nominations(cache):
     processed = 0
     for nom in nominations[:MAX_NOMINATIONS]:
         num, fn = nom["number"], nom["full_name"]
+        author = nom.get("author", "")
         print(f"  [{processed + 1}/{min(len(nominations), MAX_NOMINATIONS)}] "
               f"#{num} -> {fn or '(no repo url)'}")
 
         if not fn:
-            post_issue_comment(num,
+            notify(num, author,
                 "I couldn't find a GitHub repository URL in this nomination. This registry only "
                 "lists open-source MCP servers with a public GitHub repo the AI can evaluate. "
                 "Please open a new nomination with a valid `https://github.com/owner/repo` URL.")
@@ -476,7 +483,7 @@ def process_nominations(cache):
 
         if fn in by_name:
             print("    -> already known, returning cached verdict")
-            post_issue_comment(num, verdict_comment(fn, by_name[fn].get("analysis", {})))
+            notify(num, author, verdict_comment(fn, by_name[fn].get("analysis", {})))
             close_issue(num)
             processed += 1
             continue
@@ -484,7 +491,7 @@ def process_nominations(cache):
         meta = fetch_repo_meta(fn)
         time.sleep(1)
         if meta is None:
-            post_issue_comment(num,
+            notify(num, author,
                 f"`{fn}` doesn't resolve to a public GitHub repository (it may be private, renamed, "
                 f"or deleted). Only public repos can be evaluated — feel free to re-nominate once "
                 f"it's public.")
@@ -500,8 +507,8 @@ def process_nominations(cache):
             print(f"    -> {valid_str} (score {analysis.get('quality_score', 0)}/10)")
         except Exception as e:
             print(f"    -> ERROR: {e}")
-            post_issue_comment(num, f"Sorry — automated analysis of `{fn}` failed ({e}). "
-                                    f"It will be retried on a future run.")
+            notify(num, author, f"Sorry — automated analysis of `{fn}` failed ({e}). "
+                                f"It will be retried on a future run.")
             processed += 1
             continue  # leave the issue open so it's retried next run
 
@@ -520,7 +527,7 @@ def process_nominations(cache):
         }
         cache["servers"].append(entry)
         by_name[fn] = entry
-        post_issue_comment(num, verdict_comment(fn, analysis))
+        notify(num, author, verdict_comment(fn, analysis))
         close_issue(num)
         processed += 1
         time.sleep(4)

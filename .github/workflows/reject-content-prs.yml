@@ -66,7 +66,8 @@ jobs:
                 return;
               }
 
-              await github.rest.issues.createComment({ ...common, issue_number: pr.number, body });
+              const commentBody = login ? `@${login}\n\n${body}` : body;
+              await github.rest.issues.createComment({ ...common, issue_number: pr.number, body: commentBody });
               await github.rest.pulls.update({ ...common, pull_number: pr.number, state: 'closed' });
               core.info(`#${pr.number}: commented + closed`);
 
