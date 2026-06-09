@@ -6,9 +6,10 @@ on:
   workflow_dispatch:        # Manual trigger
 
 permissions:
-  contents: write
+  contents: write          # push the update branch
   models: read
-  issues: write   # comment on / close processed nomination issues
+  issues: write            # comment on / close processed nomination issues
+  pull-requests: write     # open + auto-merge the update PR (Safe Outputs)
 
 jobs:
   scan:
@@ -30,10 +31,50 @@ jobs:
         run: python scripts/scan_repos.py
         working-directory: ${{ github.workspace }}
 
-      - name: Commit and push changes
+      # Safe Outputs: the bot never force-commits to master. It pushes a branch and
+      # opens a PR that auto-merges, so every automated change is an auditable, revertable diff.
+      - name: Commit changes to a branch
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/known_servers.json README.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to publish."
+            exit 0
+          fi
+          BRANCH="auto/registry-update-${{ github.run_id }}"
+          git checkout -b "$BRANCH"
           git add data/known_servers.json README.md
-          git diff --cached --quiet || git commit -m "Update MCP server registry [automated]"
-          git push
+          git commit -m "Update MCP server registry [automated]"
+          git push origin "$BRANCH"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Open and auto-merge update PR
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = '${{ steps.commit.outputs.branch }}';
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            const pr = await github.rest.pulls.create({
+              ...common,
+              head: branch,
+              base: 'master',
+              title: 'Update MCP server registry [automated]',
+              body: [
+                'Automated weekly update from the Continuous-AI scanner.',
+                '',
+                'Only the generated files (`data/known_servers.json`, `README.md`) change.',
+                'Opened and auto-merged as a PR so the diff is reviewable and revertable.',
+              ].join('\n'),
+            });
+            await github.rest.pulls.merge({
+              ...common, pull_number: pr.data.number, merge_method: 'squash' });
+            try {
+              await github.rest.git.deleteRef({ ...common, ref: `heads/${branch}` });
+            } catch (e) {
+              core.info(`branch cleanup: ${e.message}`);
+            }
+            core.info(`PR #${pr.data.number} opened and merged.`);

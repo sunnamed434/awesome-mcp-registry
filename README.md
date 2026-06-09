@@ -1,8 +1,10 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-78-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--09-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)
+![Servers](https://img.shields.io/badge/servers-78-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Quality](https://img.shields.io/badge/avg%20quality-8.0%2F10-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--09-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4.1--mini-purple)
 
-An AI-powered, self-updating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4o-mini weekly.
+A self-curating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers — a [Continuous AI](https://githubnext.com/projects/continuous-ai/) experiment. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed and rated by GPT-4.1-mini weekly.
+
+> **Our bet:** curation is a job for AI, not gatekeepers. No maintainers deciding what's "in", no PR queues, no politics — just a [Continuous AI](https://githubnext.com/projects/continuous-ai/) workflow that discovers, judges, and re-judges every server on merit, week after week. This list is a small proof of a bigger idea: that AI can own a real, useful, self-maintaining system end to end. Humans set the rules once; the AI runs it.
 
 ## Databases (4)
 
@@ -135,11 +137,11 @@ An AI-powered, self-updating directory of [Model Context Protocol](https://model
 This registry is automatically maintained by a [GitHub Actions workflow](.github/workflows/auto-scanner.yml) that runs weekly:
 
 1. **Discover** — searches GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/) for new servers
-2. **Analyze** — each new repo is evaluated by AI (GPT-4o-mini via [GitHub Models](https://docs.github.com/en/github-models))
+2. **Analyze** — each new repo is evaluated by AI (GPT-4.1-mini via [GitHub Models](https://docs.github.com/en/github-models)), which also flags and penalizes prompt-injection attempts in repo content
 3. **Re-evaluate** — servers older than 90 days are re-analyzed with fresh data. If a project is abandoned, loses quality, or stops being relevant, its score drops and it falls off the list
 4. **Rank** — only servers scoring 5+/10 appear here, top 20 per category, sorted by quality then stars
 
-Servers are curated entirely by AI — they earn their spot through quality and lose it if they fall behind. Maintainers don't hand-pick entries.
+Servers are curated entirely by AI — they earn their spot through quality and lose it if they fall behind. Maintainers don't hand-pick entries. Every automated change lands as an auto-merged pull request, so the full history stays auditable and revertable.
 
 ## Contributing
 

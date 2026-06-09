@@ -1,20 +1,29 @@
 name: Validate nomination
 
-# Gives nominators instant feedback. The real AI evaluation runs in the weekly
-# Auto Scanner — this only sanity-checks that a public GitHub repo was provided.
-# It maintains a single marked comment, updating it on edits instead of spamming.
+# Two responsibilities:
+#  1. validate  — instant feedback on new nomination issues (sanity-check the repo URL).
+#  2. adopt-legacy — a scheduled/manual sweep that labels older "add an MCP server"
+#     issues (created before the nomination form existed) so the weekly scanner can
+#     process them. Labeling is reversible; the irreversible evaluate+close in the
+#     scanner only acts on the `server-nomination` label.
+#
+# The real AI evaluation runs in the weekly Auto Scanner, not here.
 
 on:
   issues:
     types: [opened, edited]
+  schedule:
+    - cron: '45 3 * * *'   # daily legacy sweep
+  workflow_dispatch:
 
 permissions:
   issues: write
 
 jobs:
   validate:
-    # Only act on issues created from the nomination form.
-    if: contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
+    if: >
+      github.event_name == 'issues' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v7
@@ -33,39 +42,60 @@ jobs:
                 "GitHub repository** — please edit the issue to include one.",
               ].join(' ');
             } else {
-              const owner = m[1];
-              const repo = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
+              const repoOwner = m[1];
+              const repoName = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
               try {
-                const r = await github.rest.repos.get({ owner, repo });
+                const r = await github.rest.repos.get({ owner: repoOwner, repo: repoName });
                 if (r.data.private) throw new Error('private');
                 msg = [
-                  `👋 Thanks! \`${owner}/${repo}\` is **queued**. The AI evaluates it on the next`,
-                  "weekly scan (Sundays), posts the verdict here, and closes this issue.",
+                  `👋 Thanks! \`${repoOwner}/${repoName}\` is **queued**. The AI evaluates it on the`,
+                  "next weekly scan (Sundays), posts the verdict here, and closes this issue.",
                   "If it scores 5+/10 it'll appear in the README automatically. No action needed.",
                 ].join(' ');
               } catch (e) {
                 msg = [
-                  `👋 Thanks for the nomination, but \`${owner}/${repo}\` doesn't look like a`,
+                  `👋 Thanks for the nomination, but \`${repoOwner}/${repoName}\` doesn't look like a`,
                   "reachable **public** GitHub repo. Only public repos can be evaluated —",
                   "please double-check the URL and edit the issue.",
                 ].join(' ');
               }
             }
 
-            const commonArgs = { owner: context.repo.owner, repo: context.repo.repo };
-            const body_out = `${MARKER}\n${msg}`;
-
-            // Reuse our own prior validation comment if one exists (avoids edit spam).
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            const bodyOut = `${MARKER}\n${msg}`;
             const comments = await github.paginate(github.rest.issues.listComments, {
-              ...commonArgs, issue_number: issue.number, per_page: 100,
-            });
+              ...common, issue_number: issue.number, per_page: 100 });
             const existing = comments.find(c =>
               c.user.type === 'Bot' && (c.body || '').includes(MARKER));
-
             if (existing) {
-              await github.rest.issues.updateComment({
-                ...commonArgs, comment_id: existing.id, body: body_out });
+              await github.rest.issues.updateComment({ ...common, comment_id: existing.id, body: bodyOut });
             } else {
-              await github.rest.issues.createComment({
-                ...commonArgs, issue_number: issue.number, body: body_out });
+              await github.rest.issues.createComment({ ...common, issue_number: issue.number, body: bodyOut });
             }
+
+  adopt-legacy:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            // Conservative heuristic: an open, unlabeled issue whose title reads like
+            // "add/nominate ... mcp/server" is treated as a legacy nomination.
+            const looksLikeNomination = t => /\b(add|nominat)/i.test(t) && /\b(mcp|server)\b/i.test(t);
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              ...common, state: 'open', per_page: 100 });
+            let labeled = 0;
+            for (const issue of issues) {
+              if (issue.pull_request) continue;  // skip PRs
+              const labels = (issue.labels || []).map(l => (l.name || l));
+              if (labels.includes('server-nomination')) continue;
+              if (!looksLikeNomination(issue.title || '')) continue;
+              await github.rest.issues.addLabels({
+                ...common, issue_number: issue.number, labels: ['server-nomination'] });
+              core.info(`Adopted #${issue.number} as a nomination: ${issue.title}`);
+              labeled++;
+            }
+            core.info(`Labeled ${labeled} legacy nomination(s)`);

@@ -79,6 +79,7 @@ CATEGORY_META = {
 # README generation controls
 MIN_QUALITY_SCORE = 5       # Don't show servers rated below this
 MAX_PER_CATEGORY = 20       # Show top N per category in README
+MODEL_DISPLAY = "GPT-4.1-mini"   # AI model shown in the README; keep in sync with scan_repos.MODEL_NAME
 
 
 def generate_readme(servers, output_path):
@@ -117,8 +118,9 @@ def generate_readme(servers, output_path):
         ) / total
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    # shields.io uses hyphens as separators, so escape date hyphens with double hyphens
+    # shields.io uses hyphens as separators, so escape hyphens with double hyphens
     today_badge = today.replace("-", "--")
+    model_badge = MODEL_DISPLAY.replace("-", "--")
 
     lines = []
     lines.append("# Awesome MCP Registry")
@@ -128,15 +130,25 @@ def generate_readme(servers, output_path):
         f"![Categories](https://img.shields.io/badge/categories-{len(categories_used)}-green) "
         f"![Avg Quality](https://img.shields.io/badge/avg%20quality-{avg_quality:.1f}%2F10-orange) "
         f"![Updated](https://img.shields.io/badge/updated-{today_badge}-lightgrey) "
-        "![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4o--mini-purple)"
+        f"![Auto-curated](https://img.shields.io/badge/curated%20by-{model_badge}-purple)"
     )
     lines.append("")
     lines.append(
-        "An AI-powered, self-updating directory of "
-        "[Model Context Protocol](https://modelcontextprotocol.io/) servers. "
+        "A self-curating directory of "
+        "[Model Context Protocol](https://modelcontextprotocol.io/) servers — a "
+        "[Continuous AI](https://githubnext.com/projects/continuous-ai/) experiment. "
         "Discovered from GitHub and the "
         "[Official MCP Registry](https://registry.modelcontextprotocol.io/), "
-        "analyzed and rated by GPT-4o-mini weekly."
+        f"analyzed and rated by {MODEL_DISPLAY} weekly."
+    )
+    lines.append("")
+    lines.append(
+        "> **Our bet:** curation is a job for AI, not gatekeepers. No maintainers deciding what's "
+        "\"in\", no PR queues, no politics — just a [Continuous AI]"
+        "(https://githubnext.com/projects/continuous-ai/) workflow that discovers, judges, and "
+        "re-judges every server on merit, week after week. This list is a small proof of a bigger "
+        "idea: that AI can own a real, useful, self-maintaining system end to end. Humans set the "
+        "rules once; the AI runs it."
     )
     lines.append("")
 
@@ -177,8 +189,9 @@ def generate_readme(servers, output_path):
     lines.append("")
     lines.append("1. **Discover** — searches GitHub and the "
                  "[Official MCP Registry](https://registry.modelcontextprotocol.io/) for new servers")
-    lines.append("2. **Analyze** — each new repo is evaluated by AI "
-                 "(GPT-4o-mini via [GitHub Models](https://docs.github.com/en/github-models))")
+    lines.append(f"2. **Analyze** — each new repo is evaluated by AI "
+                 f"({MODEL_DISPLAY} via [GitHub Models](https://docs.github.com/en/github-models)), "
+                 "which also flags and penalizes prompt-injection attempts in repo content")
     lines.append("3. **Re-evaluate** — servers older than 90 days are re-analyzed with fresh data. "
                  "If a project is abandoned, loses quality, or stops being relevant, "
                  "its score drops and it falls off the list")
@@ -188,7 +201,8 @@ def generate_readme(servers, output_path):
     lines.append("")
     lines.append(
         "Servers are curated entirely by AI — they earn their spot through quality and lose it "
-        "if they fall behind. Maintainers don't hand-pick entries."
+        "if they fall behind. Maintainers don't hand-pick entries. Every automated change lands as "
+        "an auto-merged pull request, so the full history stays auditable and revertable."
     )
     lines.append("")
 

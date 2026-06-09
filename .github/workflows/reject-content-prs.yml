@@ -6,12 +6,17 @@ name: Reject content PRs
 # points to the nomination issue form. Genuine code PRs (and dependabot) are
 # left untouched for the maintainer to review.
 #
-# Uses pull_request_target so it has write access for fork PRs. SAFE because it
-# never checks out or runs the PR's code — it only reads the changed file paths.
+# Runs on new PRs (pull_request_target — has write access for fork PRs; SAFE
+# because it never checks out or runs the PR's code, only reads changed paths)
+# AND on a daily schedule / manual dispatch to sweep PRs that were already open
+# before this workflow existed.
 
 on:
   pull_request_target:
     types: [opened, reopened]
+  schedule:
+    - cron: '30 3 * * *'   # daily sweep of already-open PRs
+  workflow_dispatch:
 
 permissions:
   contents: write        # delete same-repo head branch
@@ -25,30 +30,11 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            const pr = context.payload.pull_request;
-            const commonArgs = { owner: context.repo.owner, repo: context.repo.repo };
-
-            // Never touch dependabot or the maintainer's own PRs.
-            if (context.actor === 'dependabot[bot]' || pr.author_association === 'OWNER') {
-              core.info('Skipping: trusted author.');
-              return;
-            }
-
-            const files = await github.paginate(github.rest.pulls.listFiles, {
-              ...commonArgs, pull_number: pr.number, per_page: 100,
-            });
-            const paths = files.map(f => f.filename);
-            const touchesGenerated = paths.some(
-              p => p === 'README.md' || p === 'data/known_servers.json');
-
-            if (!touchesGenerated) {
-              core.info('Code-only PR — leaving open for review.');
-              return;
-            }
-
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const common = { owner, repo };
             const nominateUrl =
-              `https://github.com/${commonArgs.owner}/${commonArgs.repo}` +
-              `/issues/new?template=server-nomination.yml`;
+              `https://github.com/${owner}/${repo}/issues/new?template=server-nomination.yml`;
             const body = [
               "Thanks for wanting to contribute! 🙏 Closing this automatically, and here's why:",
               "",
@@ -63,18 +49,49 @@ jobs:
               "PRs are not auto-closed. See `CONTRIBUTING.md`._",
             ].join('\n');
 
-            await github.rest.issues.createComment({
-              ...commonArgs, issue_number: pr.number, body });
-            await github.rest.pulls.update({
-              ...commonArgs, pull_number: pr.number, state: 'closed' });
+            async function triagePR(pr) {
+              const login = (pr.user && pr.user.login) || '';
+              const trustedBots = ['dependabot[bot]', 'github-actions[bot]'];
+              if (trustedBots.includes(login) || pr.author_association === 'OWNER') {
+                core.info(`#${pr.number}: skip (trusted author ${login})`);
+                return;
+              }
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                ...common, pull_number: pr.number, per_page: 100 });
+              const touchesGenerated = files
+                .map(f => f.filename)
+                .some(p => p === 'README.md' || p === 'data/known_servers.json');
+              if (!touchesGenerated) {
+                core.info(`#${pr.number}: skip (code-only PR, left open)`);
+                return;
+              }
 
-            // Delete the head branch only if it lives in this repo (fork branches aren't ours).
-            if (pr.head.repo && pr.head.repo.full_name === pr.base.repo.full_name) {
-              try {
-                await github.rest.git.deleteRef({
-                  ...commonArgs, ref: `heads/${pr.head.ref}` });
-                core.info(`Deleted branch ${pr.head.ref}`);
-              } catch (e) {
-                core.info(`Could not delete branch: ${e.message}`);
+              await github.rest.issues.createComment({ ...common, issue_number: pr.number, body });
+              await github.rest.pulls.update({ ...common, pull_number: pr.number, state: 'closed' });
+              core.info(`#${pr.number}: commented + closed`);
+
+              // Delete the head branch only if it lives in this repo (fork branches aren't ours).
+              if (pr.head.repo && pr.head.repo.full_name === pr.base.repo.full_name) {
+                try {
+                  await github.rest.git.deleteRef({ ...common, ref: `heads/${pr.head.ref}` });
+                  core.info(`#${pr.number}: deleted branch ${pr.head.ref}`);
+                } catch (e) {
+                  core.info(`#${pr.number}: could not delete branch: ${e.message}`);
+                }
+              }
+            }
+
+            const evt = context.payload.pull_request;
+            if (evt) {
+              // New-PR event
+              await triagePR(evt);
+            } else {
+              // Scheduled / manual sweep of all currently-open PRs
+              const prs = await github.paginate(github.rest.pulls.list, {
+                ...common, state: 'open', per_page: 100 });
+              core.info(`Sweeping ${prs.length} open PR(s)`);
+              for (const pr of prs) {
+                try { await triagePR(pr); }
+                catch (e) { core.info(`#${pr.number}: error ${e.message}`); }
               }
             }
