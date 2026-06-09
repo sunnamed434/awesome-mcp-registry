@@ -12,7 +12,7 @@ name: Validate nomination
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, closed, reopened]
   schedule:
     - cron: '45 3 * * *'   # daily legacy sweep
   workflow_dispatch:
@@ -24,6 +24,7 @@ jobs:
   validate:
     if: >
       github.event_name == 'issues' &&
+      (github.event.action == 'opened' || github.event.action == 'edited' || github.event.action == 'reopened') &&
       contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
     runs-on: ubuntu-latest
     steps:
@@ -113,9 +114,42 @@ jobs:
                 await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed' });
               }
             } else if (issue.state === 'open') {
-              // New nomination — queue it for the weekly scan.
+              // New (or reopened) nomination — queue it; clear any prior 'withdrawn' status.
+              try {
+                await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: withdrawn' });
+              } catch (e) { /* wasn't set */ }
               await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: ['status: queued'] });
             }
+
+  withdraw:
+    # A human closed a still-queued nomination -> it's withdrawn, not to be scanned.
+    # (Bot closes use GITHUB_TOKEN and don't trigger this, so post-evaluation closes
+    # are unaffected.)
+    if: >
+      github.event_name == 'issues' &&
+      github.event.action == 'closed' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            const labels = (issue.labels || []).map(l => (l.name || l));
+            if (!labels.includes('status: queued')) {
+              core.info('Closed nomination was not queued (already evaluated or withdrawn); nothing to do.');
+              return;
+            }
+            // The scanner already ignores closed issues; this keeps labels honest + notes why.
+            try {
+              await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: queued' });
+            } catch (e) { /* wasn't set */ }
+            await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: ['status: withdrawn'] });
+            const author = (issue.user && issue.user.login) || '';
+            const msg = "This nomination was closed before evaluation, so it's **withdrawn** and won't be scanned. Reopen it (or open a new nomination) if you'd like it re-queued.";
+            await github.rest.issues.createComment({
+              ...common, issue_number: issue.number, body: author ? `@${author} ${msg}` : msg });
 
   adopt-legacy:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
