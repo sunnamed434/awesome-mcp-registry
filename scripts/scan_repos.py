@@ -5,6 +5,7 @@ import re
 import sys
 import time
 from datetime import datetime, timezone
+from urllib.parse import quote
 
 import requests
 
@@ -34,6 +35,11 @@ README_TRUNCATE = 3000
 
 # Human nominations arrive as GitHub issues created from the nomination form.
 NOMINATION_LABEL = "server-nomination"
+# Status labels track a nomination through its lifecycle.
+STATUS_QUEUED = "status: queued"
+STATUS_ACCEPTED = "status: accepted"
+STATUS_BELOW = "status: below-threshold"
+STATUS_DECLINED = "status: declined"
 REPO_SLUG = os.environ.get("GITHUB_REPOSITORY", "sunnamed434/awesome-mcp-registry")
 # Only mutate issues (comment/close) when running in CI; local runs are read-only.
 IS_CI = os.environ.get("GITHUB_ACTIONS", "").lower() == "true"
@@ -441,6 +447,50 @@ def close_issue(issue_number):
         print(f"  WARNING: Could not close #{issue_number}: {e}")
 
 
+def set_issue_labels(issue_number, add=None, remove=None):
+    """Add/remove issue labels. Read-only (prints intent) outside GitHub Actions."""
+    add, remove = add or [], remove or []
+    if not IS_CI:
+        if add or remove:
+            print(f"  [dry-run] would label #{issue_number} +{add} -{remove}")
+        return
+    for label in remove:
+        try:
+            resp = requests.delete(
+                f"https://api.github.com/repos/{REPO_SLUG}/issues/{issue_number}/labels/{quote(label)}",
+                headers=GITHUB_HEADERS,
+                timeout=30,
+            )
+            if resp.status_code not in (200, 404):  # 404 just means the label wasn't set
+                resp.raise_for_status()
+        except requests.RequestException as e:
+            print(f"  WARNING: could not remove label '{label}' on #{issue_number}: {e}")
+    if add:
+        try:
+            requests.post(
+                f"https://api.github.com/repos/{REPO_SLUG}/issues/{issue_number}/labels",
+                headers=GITHUB_HEADERS,
+                json={"labels": add},
+                timeout=30,
+            ).raise_for_status()
+        except requests.RequestException as e:
+            print(f"  WARNING: could not add labels {add} on #{issue_number}: {e}")
+
+
+def result_label_for(analysis):
+    """Map an AI verdict to its final nomination status label."""
+    if analysis.get("is_valid_mcp_server") and analysis.get("quality_score", 0) >= MIN_QUALITY_SCORE:
+        return STATUS_ACCEPTED
+    if analysis.get("is_valid_mcp_server"):
+        return STATUS_BELOW
+    return STATUS_DECLINED
+
+
+def mark_done(issue_number, result_label):
+    """Swap the 'queued' label for a final status label."""
+    set_issue_labels(issue_number, add=[result_label], remove=[STATUS_QUEUED])
+
+
 def verdict_comment(full_name, analysis):
     """Build the bot comment summarizing an AI verdict on a nominated server."""
     valid = analysis.get("is_valid_mcp_server", False)
@@ -497,6 +547,7 @@ def process_nominations(cache):
                 "I couldn't find a GitHub repository URL in this nomination. This registry only "
                 "lists open-source MCP servers with a public GitHub repo the AI can evaluate. "
                 "Please open a new nomination with a valid `https://github.com/owner/repo` URL.")
+            mark_done(num, STATUS_DECLINED)
             close_issue(num)
             processed += 1
             continue
@@ -505,6 +556,7 @@ def process_nominations(cache):
         if existing:
             print("    -> already in registry, sending 'already known' notice")
             notify(num, author, already_known_comment(existing))
+            mark_done(num, result_label_for(existing.get("analysis", {})))
             close_issue(num)
             processed += 1
             continue
@@ -516,6 +568,7 @@ def process_nominations(cache):
                 f"`{fn}` doesn't resolve to a public GitHub repository (it may be private, renamed, "
                 f"or deleted). Only public repos can be evaluated — feel free to re-nominate once "
                 f"it's public.")
+            mark_done(num, STATUS_DECLINED)
             close_issue(num)
             processed += 1
             continue
@@ -549,6 +602,7 @@ def process_nominations(cache):
         cache["servers"].append(entry)
         by_name[entry["full_name"].lower()] = entry  # dedup repeat nominations in one run
         notify(num, author, verdict_comment(fn, analysis))
+        mark_done(num, result_label_for(analysis))
         close_issue(num)
         processed += 1
         time.sleep(4)

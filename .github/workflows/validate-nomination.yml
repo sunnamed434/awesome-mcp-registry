@@ -74,6 +74,13 @@ jobs:
               await github.rest.issues.createComment({ ...common, issue_number: issue.number, body: bodyOut });
             }
 
+            // Mark it queued for the next weekly scan (only while open; the scanner
+            // swaps this for a final status label when it processes the nomination).
+            if (issue.state === 'open') {
+              await github.rest.issues.addLabels({
+                ...common, issue_number: issue.number, labels: ['status: queued'] });
+            }
+
   adopt-legacy:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
@@ -113,11 +120,12 @@ jobs:
                 labels.includes('server-nomination') || looksLikeNomination(issue.title || '');
               if (!isNomination) continue;
 
-              // 1) Ensure it's labeled.
-              if (!labels.includes('server-nomination')) {
+              // 1) Ensure it's labeled as a queued nomination.
+              const want = ['server-nomination', 'status: queued'].filter(l => !labels.includes(l));
+              if (want.length) {
                 await github.rest.issues.addLabels({
-                  ...common, issue_number: issue.number, labels: ['server-nomination'] });
-                core.info(`Labeled #${issue.number}: ${issue.title}`);
+                  ...common, issue_number: issue.number, labels: want });
+                core.info(`Labeled #${issue.number} (${want.join(', ')}): ${issue.title}`);
                 labeled++;
               }
 
