@@ -430,16 +430,17 @@ def notify(issue_number, login, body):
     post_issue_comment(issue_number, f"@{login}\n\n{body}" if login else body)
 
 
-def close_issue(issue_number):
-    """Close an issue. Read-only (prints intent) outside GitHub Actions."""
+def close_issue(issue_number, reason="completed"):
+    """Close an issue. `reason` is 'completed' (listed) or 'not_planned' (declined).
+    Read-only (prints intent) outside GitHub Actions."""
     if not IS_CI:
-        print(f"  [dry-run] would close #{issue_number}")
+        print(f"  [dry-run] would close #{issue_number} ({reason})")
         return
     try:
         resp = requests.patch(
             f"https://api.github.com/repos/{REPO_SLUG}/issues/{issue_number}",
             headers=GITHUB_HEADERS,
-            json={"state": "closed"},
+            json={"state": "closed", "state_reason": reason},
             timeout=30,
         )
         resp.raise_for_status()
@@ -489,6 +490,11 @@ def result_label_for(analysis):
 def mark_done(issue_number, result_label):
     """Swap the 'queued' label for a final status label."""
     set_issue_labels(issue_number, add=[result_label], remove=[STATUS_QUEUED])
+
+
+def close_reason_for(result_label):
+    """Close as 'completed' when the server got listed, else 'not_planned'."""
+    return "completed" if result_label == STATUS_ACCEPTED else "not_planned"
 
 
 def verdict_comment(full_name, analysis):
@@ -548,16 +554,17 @@ def process_nominations(cache):
                 "lists open-source MCP servers with a public GitHub repo the AI can evaluate. "
                 "Please open a new nomination with a valid `https://github.com/owner/repo` URL.")
             mark_done(num, STATUS_DECLINED)
-            close_issue(num)
+            close_issue(num, "not_planned")
             processed += 1
             continue
 
         existing = by_name.get(fn.lower())
         if existing:
             print("    -> already in registry, sending 'already known' notice")
+            rl = result_label_for(existing.get("analysis", {}))
             notify(num, author, already_known_comment(existing))
-            mark_done(num, result_label_for(existing.get("analysis", {})))
-            close_issue(num)
+            mark_done(num, rl)
+            close_issue(num, close_reason_for(rl))
             processed += 1
             continue
 
@@ -569,7 +576,7 @@ def process_nominations(cache):
                 f"or deleted). Only public repos can be evaluated — feel free to re-nominate once "
                 f"it's public.")
             mark_done(num, STATUS_DECLINED)
-            close_issue(num)
+            close_issue(num, "not_planned")
             processed += 1
             continue
 
@@ -601,9 +608,10 @@ def process_nominations(cache):
         }
         cache["servers"].append(entry)
         by_name[entry["full_name"].lower()] = entry  # dedup repeat nominations in one run
+        rl = result_label_for(analysis)
         notify(num, author, verdict_comment(fn, analysis))
-        mark_done(num, result_label_for(analysis))
-        close_issue(num)
+        mark_done(num, rl)
+        close_issue(num, close_reason_for(rl))
         processed += 1
         time.sleep(4)
 

@@ -111,8 +111,15 @@ jobs:
               try {
                 await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: queued' });
               } catch (e) { /* wasn't set */ }
+              // Drop any stale "queued" adoption comment so the notice isn't contradictory.
+              for (const c of comments) {
+                if (c.user.type === 'Bot' && (c.body || '').includes('<!-- nomination-adopted -->')) {
+                  try { await github.rest.issues.deleteComment({ ...common, comment_id: c.id }); } catch (e) { /* ignore */ }
+                }
+              }
               if (issue.state === 'open') {
-                await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed' });
+                const reason = resolveLabel === 'status: accepted' ? 'completed' : 'not_planned';
+                await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed', state_reason: reason });
               }
             } else if (queueable && issue.state === 'open') {
               // Reachable, not-yet-known repo — queue it; clear any prior terminal status.
@@ -234,18 +241,27 @@ jobs:
                 core.info(`Queued #${issue.number}: ${issue.title}`);
                 queued++;
               } else if (labeledNomination) {
-                // A confirmed nomination with no repo to evaluate — decline + close, don't queue.
-                // Guarded to already-labeled issues so a stray title match isn't auto-closed.
+                // A confirmed nomination with no repo to evaluate — decline + close as
+                // "not planned". Guarded to already-labeled issues so a stray title match
+                // isn't auto-closed.
                 await removeLabel(issue.number, 'status: queued');
                 if (!labels.includes('status: declined')) {
                   await github.rest.issues.addLabels({
                     ...common, issue_number: issue.number, labels: ['status: declined'] });
                 }
+                // Delete the now-contradictory "queued" comment so only one clear note remains.
+                for (const c of comments) {
+                  if (c.user.type === 'Bot' && (c.body || '').includes(QUEUED_MARKER)) {
+                    try { await github.rest.issues.deleteComment({ ...common, comment_id: c.id }); }
+                    catch (e) { /* ignore */ }
+                  }
+                }
                 if (!hasMarker(NOREPO_MARKER)) {
                   await github.rest.issues.createComment({
                     ...common, issue_number: issue.number, body: noRepoExplain(author) });
                 }
-                await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed' });
+                await github.rest.issues.update({
+                  ...common, issue_number: issue.number, state: 'closed', state_reason: 'not_planned' });
                 core.info(`Declined (no repo) #${issue.number}: ${issue.title}`);
                 declined++;
               }
