@@ -1,13 +1,14 @@
 name: Validate nomination
 
 # Two responsibilities:
-#  1. validate  — instant feedback on new nomination issues (sanity-check the repo URL).
+#  1. validate  — instant feedback on new nomination issues: sanity-check the repo URL
+#     AND short-circuit duplicates (already-listed servers are finalized immediately
+#     instead of waiting for the Sunday scan).
 #  2. adopt-legacy — a scheduled/manual sweep that labels older "add an MCP server"
 #     issues (created before the nomination form existed) so the weekly scanner can
-#     process them. Labeling is reversible; the irreversible evaluate+close in the
-#     scanner only acts on the `server-nomination` label.
+#     process them.
 #
-# The real AI evaluation runs in the weekly Auto Scanner, not here.
+# The full AI evaluation still runs in the weekly Auto Scanner, not here.
 
 on:
   issues:
@@ -32,53 +33,88 @@ jobs:
             const MARKER = '<!-- nomination-validation -->';
             const issue = context.payload.issue;
             const body = issue.body || '';
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
             const m = body.match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
 
-            let msg;
+            // Look up a repo in the published registry (public raw file, case-insensitive).
+            async function findInRegistry(fullName) {
+              try {
+                const url = `https://raw.githubusercontent.com/${common.owner}/${common.repo}/master/data/known_servers.json`;
+                const res = await fetch(url);
+                if (!res.ok) return null;
+                const json = await res.json();
+                const want = fullName.toLowerCase();
+                return (json.servers || []).find(s => (s.full_name || '').toLowerCase() === want) || null;
+              } catch (e) {
+                core.info(`Could not read registry cache: ${e.message}`);
+                return null;
+              }
+            }
+
+            // Notice + final status label for an already-known server.
+            function knownNotice(srv) {
+              const a = srv.analysis || {};
+              const fn = srv.full_name;
+              const url = srv.url || `https://github.com/${fn}`;
+              const score = a.quality_score || 0;
+              if (a.is_valid_mcp_server && score >= 5) {
+                return { label: 'status: accepted',
+                  text: `✅ **Already listed** — [\`${fn}\`](${url}) is already in the registry (scored ${score}/10). Thanks — nothing to do here!` };
+              }
+              if (a.is_valid_mcp_server) {
+                return { label: 'status: below-threshold',
+                  text: `**Already evaluated** — [\`${fn}\`](${url}) is a valid MCP server but scored **${score}/10**, below the 5/10 cutoff, so it isn't listed yet. It's re-checked automatically; if it improves it can still make the list.` };
+              }
+              return { label: 'status: declined',
+                text: `**Already evaluated** — the AI previously didn't classify [\`${fn}\`](${url}) as a qualifying, single-purpose MCP server, so it isn't listed.` };
+            }
+
+            let msg, resolveLabel = null;   // resolveLabel set => known duplicate, finalize now
             if (!m) {
-              msg = [
-                "👋 Thanks for the nomination! I couldn't find a `https://github.com/owner/repo`",
-                "URL in it. This registry only evaluates **open-source MCP servers with a public",
-                "GitHub repository** — please edit the issue to include one.",
-              ].join(' ');
+              msg = "👋 Thanks for the nomination! I couldn't find a `https://github.com/owner/repo` URL in it. This registry only evaluates **open-source MCP servers with a public GitHub repository** — please edit the issue to include one.";
             } else {
               const repoOwner = m[1];
               const repoName = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
               try {
                 const r = await github.rest.repos.get({ owner: repoOwner, repo: repoName });
                 if (r.data.private) throw new Error('private');
-                msg = [
-                  `👋 Thanks! \`${repoOwner}/${repoName}\` is **queued**. The AI evaluates it on the`,
-                  "next weekly scan (Sundays), posts the verdict here, and closes this issue.",
-                  "If it scores 5+/10 it'll appear in the README automatically. No action needed.",
-                ].join(' ');
+                const known = await findInRegistry(`${repoOwner}/${repoName}`);
+                if (known) {
+                  const n = knownNotice(known);
+                  msg = n.text;
+                  resolveLabel = n.label;
+                } else {
+                  msg = `👋 Thanks! \`${repoOwner}/${repoName}\` is **queued**. The AI evaluates it on the next weekly scan (Sundays), posts the verdict here, and closes this issue. If it scores 5+/10 it'll appear in the README automatically. No action needed.`;
+                }
               } catch (e) {
-                msg = [
-                  `👋 Thanks for the nomination, but \`${repoOwner}/${repoName}\` doesn't look like a`,
-                  "reachable **public** GitHub repo. Only public repos can be evaluated —",
-                  "please double-check the URL and edit the issue.",
-                ].join(' ');
+                msg = `👋 Thanks for the nomination, but \`${repoOwner}/${repoName}\` doesn't look like a reachable **public** GitHub repo. Only public repos can be evaluated — please double-check the URL and edit the issue.`;
               }
             }
 
-            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            // Post or update our single marked comment (@-mentioning the author).
             const author = (issue.user && issue.user.login) || '';
             const bodyOut = author ? `${MARKER}\n@${author} ${msg}` : `${MARKER}\n${msg}`;
             const comments = await github.paginate(github.rest.issues.listComments, {
               ...common, issue_number: issue.number, per_page: 100 });
-            const existing = comments.find(c =>
-              c.user.type === 'Bot' && (c.body || '').includes(MARKER));
-            if (existing) {
-              await github.rest.issues.updateComment({ ...common, comment_id: existing.id, body: bodyOut });
+            const prior = comments.find(c => c.user.type === 'Bot' && (c.body || '').includes(MARKER));
+            if (prior) {
+              await github.rest.issues.updateComment({ ...common, comment_id: prior.id, body: bodyOut });
             } else {
               await github.rest.issues.createComment({ ...common, issue_number: issue.number, body: bodyOut });
             }
 
-            // Mark it queued for the next weekly scan (only while open; the scanner
-            // swaps this for a final status label when it processes the nomination).
-            if (issue.state === 'open') {
-              await github.rest.issues.addLabels({
-                ...common, issue_number: issue.number, labels: ['status: queued'] });
+            if (resolveLabel) {
+              // Known duplicate — finalize immediately instead of waiting for the scan.
+              await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: [resolveLabel] });
+              try {
+                await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: queued' });
+              } catch (e) { /* wasn't set */ }
+              if (issue.state === 'open') {
+                await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed' });
+              }
+            } else if (issue.state === 'open') {
+              // New nomination — queue it for the weekly scan.
+              await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: ['status: queued'] });
             }
 
   adopt-legacy:
