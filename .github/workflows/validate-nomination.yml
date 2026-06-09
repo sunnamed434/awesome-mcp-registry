@@ -70,7 +70,7 @@ jobs:
                 text: `**Already evaluated** — the AI previously didn't classify [\`${fn}\`](${url}) as a qualifying, single-purpose MCP server, so it isn't listed.` };
             }
 
-            let msg, resolveLabel = null;   // resolveLabel set => known duplicate, finalize now
+            let msg, resolveLabel = null, queueable = false;  // resolveLabel => dup; queueable => reachable new repo
             if (!m) {
               msg = "👋 Thanks for the nomination! I couldn't find a `https://github.com/owner/repo` URL in it. This registry only evaluates **open-source MCP servers with a public GitHub repository** — please edit the issue to include one.";
             } else {
@@ -86,6 +86,7 @@ jobs:
                   resolveLabel = n.label;
                 } else {
                   msg = `👋 Thanks! \`${repoOwner}/${repoName}\` is **queued**. The AI evaluates it on the next weekly scan (Sundays), posts the verdict here, and closes this issue. If it scores 5+/10 it'll appear in the README automatically. No action needed.`;
+                  queueable = true;
                 }
               } catch (e) {
                 msg = `👋 Thanks for the nomination, but \`${repoOwner}/${repoName}\` doesn't look like a reachable **public** GitHub repo. Only public repos can be evaluated — please double-check the URL and edit the issue.`;
@@ -113,13 +114,17 @@ jobs:
               if (issue.state === 'open') {
                 await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed' });
               }
-            } else if (issue.state === 'open') {
-              // New (or reopened) nomination — queue it; clear any prior 'withdrawn' status.
-              try {
-                await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: withdrawn' });
-              } catch (e) { /* wasn't set */ }
+            } else if (queueable && issue.state === 'open') {
+              // Reachable, not-yet-known repo — queue it; clear any prior terminal status.
+              for (const stale of ['status: withdrawn', 'status: declined']) {
+                try {
+                  await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: stale });
+                } catch (e) { /* wasn't set */ }
+              }
               await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: ['status: queued'] });
             }
+            // else: no usable repo URL — leave labels as-is; the comment guides the user
+            //       and the weekly scan will resolve it regardless.
 
   withdraw:
     # A human closed a still-queued nomination -> it's withdrawn, not to be scanned.
@@ -159,14 +164,16 @@ jobs:
         with:
           script: |
             const common = { owner: context.repo.owner, repo: context.repo.repo };
-            const MARKER = '<!-- nomination-adopted -->';
+            const QUEUED_MARKER = '<!-- nomination-adopted -->';
+            const NOREPO_MARKER = '<!-- nomination-no-repo -->';
             const contributing =
               `https://github.com/${common.owner}/${common.repo}/blob/master/CONTRIBUTING.md`;
             // Conservative heuristic: an open issue whose title reads like
             // "add/nominate ... mcp/server" is treated as a legacy nomination.
             const looksLikeNomination = t => /\b(add|nominat)/i.test(t) && /\b(mcp|server)\b/i.test(t);
+            const repoRe = /github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+/i;
 
-            const explainBody = (author) => {
+            const queuedExplain = (author) => {
               const msg = [
                 "Thanks! I've tagged this as a **server nomination** and queued it. 👋",
                 "",
@@ -177,39 +184,71 @@ jobs:
                 "",
                 `_How it works: [CONTRIBUTING.md](${contributing})._`,
               ].join('\n');
-              return author ? `${MARKER}\n@${author} ${msg}` : `${MARKER}\n${msg}`;
+              return author ? `${QUEUED_MARKER}\n@${author} ${msg}` : `${QUEUED_MARKER}\n${msg}`;
+            };
+            const noRepoExplain = (author) => {
+              const msg = [
+                "Thanks for the suggestion! 👋 This registry only lists **public, open-source MCP",
+                "servers with a GitHub repository** — the AI reads the repo to score it, and I couldn't",
+                "find a `https://github.com/owner/repo` link here, so there's nothing it can evaluate.",
+                "",
+                "If the server has a public repo, reopen this with the link added (or open a new",
+                "nomination) and it'll be queued. If it's hosted or closed-source, it can't be listed.",
+                "",
+                `_How it works: [CONTRIBUTING.md](${contributing})._`,
+              ].join('\n');
+              return author ? `${NOREPO_MARKER}\n@${author} ${msg}` : `${NOREPO_MARKER}\n${msg}`;
+            };
+
+            const removeLabel = async (n, name) => {
+              try { await github.rest.issues.removeLabel({ ...common, issue_number: n, name }); }
+              catch (e) { /* wasn't set */ }
             };
 
             const issues = await github.paginate(github.rest.issues.listForRepo, {
               ...common, state: 'open', per_page: 100 });
-            let labeled = 0, explained = 0;
+            let queued = 0, declined = 0;
             for (const issue of issues) {
               if (issue.pull_request) continue;  // skip PRs
               const labels = (issue.labels || []).map(l => (l.name || l));
-              const isNomination =
-                labels.includes('server-nomination') || looksLikeNomination(issue.title || '');
-              if (!isNomination) continue;
+              const labeledNomination = labels.includes('server-nomination');
+              if (!labeledNomination && !looksLikeNomination(issue.title || '')) continue;
 
-              // 1) Ensure it's labeled as a queued nomination.
-              const want = ['server-nomination', 'status: queued'].filter(l => !labels.includes(l));
-              if (want.length) {
-                await github.rest.issues.addLabels({
-                  ...common, issue_number: issue.number, labels: want });
-                core.info(`Labeled #${issue.number} (${want.join(', ')}): ${issue.title}`);
-                labeled++;
-              }
-
-              // 2) Ensure it has a one-time explanation (also covers issues labeled in an
-              //    earlier run that never got an explanation). Idempotent via the marker.
+              const author = (issue.user && issue.user.login) || '';
               const comments = await github.paginate(github.rest.issues.listComments, {
                 ...common, issue_number: issue.number, per_page: 100 });
-              const explainedAlready = comments.some(c =>
-                c.user.type === 'Bot' && (c.body || '').includes(MARKER));
-              if (!explainedAlready) {
-                const author = (issue.user && issue.user.login) || '';
-                await github.rest.issues.createComment({
-                  ...common, issue_number: issue.number, body: explainBody(author) });
-                explained++;
+              const hasMarker = (mk) => comments.some(c =>
+                c.user.type === 'Bot' && (c.body || '').includes(mk));
+
+              if (repoRe.test(issue.body || '')) {
+                // Real nomination — ensure labeled + queued; clear any stale 'declined'.
+                const want = ['server-nomination', 'status: queued'].filter(l => !labels.includes(l));
+                if (want.length) {
+                  await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: want });
+                }
+                if (labels.includes('status: declined')) await removeLabel(issue.number, 'status: declined');
+                if (!hasMarker(QUEUED_MARKER)) {
+                  await github.rest.issues.createComment({
+                    ...common, issue_number: issue.number, body: queuedExplain(author) });
+                }
+                core.info(`Queued #${issue.number}: ${issue.title}`);
+                queued++;
+              } else if (labeledNomination) {
+                // A confirmed nomination with no repo to evaluate — decline + close, don't queue.
+                // Guarded to already-labeled issues so a stray title match isn't auto-closed.
+                await removeLabel(issue.number, 'status: queued');
+                if (!labels.includes('status: declined')) {
+                  await github.rest.issues.addLabels({
+                    ...common, issue_number: issue.number, labels: ['status: declined'] });
+                }
+                if (!hasMarker(NOREPO_MARKER)) {
+                  await github.rest.issues.createComment({
+                    ...common, issue_number: issue.number, body: noRepoExplain(author) });
+                }
+                await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed' });
+                core.info(`Declined (no repo) #${issue.number}: ${issue.title}`);
+                declined++;
               }
+              // else: title-only heuristic match with no repo — too weak to act on; leave it.
             }
-            core.info(`Labeled ${labeled}, explained ${explained} nomination(s)`);
+            core.info(`Queued ${queued}, declined ${declined} (no repo)`);
