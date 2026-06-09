@@ -34,3 +34,15 @@ jobs:
             To suggest a server, open a
             [nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml);
             for code contributions, open a new PR.
+
+  # GitHub disables scheduled workflows after 60 days of repo inactivity. This
+  # re-enables EVERY scheduled workflow in the repo (auto-scanner, reject-content-prs,
+  # validate-nomination, and this one). It lives in this daily workflow so it runs
+  # well within the 60-day window — one keepalive job covers them all.
+  workflow-keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: liskin/gh-workflow-keepalive@f72ff1a1336129f29bf0166c0fd0ca6cf1bcb38c # v1
