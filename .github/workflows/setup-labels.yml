@@ -20,9 +20,10 @@ jobs:
             const labels = [
               { name: 'server-nomination',      color: '1d76db', description: 'A community nomination of an MCP server' },
               { name: 'status: queued',         color: 'fbca04', description: 'Waiting for the next weekly AI scan' },
-              { name: 'status: accepted',       color: '0e8a16', description: 'Evaluated by AI and listed in the registry (5+/10)' },
-              { name: 'status: below-threshold', color: 'd93f0b', description: 'Valid MCP server but scored below the 5/10 cutoff' },
+              { name: 'status: accepted',       color: '0e8a16', description: 'Evaluated and listed in the registry (trust 50+/100)' },
+              { name: 'status: below-threshold', color: 'd93f0b', description: 'Valid MCP server but scored below the 50/100 cutoff' },
               { name: 'status: declined',       color: 'b60205', description: 'Not a qualifying MCP server, or no public repo' },
+              { name: 'status: excluded',       color: '5319e7', description: 'On the exclusion list (policy removal or maintainer opt-out) — not evaluated' },
               { name: 'status: withdrawn',      color: 'cccccc', description: 'Closed by the submitter before evaluation' },
             ];
             const common = { owner: context.repo.owner, repo: context.repo.repo };

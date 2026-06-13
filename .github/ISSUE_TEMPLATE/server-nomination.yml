@@ -10,8 +10,9 @@ body:
 
         This is an **AI-curated** registry. You don't add a server — you **nominate** one, and
         the same AI that curates the whole list evaluates it on the next weekly scan
-        (Sundays). If it scores **5+/10** it appears in the README automatically; if not, it
-        won't. The bot will comment the verdict here and close this issue.
+        (Sundays). If its [trust score](../blob/master/METHODOLOGY.md) is **50+/100** it appears
+        in the README automatically; if not, it won't. The bot will comment the verdict (with
+        the full score breakdown) here and close this issue.
 
         **Only open-source servers with a public GitHub repository are accepted** — the AI
         reads the repo's README and metadata to score it. Hosted-only endpoints with no

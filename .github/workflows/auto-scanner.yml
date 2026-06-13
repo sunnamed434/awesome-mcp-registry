@@ -3,7 +3,20 @@ name: Auto Scanner
 on:
   schedule:
     - cron: '0 2 * * 0'    # Every Sunday at 2:00 UTC
-  workflow_dispatch:        # Manual trigger
+  workflow_dispatch:        # Manual trigger (with optional budget overrides for catch-up runs)
+    inputs:
+      max_new_analyses:
+        description: 'Override MAX_NEW_ANALYSES for this run'
+        required: false
+        default: ''
+      max_re_evaluations:
+        description: 'Override MAX_RE_EVALUATIONS for this run'
+        required: false
+        default: ''
+      max_nominations:
+        description: 'Override MAX_NOMINATIONS for this run'
+        required: false
+        default: ''
 
 permissions:
   contents: write          # push the update branch
@@ -11,9 +24,16 @@ permissions:
   issues: write            # comment on / close processed nomination issues
   pull-requests: write     # open + auto-merge the update PR (Safe Outputs)
 
+# A manual catch-up dispatch must not overlap the Sunday run: both would PR the
+# same generated files and the loser's auto-merge fails, orphaning the PR.
+concurrency:
+  group: auto-scanner
+  cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v6
 
@@ -28,6 +48,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYTHONUNBUFFERED: "1"
+          MAX_NEW_ANALYSES: ${{ github.event.inputs.max_new_analyses || '' }}
+          MAX_RE_EVALUATIONS: ${{ github.event.inputs.max_re_evaluations || '' }}
+          MAX_NOMINATIONS: ${{ github.event.inputs.max_nominations || '' }}
         run: python scripts/scan_repos.py
         working-directory: ${{ github.workspace }}
 
@@ -38,14 +61,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/known_servers.json README.md; then
+          GENERATED="data/known_servers.json data/star_history.jsonl README.md SCORES.md"
+          git add -N $GENERATED  # so brand-new generated files show up in git diff
+          if git diff --quiet -- $GENERATED; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes to publish."
             exit 0
           fi
           BRANCH="auto/registry-update-${{ github.run_id }}"
           git checkout -b "$BRANCH"
-          git add data/known_servers.json README.md
+          git add $GENERATED
           git commit -m "Update MCP server registry [automated]"
           git push origin "$BRANCH"
           echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -66,7 +91,8 @@ jobs:
               body: [
                 'Automated weekly update from the Continuous-AI scanner.',
                 '',
-                'Only the generated files (`data/known_servers.json`, `README.md`) change.',
+                'Only the generated files (`data/known_servers.json`, `data/star_history.jsonl`,',
+                '`README.md`, `SCORES.md`) change.',
                 'Opened and auto-merged as a PR so the diff is reviewable and revertable.',
               ].join('\n'),
             });

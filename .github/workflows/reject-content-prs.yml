@@ -38,12 +38,12 @@ jobs:
             const body = [
               "Thanks for wanting to contribute! 🙏 Closing this automatically, and here's why:",
               "",
-              "This is an **AI-curated** registry. `README.md` and `data/known_servers.json` are",
+              "This is an **AI-curated** registry. `README.md`, `SCORES.md`, and the `data/` files are",
               "**machine-generated** by a weekly job that discovers and scores servers with AI —",
               "so any edit to them is overwritten on the next run, and a server can't be added by PR.",
               "",
               `👉 To suggest a server, **[open a nomination](${nominateUrl})** instead. The same AI`,
-              "evaluates it on the next weekly scan; if it scores 5+/10 it appears automatically.",
+              "evaluates it on the next weekly scan; if it scores 50+/100 it appears automatically.",
               "",
               "_Code contributions (bug fixes, scanner/workflow improvements) are welcome — those",
               "PRs are not auto-closed. See `CONTRIBUTING.md`._",
@@ -58,9 +58,11 @@ jobs:
               }
               const files = await github.paginate(github.rest.pulls.listFiles, {
                 ...common, pull_number: pr.number, per_page: 100 });
+              const generated = ['README.md', 'SCORES.md',
+                                 'data/known_servers.json', 'data/star_history.jsonl'];
               const touchesGenerated = files
                 .map(f => f.filename)
-                .some(p => p === 'README.md' || p === 'data/known_servers.json');
+                .some(p => generated.includes(p));
               if (!touchesGenerated) {
                 core.info(`#${pr.number}: skip (code-only PR, left open)`);
                 return;

@@ -22,16 +22,18 @@ jobs:
       - name: Install dependencies
         run: pip install requests pyyaml
 
-      - name: Generate README preview
+      - name: Generate README + SCORES preview
         run: |
           python -c "
           import sys
           sys.path.insert(0, 'scripts')
-          from utils import load_cache, generate_readme
+          from utils import load_cache, generate_readme, generate_scores_md, load_star_history
 
           cache = load_cache('data/known_servers.json')
           valid = [s for s in cache['servers'] if s.get('analysis', {}).get('is_valid_mcp_server', False)]
-          generate_readme(valid, 'README-preview.md')
+          history = load_star_history('data/star_history.jsonl')
+          generate_readme(valid, 'README-preview.md', history=history)
+          generate_scores_md(valid, 'SCORES-preview.md', history=history)
           print(f'Generated preview with {len(valid)} valid servers')
           "
 
@@ -41,8 +43,10 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           cat README-preview.md >> $GITHUB_STEP_SUMMARY
 
-      - name: Upload README preview
+      - name: Upload previews
         uses: actions/upload-artifact@v7
         with:
           name: readme-preview
-          path: README-preview.md
+          path: |
+            README-preview.md
+            SCORES-preview.md

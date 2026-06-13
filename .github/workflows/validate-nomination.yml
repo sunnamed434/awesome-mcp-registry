@@ -52,19 +52,50 @@ jobs:
               }
             }
 
+            // Check the published exclusion list (raw file on master, case-insensitive).
+            async function isExcluded(fullName) {
+              try {
+                const url = `https://raw.githubusercontent.com/${common.owner}/${common.repo}/master/data/excluded-repos.txt`;
+                const res = await fetch(url);
+                if (!res.ok) return false;
+                const text = await res.text();
+                const want = fullName.toLowerCase();
+                return text.split('\n')
+                  .map(l => l.split('#')[0].trim().toLowerCase())
+                  .filter(Boolean)
+                  .includes(want);
+              } catch (e) {
+                core.info(`Could not read exclusion list: ${e.message}`);
+                return false;
+              }
+            }
+
+            // 0-100 trust score; legacy fallback for entries the new pipeline
+            // hasn't re-scored yet (quality_score is 1-10).
+            function trustFinal(srv) {
+              const t = srv.trust || {};
+              if (typeof t.final === 'number') return Math.round(t.final);
+              return Math.min(100, ((srv.analysis || {}).quality_score || 0) * 10);
+            }
+
             // Notice + final status label for an already-known server.
             function knownNotice(srv) {
               const a = srv.analysis || {};
               const fn = srv.full_name;
               const url = srv.url || `https://github.com/${fn}`;
-              const score = a.quality_score || 0;
-              if (a.is_valid_mcp_server && score >= 5) {
+              const score = trustFinal(srv);
+              const fatal = !!((srv.trust || {}).fatal);
+              if (a.is_valid_mcp_server && score >= 50 && !fatal) {
                 return { label: 'status: accepted',
-                  text: `✅ **Already listed** — [\`${fn}\`](${url}) is already in the registry (scored ${score}/10). Thanks — nothing to do here!` };
+                  text: `✅ **Already listed** — [\`${fn}\`](${url}) is already in the registry (scored ${score}/100). Thanks — nothing to do here!` };
+              }
+              if (a.is_valid_mcp_server && fatal) {
+                return { label: 'status: below-threshold',
+                  text: `**Already evaluated** — [\`${fn}\`](${url}) scored **${score}/100**, but a blocking flag (archived, disabled, or unreachable repository) prevents listing regardless of score. If that changes, feel free to re-nominate it.` };
               }
               if (a.is_valid_mcp_server) {
                 return { label: 'status: below-threshold',
-                  text: `**Already evaluated** — [\`${fn}\`](${url}) is a valid MCP server but scored **${score}/10**, below the 5/10 cutoff, so it isn't listed yet. It's re-checked automatically; if it improves it can still make the list.` };
+                  text: `**Already evaluated** — [\`${fn}\`](${url}) is a valid MCP server but scored **${score}/100**, below the 50/100 cutoff, so it isn't listed yet. It's re-checked automatically; if it improves it can still make the list.` };
               }
               return { label: 'status: declined',
                 text: `**Already evaluated** — the AI previously didn't classify [\`${fn}\`](${url}) as a qualifying, single-purpose MCP server, so it isn't listed.` };
@@ -76,21 +107,41 @@ jobs:
             } else {
               const repoOwner = m[1];
               const repoName = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
+              if (await isExcluded(`${repoOwner}/${repoName}`)) {
+                msg = `\`${repoOwner}/${repoName}\` is on this registry's [exclusion list](https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt) (policy removal or maintainer opt-out), so it won't be evaluated or listed. If you believe this is a mistake, open a regular issue (not a nomination) to appeal.`;
+                resolveLabel = 'status: excluded';
+              } else {
               try {
                 const r = await github.rest.repos.get({ owner: repoOwner, repo: repoName });
                 if (r.data.private) throw new Error('private');
                 const known = await findInRegistry(`${repoOwner}/${repoName}`);
-                if (known) {
+                // A cached "Analysis failed" entry is a placeholder from a failed
+                // AI call, not a verdict — queue the nomination so it's re-judged.
+                const failedPlaceholder = known &&
+                  (((known.analysis || {}).reason) || '').includes('Analysis failed');
+                if (known && !failedPlaceholder) {
                   const n = knownNotice(known);
                   msg = n.text;
                   resolveLabel = n.label;
                 } else {
-                  msg = `👋 Thanks! \`${repoOwner}/${repoName}\` is **queued**. The AI evaluates it on the next weekly scan (Sundays), posts the verdict here, and closes this issue. If it scores 5+/10 it'll appear in the README automatically. No action needed.`;
+                  msg = `👋 Thanks! \`${repoOwner}/${repoName}\` is **queued**. The AI evaluates it on the next weekly scan (Sundays), posts the verdict here, and closes this issue. If it scores 50+/100 it'll appear in the README automatically. No action needed.`;
                   queueable = true;
                 }
               } catch (e) {
                 msg = `👋 Thanks for the nomination, but \`${repoOwner}/${repoName}\` doesn't look like a reachable **public** GitHub repo. Only public repos can be evaluated — please double-check the URL and edit the issue.`;
               }
+              }
+            }
+
+            // The payload's issue.state can be stale (e.g. an edit to an already
+            // closed issue, or a close racing this job) — use the live state.
+            let liveState = issue.state;
+            try {
+              liveState = (await github.rest.issues.get({ ...common, issue_number: issue.number })).data.state;
+            } catch (e) { /* fall back to the payload snapshot */ }
+            if (queueable && liveState !== 'open') {
+              queueable = false;
+              msg = "This nomination is closed, so it won't be queued. Reopen it (or open a new nomination) and it will be evaluated on the next weekly scan.";
             }
 
             // Post or update our single marked comment (@-mentioning the author).
@@ -105,29 +156,34 @@ jobs:
               await github.rest.issues.createComment({ ...common, issue_number: issue.number, body: bodyOut });
             }
 
+            const ALL_STATUS = ['status: queued', 'status: withdrawn', 'status: declined',
+                                'status: excluded', 'status: accepted', 'status: below-threshold'];
+            const removeStatusLabelsExcept = async (keep) => {
+              for (const stale of ALL_STATUS.filter(l => l !== keep)) {
+                try {
+                  await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: stale });
+                } catch (e) { /* wasn't set */ }
+              }
+            };
+
             if (resolveLabel) {
-              // Known duplicate — finalize immediately instead of waiting for the scan.
+              // Known duplicate/excluded — finalize immediately instead of waiting
+              // for the scan; strip any contradictory status label.
               await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: [resolveLabel] });
-              try {
-                await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: queued' });
-              } catch (e) { /* wasn't set */ }
+              await removeStatusLabelsExcept(resolveLabel);
               // Drop any stale "queued" adoption comment so the notice isn't contradictory.
               for (const c of comments) {
                 if (c.user.type === 'Bot' && (c.body || '').includes('<!-- nomination-adopted -->')) {
                   try { await github.rest.issues.deleteComment({ ...common, comment_id: c.id }); } catch (e) { /* ignore */ }
                 }
               }
-              if (issue.state === 'open') {
+              if (liveState === 'open') {
                 const reason = resolveLabel === 'status: accepted' ? 'completed' : 'not_planned';
                 await github.rest.issues.update({ ...common, issue_number: issue.number, state: 'closed', state_reason: reason });
               }
-            } else if (queueable && issue.state === 'open') {
+            } else if (queueable) {
               // Reachable, not-yet-known repo — queue it; clear any prior terminal status.
-              for (const stale of ['status: withdrawn', 'status: declined']) {
-                try {
-                  await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: stale });
-                } catch (e) { /* wasn't set */ }
-              }
+              await removeStatusLabelsExcept('status: queued');
               await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: ['status: queued'] });
             }
             // else: no usable repo URL — leave labels as-is; the comment guides the user
@@ -148,7 +204,15 @@ jobs:
           script: |
             const issue = context.payload.issue;
             const common = { owner: context.repo.owner, repo: context.repo.repo };
-            const labels = (issue.labels || []).map(l => (l.name || l));
+            // Read live labels, not the payload snapshot: the validate job may
+            // still be adding 'status: queued' while this close event fires.
+            let labels;
+            try {
+              labels = (await github.rest.issues.listLabelsOnIssue({
+                ...common, issue_number: issue.number })).data.map(l => l.name);
+            } catch (e) {
+              labels = (issue.labels || []).map(l => (l.name || l));
+            }
             if (!labels.includes('status: queued')) {
               core.info('Closed nomination was not queued (already evaluated or withdrawn); nothing to do.');
               return;
@@ -158,6 +222,12 @@ jobs:
               await github.rest.issues.removeLabel({ ...common, issue_number: issue.number, name: 'status: queued' });
             } catch (e) { /* wasn't set */ }
             await github.rest.issues.addLabels({ ...common, issue_number: issue.number, labels: ['status: withdrawn'] });
+            // A withdrawn nomination shouldn't show as (purple) "completed" — it
+            // wasn't done, it was abandoned.
+            try {
+              await github.rest.issues.update({
+                ...common, issue_number: issue.number, state: 'closed', state_reason: 'not_planned' });
+            } catch (e) { core.info(`could not set close reason: ${e.message}`); }
             const author = (issue.user && issue.user.login) || '';
             const msg = "This nomination was closed before evaluation, so it's **withdrawn** and won't be scanned. Reopen it (or open a new nomination) if you'd like it re-queued.";
             await github.rest.issues.createComment({
@@ -187,7 +257,7 @@ jobs:
                 "**What that means:** this registry curates itself with AI — there's no manual PR",
                 "step. On the next weekly scan, the AI reviews your nomination, posts the result here,",
                 "and closes this issue. If it points to a public open-source GitHub repo that scores",
-                "5+/10, it's added to the README automatically. Nothing else needed from you.",
+                "50+/100, it's added to the README automatically. Nothing else needed from you.",
                 "",
                 `_How it works: [CONTRIBUTING.md](${contributing})._`,
               ].join('\n');
