@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-78-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Trust](https://img.shields.io/badge/avg%20trust-80%2F100-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--10-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4.1--mini-purple)
+![Servers](https://img.shields.io/badge/servers-76-blue) ![Categories](https://img.shields.io/badge/categories-11-green) ![Avg Trust](https://img.shields.io/badge/avg%20trust-80%2F100-orange) ![Updated](https://img.shields.io/badge/updated-2026--06--14-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4.1--mini-purple)
 
 A self-curating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers — a [Continuous AI](https://githubnext.com/projects/continuous-ai/) experiment. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed by GPT-4.1-mini weekly and scored with a published, reproducible [trust formula](METHODOLOGY.md).
 
@@ -10,127 +10,126 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [mindsdb/mindsdb](https://github.com/mindsdb/mindsdb) | [80/100](SCORES.md#mindsdbmindsdb) | 39142 | MindsDB is a federated query engine for AI. |
-| [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | [80/100](SCORES.md#googleapisgenai-toolbox) | 15101 | An open source MCP server for databases. |
-| [googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox) | [80/100](SCORES.md#googleapismcp-toolbox) | 14415 | MCP Toolbox for Databases is an open source MCP server connecting AI agents to enterprise databases. |
-| [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | [80/100](SCORES.md#benborlamcp-server-mysql) | 1246 | MCP server providing read-only access to MySQL databases. |
+| [mindsdb/mindsdb](https://github.com/mindsdb/mindsdb) | [91/100](SCORES.md#mindsdbmindsdb) | 39299 | MindsDB is a federated query engine for AI. |
+| [googleapis/genai-toolbox](https://github.com/googleapis/genai-toolbox) | [91/100](SCORES.md#googleapisgenai-toolbox) | 15610 | An open source MCP server for databases. |
+| [googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox) | [91/100](SCORES.md#googleapismcp-toolbox) | 15610 | MCP Toolbox for Databases is an open source MCP server connecting AI agents to enterprise databases. |
+| [benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql) | [70/100](SCORES.md#benborlamcp-server-mysql) | 1811 | MCP server providing read-only access to MySQL databases. |
 
-## Dev Tools (29)
+## Dev Tools (28)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [github/github-mcp-server](https://github.com/github/github-mcp-server) | [90/100](SCORES.md#githubgithub-mcp-server) | 29669 | GitHub's official MCP Server for AI tool integration. |
-| [upstash/context7](https://github.com/upstash/context7) | [80/100](SCORES.md#upstashcontext7) | 54897 | Context7 Platform for up-to-date code documentation for LLMs and AI code editors. |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | [80/100](SCORES.md#microsoftplaywright-mcp) | 32278 | A Model Context Protocol server for browser automation using Playwright. |
-| [jlowin/fastmcp](https://github.com/jlowin/fastmcp) | [80/100](SCORES.md#jlowinfastmcp) | 25093 | FastMCP is a Python framework for building MCP servers and applications. |
-| [oraios/serena](https://github.com/oraios/serena) | [80/100](SCORES.md#oraiosserena) | 24020 | A coding agent toolkit providing semantic retrieval and editing capabilities. |
-| [mksglu/context-mode](https://github.com/mksglu/context-mode) | [80/100](SCORES.md#mksglucontext-mode) | 12064 | Context window optimization tool for AI coding agents. |
-| [hangwin/mcp-chrome](https://github.com/hangwin/mcp-chrome) | [80/100](SCORES.md#hangwinmcp-chrome) | 11637 | Chrome MCP Server is a Chrome extension that enables AI assistants to automate browser tasks. |
-| [BeehiveInnovations/pal-mcp-server](https://github.com/BeehiveInnovations/pal-mcp-server) | [80/100](SCORES.md#beehiveinnovationspal-mcp-server) | 11540 | A server that integrates multiple AI models into a cohesive CLI workflow. |
-| [tadata-org/fastapi_mcp](https://github.com/tadata-org/fastapi_mcp) | [80/100](SCORES.md#tadata-orgfastapi_mcp) | 11509 | Expose your FastAPI endpoints as Model Context Protocol (MCP) tools. |
-| [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use) | [80/100](SCORES.md#mcp-usemcp-use) | 9962 | Fullstack MCP framework for developing MCP Apps and Servers. |
-| [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | [80/100](SCORES.md#lauriewiredghidramcp) | 8905 | MCP server for Ghidra enabling autonomous reverse engineering. |
-| [idosal/git-mcp](https://github.com/idosal/git-mcp) | [80/100](SCORES.md#idosalgit-mcp) | 8082 | GitMCP is a remote MCP server for GitHub projects that enhances AI tool access to documentation. |
-| [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | [80/100](SCORES.md#wonderwhy-erdesktopcommandermcp) | 6070 | MCP server for terminal control and file management with AI capabilities. |
-| [cameroncooke/XcodeBuildMCP](https://github.com/cameroncooke/XcodeBuildMCP) | [80/100](SCORES.md#cameroncookexcodebuildmcp) | 5792 | A Model Context Protocol server and CLI for iOS and macOS projects. |
-| [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | [80/100](SCORES.md#kucherenkojscpd) | 5656 | A copy/paste detector for programming source code with MCP server capabilities. |
-| [executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright) | [80/100](SCORES.md#executeautomationmcp-playwright) | 5531 | A Model Context Protocol server for automating browsers using Playwright. |
-| [CursorTouch/Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | [80/100](SCORES.md#cursortouchwindows-mcp) | 4706 | MCP server for integrating AI agents with Windows OS. |
-| [getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP) | [80/100](SCORES.md#getsentryxcodebuildmcp) | 4287 | MCP server and CLI for iOS and macOS project tools. |
-| [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | [80/100](SCORES.md#ibmmcp-context-forge) | 3834 | An AI Gateway that federates MCP, A2A, and REST/gRPC APIs. |
-| [mattzcarey/shippie](https://github.com/mattzcarey/shippie) | [80/100](SCORES.md#mattzcareyshippie) | 2327 | Shippie is an extendable code review and QA agent using LLMs. |
+| [github/github-mcp-server](https://github.com/github/github-mcp-server) | [96/100](SCORES.md#githubgithub-mcp-server) | 30658 | GitHub's official MCP Server for AI tool integration. |
+| [jlowin/fastmcp](https://github.com/jlowin/fastmcp) | [92/100](SCORES.md#jlowinfastmcp) | 25622 | FastMCP is a Python framework for building MCP servers and applications. |
+| [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | [91/100](SCORES.md#chromedevtoolschrome-devtools-mcp) | 43560 | An MCP server that exposes Chrome DevTools functionality to AI coding agents for browser automation, debugging, and performance analysis. |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | [91/100](SCORES.md#microsoftplaywright-mcp) | 33891 | A Model Context Protocol server for browser automation using Playwright. |
+| [mcp-use/mcp-use](https://github.com/mcp-use/mcp-use) | [90/100](SCORES.md#mcp-usemcp-use) | 10101 | Fullstack MCP framework for developing MCP Apps and Servers. |
+| [upstash/context7](https://github.com/upstash/context7) | [89/100](SCORES.md#upstashcontext7) | 57335 | Context7 Platform for up-to-date code documentation for LLMs and AI code editors. |
+| [oraios/serena](https://github.com/oraios/serena) | [89/100](SCORES.md#oraiosserena) | 25337 | A coding agent toolkit providing semantic retrieval and editing capabilities. |
+| [IBM/mcp-context-forge](https://github.com/IBM/mcp-context-forge) | [89/100](SCORES.md#ibmmcp-context-forge) | 3883 | An AI Gateway that federates MCP, A2A, and REST/gRPC APIs. |
+| [mksglu/context-mode](https://github.com/mksglu/context-mode) | [88/100](SCORES.md#mksglucontext-mode) | 17405 | Context window optimization tool for AI coding agents. |
+| [cameroncooke/XcodeBuildMCP](https://github.com/cameroncooke/XcodeBuildMCP) | [88/100](SCORES.md#cameroncookexcodebuildmcp) | 5899 | A Model Context Protocol server and CLI for iOS and macOS projects. |
+| [getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP) | [88/100](SCORES.md#getsentryxcodebuildmcp) | 5899 | MCP server and CLI for iOS and macOS project tools. |
+| [alpic-ai/skybridge](https://github.com/alpic-ai/skybridge) | [84/100](SCORES.md#alpic-aiskybridge) | 1731 | Skybridge is a TypeScript framework for building ChatGPT and MCP Apps. |
+| [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | [84/100](SCORES.md#containerskubernetes-mcp-server) | 1684 | A powerful MCP server implementation for Kubernetes and OpenShift. |
+| [rekog-labs/MCP-Nest](https://github.com/rekog-labs/MCP-Nest) | [82/100](SCORES.md#rekog-labsmcp-nest) | 662 | A NestJS module for creating MCP servers to expose AI tools and resources. |
+| [idosal/git-mcp](https://github.com/idosal/git-mcp) | [81/100](SCORES.md#idosalgit-mcp) | 8168 | GitMCP is a remote MCP server for GitHub projects that enhances AI tool access to documentation. |
+| [MCPJam/inspector](https://github.com/MCPJam/inspector) | [81/100](SCORES.md#mcpjaminspector) | 2013 | MCPJam Inspector is a development tool for testing MCP servers and apps. |
+| [bgauryy/octocode](https://github.com/bgauryy/octocode) | [80/100](SCORES.md#bgauryyoctocode) | 864 | MCP server for semantic code research and context generation using LLM patterns. |
+| [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | [78/100](SCORES.md#jpisniceshadcn-ui-mcp-server) | 2796 | An MCP server providing AI assistants access to shadcn/ui v4 components, blocks, demos, and metadata across multiple frontend frameworks. |
+| [Kymo-MCP/mcpcan](https://github.com/Kymo-MCP/mcpcan) | [77/100](SCORES.md#kymo-mcpmcpcan) | 723 | MCPCAN is a centralized management platform for MCP services. |
+| [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | [72/100](SCORES.md#wonderwhy-erdesktopcommandermcp) ⚠ | 6168 | MCP server for terminal control and file management with AI capabilities. |
 
-*...and 9 more. See [known_servers.json](data/known_servers.json) for the full list.*
+*...and 8 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
 ## Cloud (1)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [awslabs/mcp](https://github.com/awslabs/mcp) | [80/100](SCORES.md#awslabsmcp) | 9069 | Open source MCP servers for AWS. |
+| [awslabs/mcp](https://github.com/awslabs/mcp) | [89/100](SCORES.md#awslabsmcp) | 9263 | Open source MCP servers for AWS. |
 
-## Productivity (9)
-
-| Server | Trust | Stars | Description |
-|--------|-------|-------|-------------|
-| [Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp) | [90/100](SCORES.md#pimzinospec-workflow-mcp) | 4212 | A structured spec-driven development workflow MCP server. |
-| [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | [90/100](SCORES.md#haris-musaexcel-mcp-server) | 3906 | A Model Context Protocol server for Excel file manipulation. |
-| [GongRzhe/Office-PowerPoint-MCP-Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server) | [90/100](SCORES.md#gongrzheoffice-powerpoint-mcp-server) | 1765 | A comprehensive MCP server for PowerPoint manipulation using python-pptx. |
-| [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) | [80/100](SCORES.md#czlonkowskin8n-mcp) | 13294 | A MCP server that integrates n8n workflow automation with AI assistants. |
-| [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) | [80/100](SCORES.md#soopersetmcp-atlassian) | 4754 | MCP server for Atlassian tools like Confluence and Jira. |
-| [coddingtonbear/obsidian-local-rest-api](https://github.com/coddingtonbear/obsidian-local-rest-api) | [80/100](SCORES.md#coddingtonbearobsidian-local-rest-api) | 2246 | A secure REST API and MCP server for accessing Obsidian vaults. |
-| [GongRzhe/Office-Word-MCP-Server](https://github.com/GongRzhe/Office-Word-MCP-Server) | [80/100](SCORES.md#gongrzheoffice-word-mcp-server) | 2030 | An MCP server for creating and manipulating Microsoft Word documents. |
-| [BigSweetPotatoStudio/HyperChat](https://github.com/BigSweetPotatoStudio/HyperChat) | [80/100](SCORES.md#bigsweetpotatostudiohyperchat) | 712 | HyperChat is a local AI agent platform utilizing MCP for enhanced chat experiences. |
-| [supermemoryai/apple-mcp](https://github.com/supermemoryai/apple-mcp) | [70/100](SCORES.md#supermemoryaiapple-mcp) | 2993 | Apple-native tools for enhancing productivity through the Model Context Protocol. |
-
-## Communication (1)
+## Productivity (7)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp) | [80/100](SCORES.md#lharrieswhatsapp-mcp) | 5683 | WhatsApp MCP server for managing messages and media. |
+| [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) | [91/100](SCORES.md#czlonkowskin8n-mcp) | 21733 | An MCP server providing AI assistants deep access to n8n workflow automation nodes, properties, operations, and templates to enable workflow building. |
+| [jacob-bd/notebooklm-mcp-cli](https://github.com/jacob-bd/notebooklm-mcp-cli) | [84/100](SCORES.md#jacob-bdnotebooklm-mcp-cli) | 4873 | An MCP server providing programmatic access to Google NotebookLM through a CLI with multiple notebook management tools. |
+| [coddingtonbear/obsidian-local-rest-api](https://github.com/coddingtonbear/obsidian-local-rest-api) | [84/100](SCORES.md#coddingtonbearobsidian-local-rest-api) | 2450 | A secure REST API and MCP server for accessing Obsidian vaults. |
+| [Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp) | [81/100](SCORES.md#pimzinospec-workflow-mcp) | 4226 | A structured spec-driven development workflow MCP server. |
+| [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) | [79/100](SCORES.md#soopersetmcp-atlassian) | 5393 | MCP server for Atlassian tools like Confluence and Jira. |
+| [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | [76/100](SCORES.md#haris-musaexcel-mcp-server) | 3930 | A Model Context Protocol server for Excel file manipulation. |
+| [BigSweetPotatoStudio/HyperChat](https://github.com/BigSweetPotatoStudio/HyperChat) | [56/100](SCORES.md#bigsweetpotatostudiohyperchat) | 711 | HyperChat is a local AI agent platform utilizing MCP for enhanced chat experiences. |
 
-## Web Scraping (5)
-
-| Server | Trust | Stars | Description |
-|--------|-------|-------|-------------|
-| [JoeanAmier/XHS-Downloader](https://github.com/JoeanAmier/XHS-Downloader) | [80/100](SCORES.md#joeanamierxhs-downloader) | 10016 | A tool for extracting and downloading content from XiaoHongShu. |
-| [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | [80/100](SCORES.md#d4vinciscrapling) | 8937 | A powerful Python library for adaptive web scraping. |
-| [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | [80/100](SCORES.md#firecrawlfirecrawl-mcp-server) | 6370 | A powerful web scraping and search MCP server for AI agents. |
-| [epiral/bb-browser](https://github.com/epiral/bb-browser) | [80/100](SCORES.md#epiralbb-browser) | 5612 | CLI + MCP server for AI agents to control Chrome with your login state. |
-| [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | [80/100](SCORES.md#brightdatabrightdata-mcp) | 2436 | A powerful MCP server for real-time web access and data collection. |
-
-## AI & ML (20)
+## Web Scraping (3)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [modelscope/FunASR](https://github.com/modelscope/FunASR) | [90/100](SCORES.md#modelscopefunasr) | 16655 | Industrial-grade speech recognition toolkit with multi-language support. |
-| [activepieces/activepieces](https://github.com/activepieces/activepieces) | [80/100](SCORES.md#activepiecesactivepieces) | 22123 | Activepieces is an AI automation platform with extensible MCP servers. |
-| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | [80/100](SCORES.md#ruvnetruflo) | 16632 | Ruflo is an AI orchestration platform for deploying and managing multi-agent systems. |
-| [chopratejas/headroom](https://github.com/chopratejas/headroom) | [80/100](SCORES.md#chopratejasheadroom) | 16123 | Headroom compresses AI agent inputs to reduce token usage. |
-| [GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) | [80/100](SCORES.md#glipsfigma-context-mcp) | 14691 | MCP server providing Figma data to AI coding agents. |
-| [ruvnet/claude-flow](https://github.com/ruvnet/claude-flow) | [80/100](SCORES.md#ruvnetclaude-flow) | 13789 | Claude-Flow is an AI orchestration platform for deploying multi-agent systems. |
-| [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) | [80/100](SCORES.md#triggerdotdevtriggerdev) | 13583 | Trigger.dev is an open-source platform for building AI workflows in TypeScript. |
-| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | [80/100](SCORES.md#yusufkaraaslanskill_seekers) | 9084 | Automated tool to convert documentation into Claude AI skills. |
-| [kreuzberg-dev/kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) | [80/100](SCORES.md#kreuzberg-devkreuzberg) | 8376 | A polyglot document intelligence framework for extracting information from various formats. |
-| [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) | [80/100](SCORES.md#mrexodiaida-pro-mcp) | 5427 | AI-powered reverse engineering assistant for IDA Pro using MCP. |
-| [u14app/deep-research](https://github.com/u14app/deep-research) | [80/100](SCORES.md#u14appdeep-research) | 4588 | A server for generating in-depth research reports using various LLMs. |
-| [liaokongVFX/MCP-Chinese-Getting-Started-Guide](https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide) | [80/100](SCORES.md#liaokongvfxmcp-chinese-getting-started-guide) | 3316 | A guide to quickly set up a Model Context Protocol server for web searching. |
-| [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | [80/100](SCORES.md#blazickjparxiv-mcp-server) | 2828 | A Model Context Protocol server for searching and analyzing arXiv papers. |
-| [Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | [80/100](SCORES.md#jpisniceshadcn-ui-mcp-server) | 2642 | MCP server for integrating shadcn UI components into AI workflows. |
-| [perplexityai/modelcontextprotocol](https://github.com/perplexityai/modelcontextprotocol) | [80/100](SCORES.md#perplexityaimodelcontextprotocol) | 1950 | Official MCP server implementation for the Perplexity API Platform. |
-| [stacklok/toolhive](https://github.com/stacklok/toolhive) | [80/100](SCORES.md#stackloktoolhive) | 1665 | ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers. |
-| [robotmcp/ros-mcp-server](https://github.com/robotmcp/ros-mcp-server) | [80/100](SCORES.md#robotmcpros-mcp-server) | 1010 | Connects AI models with robots using MCP and ROS. |
-| [bgauryy/octocode-mcp](https://github.com/bgauryy/octocode-mcp) | [80/100](SCORES.md#bgauryyoctocode-mcp) | 725 | MCP server for semantic code research and context generation using LLM patterns. |
-| [obot-platform/obot](https://github.com/obot-platform/obot) | [80/100](SCORES.md#obot-platformobot) | 606 | Obot is a comprehensive platform for hosting and managing MCP servers. |
-| [truffle-ai/dexto](https://github.com/truffle-ai/dexto) | [70/100](SCORES.md#truffle-aidexto) | 580 | Dexto is an agent harness for building and orchestrating AI applications. |
+| [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | [84/100](SCORES.md#firecrawlfirecrawl-mcp-server) | 6568 | A powerful web scraping and search MCP server for AI agents. |
+| [epiral/bb-browser](https://github.com/epiral/bb-browser) | [84/100](SCORES.md#epiralbb-browser) | 5779 | CLI + MCP server for AI agents to control Chrome with your login state. |
+| [brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp) | [82/100](SCORES.md#brightdatabrightdata-mcp) | 2449 | A powerful MCP server for real-time web access and data collection. |
+
+## AI & ML (22)
+
+| Server | Trust | Stars | Description |
+|--------|-------|-------|-------------|
+| [modelscope/FunASR](https://github.com/modelscope/FunASR) | [95/100](SCORES.md#modelscopefunasr) | 17968 | Industrial-grade speech recognition toolkit with multi-language support. |
+| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | [94/100](SCORES.md#yusufkaraaslanskill_seekers) | 14072 | Skill Seekers is an MCP server that converts various documentation sources into structured AI skills and knowledge assets for Claude and other AI systems. |
+| [1Panel-dev/MaxKB](https://github.com/1Panel-dev/MaxKB) | [93/100](SCORES.md#1panel-devmaxkb) | 21295 | MaxKB is an open-source platform providing enterprise-grade AI agents with retrieval-augmented generation, workflow orchestration, and multi-model integration exposed via an MCP-compatible server. |
+| [activepieces/activepieces](https://github.com/activepieces/activepieces) | [90/100](SCORES.md#activepiecesactivepieces) | 22751 | Activepieces is an AI automation platform with extensible MCP servers. |
+| [GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) | [88/100](SCORES.md#glipsfigma-context-mcp) | 15099 | MCP server providing Figma data to AI coding agents. |
+| [kreuzberg-dev/kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) | [88/100](SCORES.md#kreuzberg-devkreuzberg) | 8488 | A polyglot document intelligence framework for extracting information from various formats. |
+| [stacklok/toolhive](https://github.com/stacklok/toolhive) | [88/100](SCORES.md#stackloktoolhive) | 1878 | ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers. |
+| [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) | [87/100](SCORES.md#triggerdotdevtriggerdev) | 15341 | Trigger.dev is an open-source platform for building and deploying durable AI agents and workflows with retries, queues, and observability. |
+| [sansan0/TrendRadar](https://github.com/sansan0/TrendRadar) | [86/100](SCORES.md#sansan0trendradar) | 59417 | TrendRadar is an AI-driven public opinion and trend monitoring MCP server that aggregates multi-platform news, provides AI analysis, and supports smart alerts with multi-channel push notifications. |
+| [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) | [84/100](SCORES.md#mrexodiaida-pro-mcp) | 9361 | An MCP server integrating IDA Pro with language models to assist reverse engineering tasks. |
+| [obot-platform/obot](https://github.com/obot-platform/obot) | [84/100](SCORES.md#obot-platformobot) | 829 | Obot is a comprehensive platform for hosting and managing MCP servers. |
+| [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | [83/100](SCORES.md#blazickjparxiv-mcp-server) | 2860 | A Model Context Protocol server for searching and analyzing arXiv papers. |
+| [robotmcp/ros-mcp-server](https://github.com/robotmcp/ros-mcp-server) | [82/100](SCORES.md#robotmcpros-mcp-server) | 1282 | Connects AI models with robots using MCP and ROS. |
+| [perplexityai/modelcontextprotocol](https://github.com/perplexityai/modelcontextprotocol) | [81/100](SCORES.md#perplexityaimodelcontextprotocol) | 2301 | Official MCP server implementation for the Perplexity API Platform. |
+| [bgauryy/octocode-mcp](https://github.com/bgauryy/octocode-mcp) | [80/100](SCORES.md#bgauryyoctocode-mcp) | 864 | MCP server for semantic code research and context generation using LLM patterns. |
+| [chopratejas/headroom](https://github.com/chopratejas/headroom) | [77/100](SCORES.md#chopratejasheadroom) ⚠ | 26980 | Headroom compresses AI agent inputs to reduce token usage. |
+| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | [76/100](SCORES.md#ruvnetruflo) ⚠ | 59388 | Ruflo is an AI orchestration platform for deploying and managing multi-agent systems. |
+| [u14app/deep-research](https://github.com/u14app/deep-research) | [74/100](SCORES.md#u14appdeep-research) | 4610 | A server for generating in-depth research reports using various LLMs. |
+| [qdrant/mcp-server-qdrant](https://github.com/qdrant/mcp-server-qdrant) | [72/100](SCORES.md#qdrantmcp-server-qdrant) | 1434 | An MCP server that provides a semantic memory layer on top of the Qdrant vector search engine, exposing tools to store and retrieve information. |
+| [MiniMax-AI/MiniMax-MCP](https://github.com/MiniMax-AI/MiniMax-MCP) | [65/100](SCORES.md#minimax-aiminimax-mcp) ⚠ | 1513 | MiniMax MCP server providing AI-powered text-to-speech, image, and video generation tools via the MCP protocol. |
+
+*...and 2 more. See [known_servers.json](data/known_servers.json) for the full list.*
 
 ## Security (2)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | [90/100](SCORES.md#0x4m4hexstrike-ai) | 8773 | HexStrike AI is an advanced MCP server for automated cybersecurity tasks. |
-| [casdoor/casdoor](https://github.com/casdoor/casdoor) | [80/100](SCORES.md#casdoorcasdoor) | 13033 | An AI-first Identity and Access Management (IAM) / MCP gateway and auth server. |
+| [casdoor/casdoor](https://github.com/casdoor/casdoor) | [88/100](SCORES.md#casdoorcasdoor) | 13770 | An AI-first Identity and Access Management (IAM) / MCP gateway and auth server. |
+| [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | [77/100](SCORES.md#0x4m4hexstrike-ai) | 9562 | HexStrike AI is an advanced MCP server for automated cybersecurity tasks. |
 
-## Media (1)
-
-| Server | Trust | Stars | Description |
-|--------|-------|-------|-------------|
-| [nukeop/nuclear](https://github.com/nukeop/nuclear) | [80/100](SCORES.md#nukeopnuclear) | 17138 | Nuclear is a free, open-source music player with an MCP server for AI control. |
-
-## Knowledge Base (2)
+## Media (2)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [open-metadata/OpenMetadata](https://github.com/open-metadata/OpenMetadata) | [80/100](SCORES.md#open-metadataopenmetadata) | 8650 | OpenMetadata is a unified metadata platform for data discovery and governance. |
-| [datagouv/datagouv-mcp](https://github.com/datagouv/datagouv-mcp) | [80/100](SCORES.md#datagouvdatagouv-mcp) | 1388 | MCP server for exploring French national Open Data datasets via AI chatbots. |
+| [JoeanAmier/XHS-Downloader](https://github.com/JoeanAmier/XHS-Downloader) | [83/100](SCORES.md#joeanamierxhs-downloader) | 11549 | An MCP server for extracting and downloading content from XiaoHongShu (RedNote) including posts, user links, and media files. |
+| [nukeop/nuclear](https://github.com/nukeop/nuclear) | [82/100](SCORES.md#nukeopnuclear) | 17796 | Nuclear is a free, open-source music player with an MCP server for AI control. |
 
-## Other (4)
+## Search (1)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) | [80/100](SCORES.md#xpzouyingxiaohongshu-mcp) | 8777 | MCP server for interacting with xiaohongshu.com |
-| [webiny/webiny-js](https://github.com/webiny/webiny-js) | [80/100](SCORES.md#webinywebiny-js) | 7955 | Open-source CMS platform with AI-assisted development on AWS. |
-| [mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp) | [80/100](SCORES.md#mobile-nextmobile-mcp) | 5078 | MCP server for mobile automation and scraping across iOS and Android. |
-| [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | [80/100](SCORES.md#zcaceresmarkdownify-mcp) | 2728 | A Model Context Protocol server for converting various file types to Markdown. |
+| [liaokongVFX/MCP-Chinese-Getting-Started-Guide](https://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide) | [52/100](SCORES.md#liaokongvfxmcp-chinese-getting-started-guide) | 3518 | A Python MCP server exposing a web search tool that queries an external API and returns summarized search results. |
+
+## Knowledge Base (1)
+
+| Server | Trust | Stars | Description |
+|--------|-------|-------|-------------|
+| [datagouv/datagouv-mcp](https://github.com/datagouv/datagouv-mcp) | [83/100](SCORES.md#datagouvdatagouv-mcp) | 1535 | MCP server for exploring French national Open Data datasets via AI chatbots. |
+
+## Other (5)
+
+| Server | Trust | Stars | Description |
+|--------|-------|-------|-------------|
+| [mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp) | [88/100](SCORES.md#mobile-nextmobile-mcp) | 5196 | MCP server for mobile automation and scraping across iOS and Android. |
+| [xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) | [83/100](SCORES.md#xpzouyingxiaohongshu-mcp) | 14151 | MCP server for interacting with xiaohongshu.com |
+| [webiny/webiny-js](https://github.com/webiny/webiny-js) | [83/100](SCORES.md#webinywebiny-js) | 7991 | Open-source CMS platform with AI-assisted development on AWS. |
+| [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | [82/100](SCORES.md#zcaceresmarkdownify-mcp) | 2735 | A Model Context Protocol server for converting various file types to Markdown. |
+| [BuyWhere/buywhere-mcp](https://github.com/BuyWhere/buywhere-mcp) | [75/100](SCORES.md#buywherebuywhere-mcp) | 4 | An MCP server providing AI agents with product search and price comparison across Singapore, Southeast Asia, and US e-commerce markets. |
 
 ## How This Works
 
