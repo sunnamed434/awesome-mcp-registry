@@ -25,6 +25,7 @@ jobs:
               { name: 'status: declined',       color: 'b60205', description: 'Not a qualifying MCP server, or no public repo' },
               { name: 'status: excluded',       color: '5319e7', description: 'On the exclusion list (policy removal or maintainer opt-out) — not evaluated' },
               { name: 'status: withdrawn',      color: 'cccccc', description: 'Closed by the submitter before evaluation' },
+              { name: 'workflow-failure',       color: 'd73a4a', description: 'Auto-opened by the failure tracker when a CI workflow fails; auto-closed on recovery' },
             ];
             const common = { owner: context.repo.owner, repo: context.repo.repo };
             for (const l of labels) {

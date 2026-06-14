@@ -21,7 +21,10 @@ jobs:
   lock:
     runs-on: ubuntu-latest
     steps:
-      - uses: dessant/lock-threads@v5
+      # Pinned to v6.0.2: v5 hardcoded a Joi max(100) on github-token, which broke
+      # in May 2026 when GitHub rolled out the new ~520-char stateless GITHUB_TOKEN
+      # format ("github-token" length must be <= 100). v6 raised the limit to 1000.
+      - uses: dessant/lock-threads@89ae32b08ed1a541efecbab17912962a5e38981c # v6.0.2
         with:
           issue-inactive-days: '21'
           pr-inactive-days: '21'
