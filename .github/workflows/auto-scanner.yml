@@ -78,7 +78,7 @@ jobs:
 
       - name: Open and auto-merge update PR
         if: steps.commit.outputs.changed == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const branch = '${{ steps.commit.outputs.branch }}';

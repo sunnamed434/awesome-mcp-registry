@@ -28,7 +28,7 @@ jobs:
       contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const MARKER = '<!-- nomination-validation -->';
@@ -199,7 +199,7 @@ jobs:
       contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const issue = context.payload.issue;
@@ -237,7 +237,7 @@ jobs:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const common = { owner: context.repo.owner, repo: context.repo.repo };
