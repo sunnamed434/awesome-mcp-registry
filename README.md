@@ -130,7 +130,7 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [BuyWhere/buywhere-mcp](https://github.com/BuyWhere/buywhere-mcp) | [75/100](SCORES.md#buywherebuywhere-mcp) | 6 (+1/wk) | An MCP server providing AI agents with product search and price comparison across Singapore, Southeast Asia, and US e-commerce markets. |
+| [BuyWhere/buywhere-mcp](https://github.com/BuyWhere/buywhere-mcp?utm_source=awesome-mcp-registry&utm_medium=referral&utm_campaign=june30_25k&utm_content=awesome-mcp-registry) | [75/100](SCORES.md#buywherebuywhere-mcp) | 6 (+1/wk) | An MCP server providing AI agents with product search and price comparison across Singapore, Southeast Asia, and US e-commerce markets. |
 
 ## How This Works
 
