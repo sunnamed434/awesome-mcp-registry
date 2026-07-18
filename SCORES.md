@@ -19,7 +19,7 @@ Per-server breakdown of the registry's 0-100 trust score. The formula is publish
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 145 contributor(s) |
 
-Stars: 31373 (Δ7d +175, Δ30d +715)
+Stars: 31373 (Δ7d +0, Δ30d +522)
 
 ### sooperset/mcp-atlassian
 
@@ -36,7 +36,7 @@ Stars: 31373 (Δ7d +175, Δ30d +715)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 151 contributor(s) |
 
-Stars: 5542 (Δ7d +45, Δ30d +149)
+Stars: 5542 (Δ7d +0, Δ30d +117)
 
 ### koala73/worldmonitor
 
@@ -53,24 +53,7 @@ Stars: 5542 (Δ7d +45, Δ30d +149)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 99 contributor(s) |
 
-Stars: 61736
-
-### xberg-io/xberg
-
-[https://github.com/xberg-io/xberg](https://github.com/xberg-io/xberg)
-
-**95/100 (A)** — Listed — formula v1.0, computed 2026-07-12
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 88/100 | 17% | 8610 stars (log-scaled) |
-| Docs & hygiene | 99/100 | 17% | community health 87%, license MIT, security policy yes |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 48 contributor(s) |
-
-Stars: 8610 (Δ7d +16)
+Stars: 61736 (Δ7d +0)
 
 ### yusufkaraaslan/Skill_Seekers
 
@@ -87,7 +70,7 @@ Stars: 8610 (Δ7d +16)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 40 contributor(s) |
 
-Stars: 14435 (Δ7d +73, Δ30d +363)
+Stars: 14435 (Δ7d +0, Δ30d +222)
 
 ### 1Panel-dev/MaxKB
 
@@ -104,7 +87,7 @@ Stars: 14435 (Δ7d +73, Δ30d +363)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 82 contributor(s) |
 
-Stars: 22045 (Δ7d +227, Δ30d +750)
+Stars: 22045 (Δ7d +0, Δ30d +674)
 
 ### modelscope/FunASR
 
@@ -121,7 +104,7 @@ Stars: 22045 (Δ7d +227, Δ30d +750)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 171 contributor(s) |
 
-Stars: 19156 (Δ7d +261, Δ30d +1188)
+Stars: 19156 (Δ7d +0, Δ30d +769)
 
 ### casdoor/casdoor
 
@@ -138,7 +121,7 @@ Stars: 19156 (Δ7d +261, Δ30d +1188)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 295 contributor(s) |
 
-Stars: 13922 (Δ7d +47, Δ30d +152)
+Stars: 13922 (Δ7d +0, Δ30d +122)
 
 ### googleapis/mcp-toolbox
 
@@ -155,24 +138,7 @@ Stars: 13922 (Δ7d +47, Δ30d +152)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 143 contributor(s) |
 
-Stars: 15933 (Δ7d +79, Δ30d +323)
-
-### googleapis/mcp-toolbox
-
-[https://github.com/googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox)
-
-**92/100 (A)** — Listed — formula v1.0, computed 2026-07-12
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 94/100 | 17% | 15933 stars (log-scaled) |
-| Docs & hygiene | 99/100 | 17% | community health 87%, license Apache-2.0, security policy yes |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 143 contributor(s) |
-
-Stars: 15933 (Δ7d +79, Δ30d +323)
+Stars: 15933 (Δ7d +0, Δ30d +259)
 
 ### ChromeDevTools/chrome-devtools-mcp
 
@@ -189,7 +155,7 @@ Stars: 15933 (Δ7d +79, Δ30d +323)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 106 contributor(s) |
 
-Stars: 46707 (Δ7d +859, Δ30d +3147)
+Stars: 46707 (Δ7d +0, Δ30d +2614)
 
 ### czlonkowski/n8n-mcp
 
@@ -206,7 +172,7 @@ Stars: 46707 (Δ7d +859, Δ30d +3147)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 92/100 | 6% | 30 contributor(s) |
 
-Stars: 22250 (Δ7d +106, Δ30d +517)
+Stars: 22250 (Δ7d +0, Δ30d +363)
 
 ### oraios/serena
 
@@ -223,7 +189,7 @@ Stars: 22250 (Δ7d +106, Δ30d +517)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 185 contributor(s) |
 
-Stars: 26346 (Δ7d +243, Δ30d +1009)
+Stars: 26346 (Δ7d +0, Δ30d +752)
 
 ### microsoft/playwright-mcp
 
@@ -240,7 +206,7 @@ Stars: 26346 (Δ7d +243, Δ30d +1009)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 68 contributor(s) |
 
-Stars: 34968 (Δ7d +255, Δ30d +1077)
+Stars: 34968 (Δ7d +0, Δ30d +819)
 
 ### triggerdotdev/trigger.dev
 
@@ -257,7 +223,7 @@ Stars: 34968 (Δ7d +255, Δ30d +1077)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 137 contributor(s) |
 
-Stars: 15627 (Δ7d +62, Δ30d +286)
+Stars: 15627 (Δ7d +0, Δ30d +205)
 
 ### GLips/Figma-Context-MCP
 
@@ -274,7 +240,7 @@ Stars: 15627 (Δ7d +62, Δ30d +286)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 92/100 | 6% | 30 contributor(s) |
 
-Stars: 15371 (Δ7d +66, Δ30d +272)
+Stars: 15371 (Δ7d +0, Δ30d +203)
 
 ### firecrawl/firecrawl-mcp-server
 
@@ -291,7 +257,7 @@ Stars: 15371 (Δ7d +66, Δ30d +272)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 89/100 | 6% | 26 contributor(s) |
 
-Stars: 6916 (Δ7d +90, Δ30d +348)
+Stars: 6916 (Δ7d +0, Δ30d +274)
 
 ### datagouv/datagouv-mcp
 
@@ -308,7 +274,7 @@ Stars: 6916 (Δ7d +90, Δ30d +348)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 73/100 | 6% | 14 contributor(s) |
 
-Stars: 1561 (Δ7d +7, Δ30d +26)
+Stars: 1561 (Δ7d +0, Δ30d +20)
 
 ### upstash/context7
 
@@ -325,7 +291,7 @@ Stars: 1561 (Δ7d +7, Δ30d +26)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 124 contributor(s) |
 
-Stars: 58948 (Δ7d +359, Δ30d +1613)
+Stars: 58948 (Δ7d +0, Δ30d +1160)
 
 ### mobile-next/mobile-mcp
 
@@ -342,7 +308,7 @@ Stars: 58948 (Δ7d +359, Δ30d +1613)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 89/100 | 6% | 26 contributor(s) |
 
-Stars: 5422 (Δ7d +51, Δ30d +226)
+Stars: 5422 (Δ7d +0, Δ30d +181)
 
 ### containers/kubernetes-mcp-server
 
@@ -359,7 +325,7 @@ Stars: 5422 (Δ7d +51, Δ30d +226)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 63 contributor(s) |
 
-Stars: 1797 (Δ7d +45, Δ30d +113)
+Stars: 1797 (Δ7d +0, Δ30d +87)
 
 ### getsentry/XcodeBuildMCP
 
@@ -376,24 +342,7 @@ Stars: 1797 (Δ7d +45, Δ30d +113)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 43 contributor(s) |
 
-Stars: 6066 (Δ7d +35, Δ30d +167)
-
-### getsentry/XcodeBuildMCP
-
-[https://github.com/getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP)
-
-**86/100 (A)** — Listed — formula v1.0, computed 2026-07-12
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 84/100 | 17% | 6066 stars (log-scaled) |
-| Docs & hygiene | 88/100 | 17% | community health 62%, license MIT, security policy yes |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 43 contributor(s) |
-
-Stars: 6066 (Δ7d +35, Δ30d +167)
+Stars: 6066 (Δ7d +0, Δ30d +122)
 
 ### coddingtonbear/obsidian-local-rest-api
 
@@ -410,7 +359,7 @@ Stars: 6066 (Δ7d +35, Δ30d +167)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 82/100 | 6% | 20 contributor(s) |
 
-Stars: 2634 (Δ7d +49, Δ30d +184)
+Stars: 2634 (Δ7d +0, Δ30d +140)
 
 ### benborla/mcp-server-mysql
 
@@ -427,7 +376,7 @@ Stars: 2634 (Δ7d +49, Δ30d +184)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 92/100 | 6% | 30 contributor(s) |
 
-Stars: 1937 (Δ7d +27, Δ30d +126)
+Stars: 1937 (Δ7d +0, Δ30d +92)
 
 ### mrexodia/ida-pro-mcp
 
@@ -444,7 +393,7 @@ Stars: 1937 (Δ7d +27, Δ30d +126)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 62 contributor(s) |
 
-Stars: 10043 (Δ7d +157, Δ30d +682)
+Stars: 10043 (Δ7d +0, Δ30d +513)
 
 ### jacob-bd/notebooklm-mcp-cli
 
@@ -461,7 +410,7 @@ Stars: 10043 (Δ7d +157, Δ30d +682)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 50 contributor(s) |
 
-Stars: 5419 (Δ7d +247, Δ30d +546)
+Stars: 5419 (Δ7d +0, Δ30d +430)
 
 ### zcaceres/markdownify-mcp
 
@@ -478,7 +427,7 @@ Stars: 5419 (Δ7d +247, Δ30d +546)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 62/100 | 6% | 9 contributor(s) |
 
-Stars: 2785 (Δ7d +14, Δ30d +50)
+Stars: 2785 (Δ7d +0, Δ30d +31)
 
 ### JoeanAmier/XHS-Downloader
 
@@ -495,7 +444,7 @@ Stars: 2785 (Δ7d +14, Δ30d +50)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 59/100 | 6% | 8 contributor(s) |
 
-Stars: 11912 (Δ7d +91, Δ30d +363)
+Stars: 11912 (Δ7d +0, Δ30d +276)
 
 ### brightdata/brightdata-mcp
 
@@ -512,7 +461,7 @@ Stars: 11912 (Δ7d +91, Δ30d +363)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 76/100 | 6% | 16 contributor(s) |
 
-Stars: 2494 (Δ7d +4, Δ30d +45)
+Stars: 2494 (Δ7d +0, Δ30d +33)
 
 ### epiral/bb-browser
 
@@ -529,7 +478,7 @@ Stars: 2494 (Δ7d +4, Δ30d +45)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
 
-Stars: 5953 (Δ7d +16, Δ30d +174)
+Stars: 5953 (Δ7d +0, Δ30d +117)
 
 ### idosal/git-mcp
 
@@ -546,7 +495,7 @@ Stars: 5953 (Δ7d +16, Δ30d +174)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 76/100 | 6% | 16 contributor(s) |
 
-Stars: 8244 (Δ7d +13, Δ30d +76)
+Stars: 8244 (Δ7d +0, Δ30d +53)
 
 ### blazickjp/arxiv-mcp-server
 
@@ -563,7 +512,7 @@ Stars: 8244 (Δ7d +13, Δ30d +76)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 73/100 | 6% | 14 contributor(s) |
 
-Stars: 2950 (Δ7d +20, Δ30d +90)
+Stars: 2950 (Δ7d +0, Δ30d +77)
 
 ### perplexityai/modelcontextprotocol
 
@@ -580,7 +529,7 @@ Stars: 2950 (Δ7d +20, Δ30d +90)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 76/100 | 6% | 16 contributor(s) |
 
-Stars: 2375 (Δ7d +9, Δ30d +74)
+Stars: 2375 (Δ7d +0, Δ30d +51)
 
 ### robotmcp/ros-mcp-server
 
@@ -597,24 +546,7 @@ Stars: 2375 (Δ7d +9, Δ30d +74)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 79/100 | 6% | 18 contributor(s) |
 
-Stars: 1342 (Δ7d +10, Δ30d +60)
-
-### bgauryy/octocode
-
-[https://github.com/bgauryy/octocode](https://github.com/bgauryy/octocode)
-
-**79/100 (B)** — Listed — formula v1.0, computed 2026-07-12
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 66/100 | 17% | 886 stars (log-scaled) |
-| Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 56/100 | 6% | 7 contributor(s) |
-
-Stars: 886 (Δ7d +10, Δ30d +22)
+Stars: 1342 (Δ7d +0, Δ30d +42)
 
 ### xpzouying/xiaohongshu-mcp
 
@@ -631,7 +563,7 @@ Stars: 886 (Δ7d +10, Δ30d +22)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 92/100 | 6% | 30 contributor(s) |
 
-Stars: 14631 (Δ7d +121, Δ30d +480)
+Stars: 14631 (Δ7d +0, Δ30d +370)
 
 ### Pimzino/spec-workflow-mcp
 
@@ -648,7 +580,7 @@ Stars: 14631 (Δ7d +121, Δ30d +480)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 81/100 | 6% | 19 contributor(s) |
 
-Stars: 4268 (Δ7d +13, Δ30d +42)
+Stars: 4268 (Δ7d +0, Δ30d +28)
 
 ### DeusData/codebase-memory-mcp
 
@@ -668,7 +600,7 @@ Stars: 4268 (Δ7d +13, Δ30d +42)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 30231 (Δ7d +3934)
+Stars: 30231 (Δ7d +0, Δ30d +20640)
 
 ### bgauryy/octocode
 
@@ -685,7 +617,7 @@ Stars: 30231 (Δ7d +3934)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 56/100 | 6% | 7 contributor(s) |
 
-Stars: 886 (Δ7d +10, Δ30d +22)
+Stars: 886 (Δ7d +0, Δ30d +19)
 
 ### headroomlabs-ai/headroom
 
@@ -705,7 +637,7 @@ Stars: 886 (Δ7d +10, Δ30d +22)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 58598 (Δ7d +1999)
+Stars: 58598 (Δ7d +0)
 
 ### zylon-ai/private-gpt
 
@@ -725,7 +657,7 @@ Stars: 58598 (Δ7d +1999)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 57330
+Stars: 57330 (Δ7d +0)
 
 ### BuyWhere/buywhere-mcp
 
@@ -742,7 +674,7 @@ Stars: 57330
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 30/100 | 6% | 2 contributor(s) |
 
-Stars: 6 (Δ7d +1, Δ30d +2)
+Stars: 6 (Δ7d +0, Δ30d +2)
 
 ### haris-musa/excel-mcp-server
 
@@ -759,7 +691,7 @@ Stars: 6 (Δ7d +1, Δ30d +2)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
 
-Stars: 4013 (Δ7d +28, Δ30d +83)
+Stars: 4013 (Δ7d +0, Δ30d +66)
 
 ### 0x4m4/hexstrike-ai
 
@@ -776,7 +708,7 @@ Stars: 4013 (Δ7d +28, Δ30d +83)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 30/100 | 6% | 2 contributor(s) |
 
-Stars: 10269 (Δ7d +122, Δ30d +707)
+Stars: 10269 (Δ7d +0, Δ30d +486)
 
 ### Jpisnice/shadcn-ui-mcp-server
 
@@ -793,7 +725,7 @@ Stars: 10269 (Δ7d +122, Δ30d +707)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 78/100 | 6% | 17 contributor(s) |
 
-Stars: 2851 (Δ7d +21, Δ30d +55)
+Stars: 2851 (Δ7d +0, Δ30d +52)
 
 ### qdrant/mcp-server-qdrant
 
@@ -810,7 +742,7 @@ Stars: 2851 (Δ7d +21, Δ30d +55)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 67/100 | 6% | 11 contributor(s) |
 
-Stars: 1461 (Δ7d +7, Δ30d +27)
+Stars: 1461 (Δ7d +0, Δ30d +21)
 
 ### sansan0/TrendRadar
 
@@ -830,7 +762,7 @@ Stars: 1461 (Δ7d +7, Δ30d +27)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 60472 (Δ7d +219, Δ30d +1055)
+Stars: 60472 (Δ7d +0, Δ30d +760)
 
 ### wonderwhy-er/DesktopCommanderMCP
 
@@ -850,7 +782,7 @@ Stars: 60472 (Δ7d +219, Δ30d +1055)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 7822 (Δ7d +1577, Δ30d +1654)
+Stars: 7822 (Δ7d +0, Δ30d +1633)
 
 ### CursorTouch/Windows-MCP
 
@@ -870,7 +802,7 @@ Stars: 7822 (Δ7d +1577, Δ30d +1654)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 6397 (Δ7d +73, Δ30d +423)
+Stars: 6397 (Δ7d +0, Δ30d +221)
 
 ### kucherenko/jscpd
 
@@ -890,7 +822,7 @@ Stars: 6397 (Δ7d +73, Δ30d +423)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 5868 (Δ7d +31, Δ30d +98)
+Stars: 5868 (Δ7d +0, Δ30d +78)
 
 ### BeehiveInnovations/pal-mcp-server
 
@@ -907,7 +839,7 @@ Stars: 5868 (Δ7d +31, Δ30d +98)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 94/100 | 6% | 32 contributor(s) |
 
-Stars: 11655 (Δ7d +12, Δ30d +56)
+Stars: 11655 (Δ7d +0, Δ30d +54)
 
 ### executeautomation/mcp-playwright
 
@@ -924,7 +856,7 @@ Stars: 11655 (Δ7d +12, Δ30d +56)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 91/100 | 6% | 28 contributor(s) |
 
-Stars: 5572 (Δ7d +5, Δ30d +18)
+Stars: 5572 (Δ7d +0, Δ30d +18)
 
 ### hangwin/mcp-chrome
 
@@ -941,7 +873,7 @@ Stars: 5572 (Δ7d +5, Δ30d +18)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 75/100 | 6% | 15 contributor(s) |
 
-Stars: 12093 (Δ7d +51, Δ30d +175)
+Stars: 12093 (Δ7d +0, Δ30d +127)
 
 ### tadata-org/fastapi_mcp
 
@@ -958,7 +890,7 @@ Stars: 12093 (Δ7d +51, Δ30d +175)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 75/100 | 6% | 15 contributor(s) |
 
-Stars: 11938 (Δ7d +1, Δ30d +23)
+Stars: 11938 (Δ7d +0, Δ30d +17)
 
 ### MiniMax-AI/MiniMax-MCP
 
@@ -978,7 +910,7 @@ Stars: 11938 (Δ7d +1, Δ30d +23)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 1527 (Δ7d +6, Δ30d +14)
+Stars: 1527 (Δ7d +0, Δ30d +11)
 
 ### smallhandsome/shotapi-mcp-server
 
@@ -1012,7 +944,7 @@ Stars: 0 (Δ7d +0, Δ30d +0)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
 
-Stars: 9473 (Δ7d +72, Δ30d +259)
+Stars: 9473 (Δ7d +0, Δ30d +169)
 
 ### GongRzhe/Office-PowerPoint-MCP-Server
 
@@ -1032,7 +964,7 @@ Stars: 9473 (Δ7d +72, Δ30d +259)
 Flags:
 - ⚠ Repository is archived (blocks listing)
 
-Stars: 1833 (Δ7d +9, Δ30d +46)
+Stars: 1833 (Δ7d +0, Δ30d +30)
 
 ### GongRzhe/Office-Word-MCP-Server
 
@@ -1052,7 +984,7 @@ Stars: 1833 (Δ7d +9, Δ30d +46)
 Flags:
 - ⚠ Repository is archived (blocks listing)
 
-Stars: 2096 (Δ7d +4, Δ30d +49)
+Stars: 2096 (Δ7d +0, Δ30d +37)
 
 ### supermemoryai/apple-mcp
 
@@ -1072,7 +1004,7 @@ Stars: 2096 (Δ7d +4, Δ30d +49)
 Flags:
 - ⚠ Repository is archived (blocks listing)
 
-Stars: 3123 (Δ7d +6, Δ30d +6)
+Stars: 3123 (Δ7d +0, Δ30d +6)
 
 ### liaokongVFX/MCP-Chinese-Getting-Started-Guide
 
@@ -1089,7 +1021,7 @@ Stars: 3123 (Δ7d +6, Δ30d +6)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 37/100 | 6% | 3 contributor(s) |
 
-Stars: 3537 (Δ7d -2, Δ30d +19)
+Stars: 3537 (Δ7d +0, Δ30d +16)
 
 ### chongdashu/unreal-mcp
 
@@ -1106,7 +1038,7 @@ Stars: 3537 (Δ7d -2, Δ30d +19)
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 30/100 | 6% | 2 contributor(s) |
 
-Stars: 2031 (Δ7d +11, Δ30d +51)
+Stars: 2031 (Δ7d +0, Δ30d +31)
 
 ### refreshdotdev/web-eval-agent
 
@@ -1127,7 +1059,7 @@ Flags:
 - ⚠ Repository is archived (blocks listing)
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 1241 (Δ7d -2)
+Stars: 1241 (Δ7d +0)
 
 ### lharries/whatsapp-mcp
 
@@ -1147,4 +1079,4 @@ Stars: 1241 (Δ7d -2)
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 5892 (Δ7d +17, Δ30d +113)
+Stars: 5892 (Δ7d +0, Δ30d +81)

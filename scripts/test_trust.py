@@ -368,6 +368,65 @@ class TestNominationVerdicts(unittest.TestCase):
         self.assertNotIn("Already listed", text)
 
 
+class TestDedupe(unittest.TestCase):
+    def _srv(self, fn, checked, rid=None, **kw):
+        e = {"full_name": fn, "last_checked": checked,
+             "analysis": {"is_valid_mcp_server": True, "quality_score": 8}}
+        if rid:
+            e["repo_id"] = rid
+        e.update(kw)
+        return e
+
+    def test_same_repo_id_under_two_slugs(self):
+        import scan_repos
+        # A transferred repo re-discovered under its new slug: one record survives.
+        cache = {"servers": [self._srv("jlowin/fastmcp", day(20), rid=5),
+                             self._srv("PrefectHQ/fastmcp", day(2), rid=5)]}
+        self.assertEqual(scan_repos.dedupe_servers(cache), 1)
+        self.assertEqual([s["full_name"] for s in cache["servers"]],
+                         ["PrefectHQ/fastmcp"])
+
+    def test_slug_fallback_is_case_insensitive(self):
+        import scan_repos
+        # Regression: the same repo listed twice (ids not backfilled yet).
+        cache = {"servers": [self._srv("getsentry/XcodeBuildMCP", day(20)),
+                             self._srv("getsentry/xcodebuildmcp", day(2))]}
+        self.assertEqual(scan_repos.dedupe_servers(cache), 1)
+        self.assertEqual(len(cache["servers"]), 1)
+        self.assertEqual(cache["servers"][0]["last_checked"], day(2))
+
+    def test_known_repo_id_survives_merge(self):
+        import scan_repos
+        cache = {"servers": [self._srv("o/r", day(20), rid=7),
+                             self._srv("o/r", day(2))]}
+        scan_repos.dedupe_servers(cache)
+        survivor = cache["servers"][0]
+        self.assertEqual(survivor["last_checked"], day(2))
+        self.assertEqual(survivor["repo_id"], 7)
+
+    def test_first_discovery_provenance_survives(self):
+        import scan_repos
+        nominated = self._srv("o/r", day(30), rid=7, source="nominated",
+                              discovered_via="nomination",
+                              nominated_by={"login": "x", "user_id": 1,
+                                            "issue_number": 2})
+        rediscovered = self._srv("o/r", day(1), rid=7, source="github",
+                                 discovered_via="github-search")
+        cache = {"servers": [nominated, rediscovered]}
+        scan_repos.dedupe_servers(cache)
+        survivor = cache["servers"][0]
+        self.assertEqual(survivor["last_checked"], day(1))  # freshest verdict
+        self.assertEqual(survivor["discovered_via"], "nomination")
+        self.assertEqual(survivor["nominated_by"]["user_id"], 1)
+
+    def test_distinct_repos_untouched(self):
+        import scan_repos
+        cache = {"servers": [self._srv("a/x", day(1), rid=1),
+                             self._srv("b/y", day(1), rid=2)]}
+        self.assertEqual(scan_repos.dedupe_servers(cache), 0)
+        self.assertEqual(len(cache["servers"]), 2)
+
+
 class TestIdentityResolution(unittest.TestCase):
     def _entry(self, **kw):
         e = {"full_name": "old/name",

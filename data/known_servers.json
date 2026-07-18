@@ -138,7 +138,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 896335270
     },
     {
       "full_name": "upstash/context7",
@@ -296,12 +298,14 @@
           "tsconfig.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 955620917
     },
     {
-      "full_name": "mindsdb/minds",
-      "name": "minds",
-      "url": "https://github.com/mindsdb/minds",
+      "full_name": "mindsdb/mindshub",
+      "name": "mindshub",
+      "url": "https://github.com/mindsdb/mindshub",
       "stars": 39348,
       "source": "github",
       "last_checked": "2026-06-28",
@@ -451,7 +455,9 @@
           "frontend"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 143328315
     },
     {
       "full_name": "microsoft/playwright-mcp",
@@ -609,7 +615,9 @@
           "update-readme.js"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 952688112
     },
     {
       "full_name": "github/github-mcp-server",
@@ -772,15 +780,17 @@
           "ui"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 942771284
     },
     {
       "full_name": "PrefectHQ/fastmcp",
       "name": "fastmcp",
       "url": "https://github.com/PrefectHQ/fastmcp",
-      "stars": 25825,
+      "stars": 25972,
       "source": "github",
-      "last_checked": "2026-06-28",
+      "last_checked": "2026-07-05",
       "analysis": {
         "is_valid_mcp_server": false,
         "confidence": 100,
@@ -795,103 +805,14 @@
         "server_entrypoint": "unknown",
         "security_concerns": [],
         "injection_attempt": false,
-        "reason": "The repository is the FastMCP framework for building MCP servers and clients, not a single focused MCP server itself; it provides tools to create servers but does not expose a standalone server with entrypoint and tools to connect to.",
-        "short_description": "A Python framework for building MCP servers and clients that automates schema, validation, and protocol management.",
+        "reason": "The repository is the 'fastmcp' framework for building MCP servers and clients, not a single focused MCP server itself; the README shows example code for defining a server but this repo provides the framework, not a standalone server with a concrete entrypoint or exposed tools.",
+        "short_description": "A Python framework to build MCP servers and clients by declaring tools as Python functions with automatic schema and protocol management.",
         "quality_score": 9
       },
-      "last_update": "2026-06-28T04:10:54Z",
+      "last_update": "2026-07-05T06:06:21Z",
       "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
       "language": "Python",
       "topics": "agents, fastmcp, llms, mcp, mcp-clients, mcp-servers, mcp-tools, model-context-protocol, python",
-      "metrics": {
-        "fetched_at": "2026-06-28",
-        "gone": false,
-        "stars": 25825,
-        "pushed_at": "2026-06-27T16:53:49Z",
-        "created_at": "2024-11-30T01:47:40Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "Apache-2.0",
-        "owner_type": "Organization",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 249,
-        "health_percentage": 87,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 6916,
-        "readme_headings": 6,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "PrefectHQ",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
-        "language": "Python",
-        "topics": "agents, fastmcp, llms, mcp, mcp-clients, mcp-servers, mcp-tools, model-context-protocol, python",
-        "last_update": "2026-06-28T04:10:54Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-06-28",
-        "final": 90,
-        "grade": "A",
-        "subscores": {
-          "ai": {
-            "score": 75,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 2,
-                "maturity": 4
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 99,
-            "detail": {
-              "stars": 25825
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 99,
-            "detail": {
-              "health_percentage": 87,
-              "license": "Apache-2.0",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 249
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
-      },
       "mcp_signals": {
         "sdk_dependencies": [
           "mcp (python)",
@@ -934,7 +855,98 @@
           "v3-notes"
         ]
       },
-      "prompt_version": 2
+      "metrics": {
+        "fetched_at": "2026-07-05",
+        "gone": false,
+        "stars": 25972,
+        "pushed_at": "2026-07-01T14:51:33Z",
+        "created_at": "2024-11-30T01:47:40Z",
+        "archived": false,
+        "disabled": false,
+        "license_spdx": "Apache-2.0",
+        "owner_type": "Organization",
+        "owner_created_at": null,
+        "commits_90d": 30,
+        "contributors": 250,
+        "health_percentage": 87,
+        "security_policy": true,
+        "scorecard": null,
+        "readme_chars": 6916,
+        "readme_headings": 6,
+        "readme_has_code_block": true,
+        "pipe_to_shell": false,
+        "default_branch": "main",
+        "owner_login": "PrefectHQ",
+        "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
+        "language": "Python",
+        "topics": "agents, fastmcp, llms, mcp, mcp-clients, mcp-servers, mcp-tools, model-context-protocol, python",
+        "last_update": "2026-07-05T06:06:21Z"
+      },
+      "trust": {
+        "formula_version": "1.0",
+        "computed_at": "2026-07-05",
+        "final": 90,
+        "grade": "A",
+        "subscores": {
+          "ai": {
+            "score": 75,
+            "detail": {
+              "source": "rubric",
+              "rubric": {
+                "documentation": 3,
+                "utility": 2,
+                "maturity": 4
+              }
+            },
+            "weight": 0.3889
+          },
+          "maintenance": {
+            "score": 100,
+            "detail": {
+              "days_since_push": 3,
+              "commits_90d": 30
+            },
+            "weight": 0.2222
+          },
+          "popularity": {
+            "score": 99,
+            "detail": {
+              "stars": 25972
+            },
+            "weight": 0.1667
+          },
+          "docs": {
+            "score": 99,
+            "detail": {
+              "health_percentage": 87,
+              "license": "Apache-2.0",
+              "security_policy": true
+            },
+            "weight": 0.1667
+          },
+          "security": {
+            "score": null,
+            "detail": {
+              "scorecard": null,
+              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
+            },
+            "weight": 0.0
+          },
+          "community": {
+            "score": 100,
+            "detail": {
+              "contributors": 250
+            },
+            "weight": 0.0556
+          }
+        },
+        "flags": [],
+        "penalty": 0,
+        "fatal": false
+      },
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 896296825
     },
     {
       "full_name": "activepieces/activepieces",
@@ -1097,7 +1109,9 @@
           "CONTRIBUTING.md"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 573661753
     },
     {
       "full_name": "oraios/serena",
@@ -1262,7 +1276,9 @@
           "src"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 953683578
     },
     {
       "full_name": "GLips/Figma-Context-MCP",
@@ -1422,7 +1438,9 @@
           "vitest.config.ts"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 931892749
     },
     {
       "full_name": "googleapis/mcp-toolbox",
@@ -1585,7 +1603,9 @@
           "npm"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 812044182
     },
     {
       "full_name": "BeehiveInnovations/pal-mcp-server",
@@ -1751,7 +1771,9 @@
           "pytest.ini"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 998428732
     },
     {
       "full_name": "hangwin/mcp-chrome",
@@ -1904,7 +1926,9 @@
           "releases"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 998796026
     },
     {
       "full_name": "mcp-use/mcp-use",
@@ -2051,7 +2075,9 @@
           "static"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 956472076
     },
     {
       "full_name": "modelcontextprotocol/inspector",
@@ -2215,7 +2241,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 867337374
     },
     {
       "full_name": "awslabs/mcp",
@@ -2377,7 +2405,9 @@
           "trivy.yaml"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 952238700
     },
     {
       "full_name": "idosal/git-mcp",
@@ -2542,7 +2572,9 @@
           "worker-configuration.d.ts"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 956842312
     },
     {
       "full_name": "LaurieWired/GhidraMCP",
@@ -2687,7 +2719,9 @@
           "src"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 953335676
     },
     {
       "full_name": "0x4m4/hexstrike-ai",
@@ -2829,7 +2863,9 @@
           "requirements.txt"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1017550802
     },
     {
       "full_name": "modelcontextprotocol/registry",
@@ -2989,7 +3025,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 927890076
     },
     {
       "full_name": "yzfly/Awesome-MCP-ZH",
@@ -3123,128 +3161,38 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 959543974
     },
     {
       "full_name": "xberg-io/xberg",
       "name": "xberg",
       "url": "https://github.com/xberg-io/xberg",
-      "stars": 8610,
+      "stars": 8565,
       "source": "github",
       "last_checked": "2026-06-28",
+      "last_update": "2026-06-28T04:40:40Z",
+      "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
+      "language": "Rust",
+      "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm",
       "analysis": {
-        "is_valid_mcp_server": true,
-        "confidence": 90,
-        "category": "ai-ml",
+        "is_valid_mcp_server": false,
+        "confidence": 95,
+        "category": "other",
         "rubric": {
           "documentation": 3,
           "utility": 4,
           "maturity": 4
         },
-        "transport": [
-          "stdio",
-          "streamable-http"
-        ],
-        "tools_count_estimate": 5,
-        "server_entrypoint": "xberg-mcp-server",
+        "transport": [],
+        "tools_count_estimate": 0,
+        "server_entrypoint": "unknown",
         "security_concerns": [],
         "injection_attempt": false,
-        "reason": "The README states the server can be used via MCP server interface and exposes tools for extracting text, metadata, images, and structured data from over 97 document formats; the server entrypoint is implied as the MCP server mode of the xberg CLI or binary, with tools including PDF text extraction, image extraction, and metadata extraction.",
-        "short_description": "An MCP server providing document intelligence tools for extracting text, metadata, images, and structured information from a wide variety of document formats.",
+        "reason": "The repository is a polyglot document intelligence framework with bindings for many languages and supports CLI, REST API, and MCP server usage, but the README does not specify a concrete MCP server entrypoint or list specific MCP tools exposed by this server instance.",
+        "short_description": "A document intelligence framework with a Rust core that extracts text, metadata, images, and structured information from various document formats.",
         "quality_score": 10
-      },
-      "last_update": "2026-07-12T05:02:30Z",
-      "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
-      "language": "Rust",
-      "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm",
-      "metrics": {
-        "fetched_at": "2026-07-12",
-        "gone": false,
-        "stars": 8610,
-        "pushed_at": "2026-07-12T05:02:25Z",
-        "created_at": "2025-01-31T21:50:02Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "MIT",
-        "owner_type": "Organization",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 48,
-        "health_percentage": 87,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 25268,
-        "readme_headings": 28,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "xberg-io",
-        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
-        "language": "Rust",
-        "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm",
-        "last_update": "2026-07-12T05:02:30Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-07-12",
-        "final": 95,
-        "grade": "A",
-        "subscores": {
-          "ai": {
-            "score": 92,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 4,
-                "maturity": 4
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 88,
-            "detail": {
-              "stars": 8610
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 99,
-            "detail": {
-              "health_percentage": 87,
-              "license": "MIT",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 48
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
       },
       "mcp_signals": {
         "sdk_dependencies": [],
@@ -3289,7 +3237,98 @@
           "LICENSE"
         ]
       },
-      "prompt_version": 2
+      "metrics": {
+        "fetched_at": "2026-06-28",
+        "gone": false,
+        "stars": 8565,
+        "pushed_at": "2026-06-27T17:30:37Z",
+        "created_at": "2025-01-31T21:50:02Z",
+        "archived": false,
+        "disabled": false,
+        "license_spdx": "MIT",
+        "owner_type": "Organization",
+        "owner_created_at": "2025-10-31T15:27:44Z",
+        "commits_90d": 30,
+        "contributors": 45,
+        "health_percentage": 87,
+        "security_policy": true,
+        "scorecard": null,
+        "readme_chars": 25492,
+        "readme_headings": 28,
+        "readme_has_code_block": true,
+        "pipe_to_shell": false,
+        "default_branch": "main",
+        "owner_login": "xberg-io",
+        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
+        "language": "Rust",
+        "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm",
+        "last_update": "2026-06-28T04:40:40Z"
+      },
+      "trust": {
+        "formula_version": "1.0",
+        "computed_at": "2026-06-28",
+        "final": 95,
+        "grade": "A",
+        "subscores": {
+          "ai": {
+            "score": 92,
+            "detail": {
+              "source": "rubric",
+              "rubric": {
+                "documentation": 3,
+                "utility": 4,
+                "maturity": 4
+              }
+            },
+            "weight": 0.3889
+          },
+          "maintenance": {
+            "score": 100,
+            "detail": {
+              "days_since_push": 0,
+              "commits_90d": 30
+            },
+            "weight": 0.2222
+          },
+          "popularity": {
+            "score": 88,
+            "detail": {
+              "stars": 8565
+            },
+            "weight": 0.1667
+          },
+          "docs": {
+            "score": 99,
+            "detail": {
+              "health_percentage": 87,
+              "license": "MIT",
+              "security_policy": true
+            },
+            "weight": 0.1667
+          },
+          "security": {
+            "score": null,
+            "detail": {
+              "scorecard": null,
+              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
+            },
+            "weight": 0.0
+          },
+          "community": {
+            "score": 100,
+            "detail": {
+              "contributors": 45
+            },
+            "weight": 0.0556
+          }
+        },
+        "flags": [],
+        "penalty": 0,
+        "fatal": false
+      },
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 925434317
     },
     {
       "full_name": "BrowserMCP/mcp",
@@ -3429,7 +3468,9 @@
           "tsconfig.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 956283541
     },
     {
       "full_name": "firecrawl/firecrawl-mcp-server",
@@ -3585,7 +3626,9 @@
           "tsup.config.ts"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 899407931
     },
     {
       "full_name": "wonderwhy-er/DesktopCommanderMCP",
@@ -3757,7 +3800,9 @@
           "plugins"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 898345892
     },
     {
       "full_name": "lharries/whatsapp-mcp",
@@ -3901,7 +3946,9 @@
           "whatsapp-mcp-server"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 957053334
     },
     {
       "full_name": "executeautomation/mcp-playwright",
@@ -4062,7 +4109,9 @@
           "tsconfig.test.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 898077246
     },
     {
       "full_name": "appcypher/awesome-mcp-servers",
@@ -4194,7 +4243,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 895801050
     },
     {
       "full_name": "nanbingxyz/5ire",
@@ -4355,7 +4406,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 739667828
     },
     {
       "full_name": "aipotheosis-labs/aci",
@@ -4497,7 +4550,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 859956307
     },
     {
       "full_name": "u14app/deep-research",
@@ -4653,7 +4708,9 @@
           "wrangler.toml"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 936974548
     },
     {
       "full_name": "modelcontextprotocol/servers",
@@ -4802,7 +4859,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 890668799
     },
     {
       "full_name": "modelcontextprotocol/python-sdk",
@@ -4959,7 +5018,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 862584018
     },
     {
       "full_name": "modelcontextprotocol/typescript-sdk",
@@ -5119,7 +5180,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 862578138
     },
     {
       "full_name": "getsentry/XcodeBuildMCP",
@@ -5284,7 +5347,9 @@
           "schemas"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 945551361
     },
     {
       "full_name": "modelcontextprotocol/csharp-sdk",
@@ -5440,7 +5505,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 946174307
     },
     {
       "full_name": "Pimzino/spec-workflow-mcp",
@@ -5605,7 +5672,9 @@
           "vscode-extension"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1033865617
     },
     {
       "full_name": "modelcontextprotocol/go-sdk",
@@ -5771,7 +5840,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 971300888
     },
     {
       "full_name": "opensumi/core",
@@ -5932,7 +6003,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 429104828
     },
     {
       "full_name": "wong2/awesome-mcp-servers",
@@ -6066,7 +6139,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 895553015
     },
     {
       "full_name": "mobile-next/mobile-mcp",
@@ -6223,7 +6298,9 @@
           "tsconfig.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 956657893
     },
     {
       "full_name": "haris-musa/excel-mcp-server",
@@ -6377,7 +6454,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 931365873
     },
     {
       "full_name": "IBM/mcp-context-forge",
@@ -6544,7 +6623,9 @@
           "AGENTS.md"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 979886407
     },
     {
       "full_name": "modelcontextprotocol/java-sdk",
@@ -6700,7 +6781,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 919609219
     },
     {
       "full_name": "microsoft/mcp",
@@ -6866,7 +6949,9 @@
         "penalty": 15,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 963038660
     },
     {
       "full_name": "zcaceres/markdownify-mcp",
@@ -7021,7 +7106,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 905450127
     },
     {
       "full_name": "blazickjp/arxiv-mcp-server",
@@ -7176,7 +7263,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 896146306
     },
     {
       "full_name": "brightdata/brightdata-mcp",
@@ -7339,7 +7428,9 @@
           "tool_groups.js"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 966718614
     },
     {
       "full_name": "GongRzhe/Office-Word-MCP-Server",
@@ -7501,7 +7592,9 @@
           "word_mcp_server.py"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 954434732
     },
     {
       "full_name": "GongRzhe/Office-PowerPoint-MCP-Server",
@@ -7662,7 +7755,9 @@
           "utils"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 954558050
     },
     {
       "full_name": "f/mcptools",
@@ -7814,7 +7909,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 954858451
     },
     {
       "full_name": "modelcontextprotocol/php-sdk",
@@ -7963,7 +8060,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1020454748
     },
     {
       "full_name": "modelcontextprotocol/kotlin-sdk",
@@ -8122,7 +8221,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 904281964
     },
     {
       "full_name": "MiniMax-AI/MiniMax-MCP",
@@ -8279,7 +8380,9 @@
         "penalty": 15,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 963737260
     },
     {
       "full_name": "modelcontextprotocol/swift-sdk",
@@ -8422,7 +8525,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 927967893
     },
     {
       "full_name": "qdrant/mcp-server-qdrant",
@@ -8569,7 +8674,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 897308110
     },
     {
       "full_name": "n8n-io/n8n",
@@ -8738,7 +8845,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 193215554
     },
     {
       "full_name": "google-gemini/gemini-cli",
@@ -8899,7 +9008,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 968197216
     },
     {
       "full_name": "sansan0/TrendRadar",
@@ -9069,7 +9180,9 @@
         "penalty": 15,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 974186260
     },
     {
       "full_name": "bytedance/UI-TARS-desktop",
@@ -9239,7 +9352,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 918932603
     },
     {
       "full_name": "assafelovic/gpt-researcher",
@@ -9404,7 +9519,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 639835356
     },
     {
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
@@ -9569,7 +9686,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1054793726
     },
     {
       "full_name": "1Panel-dev/MaxKB",
@@ -9719,7 +9838,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 691347156
     },
     {
       "full_name": "microsoft/mcp-for-beginners",
@@ -9875,34 +9996,132 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 960665821
     },
     {
       "full_name": "ruvnet/ruflo",
       "name": "ruflo",
       "url": "https://github.com/ruvnet/ruflo",
-      "stars": 59386,
+      "stars": 60597,
       "source": "github",
-      "last_checked": "2026-06-14",
+      "last_checked": "2026-06-21",
       "analysis": {
         "is_valid_mcp_server": false,
         "confidence": 95,
         "category": "other",
         "rubric": {
-          "documentation": 1,
-          "utility": 2,
-          "maturity": 2
+          "documentation": 2,
+          "utility": 3,
+          "maturity": 3
         },
         "transport": [],
         "tools_count_estimate": 0,
         "server_entrypoint": "unknown",
         "security_concerns": [],
         "injection_attempt": false,
-        "reason": "The repository describes a multi-agent AI framework with integrations for Claude and Codex, but does not identify a concrete MCP server entrypoint or specify example MCP tools it exposes. It appears to be a framework or meta-harness rather than a single focused MCP server.",
-        "short_description": "A TypeScript framework for deploying multi-agent AI swarms and autonomous workflows with Claude and Codex integration.",
-        "quality_score": 6
+        "reason": "The repository is a multi-agent framework and meta-harness for Claude with rich features, but it lacks a clear MCP server entrypoint or instructions on how an MCP client would launch or connect to a server within this repo. The presence of many directories and plugins suggests a framework or platform rather than a single focused MCP server.",
+        "short_description": "A TypeScript-based multi-agent meta-harness for deploying intelligent agent swarms and autonomous workflows with Claude integration.",
+        "quality_score": 7
       },
-      "last_update": "2026-06-14T12:38:07Z",
+      "metrics": {
+        "fetched_at": "2026-06-21",
+        "gone": false,
+        "stars": 60597,
+        "pushed_at": "2026-06-21T06:07:56Z",
+        "created_at": "2025-06-02T21:24:20Z",
+        "archived": false,
+        "disabled": false,
+        "license_spdx": "MIT",
+        "owner_type": "User",
+        "owner_created_at": null,
+        "commits_90d": 30,
+        "contributors": 32,
+        "health_percentage": 71,
+        "security_policy": true,
+        "scorecard": null,
+        "readme_chars": 29125,
+        "readme_headings": 37,
+        "readme_has_code_block": true,
+        "pipe_to_shell": true,
+        "default_branch": "main",
+        "owner_login": "ruvnet",
+        "description": "🌊 The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+        "language": "TypeScript",
+        "topics": "agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agents, ai-assistant, ai-coding, ai-skills, autonomous-agents, claude-code, codex, mcp-server, multi-agent, multi-agent-systems, npm, skills, swarm, swarm-intelligence, typescript",
+        "last_update": "2026-06-21T07:01:42Z"
+      },
+      "trust": {
+        "formula_version": "1.0",
+        "computed_at": "2026-06-21",
+        "final": 71,
+        "grade": "B",
+        "subscores": {
+          "ai": {
+            "score": 67,
+            "detail": {
+              "source": "rubric",
+              "rubric": {
+                "documentation": 2,
+                "utility": 3,
+                "maturity": 3
+              }
+            },
+            "weight": 0.3889
+          },
+          "maintenance": {
+            "score": 100,
+            "detail": {
+              "days_since_push": 0,
+              "commits_90d": 30
+            },
+            "weight": 0.2222
+          },
+          "popularity": {
+            "score": 100,
+            "detail": {
+              "stars": 60597
+            },
+            "weight": 0.1667
+          },
+          "docs": {
+            "score": 92,
+            "detail": {
+              "health_percentage": 71,
+              "license": "MIT",
+              "security_policy": true
+            },
+            "weight": 0.1667
+          },
+          "security": {
+            "score": null,
+            "detail": {
+              "scorecard": null,
+              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
+            },
+            "weight": 0.0
+          },
+          "community": {
+            "score": 94,
+            "detail": {
+              "contributors": 32
+            },
+            "weight": 0.0556
+          }
+        },
+        "flags": [
+          {
+            "id": "pipe_to_shell",
+            "label": "README instructs piping a download into a shell (e.g. curl | bash)",
+            "penalty": 15,
+            "fatal": false
+          }
+        ],
+        "penalty": 15,
+        "fatal": false
+      },
+      "last_update": "2026-06-21T07:01:42Z",
       "description": "🌊 The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
       "language": "TypeScript",
       "topics": "agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agents, ai-assistant, ai-coding, ai-skills, autonomous-agents, claude-code, codex, mcp-server, multi-agent, multi-agent-systems, npm, skills, swarm, swarm-intelligence, typescript",
@@ -9921,6 +10140,7 @@
           ".githooks",
           ".github",
           ".gitignore",
+          ".harness",
           ".npmignore",
           "AGENTS.md",
           "CHANGELOG.md",
@@ -9943,107 +10163,12 @@
           "ruflo",
           "scripts",
           "tests",
-          "tsconfig.json",
-          "v3"
+          "tsconfig.json"
         ]
       },
-      "metrics": {
-        "fetched_at": "2026-06-14",
-        "gone": false,
-        "stars": 59386,
-        "pushed_at": "2026-06-14T07:54:58Z",
-        "created_at": "2025-06-02T21:24:20Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "MIT",
-        "owner_type": "User",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 31,
-        "health_percentage": 71,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 28296,
-        "readme_headings": 37,
-        "readme_has_code_block": true,
-        "pipe_to_shell": true,
-        "default_branch": "main",
-        "owner_login": "ruvnet",
-        "description": "🌊 The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
-        "language": "TypeScript",
-        "topics": "agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agents, ai-assistant, ai-coding, ai-skills, autonomous-agents, claude-code, codex, mcp-server, multi-agent, multi-agent-systems, npm, skills, swarm, swarm-intelligence, typescript",
-        "last_update": "2026-06-14T12:38:07Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-06-14",
-        "final": 61,
-        "grade": "C",
-        "subscores": {
-          "ai": {
-            "score": 42,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 1,
-                "utility": 2,
-                "maturity": 2
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 100,
-            "detail": {
-              "stars": 59386
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 92,
-            "detail": {
-              "health_percentage": 71,
-              "license": "MIT",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 93,
-            "detail": {
-              "contributors": 31
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [
-          {
-            "id": "pipe_to_shell",
-            "label": "README instructs piping a download into a shell (e.g. curl | bash)",
-            "penalty": 15,
-            "fatal": false
-          }
-        ],
-        "penalty": 15,
-        "fatal": false
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 995029641
     },
     {
       "full_name": "triggerdotdev/trigger.dev",
@@ -10206,7 +10331,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 572570113
     },
     {
       "full_name": "czlonkowski/n8n-mcp",
@@ -10371,7 +10498,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 997890921
     },
     {
       "full_name": "tadata-org/fastapi_mcp",
@@ -10526,7 +10655,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 944976593
     },
     {
       "full_name": "0xJacky/nginx-ui",
@@ -10690,7 +10821,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 340339997
     },
     {
       "full_name": "JoeanAmier/XHS-Downloader",
@@ -10841,7 +10974,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 679219059
     },
     {
       "full_name": "yusufkaraaslan/Skill_Seekers",
@@ -11007,7 +11142,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1078319457
     },
     {
       "full_name": "D4Vinci/Scrapling",
@@ -11167,7 +11304,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 872119017
     },
     {
       "full_name": "open-metadata/OpenMetadata",
@@ -11336,7 +11475,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 391740664
     },
     {
       "full_name": "modelcontextprotocol/modelcontextprotocol",
@@ -11497,7 +11638,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 862570523
     },
     {
       "full_name": "mrexodia/ida-pro-mcp",
@@ -11650,7 +11793,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 954963562
     },
     {
       "full_name": "liaokongVFX/MCP-Chinese-Getting-Started-Guide",
@@ -11783,7 +11928,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 941145803
     },
     {
       "full_name": "metorial/metorial",
@@ -11932,7 +12079,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 965998145
     },
     {
       "full_name": "supermemoryai/apple-mcp",
@@ -12090,7 +12239,9 @@
         "penalty": 0,
         "fatal": true
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 935736274
     },
     {
       "full_name": "opensolon/solon",
@@ -12249,7 +12400,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 140086420
     },
     {
       "full_name": "Jpisnice/shadcn-ui-mcp-server",
@@ -12409,7 +12562,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 961975051
     },
     {
       "full_name": "mattzcarey/shippie",
@@ -12559,172 +12714,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "getsentry/XcodeBuildMCP",
-      "name": "XcodeBuildMCP",
-      "url": "https://github.com/getsentry/XcodeBuildMCP",
-      "stars": 6066,
-      "source": "github",
-      "last_checked": "2026-06-21",
-      "analysis": {
-        "is_valid_mcp_server": true,
-        "confidence": 95,
-        "category": "dev-tools",
-        "rubric": {
-          "documentation": 3,
-          "utility": 3,
-          "maturity": 3
-        },
-        "transport": [
-          "stdio"
-        ],
-        "tools_count_estimate": 2,
-        "server_entrypoint": "xcodebuildmcp mcp",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The README specifies the MCP server can be run via the CLI command 'xcodebuildmcp mcp' and exposes tools related to iOS/macOS project builds, including skills for MCP and CLI usage. It includes installation instructions, client connection snippets, and CI badges indicating maturity.",
-        "short_description": "An MCP server and CLI providing tools for AI agents to interact with iOS and macOS projects using Xcode.",
-        "quality_score": 9
-      },
-      "metrics": {
-        "fetched_at": "2026-07-12",
-        "gone": false,
-        "stars": 6066,
-        "pushed_at": "2026-07-11T22:02:17Z",
-        "created_at": "2025-03-09T17:31:18Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "MIT",
-        "owner_type": "Organization",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 43,
-        "health_percentage": 62,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 5409,
-        "readme_headings": 15,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "getsentry",
-        "description": "A Model Context Protocol (MCP) server and CLI that provides tools for agent use when working on iOS and macOS projects.",
-        "language": "TypeScript",
-        "topics": "mcp, mcp-server, model-context-protocol, model-context-protocol-servers, tag-production, xcode, xcodebuild",
-        "last_update": "2026-07-12T05:24:01Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-07-12",
-        "final": 86,
-        "grade": "A",
-        "subscores": {
-          "ai": {
-            "score": 75,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 3,
-                "maturity": 3
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 84,
-            "detail": {
-              "stars": 6066
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 88,
-            "detail": {
-              "health_percentage": 62,
-              "license": "MIT",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 43
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
-      },
-      "last_update": "2026-07-12T05:24:01Z",
-      "description": "A Model Context Protocol (MCP) server and CLI that provides tools for agent use when working on iOS and macOS projects.",
-      "language": "TypeScript",
-      "topics": "mcp, mcp-server, model-context-protocol, model-context-protocol-servers, tag-production, xcode, xcodebuild",
-      "mcp_signals": {
-        "sdk_dependencies": [
-          "@modelcontextprotocol/sdk"
-        ],
-        "manifests_checked": [
-          "package.json"
-        ],
-        "package_name": "xcodebuildmcp",
-        "has_mcp_manifest": true,
-        "topics_mcp_server": true,
-        "root_files": [
-          ".agents",
-          ".axe-version",
-          ".cursor",
-          ".githooks",
-          ".github",
-          ".gitignore",
-          ".mcp.json",
-          ".prettierignore",
-          ".prettierrc.js",
-          ".vscode",
-          "AGENTS.md",
-          "CHANGELOG.md",
-          "CLAUDE.md",
-          "CODE_OF_CONDUCT.md",
-          "LICENSE",
-          "README.md",
-          "SECURITY.md",
-          "THIRD_PARTY_LICENSES",
-          "THIRD_PARTY_PACKAGE_LICENSES.md",
-          "XcodeBuildMCP.code-workspace",
-          "assets",
-          "benchmarks",
-          "config.example.yaml",
-          "eslint.config.js",
-          "example_projects",
-          "knip.json",
-          "manifests",
-          "package-lock.json",
-          "package.json",
-          "schemas"
-        ]
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 663247362
     },
     {
       "full_name": "xpzouying/xiaohongshu-mcp",
@@ -12889,7 +12881,9 @@
           "handlers_api.go"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1031215137
     },
     {
       "full_name": "perplexityai/modelcontextprotocol",
@@ -13041,7 +13035,9 @@
           "vitest.config.ts"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 946214670
     },
     {
       "full_name": "MCPJam/inspector",
@@ -13199,7 +13195,9 @@
           "widget-react"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 989134268
     },
     {
       "full_name": "snyk/agent-scan",
@@ -13363,7 +13361,9 @@
         "penalty": 5,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 962024783
     },
     {
       "full_name": "chongdashu/unreal-mcp",
@@ -13504,7 +13504,9 @@
           "mcp.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 956687107
     },
     {
       "full_name": "refreshdotdev/web-eval-agent",
@@ -13666,7 +13668,9 @@
         "penalty": 15,
         "fatal": true
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 958888851
     },
     {
       "full_name": "basementstudio/xmcp",
@@ -13831,7 +13835,9 @@
         "penalty": 15,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 985096937
     },
     {
       "full_name": "containers/kubernetes-mcp-server",
@@ -13993,7 +13999,9 @@
           "smithery.yaml"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 930678258
     },
     {
       "full_name": "robotmcp/ros-mcp-server",
@@ -14147,7 +14155,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 964371379
     },
     {
       "full_name": "QuantGeekDev/mcp-framework",
@@ -14311,7 +14321,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 900493069
     },
     {
       "full_name": "bgauryy/octocode",
@@ -14319,25 +14331,25 @@
       "url": "https://github.com/bgauryy/octocode",
       "stars": 886,
       "source": "github",
-      "last_checked": "2026-06-21",
+      "last_checked": "2026-06-28",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 90,
-        "category": "dev-tools",
+        "category": "ai-ml",
         "rubric": {
           "documentation": 3,
           "utility": 3,
-          "maturity": 3
+          "maturity": 2
         },
         "transport": [
           "stdio"
         ],
-        "tools_count_estimate": 12,
-        "server_entrypoint": "octocode-cli",
+        "tools_count_estimate": 5,
+        "server_entrypoint": "octocode-mcp CLI or MCP server (Rust engine backend)",
         "security_concerns": [],
         "injection_attempt": false,
-        "reason": "The README explicitly describes an MCP server interface named 'octocode-cli' with commands such as 'octocode tree', 'octocode search', 'octocode get', and 'octocode pr', exposing at least a dozen tools for semantic code research and context generation. The documentation includes install instructions, configuration, tool listing, and usage examples.",
-        "short_description": "An MCP server providing semantic code research and context generation tools for local and GitHub codebases via a CLI and AI assistant integration.",
+        "reason": "The README explicitly states it can run as an MCP server and CLI, with a Rust engine backend providing tools such as ripgrep and AST structural search, repository tree browsing, LSP semantic navigation, and binary inspection. It documents configuration, authentication, and usage, evidencing a real MCP server with multiple tools.",
+        "short_description": "Octocode is an MCP server and CLI for semantic code research and context generation, enabling AI agents and developers to search and analyze codebases across local and external repositories.",
         "quality_score": 8
       },
       "metrics": {
@@ -14370,17 +14382,17 @@
       "trust": {
         "formula_version": "1.0",
         "computed_at": "2026-07-12",
-        "final": 79,
+        "final": 76,
         "grade": "B",
         "subscores": {
           "ai": {
-            "score": 75,
+            "score": 67,
             "detail": {
               "source": "rubric",
               "rubric": {
                 "documentation": 3,
                 "utility": 3,
-                "maturity": 3
+                "maturity": 2
               }
             },
             "weight": 0.3889
@@ -14442,7 +14454,6 @@
         "has_mcp_manifest": false,
         "topics_mcp_server": false,
         "root_files": [
-          ".agents",
           ".github",
           ".gitignore",
           ".npmignore",
@@ -14458,8 +14469,8 @@
           "PRIVACY.md",
           "README.md",
           "TERMS.md",
+          "_skills",
           "assets",
-          "benchmark",
           "docs",
           "eslint.config.js",
           "glama.json",
@@ -14472,7 +14483,9 @@
           "yarn.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 996813130
     },
     {
       "full_name": "BigSweetPotatoStudio/HyperChat",
@@ -14633,7 +14646,9 @@
           "tsconfig.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 903270862
     },
     {
       "full_name": "Kymo-MCP/mcpcan",
@@ -14789,7 +14804,9 @@
           "images"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1059189119
     },
     {
       "full_name": "tbxark/mcp-proxy",
@@ -14945,7 +14962,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 955698123
     },
     {
       "full_name": "obot-platform/obot",
@@ -15106,7 +15125,9 @@
           "tools"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 852998534
     },
     {
       "full_name": "truffle-ai/dexto",
@@ -15276,7 +15297,9 @@
           "feature-plans"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 954321799
     },
     {
       "full_name": "rekog-labs/MCP-Nest",
@@ -15434,169 +15457,9 @@
           "tsconfig.playground.json"
         ]
       },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "PrefectHQ/fastmcp",
-      "name": "fastmcp",
-      "url": "https://github.com/PrefectHQ/fastmcp",
-      "stars": 25972,
-      "source": "github",
-      "last_checked": "2026-07-05",
-      "analysis": {
-        "is_valid_mcp_server": false,
-        "confidence": 100,
-        "category": "other",
-        "rubric": {
-          "documentation": 3,
-          "utility": 2,
-          "maturity": 4
-        },
-        "transport": [],
-        "tools_count_estimate": 0,
-        "server_entrypoint": "unknown",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The repository is the 'fastmcp' framework for building MCP servers and clients, not a single focused MCP server itself; the README shows example code for defining a server but this repo provides the framework, not a standalone server with a concrete entrypoint or exposed tools.",
-        "short_description": "A Python framework to build MCP servers and clients by declaring tools as Python functions with automatic schema and protocol management.",
-        "quality_score": 9
-      },
-      "last_update": "2026-07-05T06:06:21Z",
-      "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
-      "language": "Python",
-      "topics": "agents, fastmcp, llms, mcp, mcp-clients, mcp-servers, mcp-tools, model-context-protocol, python",
-      "mcp_signals": {
-        "sdk_dependencies": [
-          "mcp (python)",
-          "fastmcp (python)"
-        ],
-        "manifests_checked": [
-          "pyproject.toml"
-        ],
-        "package_name": "fastmcp",
-        "has_mcp_manifest": false,
-        "topics_mcp_server": true,
-        "root_files": [
-          ".ccignore",
-          ".claude",
-          ".coderabbit.yaml",
-          ".cursor",
-          ".github",
-          ".gitignore",
-          ".pre-commit-config.yaml",
-          ".python-version",
-          "AGENTS.md",
-          "CLAUDE.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "LICENSE",
-          "README.md",
-          "SECURITY.md",
-          "docs",
-          "examples",
-          "fastmcp_remote",
-          "fastmcp_slim",
-          "justfile",
-          "logo.py",
-          "loq.toml",
-          "pyproject.toml",
-          "scripts",
-          "skills",
-          "tests",
-          "uv.lock",
-          "v3-notes"
-        ]
-      },
-      "metrics": {
-        "fetched_at": "2026-07-05",
-        "gone": false,
-        "stars": 25972,
-        "pushed_at": "2026-07-01T14:51:33Z",
-        "created_at": "2024-11-30T01:47:40Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "Apache-2.0",
-        "owner_type": "Organization",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 250,
-        "health_percentage": 87,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 6916,
-        "readme_headings": 6,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "PrefectHQ",
-        "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
-        "language": "Python",
-        "topics": "agents, fastmcp, llms, mcp, mcp-clients, mcp-servers, mcp-tools, model-context-protocol, python",
-        "last_update": "2026-07-05T06:06:21Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-07-05",
-        "final": 90,
-        "grade": "A",
-        "subscores": {
-          "ai": {
-            "score": 75,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 2,
-                "maturity": 4
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 3,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 99,
-            "detail": {
-              "stars": 25972
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 99,
-            "detail": {
-              "health_percentage": 87,
-              "license": "Apache-2.0",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 250
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 922709376
     },
     {
       "full_name": "casdoor/casdoor",
@@ -15761,7 +15624,9 @@
           "i18n"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 306366900
     },
     {
       "full_name": "modelcontextprotocol/ext-apps",
@@ -15923,7 +15788,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1101234405
     },
     {
       "full_name": "benborla/mcp-server-mysql",
@@ -16088,175 +15955,9 @@
           "scripts"
         ]
       },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "ruvnet/ruflo",
-      "name": "ruflo",
-      "url": "https://github.com/ruvnet/ruflo",
-      "stars": 60597,
-      "source": "github",
-      "last_checked": "2026-06-21",
-      "analysis": {
-        "is_valid_mcp_server": false,
-        "confidence": 95,
-        "category": "other",
-        "rubric": {
-          "documentation": 2,
-          "utility": 3,
-          "maturity": 3
-        },
-        "transport": [],
-        "tools_count_estimate": 0,
-        "server_entrypoint": "unknown",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The repository is a multi-agent framework and meta-harness for Claude with rich features, but it lacks a clear MCP server entrypoint or instructions on how an MCP client would launch or connect to a server within this repo. The presence of many directories and plugins suggests a framework or platform rather than a single focused MCP server.",
-        "short_description": "A TypeScript-based multi-agent meta-harness for deploying intelligent agent swarms and autonomous workflows with Claude integration.",
-        "quality_score": 7
-      },
-      "metrics": {
-        "fetched_at": "2026-06-21",
-        "gone": false,
-        "stars": 60597,
-        "pushed_at": "2026-06-21T06:07:56Z",
-        "created_at": "2025-06-02T21:24:20Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "MIT",
-        "owner_type": "User",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 32,
-        "health_percentage": 71,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 29125,
-        "readme_headings": 37,
-        "readme_has_code_block": true,
-        "pipe_to_shell": true,
-        "default_branch": "main",
-        "owner_login": "ruvnet",
-        "description": "🌊 The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
-        "language": "TypeScript",
-        "topics": "agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agents, ai-assistant, ai-coding, ai-skills, autonomous-agents, claude-code, codex, mcp-server, multi-agent, multi-agent-systems, npm, skills, swarm, swarm-intelligence, typescript",
-        "last_update": "2026-06-21T07:01:42Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-06-21",
-        "final": 71,
-        "grade": "B",
-        "subscores": {
-          "ai": {
-            "score": 67,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 2,
-                "utility": 3,
-                "maturity": 3
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 100,
-            "detail": {
-              "stars": 60597
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 92,
-            "detail": {
-              "health_percentage": 71,
-              "license": "MIT",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 94,
-            "detail": {
-              "contributors": 32
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [
-          {
-            "id": "pipe_to_shell",
-            "label": "README instructs piping a download into a shell (e.g. curl | bash)",
-            "penalty": 15,
-            "fatal": false
-          }
-        ],
-        "penalty": 15,
-        "fatal": false
-      },
-      "last_update": "2026-06-21T07:01:42Z",
-      "description": "🌊 The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
-      "language": "TypeScript",
-      "topics": "agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agents, ai-assistant, ai-coding, ai-skills, autonomous-agents, claude-code, codex, mcp-server, multi-agent, multi-agent-systems, npm, skills, swarm, swarm-intelligence, typescript",
-      "mcp_signals": {
-        "sdk_dependencies": [],
-        "manifests_checked": [
-          "package.json"
-        ],
-        "package_name": "claude-flow",
-        "has_mcp_manifest": false,
-        "topics_mcp_server": true,
-        "root_files": [
-          ".agents",
-          ".claude-plugin",
-          ".claude",
-          ".githooks",
-          ".github",
-          ".gitignore",
-          ".harness",
-          ".npmignore",
-          "AGENTS.md",
-          "CHANGELOG.md",
-          "CLAUDE.local.md",
-          "CLAUDE.md",
-          "LICENSE",
-          "README.md",
-          "SECURITY.md",
-          "agentdb.rvf",
-          "agentdb.rvf.lock",
-          "bin",
-          "data",
-          "docs",
-          "package-lock.json",
-          "package.json",
-          "plugin",
-          "plugins",
-          "pnpm-lock.yaml",
-          "ruflo-plugins.gif",
-          "ruflo",
-          "scripts",
-          "tests",
-          "tsconfig.json"
-        ]
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 900806525
     },
     {
       "full_name": "CursorTouch/Windows-MCP",
@@ -16422,7 +16123,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 982517950
     },
     {
       "full_name": "stacklok/toolhive",
@@ -16585,7 +16288,9 @@
           "examples"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 947349598
     },
     {
       "full_name": "sooperset/mcp-atlassian",
@@ -16746,7 +16451,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 897809208
     },
     {
       "full_name": "alpic-ai/skybridge",
@@ -16901,7 +16608,9 @@
           "skills"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1071272475
     },
     {
       "full_name": "webiny/webiny-js",
@@ -17070,171 +16779,9 @@
           "scripts"
         ]
       },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "googleapis/mcp-toolbox",
-      "name": "mcp-toolbox",
-      "url": "https://github.com/googleapis/mcp-toolbox",
-      "stars": 15933,
-      "source": "github",
-      "last_checked": "2026-06-21",
-      "analysis": {
-        "is_valid_mcp_server": true,
-        "confidence": 95,
-        "category": "databases",
-        "rubric": {
-          "documentation": 3,
-          "utility": 4,
-          "maturity": 3
-        },
-        "transport": [
-          "stdio",
-          "streamable-http"
-        ],
-        "tools_count_estimate": 10,
-        "server_entrypoint": "main.go",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The repository provides a Go-based MCP server executable (main.go) that connects MCP clients like Gemini CLI and Claude Code to multiple databases, exposing tools for schema exploration, code generation, and NL2SQL queries. The README includes installation, configuration, and usage information with links to full documentation and lists example MCP clients and tools.",
-        "short_description": "An open source MCP server in Go that connects AI agents and applications to enterprise databases, providing generic and customizable database tools.",
-        "quality_score": 9
-      },
-      "metrics": {
-        "fetched_at": "2026-07-12",
-        "gone": false,
-        "stars": 15933,
-        "pushed_at": "2026-07-11T21:41:35Z",
-        "created_at": "2024-06-07T20:52:54Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "Apache-2.0",
-        "owner_type": "Organization",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 143,
-        "health_percentage": 87,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 32770,
-        "readme_headings": 30,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "googleapis",
-        "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
-        "language": "Go",
-        "topics": "agent, agents, ai, bigquery, clickhouse, cockroachdb, database, elasticsearch, firestore, genai, llm, mcp, mongodb, mysql, oracle, postgresql, redis, server, spanner, tidb",
-        "last_update": "2026-07-12T01:45:07Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-07-12",
-        "final": 92,
-        "grade": "A",
-        "subscores": {
-          "ai": {
-            "score": 83,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 4,
-                "maturity": 3
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 94,
-            "detail": {
-              "stars": 15933
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 99,
-            "detail": {
-              "health_percentage": 87,
-              "license": "Apache-2.0",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 143
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
-      },
-      "last_update": "2026-07-12T01:45:07Z",
-      "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
-      "language": "Go",
-      "topics": "agent, agents, ai, bigquery, clickhouse, cockroachdb, database, elasticsearch, firestore, genai, llm, mcp, mongodb, mysql, oracle, postgresql, redis, server, spanner, tidb",
-      "mcp_signals": {
-        "sdk_dependencies": [],
-        "manifests_checked": [
-          "go.mod"
-        ],
-        "package_name": "",
-        "has_mcp_manifest": true,
-        "topics_mcp_server": false,
-        "root_files": [
-          ".ci",
-          ".gemini",
-          ".github",
-          ".gitignore",
-          ".gitmodules",
-          ".golangci.yaml",
-          ".hugo",
-          ".lycheeignore",
-          "AGENTS.md",
-          "CHANGELOG.md",
-          "CLAUDE.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "DEVELOPER.md",
-          "Dockerfile",
-          "GEMINI.md",
-          "LICENSE",
-          "MCP-TOOLBOX-EXTENSION.md",
-          "README.md",
-          "SECURITY.md",
-          "UPGRADING.md",
-          "cmd",
-          "docs",
-          "gemini-extension.json",
-          "go.mod",
-          "go.sum",
-          "internal",
-          "logo.png",
-          "main.go",
-          "npm"
-        ]
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 116817549
     },
     {
       "full_name": "nukeop/nuclear",
@@ -17399,7 +16946,9 @@
           "turbo.json"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 68968979
     },
     {
       "full_name": "datagouv/datagouv-mcp",
@@ -17552,7 +17101,9 @@
           "uv.lock"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1103742564
     },
     {
       "full_name": "google-labs-code/stitch-skills",
@@ -17689,7 +17240,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1135847870
     },
     {
       "full_name": "mksglu/context-mode",
@@ -17852,7 +17405,9 @@
           "release-notes-v1.0.148.md"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1164477708
     },
     {
       "full_name": "kucherenko/jscpd",
@@ -18030,7 +17585,9 @@
           "rust"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 10353211
     },
     {
       "full_name": "coddingtonbear/obsidian-local-rest-api",
@@ -18195,167 +17752,9 @@
           "tsconfig.json"
         ]
       },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "bgauryy/octocode",
-      "name": "octocode",
-      "url": "https://github.com/bgauryy/octocode",
-      "stars": 886,
-      "source": "github",
-      "last_checked": "2026-06-28",
-      "analysis": {
-        "is_valid_mcp_server": true,
-        "confidence": 90,
-        "category": "ai-ml",
-        "rubric": {
-          "documentation": 3,
-          "utility": 3,
-          "maturity": 2
-        },
-        "transport": [
-          "stdio"
-        ],
-        "tools_count_estimate": 5,
-        "server_entrypoint": "octocode-mcp CLI or MCP server (Rust engine backend)",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The README explicitly states it can run as an MCP server and CLI, with a Rust engine backend providing tools such as ripgrep and AST structural search, repository tree browsing, LSP semantic navigation, and binary inspection. It documents configuration, authentication, and usage, evidencing a real MCP server with multiple tools.",
-        "short_description": "Octocode is an MCP server and CLI for semantic code research and context generation, enabling AI agents and developers to search and analyze codebases across local and external repositories.",
-        "quality_score": 8
-      },
-      "metrics": {
-        "fetched_at": "2026-07-12",
-        "gone": false,
-        "stars": 886,
-        "pushed_at": "2026-07-10T07:29:27Z",
-        "created_at": "2025-06-05T13:56:40Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "MIT",
-        "owner_type": "User",
-        "owner_created_at": null,
-        "commits_90d": 30,
-        "contributors": 7,
-        "health_percentage": 57,
-        "security_policy": false,
-        "scorecard": null,
-        "readme_chars": 37968,
-        "readme_headings": 34,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "bgauryy",
-        "description": "MCP server for semantic code research and context generation on real-time using LLM patterns | Search naturally across public & private repos based on your permissions | Transform any accessible codebase/s into AI-optimized knowledge on simple and complex flows | Find real implementations and live docs from anywhere",
-        "language": "TypeScript",
-        "topics": "agent, ai, ai-agents, ai-tools, claude-ai, code-intelligence, code-search, context, cursor, cursor-ai, development, github, github-api, llm, mcp, model-context-protocol, modelcontextprotocol, octocode, semantic-search, vibe-coding",
-        "last_update": "2026-07-12T02:51:12Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-07-12",
-        "final": 76,
-        "grade": "B",
-        "subscores": {
-          "ai": {
-            "score": 67,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 3,
-                "maturity": 2
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 1,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 66,
-            "detail": {
-              "stars": 886
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 81,
-            "detail": {
-              "health_percentage": 57,
-              "license": "MIT",
-              "security_policy": false
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 56,
-            "detail": {
-              "contributors": 7
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
-      },
-      "last_update": "2026-07-12T02:51:12Z",
-      "description": "MCP server for semantic code research and context generation on real-time using LLM patterns | Search naturally across public & private repos based on your permissions | Transform any accessible codebase/s into AI-optimized knowledge on simple and complex flows | Find real implementations and live docs from anywhere",
-      "language": "TypeScript",
-      "topics": "agent, ai, ai-agents, ai-tools, claude-ai, code-intelligence, code-search, context, cursor, cursor-ai, development, github, github-api, llm, mcp, model-context-protocol, modelcontextprotocol, octocode, semantic-search, vibe-coding",
-      "mcp_signals": {
-        "sdk_dependencies": [],
-        "manifests_checked": [
-          "package.json"
-        ],
-        "package_name": "octocode-monorepo",
-        "has_mcp_manifest": false,
-        "topics_mcp_server": false,
-        "root_files": [
-          ".github",
-          ".gitignore",
-          ".npmignore",
-          ".prettierignore",
-          ".prettierrc.json",
-          ".syncpackrc.mjs",
-          ".yarn",
-          ".yarnrc.yml",
-          "AGENTS.md",
-          "CLAUDE.md",
-          "LICENSE",
-          "MANIFEST.md",
-          "PRIVACY.md",
-          "README.md",
-          "TERMS.md",
-          "_skills",
-          "assets",
-          "docs",
-          "eslint.config.js",
-          "glama.json",
-          "homebrew-octocode",
-          "package.json",
-          "packages",
-          "release",
-          "scripts",
-          "skills",
-          "yarn.lock"
-        ]
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 451732769
     },
     {
       "full_name": "epiral/bb-browser",
@@ -18511,7 +17910,9 @@
           "web"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1146413571
     },
     {
       "full_name": "modelscope/FunASR",
@@ -18675,7 +18076,9 @@
           "tests_models"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 569959091
     },
     {
       "full_name": "headroomlabs-ai/headroom",
@@ -18848,7 +18251,9 @@
           "Makefile"
         ]
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1129940957
     },
     {
       "full_name": "jacob-bd/notebooklm-mcp-cli",
@@ -19000,7 +18405,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1121438740
     },
     {
       "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -19151,7 +18558,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1177608268
     },
     {
       "full_name": "BuyWhere/buywhere-mcp",
@@ -19306,7 +18715,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "nomination",
+      "repo_id": 1212338943
     },
     {
       "full_name": "smallhandsome/shotapi-mcp-server",
@@ -19450,7 +18861,9 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "nomination",
+      "repo_id": 1259122854
     },
     {
       "full_name": "DeusData/codebase-memory-mcp",
@@ -19627,347 +19040,9 @@
         "penalty": 15,
         "fatal": false
       },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "headroomlabs-ai/headroom",
-      "name": "headroom",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 52694,
-      "source": "github",
-      "last_checked": "2026-06-28",
-      "last_update": "2026-06-28T06:21:34Z",
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
-      "language": "Python",
-      "topics": "agent, ai, anthropic, claude-code, compression, context-engineering, context-window, cursor, fastapi, langchain, llm, mcp, openai, prompt-engineering, proxy, python, rag, token-optimization, tokens, typescript",
-      "analysis": {
-        "is_valid_mcp_server": false,
-        "confidence": 95,
-        "category": "ai-ml",
-        "rubric": {
-          "documentation": 3,
-          "utility": 3,
-          "maturity": 3
-        },
-        "transport": [],
-        "tools_count_estimate": 0,
-        "server_entrypoint": "unknown",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The repository describes a compression library, proxy, and MCP server for compressing tool outputs and context before reaching LLMs, but the README and metadata do not specify a concrete MCP server entrypoint or example tools exposed by the server. The presence of an MCP SDK dependency alone is insufficient to confirm a valid MCP server.",
-        "short_description": "A context compression layer for AI agents that reduces token usage by compressing tool outputs, logs, files, and RAG chunks before they reach the LLM.",
-        "quality_score": 6
-      },
-      "mcp_signals": {
-        "sdk_dependencies": [
-          "mcp (python)"
-        ],
-        "manifests_checked": [
-          "pyproject.toml",
-          "Cargo.toml"
-        ],
-        "package_name": "headroom-ai",
-        "has_mcp_manifest": false,
-        "topics_mcp_server": false,
-        "root_files": [
-          ".actrc",
-          ".actrc.local.example",
-          ".changelog.md",
-          ".claude-plugin",
-          ".codegraph",
-          ".commitlintrc.json",
-          ".devcontainer",
-          ".dockerignore",
-          ".env.act.example",
-          ".env.example",
-          ".git-blame-ignore-revs",
-          ".gitattributes",
-          ".gitguardian.yaml",
-          ".github",
-          ".gitignore",
-          ".gitleaks.toml",
-          ".pre-commit-config.yaml",
-          ".release-please-config.json",
-          ".release-please-manifest.json",
-          ".serena",
-          "AGENTS.md",
-          "CHANGELOG.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "Cargo.lock",
-          "Cargo.toml",
-          "Dockerfile",
-          "ENTERPRISE.md",
-          "Headroom-2.gif",
-          "HeadroomDemo-Fast.gif"
-        ]
-      },
-      "metrics": {
-        "fetched_at": "2026-06-28",
-        "gone": false,
-        "stars": 52694,
-        "pushed_at": "2026-06-28T06:09:53Z",
-        "created_at": "2026-01-07T19:58:51Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "Apache-2.0",
-        "owner_type": "Organization",
-        "owner_created_at": "2026-06-16T19:16:07Z",
-        "commits_90d": 30,
-        "contributors": 142,
-        "health_percentage": 87,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 26625,
-        "readme_headings": 25,
-        "readme_has_code_block": true,
-        "pipe_to_shell": true,
-        "default_branch": "main",
-        "owner_login": "headroomlabs-ai",
-        "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
-        "language": "Python",
-        "topics": "agent, ai, anthropic, claude-code, compression, context-engineering, context-window, cursor, fastapi, langchain, llm, mcp, openai, prompt-engineering, proxy, python, rag, token-optimization, tokens, typescript",
-        "last_update": "2026-06-28T06:21:34Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-06-28",
-        "final": 65,
-        "grade": "B",
-        "subscores": {
-          "ai": {
-            "score": 75,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 3,
-                "maturity": 3
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 100,
-            "detail": {
-              "stars": 52694
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 99,
-            "detail": {
-              "health_percentage": 87,
-              "license": "Apache-2.0",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 142
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [
-          {
-            "id": "young_owner",
-            "label": "Owner account is less than 30 days old",
-            "penalty": 10,
-            "fatal": false
-          },
-          {
-            "id": "pipe_to_shell",
-            "label": "README instructs piping a download into a shell (e.g. curl | bash)",
-            "penalty": 15,
-            "fatal": false
-          }
-        ],
-        "penalty": 25,
-        "fatal": false
-      },
-      "prompt_version": 2
-    },
-    {
-      "full_name": "xberg-io/xberg",
-      "name": "xberg",
-      "url": "https://github.com/xberg-io/xberg",
-      "stars": 8565,
-      "source": "github",
-      "last_checked": "2026-06-28",
-      "last_update": "2026-06-28T04:40:40Z",
-      "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
-      "language": "Rust",
-      "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm",
-      "analysis": {
-        "is_valid_mcp_server": false,
-        "confidence": 95,
-        "category": "other",
-        "rubric": {
-          "documentation": 3,
-          "utility": 4,
-          "maturity": 4
-        },
-        "transport": [],
-        "tools_count_estimate": 0,
-        "server_entrypoint": "unknown",
-        "security_concerns": [],
-        "injection_attempt": false,
-        "reason": "The repository is a polyglot document intelligence framework with bindings for many languages and supports CLI, REST API, and MCP server usage, but the README does not specify a concrete MCP server entrypoint or list specific MCP tools exposed by this server instance.",
-        "short_description": "A document intelligence framework with a Rust core that extracts text, metadata, images, and structured information from various document formats.",
-        "quality_score": 10
-      },
-      "mcp_signals": {
-        "sdk_dependencies": [],
-        "manifests_checked": [
-          "package.json",
-          "pyproject.toml",
-          "Cargo.toml"
-        ],
-        "package_name": "xberg-root",
-        "has_mcp_manifest": true,
-        "topics_mcp_server": false,
-        "root_files": [
-          ".ai-rulez",
-          ".cargo",
-          ".clang-format",
-          ".dockerignore",
-          ".editorconfig",
-          ".gh-actions-updater.toml",
-          ".gitattributes",
-          ".github",
-          ".gitignore",
-          ".gitmodules",
-          ".golangci.yml",
-          ".hadolint.yaml",
-          ".lychee.toml",
-          ".npmrc",
-          ".oxfmtrc.json",
-          ".oxlintrc.json",
-          ".pre-commit-config.yaml",
-          ".rumdl.toml",
-          ".sdkmanrc",
-          ".shellcheckrc",
-          ".task",
-          ".textlintrc.json",
-          ".typos.toml",
-          "ATTRIBUTIONS.md",
-          "CHANGELOG.md",
-          "CODE_OF_CONDUCT.md",
-          "CONTRIBUTING.md",
-          "Cargo.lock",
-          "Cargo.toml",
-          "LICENSE"
-        ]
-      },
-      "metrics": {
-        "fetched_at": "2026-06-28",
-        "gone": false,
-        "stars": 8565,
-        "pushed_at": "2026-06-27T17:30:37Z",
-        "created_at": "2025-01-31T21:50:02Z",
-        "archived": false,
-        "disabled": false,
-        "license_spdx": "MIT",
-        "owner_type": "Organization",
-        "owner_created_at": "2025-10-31T15:27:44Z",
-        "commits_90d": 30,
-        "contributors": 45,
-        "health_percentage": 87,
-        "security_policy": true,
-        "scorecard": null,
-        "readme_chars": 25492,
-        "readme_headings": 28,
-        "readme_has_code_block": true,
-        "pipe_to_shell": false,
-        "default_branch": "main",
-        "owner_login": "xberg-io",
-        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
-        "language": "Rust",
-        "topics": "bun, csharp, document-intelligence, elixir, ffi, golang, java, metadata-extraction, node, pdf-extraction, pdfium, php, python, rag, ruby, rust, table-extraction, tesseract, text-extraction, wasm",
-        "last_update": "2026-06-28T04:40:40Z"
-      },
-      "trust": {
-        "formula_version": "1.0",
-        "computed_at": "2026-06-28",
-        "final": 95,
-        "grade": "A",
-        "subscores": {
-          "ai": {
-            "score": 92,
-            "detail": {
-              "source": "rubric",
-              "rubric": {
-                "documentation": 3,
-                "utility": 4,
-                "maturity": 4
-              }
-            },
-            "weight": 0.3889
-          },
-          "maintenance": {
-            "score": 100,
-            "detail": {
-              "days_since_push": 0,
-              "commits_90d": 30
-            },
-            "weight": 0.2222
-          },
-          "popularity": {
-            "score": 88,
-            "detail": {
-              "stars": 8565
-            },
-            "weight": 0.1667
-          },
-          "docs": {
-            "score": 99,
-            "detail": {
-              "health_percentage": 87,
-              "license": "MIT",
-              "security_policy": true
-            },
-            "weight": 0.1667
-          },
-          "security": {
-            "score": null,
-            "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
-            },
-            "weight": 0.0
-          },
-          "community": {
-            "score": 100,
-            "detail": {
-              "contributors": 45
-            },
-            "weight": 0.0556
-          }
-        },
-        "flags": [],
-        "penalty": 0,
-        "fatal": false
-      },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1166102148
     },
     {
       "full_name": "zylon-ai/private-gpt",
@@ -20129,7 +19204,9 @@
         "penalty": 15,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 635240594
     },
     {
       "full_name": "koala73/worldmonitor",
@@ -20292,8 +19369,10 @@
         "penalty": 0,
         "fatal": false
       },
-      "prompt_version": 2
+      "prompt_version": 2,
+      "discovered_via": "github-search",
+      "repo_id": 1130564872
     }
   ],
-  "last_scan": "2026-07-12"
+  "last_scan": "2026-07-18"
 }

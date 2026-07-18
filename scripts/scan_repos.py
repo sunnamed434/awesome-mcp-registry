@@ -453,6 +453,51 @@ def resolve_known_entries(cache, excluded):
     return renamed, quarantined_now, backfilled
 
 
+def dedupe_servers(cache):
+    """Collapse duplicate entries for the same repository.
+
+    repo_id is the primary key; a case-insensitive slug is the fallback while
+    ids are still being backfilled. Renamed/transferred repos used to be
+    re-discovered under their new slug as a "new" repo, producing doubles.
+    The freshest record (last_checked, then file order) wins; first-discovery
+    provenance (source/discovered_via/nominated_by) and any known repo_id
+    survive the merge. Returns the number of duplicates dropped."""
+    result, dropped = [], 0
+    by_key = {}  # ("id", repo_id) / ("slug", slug) -> surviving record
+    for s in cache["servers"]:
+        rid = s.get("repo_id")
+        slug = (s.get("full_name") or "").lower()
+        keys = ([("id", rid)] if rid else []) + ([("slug", slug)] if slug else [])
+        existing = next((by_key[k] for k in keys if k in by_key), None)
+        if existing is None:
+            result.append(s)
+            for k in keys:
+                by_key[k] = s
+            continue
+        dropped += 1
+        keep, lose = ((s, existing)
+                      if (s.get("last_checked") or "") >= (existing.get("last_checked") or "")
+                      else (existing, s))
+        # `existing` came first in the cache: its discovery provenance wins.
+        for field in ("source", "discovered_via", "nominated_by"):
+            if existing.get(field):
+                keep[field] = existing[field]
+        if not keep.get("repo_id") and lose.get("repo_id"):
+            keep["repo_id"] = lose["repo_id"]
+        if keep is s:
+            result[next(i for i, r in enumerate(result) if r is existing)] = s
+        for k, v in list(by_key.items()):
+            if v is lose:
+                by_key[k] = keep
+        for k in keys:
+            by_key[k] = keep
+        print(f"  DEDUPED: {keep.get('full_name')} — merged duplicate entry "
+              f"(kept {keep.get('last_checked') or '?'}, "
+              f"dropped {lose.get('last_checked') or '?'})")
+    cache["servers"] = result
+    return dropped
+
+
 # ---------------------------------------------------------------------------
 # Fetch README + deterministic MCP signals
 # ---------------------------------------------------------------------------
@@ -1150,6 +1195,9 @@ def main():
     renamed, quarantined_now, backfilled = resolve_known_entries(cache, excluded)
     print(f"  {backfilled} repo_id(s) backfilled, {len(renamed)} slug(s) updated, "
           f"{len(quarantined_now)} entr(ies) quarantined")
+    deduped = dedupe_servers(cache)
+    if deduped:
+        print(f"  {deduped} duplicate entr(ies) merged by repo_id/slug")
 
     # 3. Search GitHub
     print("\n[3/11] Searching GitHub...")
@@ -1162,9 +1210,11 @@ def main():
     # 5. Merge and deduplicate
     print("\n[5/11] Merging sources...")
     all_repos = merge_sources(github_repos, registry_repos)
-    cached_names = {s["full_name"] for s in cache["servers"]}
+    # Case-insensitive: GitHub slugs are, and a casing mismatch here used to
+    # let an already-known repo through as "new" (a second, duplicate entry).
+    cached_names = {s["full_name"].lower() for s in cache["servers"]}
     new_repos = [r for r in all_repos
-                 if r["full_name"] not in cached_names
+                 if r["full_name"].lower() not in cached_names
                  and r["full_name"].lower() not in excluded]
     print(f"  New repos to analyze: {len(new_repos)}")
 
