@@ -84,5 +84,10 @@ regenerate them.
 
 The verdicts are automated and not perfect. If you think the AI got your server wrong, comment on
 the (closed) nomination issue — threads stay open for a few weeks before they lock, so there's a
-window to flag genuine misjudgements. The per-server breakdown in [SCORES.md](SCORES.md) shows
-exactly which component cost the points.
+window to flag genuine misjudgements. **If the thread has already locked**, open a fresh
+[nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml)
+for the same repo: the bot replies with the current verdict and score breakdown, and the new
+thread gives you another few-week window to make your case. Every server is also re-judged
+automatically against fresh data (~every 90 days), so real improvements count even if you say
+nothing. The per-server breakdown in [SCORES.md](SCORES.md) shows exactly which component cost
+the points.

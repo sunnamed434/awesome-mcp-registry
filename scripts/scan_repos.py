@@ -1058,7 +1058,10 @@ def verdict_comment(full_name, analysis, trust_obj, repo_id=None):
     badge = badge_offer(repo_id) if accepted else ""
     return (f"{outcome}\n\n> _AI reason: {reason}_{breakdown}\n\n"
             f"This verdict is automated. If you believe it's wrong, leave a comment — "
-            f"the thread stays open for a few weeks before it locks.{badge}")
+            f"the thread stays open for a few weeks before it locks. After it locks, "
+            f"open a fresh nomination for the same repo to get the current verdict and "
+            f"a new comment window; servers are also re-judged automatically every "
+            f"~90 days.{badge}")
 
 
 def already_known_comment(server):
