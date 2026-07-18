@@ -331,6 +331,25 @@ class TestStarHistory(unittest.TestCase):
         self.assertIn("alive/repo", history)
 
 
+class TestNominationIntake(unittest.TestCase):
+    def test_fetch_nominations_captures_author_identity(self):
+        import scan_repos
+        payload = [
+            {"number": 41, "title": "Nominate: o/r",
+             "body": "https://github.com/o/r",
+             "user": {"login": "someone", "id": 12345}},
+            {"number": 42, "title": "a PR", "body": "",
+             "user": {"login": "x", "id": 1}, "pull_request": {}},  # skipped
+        ]
+        with mock.patch.object(scan_repos.requests, "get",
+                               return_value=fake_response(200, payload)):
+            noms = scan_repos.fetch_nominations()
+        self.assertEqual(len(noms), 1)
+        self.assertEqual(noms[0]["number"], 41)
+        self.assertEqual(noms[0]["author"], "someone")
+        self.assertEqual(noms[0]["author_id"], 12345)
+
+
 class TestNominationVerdicts(unittest.TestCase):
     def test_fatal_blocks_acceptance(self):
         import scan_repos

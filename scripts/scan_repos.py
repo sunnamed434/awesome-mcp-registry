@@ -831,6 +831,8 @@ def fetch_nominations():
                 "title": issue.get("title", ""),
                 "full_name": parse_repo_full_name(issue.get("body", "")),
                 "author": (issue.get("user") or {}).get("login", ""),
+                # Numeric id: stable even if the username is renamed/re-registered.
+                "author_id": (issue.get("user") or {}).get("id"),
             })
     except requests.RequestException as e:
         print(f"  WARNING: Could not fetch nominations: {e}")
@@ -1109,6 +1111,10 @@ def process_nominations(cache, excluded, listed_for_squat):
             "stars": meta.get("stars", 0),
             "source": "nominated",
             "discovered_via": "nomination",
+            # Provenance/credit only — nominators get no special rights.
+            "nominated_by": {"login": author,
+                             "user_id": nom.get("author_id"),
+                             "issue_number": num},
             "last_checked": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "last_update": meta.get("last_update", ""),
             "description": meta.get("description", ""),
