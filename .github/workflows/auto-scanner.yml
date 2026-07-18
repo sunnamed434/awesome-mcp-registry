@@ -56,11 +56,16 @@ jobs:
 
       # Diff the freshly generated cache against the committed one BEFORE the
       # commit step: the notes feed the PR body and the weekly Release below.
+      # Links inside the notes are pinned to the release tag (not master), so
+      # an old release keeps pointing at that week's snapshot of the files.
       - name: Build weekly diff notes
+        id: notes
         run: |
+          TAG="registry-$(date -u +%Y-%m-%d)"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           git show HEAD:data/known_servers.json > /tmp/known_old.json 2>/dev/null \
             || echo '{"servers":[]}' > /tmp/known_old.json
-          python scripts/release_notes.py /tmp/known_old.json data/known_servers.json \
+          python scripts/release_notes.py /tmp/known_old.json data/known_servers.json "$TAG" \
             | tee /tmp/release_notes.md
 
       # Safe Outputs: the bot never force-commits to master. It pushes a branch and
@@ -135,8 +140,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG="registry-$(date -u +%Y-%m-%d)"
+          TAG="${{ steps.notes.outputs.tag }}"
           gh release create "$TAG" --target master \
-            --title "Registry update $(date -u +%Y-%m-%d)" \
+            --title "Registry update ${TAG#registry-}" \
             --notes-file /tmp/release_notes.md \
             || echo "Release $TAG already exists; skipping."

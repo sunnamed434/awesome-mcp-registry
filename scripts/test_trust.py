@@ -718,6 +718,11 @@ class TestReleaseNotes(unittest.TestCase):
         text = release_notes.render(d, 3)
         self.assertIn("**3** servers listed (+1 / −1)", text)
         self.assertIn("80 → 90", text)
+        self.assertIn("blob/master/SCORES.md", text)  # default ref
+        pinned = release_notes.render(d, 3, ref="registry-2026-07-18")
+        # Links inside a release must snapshot that week's files, not track master
+        self.assertIn("blob/registry-2026-07-18/SCORES.md", pinned)
+        self.assertNotIn("blob/master/", pinned)
 
     def test_quiet_week(self):
         import release_notes

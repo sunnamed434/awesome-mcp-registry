@@ -1,13 +1,17 @@
 """Weekly registry diff rendered as markdown release notes.
 
 Usage:
-    python scripts/release_notes.py old_known_servers.json new_known_servers.json
+    python scripts/release_notes.py old_known_servers.json new_known_servers.json [ref]
 
 Compares the listed set of two cache snapshots (added / dropped / trust movers,
 matched by immutable repo_id with a slug fallback) and prints markdown to
 stdout. Pure file comparison — no network, no AI. The Auto Scanner feeds the
 output into the update PR body and a GitHub Release, so watchers get a free
 weekly changelog (and releases.atom is a free RSS feed).
+
+`ref` (default "master") anchors the SCORES/METHODOLOGY links. The scanner
+passes the release tag so links inside an old release keep showing that week's
+snapshot instead of whatever master has moved on to.
 """
 
 import json
@@ -54,7 +58,7 @@ def _entry(s):
     return f"[`{fn}`](https://github.com/{fn}) ({trust_final(s)}/100)"
 
 
-def render(d, total_listed):
+def render(d, total_listed, ref="master"):
     lines = [f"Weekly automated scan. **{total_listed}** servers listed "
              f"(+{len(d['added'])} / −{len(d['removed'])}).", ""]
     if d["added"]:
@@ -75,20 +79,21 @@ def render(d, total_listed):
     if not (d["added"] or d["removed"] or d["movers"]):
         lines.append("Metrics refreshed; no listing changes this week.")
         lines.append("")
-    lines.append(f"Full breakdown: [SCORES.md](https://github.com/{REPO}/blob/master/SCORES.md) "
-                 f"· formula: [METHODOLOGY.md](https://github.com/{REPO}/blob/master/METHODOLOGY.md)")
+    lines.append(f"Full breakdown: [SCORES.md](https://github.com/{REPO}/blob/{ref}/SCORES.md) "
+                 f"· formula: [METHODOLOGY.md](https://github.com/{REPO}/blob/{ref}/METHODOLOGY.md)")
     return "\n".join(lines)
 
 
 def main():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")  # − and → survive Windows consoles
-    if len(sys.argv) != 3:
+    if len(sys.argv) not in (3, 4):
         print(__doc__)
         sys.exit(1)
     old = load_servers(sys.argv[1])
     new = load_servers(sys.argv[2])
-    print(render(diff(old, new), sum(1 for s in new if is_listed(s))))
+    ref = sys.argv[3] if len(sys.argv) == 4 else "master"
+    print(render(diff(old, new), sum(1 for s in new if is_listed(s)), ref=ref))
 
 
 if __name__ == "__main__":
