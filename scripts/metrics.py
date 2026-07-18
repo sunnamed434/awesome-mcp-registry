@@ -212,7 +212,7 @@ SOURCE_SCAN_EXTENSIONS = {
     ".py", ".js", ".ts", ".tsx", ".jsx", ".mjs", ".cjs", ".go", ".rs", ".rb",
     ".java", ".cs", ".php", ".json", ".yaml", ".yml", ".toml", ".md",
 }
-# ponytail: test/fixture and documentation dirs are skipped to avoid flagging
+# Test/fixture and documentation dirs are skipped to avoid flagging
 # security tools' attack samples and docs QUOTING injections (e.g. a page about
 # prompt-injection protection). Tool descriptions live in code; the README the
 # model actually reads is covered by the AI's own injection_attempt flag. The
