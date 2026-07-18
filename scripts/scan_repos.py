@@ -1226,6 +1226,15 @@ def main():
 
     today = datetime.now(timezone.utc)
     touched = set()  # full_names that already got fresh metrics this run
+    # Listed servers whose source was clean last week but carries injection
+    # markers now — the rug-pull moment worth shouting about.
+    security_alerts = []
+
+    def note_marker_change(entry, was_listed, prev_scan, new_metrics):
+        had = bool((prev_scan or {}).get("markers"))
+        has = bool(((new_metrics or {}).get("source_scan") or {}).get("markers"))
+        if has and not had and was_listed:
+            security_alerts.append(entry.get("full_name", ""))
 
     # 6. Analyze new repos with AI
     print(f"\n[6/11] Analyzing (max {MAX_NEW_ANALYSES} new repos)...")
@@ -1317,10 +1326,13 @@ def main():
                     "description", "language", "topics"):
             s[key] = meta.get(key, s.get(key))
 
+        was_listed = is_listed(s)
+        prev_scan = (s.get("metrics") or {}).get("source_scan")
         analysis, signals, repo_metrics, trust_obj, error = evaluate_repo(
             meta, fn, listed_for_squat)
         s["mcp_signals"] = signals
         s["metrics"] = repo_metrics
+        note_marker_change(s, was_listed, prev_scan, repo_metrics)
         if error is not None:
             # Keep the old verdict and DON'T bump last_checked: the entry stays
             # stale (by age or prompt version) and is retried next run.
@@ -1372,11 +1384,14 @@ def main():
                           "readme_has_code_block", "pipe_to_shell")
                 if k in prev and prev[k] is not None
             } or None
+        was_listed = is_listed(s)
+        prev_scan = (s.get("metrics") or {}).get("source_scan")
         repo_metrics = metrics.collect_metrics(fn, readme_statistics=readme_statistics)
         if not reconcile_repo_id(s, repo_metrics.get("repo_id")):
             print(f"  QUARANTINED: {fn} — {s.get('quarantine_reason')}")
             continue
         s["metrics"] = repo_metrics
+        note_marker_change(s, was_listed, prev_scan, repo_metrics)
         s["trust"] = trust.compute_trust(repo_metrics, s.get("analysis", {}),
                                          full_name=fn, listed_servers=listed_for_squat)
         if not repo_metrics.get("gone"):
@@ -1410,6 +1425,10 @@ def main():
     save_cache(CACHE_PATH, cache)
     generate_readme(valid_servers, README_PATH, history=history)
     generate_scores_md(valid_servers, SCORES_PATH, history=history)
+
+    if security_alerts:
+        print(f"\nNEW INJECTION MARKERS on previously-clean listed server(s): "
+              f"{', '.join(security_alerts)} — possible rug pull, see SCORES.md flags")
 
     quarantined_all = [s for s in cache["servers"] if s.get("quarantined")]
     if quarantined_all:

@@ -210,6 +210,18 @@ def detect_red_flags(metrics, analysis, full_name="", listed_servers=None, today
                       "label": "README instructs piping a download into a shell (e.g. curl | bash)",
                       "penalty": 15, "fatal": False})
 
+    markers = (m.get("source_scan") or {}).get("markers") or []
+    if markers:
+        kinds = []
+        for f in markers:
+            kind = f.get("marker", "")
+            if kind and kind not in kinds:
+                kinds.append(kind)
+        flags.append({"id": "injection_suspect",
+                      "label": "Source contains prompt-injection markers (tool-poisoning "
+                               "pattern): " + "; ".join(kinds[:3]),
+                      "penalty": 15, "fatal": False})
+
     squat_target = _typosquat_target(full_name, m.get("stars") or 0, listed_servers or [])
     if squat_target:
         flags.append({"id": "possible_typosquat",

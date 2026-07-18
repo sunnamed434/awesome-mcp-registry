@@ -474,10 +474,15 @@ def generate_readme(servers, output_path, history=None):
     lines.append("")
     lines.append(
         "Trust scores are computed from public metadata, the README, and "
-        "[OpenSSF Scorecard](https://scorecard.dev/) data. **No entry has been code-audited or "
-        "executed by this registry.** A high score means strong public signals, not a security "
-        "guarantee — review any MCP server (and the credentials you grant it) before connecting "
-        "it to your tools."
+        "[OpenSSF Scorecard](https://scorecard.dev/) data. Every entry's source is additionally "
+        "scanned — **read, never executed** — for tool-poisoning markers (hidden instructions "
+        "aimed at the model inside tool descriptions; flagged entries lose points in "
+        "[SCORES.md](SCORES.md)). Entries are keyed by GitHub's immutable repository id, so "
+        "renames are followed and a known name silently re-registered by someone else "
+        "(repojacking) is quarantined instead of trusted. **Still: no entry has been "
+        "code-audited or executed by this registry.** A high score means strong public signals, "
+        "not a security guarantee — review any MCP server (and the credentials you grant it) "
+        "before connecting it to your tools."
     )
     lines.append("")
 

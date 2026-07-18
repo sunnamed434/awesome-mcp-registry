@@ -88,15 +88,19 @@ flag is shown in [SCORES.md](SCORES.md).
 | New repo | −10 | Repo < 30 days old with < 50 stars (typosquat window) |
 | Young owner | −10 | Owner account < 30 days old |
 | Pipe-to-shell install | −15 | README instructs `curl … \| bash`, `iwr … \| iex`, `base64 -d … \| sh`, etc. |
+| Injection markers in source | −15 | Static scan of the repository tarball (read, never executed) finds hidden-instruction tags (`<IMPORTANT>`, `<system>`), "ignore previous instructions" phrasing, user-concealment wording, or zero-width unicode in source files — the tool-poisoning pattern ([Invariant Labs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks), [MCPTox](https://arxiv.org/abs/2508.14925)). Sensitive-path mentions (`~/.ssh`, `.env`, `mcp.json`) never fire alone — every honest README contains them — they're recorded only as corroborating evidence next to a primary marker. Test/fixture directories are skipped to avoid flagging security tools' own attack samples |
 | Possible typosquat | −15 | Name ≥ 85% similar to a listed 5k+ star server under a different owner, where the candidate has fewer stars than the target |
 | Injection attempt | −20 | Repo content tried to manipulate the AI evaluator |
 | AI security concern | −5 each (max −15) | Concrete README evidence (obfuscated install scripts, excessive credential demands, remote code execution at runtime) |
 
 ## What this is NOT
 
-- **Not a code audit.** No entry's source code has been reviewed for vulnerabilities or malice.
-- **Not executed.** This registry never installs or runs the servers it lists. (Running
-  nominated third-party code is itself the attack vector this registry refuses to host.)
+- **Not a code audit.** Beyond the automated static scan for known injection markers above,
+  no entry's source code has been reviewed for vulnerabilities or malice.
+- **Not executed.** This registry never installs or runs the servers it lists — the injection
+  scan reads the repository tarball, it never executes anything. (Running nominated third-party
+  code is itself the attack vector this registry refuses to host; note that most MCP security
+  scanners work by *connecting to* the servers, which is exactly what this pipeline avoids.)
 - **Not an endorsement.** A high score means strong *public signals* — maintained, documented,
   licensed, popular, decent supply-chain hygiene. A backdoor can hide behind all of those.
   Review any MCP server, and the credentials you grant it, before connecting it to your tools.
@@ -148,9 +152,11 @@ latency: 420ms, tools: 12" — is **deliberately deferred**:
 If/when it's built, the hardened design is: a **separate** monthly workflow with **no secrets**
 in its environment; servers installed and started inside a container with `--network=none` after
 install and hard timeouts; only `initialize` + `tools/list` exercised (never tool calls);
-results written as data, never granted write access to the repo. A cheaper intermediate step is
-static-only scanning of cloned sources with a pinned OSS scanner (e.g. `mcp-shield` or Cisco's
-`mcp-scanner`) — code is read, never executed. Both remain opt-in future work.
+results written as data, never granted write access to the repo. The cheaper intermediate step —
+static-only scanning of sources, code read but never executed — is now **built in**: the weekly
+scan greps every entry's tarball for tool-poisoning markers (see the red-flags table above).
+Integrating a full external scanner (e.g. `mcp-scan`, which *connects to* servers and would
+execute them) remains deferred to the sandboxed design.
 
 ## Changelog
 

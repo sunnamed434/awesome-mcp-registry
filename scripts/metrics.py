@@ -6,8 +6,10 @@ degrades gracefully: a failed call yields None for that field, and trust.py
 renormalizes weights so missing data never punishes a repo.
 """
 
+import io
 import os
 import re
+import tarfile
 import time
 from datetime import datetime, timedelta, timezone
 
@@ -192,6 +194,130 @@ def fetch_scorecard(full_name):
         return None
 
 
+# ---------------------------------------------------------------------------
+# Static source scan for tool-poisoning / prompt-injection markers
+# ---------------------------------------------------------------------------
+#
+# Tool Poisoning (Invariant Labs 2025; MCPTox, arXiv:2508.14925) hides
+# instructions to the MODEL inside tool descriptions the USER never sees.
+# This scan READS the repository tarball — one API call, nothing is ever
+# installed or executed — and greps text sources for the known marker
+# patterns. Two tiers keep false positives down: primary markers (hidden
+# instruction tags, "ignore previous instructions", concealment phrasing,
+# zero-width unicode) fire on their own; sensitive-path mentions (~/.ssh,
+# .env, mcp.json) are reported only as corroboration when a primary marker
+# already hit the same file, because every honest README mentions them too.
+
+SOURCE_SCAN_EXTENSIONS = {
+    ".py", ".js", ".ts", ".tsx", ".jsx", ".mjs", ".cjs", ".go", ".rs", ".rb",
+    ".java", ".cs", ".php", ".json", ".yaml", ".yml", ".toml", ".md",
+}
+# ponytail: test/fixture dirs are skipped to avoid flagging security tools'
+# own attack samples; the cost is missing malware hidden in test dirs.
+SOURCE_SCAN_SKIP_DIRS = {
+    "node_modules", "vendor", "dist", "build", ".git",
+    "test", "tests", "__tests__", "testdata", "fixtures", "spec",
+}
+SOURCE_SCAN_MAX_TARBALL = 30 * 1024 * 1024   # download cap
+SOURCE_SCAN_MAX_FILE = 200 * 1024            # per-file cap
+SOURCE_SCAN_MAX_TOTAL = 8 * 1024 * 1024      # total text scanned
+SOURCE_SCAN_MAX_FILES = 400
+SOURCE_SCAN_MAX_FINDINGS = 5                 # evidence kept per repo
+
+PRIMARY_MARKERS = [
+    ("hidden-instruction tag",
+     re.compile(r"<\s*/?\s*(?:IMPORTANT|SYSTEM|SECRET|HIDDEN)\s*>", re.IGNORECASE)),
+    ("ignore-previous-instructions",
+     re.compile(r"ignore\s+(?:all\s+|any\s+)?(?:previous|prior|above)\s+instructions",
+                re.IGNORECASE)),
+    ("concealment phrasing",
+     re.compile(r"do\s+not\s+(?:tell|mention|inform|reveal|show|disclose)\b[^.\n]{0,40}"
+                r"\b(?:user|human)", re.IGNORECASE)),
+    ("zero-width/invisible unicode",
+     re.compile("[\u200b-\u200f\u2060-\u2064\ufeff]|[\U000e0000-\U000e007f]")),
+]
+SENSITIVE_PATHS = re.compile(
+    r"~/\.ssh|id_rsa|id_ed25519|\.aws/credentials|(?<![\w.])\.env(?!\.example)\b|mcp\.json",
+    re.IGNORECASE)
+
+
+def scan_text_for_markers(text, filename=""):
+    """Pure marker check over one file's text. Returns finding dicts."""
+    findings = []
+    for label, pattern in PRIMARY_MARKERS:
+        match = pattern.search(text)
+        if not match:
+            continue
+        start = max(0, match.start() - 40)
+        excerpt = text[start:match.end() + 40].replace("\n", " ")
+        # Invisible characters make an empty-looking excerpt; name them instead.
+        if label.startswith("zero-width"):
+            excerpt = f"invisible character U+{ord(match.group(0)[0]):04X}"
+        sensitive = SENSITIVE_PATHS.search(text)
+        # backslashreplace: third-party text can contain anything; evidence
+        # must survive any console/file encoding.
+        excerpt = excerpt.strip()[:160].encode("ascii", "backslashreplace").decode()
+        findings.append({
+            "file": filename,
+            "marker": label,
+            "excerpt": excerpt,
+            "sensitive_path": sensitive.group(0) if sensitive else None,
+        })
+    return findings
+
+
+def _scan_member(name):
+    parts = name.split("/")
+    if any(p in SOURCE_SCAN_SKIP_DIRS for p in parts):
+        return False
+    return os.path.splitext(name)[1].lower() in SOURCE_SCAN_EXTENSIONS
+
+
+def scan_source_for_injection(full_name):
+    """Download the repo tarball (1 API call) and grep sources for poisoning
+    markers. Never executes anything. Returns
+    {checked, files_scanned, markers: [finding, ...]}; checked=False on any
+    fetch problem (missing data, never a penalty)."""
+    result = {"checked": False, "files_scanned": 0, "markers": []}
+    try:
+        resp = _get(f"{GITHUB_API}/repos/{full_name}/tarball", stream=True)
+        if resp.status_code != 200:
+            return result
+        buf = io.BytesIO()
+        for chunk in resp.iter_content(chunk_size=65536):
+            buf.write(chunk)
+            if buf.tell() > SOURCE_SCAN_MAX_TARBALL:
+                print(f"  WARNING: {full_name} tarball exceeds "
+                      f"{SOURCE_SCAN_MAX_TARBALL >> 20}MB; skipping source scan")
+                return result
+        buf.seek(0)
+        scanned_bytes = 0
+        with tarfile.open(fileobj=buf, mode="r:gz") as tar:
+            for member in tar:
+                if not member.isfile() or member.size > SOURCE_SCAN_MAX_FILE:
+                    continue
+                # Strip the tarball's "owner-repo-sha/" prefix for reporting.
+                name = member.name.split("/", 1)[-1]
+                if not _scan_member(name):
+                    continue
+                if (result["files_scanned"] >= SOURCE_SCAN_MAX_FILES
+                        or scanned_bytes >= SOURCE_SCAN_MAX_TOTAL):
+                    break
+                fh = tar.extractfile(member)
+                if fh is None:
+                    continue
+                text = fh.read().decode("utf-8", errors="replace")
+                scanned_bytes += len(text)
+                result["files_scanned"] += 1
+                for finding in scan_text_for_markers(text, name):
+                    if len(result["markers"]) < SOURCE_SCAN_MAX_FINDINGS:
+                        result["markers"].append(finding)
+        result["checked"] = True
+    except Exception as e:  # tarfile/zlib errors included, not just HTTP
+        print(f"  WARNING: source scan failed for {full_name}: {e}")
+    return result
+
+
 def collect_metrics(full_name, readme_statistics=None, include_owner=False):
     """Gather all raw metrics for one repo (~5-8 REST calls + 1 Scorecard call).
 
@@ -224,6 +350,8 @@ def collect_metrics(full_name, readme_statistics=None, include_owner=False):
     out["health_percentage"] = fetch_community_health(full_name)
     time.sleep(SLEEP_BETWEEN_CALLS)
     out["security_policy"] = fetch_security_policy(full_name)
+    time.sleep(SLEEP_BETWEEN_CALLS)
+    out["source_scan"] = scan_source_for_injection(full_name)
 
     if include_owner:
         out["owner_created_at"] = fetch_owner_created_at(out.get("owner_login", ""))
