@@ -262,7 +262,8 @@ CATEGORY_META = {
 
 # README generation controls
 REPO = "sunnamed434/awesome-mcp-registry"   # public home of this registry
-MIN_TRUST_SCORE = 50        # Don't show servers whose trust score is below this
+MIN_TRUST_SCORE = 50        # Entry threshold: new servers need at least this to be listed
+LISTING_EXIT_SCORE = 48     # Hysteresis: already-listed servers stay until below this
 MAX_PER_CATEGORY = 20       # Show top N per category in README
 TRENDING_MIN_D7 = 10        # Minimum weekly star growth to appear in Trending
 MODEL_DISPLAY = "GPT-4.1-mini"   # AI model shown in the README; keep in sync with scan_repos.MODEL_NAME
@@ -291,8 +292,13 @@ def trust_final(server):
 
 
 def is_listed(server):
-    """Listing gate: valid MCP server, trust >= threshold, no fatal flag, and
-    not quarantined (slug/repo_id identity mismatch awaiting human review)."""
+    """Listing gate: valid MCP server, no fatal flag, not quarantined
+    (slug/repo_id identity mismatch awaiting human review), and enough trust.
+
+    Trust uses a hysteresis band so borderline entries don't flap in and out
+    of the README week to week: entry needs >= MIN_TRUST_SCORE, but a server
+    listed last scan (the stamped `listed` field) stays until it drops below
+    LISTING_EXIT_SCORE. Fatal flags and quarantine override the band."""
     if server.get("quarantined"):
         return False
     analysis = server.get("analysis") or {}
@@ -300,7 +306,10 @@ def is_listed(server):
         return False
     if (server.get("trust") or {}).get("fatal"):
         return False
-    return trust_final(server) >= MIN_TRUST_SCORE
+    final = trust_final(server)
+    if final >= MIN_TRUST_SCORE:
+        return True
+    return bool(server.get("listed")) and final >= LISTING_EXIT_SCORE
 
 
 BADGE_COLORS = {"A": "brightgreen", "B": "green", "C": "orange", "F": "red"}

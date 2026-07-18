@@ -29,9 +29,11 @@ the breakdown says so explicitly. Within a component, unavailable inputs are imp
 (noted in the table above) rather than scored as zero.
 
 **Listing gate:** a server appears in the README iff the AI judged it a valid MCP server AND its
-trust score is **≥ 50** AND it has no fatal flag (archived, disabled, or deleted repo). A fatal
-flag also blocks nomination acceptance — a high-scoring archived repo is reported as
-"not listable", never "accepted".
+trust score clears the gate AND it has no fatal flag (archived, disabled, or deleted repo). The
+gate has a small hysteresis band: **entry requires ≥ 50**, but an already-listed server stays
+until it drops **below 48** — so entries sitting right at the threshold don't flap in and out
+week to week. Fatal flags and quarantine override the band. A fatal flag also blocks nomination
+acceptance — a high-scoring archived repo is reported as "not listable", never "accepted".
 
 **Letter grades** (shown in [SCORES.md](SCORES.md)) are fixed bands over the final score:
 **A ≥ 80, B ≥ 65, C ≥ 50, F < 50**. They are presentation only — listing depends solely on the

@@ -736,6 +736,17 @@ class TestDisplayHelpers(unittest.TestCase):
         self.assertFalse(utils.is_listed(fatal))
         self.assertFalse(utils.is_listed(invalid))
 
+    def test_listing_hysteresis_band(self):
+        base = {"analysis": {"is_valid_mcp_server": True}}
+        newcomer_49 = dict(base, trust={"final": 49})
+        self.assertFalse(utils.is_listed(newcomer_49))          # entry needs 50
+        incumbent_49 = dict(base, trust={"final": 49}, listed=True)
+        self.assertTrue(utils.is_listed(incumbent_49))          # band holds
+        incumbent_47 = dict(base, trust={"final": 47}, listed=True)
+        self.assertFalse(utils.is_listed(incumbent_47))         # below exit score
+        fatal_incumbent = dict(base, trust={"final": 90, "fatal": True}, listed=True)
+        self.assertFalse(utils.is_listed(fatal_incumbent))      # band never overrides fatal
+
     def test_gh_anchor(self):
         self.assertEqual(utils.gh_anchor("jlowin/fastmcp"), "jlowinfastmcp")
         self.assertEqual(utils.gh_anchor("trigger.dev x"), "triggerdev-x")

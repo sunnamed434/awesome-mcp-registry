@@ -1492,6 +1492,9 @@ def main():
 
     # 11. Save and generate
     print("\n[11/11] Saving results...")
+    # Stamp each entry's listing decision — next week's hysteresis-band input.
+    for s in cache["servers"]:
+        s["listed"] = is_listed(s)
     save_cache(CACHE_PATH, cache)
     generate_readme(valid_servers, README_PATH, history=history)
     generate_scores_md(valid_servers, SCORES_PATH, history=history)
