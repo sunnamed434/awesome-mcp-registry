@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-55-blue) ![Categories](https://img.shields.io/badge/categories-12-green) ![Avg Trust](https://img.shields.io/badge/avg%20trust-78%2F100-orange) ![Updated](https://img.shields.io/badge/updated-2026--07--18-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4.1--mini-purple)
+![Servers](https://img.shields.io/badge/servers-55-blue) ![Categories](https://img.shields.io/badge/categories-12-green) ![Avg Trust](https://img.shields.io/badge/avg%20trust-80%2F100-orange) ![Updated](https://img.shields.io/badge/updated-2026--07--18-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4.1--mini-purple)
 
 A self-curating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers — a [Continuous AI](https://githubnext.com/projects/continuous-ai/) experiment. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed by GPT-4.1-mini weekly and scored with a published, reproducible [trust formula](METHODOLOGY.md).
 
@@ -42,16 +42,16 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
-| [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | [72/100](SCORES.md#containerskubernetes-mcp-server) ⚠ | 1826 (+29/wk) | A Kubernetes and OpenShift focused MCP server implementing CRUD and management operations on cluster resources, Helm charts, and Tekton pipelines. |
+| [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | [87/100](SCORES.md#containerskubernetes-mcp-server) | 1826 (+29/wk) | A Kubernetes and OpenShift focused MCP server implementing CRUD and management operations on cluster resources, Helm charts, and Tekton pipelines. |
 
 ## Productivity (7)
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
+| [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) | [97/100](SCORES.md#soopersetmcp-atlassian) | 5581 (+39/wk) | An MCP server providing integration with Atlassian tools like Confluence and Jira for querying and managing issues and documents. |
 | [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) | [91/100](SCORES.md#czlonkowskin8n-mcp) | 22330 (+80/wk) | An MCP server providing AI assistants deep access to n8n workflow automation nodes, properties, operations, and templates to enable workflow building. |
 | [coddingtonbear/obsidian-local-rest-api](https://github.com/coddingtonbear/obsidian-local-rest-api) | [85/100](SCORES.md#coddingtonbearobsidian-local-rest-api) | 2663 (+29/wk) | A secure local REST API and MCP server providing authenticated access to Obsidian vault files and commands. |
 | [jacob-bd/notebooklm-mcp-cli](https://github.com/jacob-bd/notebooklm-mcp-cli) | [84/100](SCORES.md#jacob-bdnotebooklm-mcp-cli) | 5499 (+80/wk) | An MCP server providing programmatic access to Google NotebookLM through a CLI with multiple notebook management tools. |
-| [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian) | [82/100](SCORES.md#soopersetmcp-atlassian) ⚠ | 5581 (+39/wk) | An MCP server providing integration with Atlassian tools like Confluence and Jira for querying and managing issues and documents. |
 | [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | [82/100](SCORES.md#zcaceresmarkdownify-mcp) | 2879 (+94/wk) | An MCP server that converts various file types and web content into Markdown format. |
 | [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | [73/100](SCORES.md#haris-musaexcel-mcp-server) | 4040 (+27/wk) | An MCP server enabling AI agents to create, read, and manipulate Excel files remotely or locally without requiring Microsoft Excel. |
 | [CursorTouch/Windows-MCP](https://github.com/CursorTouch/Windows-MCP) | [71/100](SCORES.md#cursortouchwindows-mcp) ⚠ | 6457 (+60/wk) | Windows-MCP is an MCP server enabling AI agents to interact with Windows OS for UI automation, application control, and file navigation. |
@@ -68,6 +68,7 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
+| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | [94/100](SCORES.md#yusufkaraaslanskill_seekers) | 14492 (+57/wk) | Skill Seekers is an MCP server that converts various documentation sources into structured AI skills and knowledge assets for Claude and other AI systems. |
 | [1Panel-dev/MaxKB](https://github.com/1Panel-dev/MaxKB) | [93/100](SCORES.md#1panel-devmaxkb) | 22127 (+82/wk) | MaxKB is an open-source platform providing enterprise-grade AI agents with retrieval-augmented generation, workflow orchestration, and multi-model integration exposed via an MCP-compatible server. |
 | [modelscope/FunASR](https://github.com/modelscope/FunASR) | [93/100](SCORES.md#modelscopefunasr) | 19323 (+167/wk) | FunASR is an industrial-grade speech recognition MCP server offering multilingual ASR, speaker diarization, emotion detection, and streaming capabilities via a Python package. |
 | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | [89/100](SCORES.md#microsoftplaywright-mcp) | 35231 (+263/wk) | A Model Context Protocol server providing browser automation capabilities through Playwright's accessibility tree for LLM-driven web interactions. |
@@ -75,7 +76,6 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 | [GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP) | [89/100](SCORES.md#glipsfigma-context-mcp) | 15430 (+59/wk) | An MCP server that provides simplified Figma design data to AI coding agents to enable accurate one-shot UI implementation. |
 | [upstash/context7](https://github.com/upstash/context7) | [87/100](SCORES.md#upstashcontext7) | 59337 (+389/wk) | Context7 is an MCP server providing up-to-date, version-specific code documentation and examples for programming libraries and frameworks to enhance LLM prompts. |
 | [mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp) | [84/100](SCORES.md#mrexodiaida-pro-mcp) | 10402 (+359/wk) | An MCP server integrating IDA Pro with language models to assist reverse engineering tasks. |
-| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | [79/100](SCORES.md#yusufkaraaslanskill_seekers) ⚠ | 14492 (+57/wk) | Skill Seekers is an MCP server that converts various documentation sources into structured AI skills and knowledge assets for Claude and other AI systems. |
 | [idosal/git-mcp](https://github.com/idosal/git-mcp) | [79/100](SCORES.md#idosalgit-mcp) | 8266 (+22/wk) | GitMCP is a remote MCP server that provides AI tools access to the latest documentation and code from any GitHub project to improve code correctness and reduce hallucinations. |
 | [robotmcp/ros-mcp-server](https://github.com/robotmcp/ros-mcp-server) | [79/100](SCORES.md#robotmcpros-mcp-server) | 1346 (+4/wk) | A Python MCP server that connects large language models to ROS-based robots, enabling two-way interaction and control without modifying robot source code. |
 | [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) | [78/100](SCORES.md#blazickjparxiv-mcp-server) | 2967 (+17/wk) | An MCP server enabling AI assistants to search, access, and analyze arXiv papers through a programmatic interface. |
@@ -86,8 +86,8 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 | [qdrant/mcp-server-qdrant](https://github.com/qdrant/mcp-server-qdrant) | [72/100](SCORES.md#qdrantmcp-server-qdrant) | 1472 (+11/wk) | An MCP server that provides a semantic memory layer on top of the Qdrant vector search engine, exposing tools to store and retrieve information. |
 | [sansan0/TrendRadar](https://github.com/sansan0/TrendRadar) | [71/100](SCORES.md#sansan0trendradar) ⚠ | 60660 (+188/wk) | TrendRadar is an AI-driven public opinion and trend monitoring MCP server that aggregates multi-platform news, provides AI analysis, and supports smart alerts with multi-channel push notifications. |
 | [bgauryy/octocode](https://github.com/bgauryy/octocode) | [69/100](SCORES.md#bgauryyoctocode) | 895 (+9/wk) | Octocode is an MCP server and CLI for semantic code research and context generation, enabling AI agents and developers to search and analyze codebases across local and external repositories. |
+| [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | [68/100](SCORES.md#kucherenkojscpd) ⚠ | 5893 (+25/wk) | A copy/paste detector for source code that includes an AI-ready MCP server exposing clone detection and reporting tools. |
 | [BeehiveInnovations/pal-mcp-server](https://github.com/BeehiveInnovations/pal-mcp-server) | [66/100](SCORES.md#beehiveinnovationspal-mcp-server) | 11686 (+31/wk) | PAL MCP server orchestrates multiple AI model CLIs into a unified workflow, enabling multi-agent collaboration and context management for AI development tasks. |
-| [executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright) | [64/100](SCORES.md#executeautomationmcp-playwright) | 5577 (+5/wk) | An MCP server providing browser automation tools using Playwright for LLMs to interact with web pages and APIs. |
 
 *...and 4 more. See [known_servers.json](data/known_servers.json) for the full list.*
 

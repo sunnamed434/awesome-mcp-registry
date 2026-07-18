@@ -231,42 +231,81 @@ SOURCE_SCAN_MAX_FINDINGS = 5                 # evidence kept per repo
 PRIMARY_MARKERS = [
     ("hidden-instruction tag",
      re.compile(r"<\s*/?\s*(?:IMPORTANT|SYSTEM|SECRET|HIDDEN)\s*>", re.IGNORECASE)),
-    ("ignore-previous-instructions",
-     re.compile(r"ignore\s+(?:all\s+|any\s+)?(?:previous|prior|above)\s+instructions",
-                re.IGNORECASE)),
     ("concealment phrasing",
      re.compile(r"do\s+not\s+(?:tell|mention|inform|reveal|show|disclose)\b[^.\n]{0,40}"
                 r"\b(?:user|human)", re.IGNORECASE)),
-    ("zero-width/invisible unicode",
-     re.compile("[\u200b-\u200f\u2060-\u2064\ufeff]|[\U000e0000-\U000e007f]")),
+]
+# Security tools legitimately QUOTE this phrase in their detection patterns, so
+# on its own it is not evidence — it only counts next to a primary marker or a
+# sensitive-path mention in the same file. A real poisoned tool description
+# pairs it with both.
+CORROBORATED_MARKERS = [
+    ("ignore-previous-instructions",
+     re.compile(r"ignore\s+(?:all\s+|any\s+)?(?:previous|prior|above)\s+instructions",
+                re.IGNORECASE)),
 ]
 SENSITIVE_PATHS = re.compile(
     r"~/\.ssh|id_rsa|id_ed25519|\.aws/credentials|(?<![\w.])\.env(?!\.example)\b|mcp\.json",
     re.IGNORECASE)
 
+# Invisible unicode: emoji joiners (U+200D), bidi marks, and stray zero-widths
+# are everywhere in honest repos, so a lone character is noise. Suspicious:
+# tag characters (the ASCII-smuggling channel), a run of zero-widths, or an
+# unusual count in one file.
+INVISIBLE_TAG_RE = re.compile("[\U000e0000-\U000e007f]")
+INVISIBLE_CLASS = "[\u200b\u2060-\u2064]"
+INVISIBLE_RUN_RE = re.compile(INVISIBLE_CLASS + "{5,}")
+INVISIBLE_COUNT_THRESHOLD = 20
+
+
+def _invisible_finding(text):
+    """Reason string when a file's invisible-unicode use looks like smuggling."""
+    if INVISIBLE_TAG_RE.search(text):
+        return "unicode tag characters (ASCII-smuggling channel)"
+    if INVISIBLE_RUN_RE.search(text):
+        return "run of 5+ consecutive zero-width characters"
+    count = len(re.findall(INVISIBLE_CLASS, text))
+    if count >= INVISIBLE_COUNT_THRESHOLD:
+        return f"{count} zero-width characters in one file"
+    return None
+
 
 def scan_text_for_markers(text, filename=""):
-    """Pure marker check over one file's text. Returns finding dicts."""
-    findings = []
-    for label, pattern in PRIMARY_MARKERS:
-        match = pattern.search(text)
-        if not match:
-            continue
-        start = max(0, match.start() - 40)
-        excerpt = text[start:match.end() + 40].replace("\n", " ")
-        # Invisible characters make an empty-looking excerpt; name them instead.
-        if label.startswith("zero-width"):
-            excerpt = f"invisible character U+{ord(match.group(0)[0]):04X}"
-        sensitive = SENSITIVE_PATHS.search(text)
+    """Pure marker check over one file's text. Returns finding dicts.
+
+    Primary markers fire on their own; corroborated markers only count next to
+    a primary hit or a sensitive-path mention in the same file; invisible
+    unicode only in smuggling-shaped quantities (see _invisible_finding)."""
+    sensitive = SENSITIVE_PATHS.search(text)
+
+    def finding(label, excerpt):
         # backslashreplace: third-party text can contain anything; evidence
         # must survive any console/file encoding.
         excerpt = excerpt.strip()[:160].encode("ascii", "backslashreplace").decode()
-        findings.append({
+        return {
             "file": filename,
             "marker": label,
             "excerpt": excerpt,
             "sensitive_path": sensitive.group(0) if sensitive else None,
-        })
+        }
+
+    def context(match):
+        start = max(0, match.start() - 40)
+        return text[start:match.end() + 40].replace("\n", " ")
+
+    findings = []
+    for label, pattern in PRIMARY_MARKERS:
+        match = pattern.search(text)
+        if match:
+            findings.append(finding(label, context(match)))
+    if findings or sensitive:
+        for label, pattern in CORROBORATED_MARKERS:
+            match = pattern.search(text)
+            if match:
+                findings.append(finding(label, context(match)))
+    invisible = _invisible_finding(text)
+    if invisible:
+        findings.append(finding("suspicious invisible unicode", invisible))
     return findings
 
 

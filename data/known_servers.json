@@ -11350,27 +11350,14 @@
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
-          "markers": [
-            {
-              "file": "src/skill_seekers/workflows/default.yaml",
-              "marker": "ignore-previous-instructions",
-              "excerpt": "or: role assumption (\"You are now...\", \"Ignore previous instructions\"),       instruction overrides, delimit",
-              "sensitive_path": null
-            },
-            {
-              "file": "src/skill_seekers/workflows/prompt-injection-check.yaml",
-              "marker": "ignore-previous-instructions",
-              "excerpt": "tempts (\"You are now...\", \"Act as...\", \"Ignore previous instructions\")       2. Instruction override pattern",
-              "sensitive_path": null
-            }
-          ]
+          "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
         "computed_at": "2026-07-18",
-        "final": 79,
-        "grade": "B",
+        "final": 94,
+        "grade": "A",
         "subscores": {
           "ai": {
             "score": 92,
@@ -11424,15 +11411,8 @@
             "weight": 0.0556
           }
         },
-        "flags": [
-          {
-            "id": "injection_suspect",
-            "label": "Source contains prompt-injection markers (tool-poisoning pattern): ignore-previous-instructions",
-            "penalty": 15,
-            "fatal": false
-          }
-        ],
-        "penalty": 15,
+        "flags": [],
+        "penalty": 0,
         "fatal": false
       },
       "prompt_version": 2,
@@ -14255,21 +14235,14 @@
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
-          "markers": [
-            {
-              "file": "README.md",
-              "marker": "zero-width/invisible unicode",
-              "excerpt": "invisible character U+200D",
-              "sensitive_path": "mcp.json"
-            }
-          ]
+          "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
         "computed_at": "2026-07-18",
-        "final": 72,
-        "grade": "B",
+        "final": 87,
+        "grade": "A",
         "subscores": {
           "ai": {
             "score": 83,
@@ -14323,15 +14296,8 @@
             "weight": 0.0556
           }
         },
-        "flags": [
-          {
-            "id": "injection_suspect",
-            "label": "Source contains prompt-injection markers (tool-poisoning pattern): zero-width/invisible unicode",
-            "penalty": 15,
-            "fatal": false
-          }
-        ],
-        "penalty": 15,
+        "flags": [],
+        "penalty": 0,
         "fatal": false
       },
       "last_update": "2026-07-18T10:54:48Z",
@@ -16773,20 +16739,13 @@
         "source_scan": {
           "checked": true,
           "files_scanned": 155,
-          "markers": [
-            {
-              "file": "src/mcp_atlassian/jira/config.py",
-              "marker": "zero-width/invisible unicode",
-              "excerpt": "invisible character U+200B",
-              "sensitive_path": null
-            }
-          ]
+          "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
         "computed_at": "2026-07-18",
-        "final": 82,
+        "final": 97,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -16841,15 +16800,8 @@
             "weight": 0.0556
           }
         },
-        "flags": [
-          {
-            "id": "injection_suspect",
-            "label": "Source contains prompt-injection markers (tool-poisoning pattern): zero-width/invisible unicode",
-            "penalty": 15,
-            "fatal": false
-          }
-        ],
-        "penalty": 15,
+        "flags": [],
+        "penalty": 0,
         "fatal": false
       },
       "last_update": "2026-07-18T16:32:54Z",
@@ -17931,21 +17883,14 @@
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
-          "markers": [
-            {
-              "file": "packages/tokenizer/src/tokenize.ts",
-              "marker": "zero-width/invisible unicode",
-              "excerpt": "invisible character U+200B",
-              "sensitive_path": null
-            }
-          ]
+          "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
         "computed_at": "2026-07-18",
-        "final": 53,
-        "grade": "C",
+        "final": 68,
+        "grade": "B",
         "subscores": {
           "ai": {
             "score": 75,
@@ -18005,15 +17950,9 @@
             "label": "README instructs piping a download into a shell (e.g. curl | bash)",
             "penalty": 15,
             "fatal": false
-          },
-          {
-            "id": "injection_suspect",
-            "label": "Source contains prompt-injection markers (tool-poisoning pattern): zero-width/invisible unicode",
-            "penalty": 15,
-            "fatal": false
           }
         ],
-        "penalty": 30,
+        "penalty": 15,
         "fatal": false
       },
       "last_update": "2026-07-18T13:57:06Z",
