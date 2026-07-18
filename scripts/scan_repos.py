@@ -352,6 +352,108 @@ def ensure_provenance(cache):
 
 
 # ---------------------------------------------------------------------------
+# Identity resolution (repo_id is canonical; the slug is a mutable display name)
+# ---------------------------------------------------------------------------
+
+def fetch_repo_by_id(repo_id):
+    """Resolve a repository by its immutable numeric id. Returns (info, status)
+    where status is 'ok', 'gone' (404 — deleted/private), or 'error' (transient)."""
+    try:
+        resp = requests.get(
+            f"https://api.github.com/repositories/{repo_id}",
+            headers=GITHUB_HEADERS,
+            timeout=30,
+        )
+        if resp.status_code in (404, 410):
+            return None, "gone"
+        resp.raise_for_status()
+        return resp.json(), "ok"
+    except requests.RequestException as e:
+        print(f"  WARNING: could not resolve repo id {repo_id}: {e}")
+        return None, "error"
+
+
+def quarantine(server, reason):
+    """Freeze an entry whose stored slug no longer provably belongs to the repo
+    we evaluated. Quarantined entries are dropped from README/SCORES generation
+    and skipped by every fetch/refresh path until a human clears the flag."""
+    server["quarantined"] = True
+    server["quarantine_reason"] = reason
+
+
+def reconcile_repo_id(server, fetched_id):
+    """Check a by-slug API response against the entry's stored repo_id.
+
+    A mismatch means the stored slug now resolves to a DIFFERENT repository
+    (repojacking pattern: old name re-registered by someone else) — quarantine
+    and return False so the caller discards the fetched data. Entries without
+    a repo_id yet get it backfilled here (lazy, never a crash)."""
+    if not fetched_id:
+        return True
+    stored = server.get("repo_id")
+    if not stored:
+        server["repo_id"] = fetched_id
+        return True
+    if fetched_id != stored:
+        quarantine(server,
+                   f"slug {server.get('full_name')} resolves to repo_id {fetched_id}, "
+                   f"expected {stored} (repojacking pattern)")
+        return False
+    return True
+
+
+def resolve_known_entries(cache, excluded):
+    """Weekly identity pass: ~1 API call per known entry.
+
+    Entries with a repo_id are resolved by id, so renames/transfers update the
+    stored slug automatically. If a repo is gone by id but its old slug now
+    resolves to a different repo_id, the entry is quarantined instead of
+    updated. Plain 404s (deleted repos) are left to the existing fatal-flag
+    path. Entries without a repo_id are resolved by slug to backfill the id.
+
+    Returns (renamed, quarantined_now, backfilled) for the run summary."""
+    renamed, quarantined_now, backfilled = [], [], 0
+    for s in cache["servers"]:
+        fn = s.get("full_name", "")
+        if not fn or fn.lower() in excluded or s.get("quarantined"):
+            continue
+        rid = s.get("repo_id")
+        if rid:
+            info, status = fetch_repo_by_id(rid)
+            if status == "ok":
+                new_fn = info.get("full_name") or fn
+                if new_fn != fn:
+                    renamed.append((fn, new_fn))
+                    print(f"  RENAMED: {fn} -> {new_fn}")
+                    s["full_name"] = new_fn
+                    s["name"] = info.get("name", new_fn.split("/")[-1])
+                    s["url"] = info.get("html_url", f"https://github.com/{new_fn}")
+            elif status == "gone":
+                meta, slug_status = fetch_repo_meta(fn)
+                if slug_status == "ok" and meta.get("repo_id") != rid:
+                    quarantine(s, f"repo_id {rid} is gone but slug {fn} now resolves "
+                                  f"to repo_id {meta.get('repo_id')} (repojacking pattern)")
+                    quarantined_now.append(fn)
+                    print(f"  QUARANTINED: {fn} — {s['quarantine_reason']}")
+                # else: plain deletion — the metrics fetch marks it gone (fatal flag)
+        else:
+            meta, status = fetch_repo_meta(fn)
+            if status == "ok":
+                if meta.get("repo_id"):
+                    s["repo_id"] = meta["repo_id"]
+                    backfilled += 1
+                new_fn = meta.get("full_name") or fn
+                if new_fn != fn:  # GitHub redirected the slug: renamed before we had an id
+                    renamed.append((fn, new_fn))
+                    print(f"  RENAMED: {fn} -> {new_fn}")
+                    s["full_name"] = new_fn
+                    s["name"] = meta.get("name", new_fn.split("/")[-1])
+                    s["url"] = meta.get("url", f"https://github.com/{new_fn}")
+        time.sleep(0.3)
+    return renamed, quarantined_now, backfilled
+
+
+# ---------------------------------------------------------------------------
 # Fetch README + deterministic MCP signals
 # ---------------------------------------------------------------------------
 
@@ -1043,16 +1145,22 @@ def main():
     print(f"  Exclusion list: {len(excluded)} repo(s); {enforced} cache entr(ies) newly enforced")
     listed_for_squat = squat_targets(cache)
 
-    # 2. Search GitHub
-    print("\n[2/10] Searching GitHub...")
+    # 2. Resolve identities: follow renames by repo_id, quarantine repojacked slugs
+    print("\n[2/11] Resolving known entries by repo_id...")
+    renamed, quarantined_now, backfilled = resolve_known_entries(cache, excluded)
+    print(f"  {backfilled} repo_id(s) backfilled, {len(renamed)} slug(s) updated, "
+          f"{len(quarantined_now)} entr(ies) quarantined")
+
+    # 3. Search GitHub
+    print("\n[3/11] Searching GitHub...")
     github_repos = search_github()
 
-    # 3. Fetch from MCP Registry
-    print("\n[3/10] Fetching from MCP Registry...")
+    # 4. Fetch from MCP Registry
+    print("\n[4/11] Fetching from MCP Registry...")
     registry_repos = fetch_from_registry()
 
-    # 4. Merge and deduplicate
-    print("\n[4/10] Merging sources...")
+    # 5. Merge and deduplicate
+    print("\n[5/11] Merging sources...")
     all_repos = merge_sources(github_repos, registry_repos)
     cached_names = {s["full_name"] for s in cache["servers"]}
     new_repos = [r for r in all_repos
@@ -1063,8 +1171,8 @@ def main():
     today = datetime.now(timezone.utc)
     touched = set()  # full_names that already got fresh metrics this run
 
-    # 5. Analyze new repos with AI
-    print(f"\n[5/10] Analyzing (max {MAX_NEW_ANALYSES} new repos)...")
+    # 6. Analyze new repos with AI
+    print(f"\n[6/11] Analyzing (max {MAX_NEW_ANALYSES} new repos)...")
     analyzed = 0
     for repo in new_repos[:MAX_NEW_ANALYSES]:
         fn = repo["full_name"]
@@ -1112,11 +1220,12 @@ def main():
         analyzed += 1
         time.sleep(4)  # Rate limit: stay under 15 req/min for Models API
 
-    # 6. Re-evaluate stale entries
-    print(f"\n[6/10] Re-evaluating stale entries (prompt v{PROMPT_VERSION}, "
+    # 7. Re-evaluate stale entries
+    print(f"\n[7/11] Re-evaluating stale entries (prompt v{PROMPT_VERSION}, "
           f"older than {STALE_AFTER_DAYS} days, or failed)...")
     stale = [s for s in cache["servers"]
-             if s.get("full_name", "").lower() not in excluded and is_stale(s, today)]
+             if s.get("full_name", "").lower() not in excluded
+             and not s.get("quarantined") and is_stale(s, today)]
     stale.sort(key=reaudit_priority)
     re_evaluated = 0
 
@@ -1140,6 +1249,10 @@ def main():
             continue
         if status == "error":
             print("    -> metadata fetch failed; will retry next run")
+            re_evaluated += 1
+            continue
+        if not reconcile_repo_id(s, meta.get("repo_id")):
+            print(f"    -> QUARANTINED: {s.get('quarantine_reason')}")
             re_evaluated += 1
             continue
 
@@ -1182,13 +1295,14 @@ def main():
 
     print(f"  Re-evaluated {re_evaluated} stale entries ({len(stale)} total stale)")
 
-    # 7. Weekly metrics + trust refresh for every other valid server (no AI calls):
+    # 8. Weekly metrics + trust refresh for every other valid server (no AI calls):
     #    trust scores and star counts stay fresh even though AI re-eval is 90-day.
-    print("\n[7/10] Refreshing metrics for listed servers...")
+    print("\n[8/11] Refreshing metrics for listed servers...")
     refreshed = 0
     for s in cache["servers"]:
         fn = s.get("full_name", "")
         if (fn.lower() in touched or fn.lower() in excluded
+                or s.get("quarantined")
                 or not s.get("analysis", {}).get("is_valid_mcp_server")):
             continue
         _, readme_statistics = fetch_readme(fn)
@@ -1203,6 +1317,9 @@ def main():
                 if k in prev and prev[k] is not None
             } or None
         repo_metrics = metrics.collect_metrics(fn, readme_statistics=readme_statistics)
+        if not reconcile_repo_id(s, repo_metrics.get("repo_id")):
+            print(f"  QUARANTINED: {fn} — {s.get('quarantine_reason')}")
+            continue
         s["metrics"] = repo_metrics
         s["trust"] = trust.compute_trust(repo_metrics, s.get("analysis", {}),
                                          full_name=fn, listed_servers=listed_for_squat)
@@ -1217,25 +1334,33 @@ def main():
         time.sleep(0.5)
     print(f"  Refreshed metrics for {refreshed} server(s)")
 
-    # 8. Process human nominations (issue-form submissions) through the same AI gate
-    print(f"\n[8/10] Processing nominations (max {MAX_NOMINATIONS})...")
+    # 9. Process human nominations (issue-form submissions) through the same AI gate
+    print(f"\n[9/11] Processing nominations (max {MAX_NOMINATIONS})...")
     process_nominations(cache, excluded, listed_for_squat)
 
-    # 9. Star history snapshot (powers the trend deltas in README/SCORES)
-    print("\n[9/10] Updating star history...")
+    # 10. Star history snapshot (powers the trend deltas in README/SCORES)
+    print("\n[10/11] Updating star history...")
     valid_servers = [
         s for s in cache["servers"]
         if s.get("analysis", {}).get("is_valid_mcp_server", False)
+        and not s.get("quarantined")
     ]
     history = update_star_history(STAR_HISTORY_PATH, valid_servers,
                                   today.strftime("%Y-%m-%d"))
     print(f"  Star history covers {len(history)} server(s)")
 
-    # 10. Save and generate
-    print("\n[10/10] Saving results...")
+    # 11. Save and generate
+    print("\n[11/11] Saving results...")
     save_cache(CACHE_PATH, cache)
     generate_readme(valid_servers, README_PATH, history=history)
     generate_scores_md(valid_servers, SCORES_PATH, history=history)
+
+    quarantined_all = [s for s in cache["servers"] if s.get("quarantined")]
+    if quarantined_all:
+        print(f"\nQUARANTINED ({len(quarantined_all)}) — excluded from README/SCORES "
+              f"until manually cleared:")
+        for s in quarantined_all:
+            print(f"  - {s.get('full_name')}: {s.get('quarantine_reason', '')}")
 
     print(f"\nDone! Analyzed {analyzed} new repos, re-evaluated {re_evaluated} stale. "
           f"Total valid servers: {len(valid_servers)}")

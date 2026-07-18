@@ -10,6 +10,7 @@ import sys
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(__file__))
 
@@ -18,6 +19,15 @@ import trust
 import utils
 
 NOW = datetime(2026, 6, 10, tzinfo=timezone.utc)
+
+
+def fake_response(status=200, payload=None):
+    """A minimal stand-in for requests.Response (no network in tests)."""
+    resp = mock.Mock()
+    resp.status_code = status
+    resp.json.return_value = payload if payload is not None else {}
+    resp.headers = {}
+    return resp
 
 
 def iso(days_ago):
@@ -356,6 +366,92 @@ class TestNominationVerdicts(unittest.TestCase):
         text = scan_repos.already_known_comment(server)
         self.assertIn("blocking flag", text)
         self.assertNotIn("Already listed", text)
+
+
+class TestIdentityResolution(unittest.TestCase):
+    def _entry(self, **kw):
+        e = {"full_name": "old/name",
+             "analysis": {"is_valid_mcp_server": True, "quality_score": 8}}
+        e.update(kw)
+        return e
+
+    def _resolve(self, entry, responses):
+        import scan_repos
+        cache = {"servers": [entry]}
+        with mock.patch.object(scan_repos.requests, "get", side_effect=responses), \
+             mock.patch.object(scan_repos.time, "sleep"):
+            return scan_repos.resolve_known_entries(cache, set())
+
+    def test_rename_updates_slug(self):
+        entry = self._entry(repo_id=111)
+        renamed, jacked, _ = self._resolve(entry, [fake_response(200, {
+            "id": 111, "full_name": "new/name", "name": "name",
+            "html_url": "https://github.com/new/name"})])
+        self.assertEqual(renamed, [("old/name", "new/name")])
+        self.assertEqual(jacked, [])
+        self.assertEqual(entry["full_name"], "new/name")
+        self.assertEqual(entry["url"], "https://github.com/new/name")
+        self.assertFalse(entry.get("quarantined"))
+
+    def test_repojacked_slug_is_quarantined_not_updated(self):
+        entry = self._entry(repo_id=111)
+        renamed, jacked, _ = self._resolve(entry, [
+            fake_response(404),  # by id: our repo is gone
+            fake_response(200, {"id": 999, "full_name": "old/name",  # slug re-registered
+                                "stargazers_count": 5}),
+        ])
+        self.assertEqual(jacked, ["old/name"])
+        self.assertTrue(entry["quarantined"])
+        self.assertIn("repojack", entry["quarantine_reason"])
+        self.assertEqual(entry["full_name"], "old/name")  # entry left untouched
+        self.assertEqual(entry["repo_id"], 111)
+
+    def test_plain_deletion_is_not_quarantined(self):
+        entry = self._entry(repo_id=111)
+        renamed, jacked, _ = self._resolve(entry, [fake_response(404), fake_response(404)])
+        self.assertEqual(jacked, [])
+        self.assertFalse(entry.get("quarantined"))  # existing fatal-flag path handles it
+
+    def test_backfills_missing_repo_id(self):
+        entry = self._entry()
+        _, _, backfilled = self._resolve(entry, [fake_response(200, {
+            "id": 222, "full_name": "old/name", "stargazers_count": 1})])
+        self.assertEqual(backfilled, 1)
+        self.assertEqual(entry["repo_id"], 222)
+
+    def test_reconcile_repo_id(self):
+        import scan_repos
+        entry = self._entry(repo_id=111)
+        self.assertFalse(scan_repos.reconcile_repo_id(entry, 999))
+        self.assertTrue(entry["quarantined"])
+        fresh = self._entry()
+        self.assertTrue(scan_repos.reconcile_repo_id(fresh, 42))  # lazy backfill
+        self.assertEqual(fresh["repo_id"], 42)
+        self.assertTrue(scan_repos.reconcile_repo_id(fresh, 42))  # match: fine
+        self.assertTrue(scan_repos.reconcile_repo_id(fresh, None))  # no data: tolerated
+
+    def test_quarantined_dropped_from_generation(self):
+        good = {"full_name": "good/server", "stars": 10, "url": "https://github.com/good/server",
+                "analysis": {"is_valid_mcp_server": True, "quality_score": 8,
+                             "category": "dev-tools", "short_description": "fine"}}
+        bad = {"full_name": "jacked/server", "stars": 10, "url": "https://github.com/jacked/server",
+               "quarantined": True, "quarantine_reason": "repo_id mismatch",
+               "analysis": {"is_valid_mcp_server": True, "quality_score": 8,
+                            "category": "dev-tools", "short_description": "fine"}}
+        self.assertFalse(utils.is_listed(bad))
+        with tempfile.TemporaryDirectory() as tmp:
+            readme = os.path.join(tmp, "README.md")
+            scores = os.path.join(tmp, "SCORES.md")
+            utils.generate_readme([good, bad], readme)
+            utils.generate_scores_md([good, bad], scores)
+            with open(readme, encoding="utf-8") as f:
+                readme_text = f.read()
+            with open(scores, encoding="utf-8") as f:
+                scores_text = f.read()
+        self.assertIn("good/server", readme_text)
+        self.assertNotIn("jacked/server", readme_text)
+        self.assertIn("good/server", scores_text)
+        self.assertNotIn("jacked/server", scores_text)
 
 
 class TestStaleness(unittest.TestCase):

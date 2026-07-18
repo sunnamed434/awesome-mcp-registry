@@ -110,6 +110,21 @@ Star counts are snapshotted weekly into [`data/star_history.jsonl`](data/star_hi
 "Trending This Week" section; 7-day and 30-day deltas appear in SCORES.md. Snapshots older than
 ~53 weeks are thinned to one per month.
 
+## Identity: renames, transfers, repojacking
+
+Each entry stores GitHub's immutable numeric repository ID (`repo_id`) as its canonical key;
+the `owner/name` slug is just the current display name. Every weekly scan re-resolves entries
+by ID, so renamed or transferred repositories keep their history and scores under the new slug
+automatically.
+
+If a stored repository disappears by ID while its old slug resolves to a **different**
+repository — the repojacking pattern (an abandoned name re-registered by someone else) — the
+entry is **quarantined** instead of updated: marked `quarantined: true` with a reason in
+[`data/known_servers.json`](data/known_servers.json), dropped from README and SCORES, and no
+longer fetched, until a human reviews and clears it. The same guard applies anywhere the
+scanner fetches by slug: a response whose repository ID doesn't match the stored `repo_id` is
+discarded and the entry quarantined.
+
 ## Exclusion list
 
 [`data/excluded-repos.txt`](data/excluded-repos.txt) is the only place a human overrides the AI,

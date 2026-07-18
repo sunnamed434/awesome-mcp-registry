@@ -281,7 +281,10 @@ def trust_final(server):
 
 
 def is_listed(server):
-    """Listing gate: valid MCP server, trust >= threshold, no fatal flag."""
+    """Listing gate: valid MCP server, trust >= threshold, no fatal flag, and
+    not quarantined (slug/repo_id identity mismatch awaiting human review)."""
+    if server.get("quarantined"):
+        return False
     analysis = server.get("analysis") or {}
     if not analysis.get("is_valid_mcp_server"):
         return False
@@ -544,7 +547,9 @@ def generate_scores_md(servers, output_path, history=None):
     """Generate SCORES.md: the full per-server trust breakdown."""
     history = history or {}
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    scored = sorted(servers, key=lambda s: (trust_final(s), s.get("stars", 0)), reverse=True)
+    # Quarantined entries (identity mismatch awaiting human review) are not rendered.
+    scored = sorted((s for s in servers if not s.get("quarantined")),
+                    key=lambda s: (trust_final(s), s.get("stars", 0)), reverse=True)
 
     lines = []
     lines.append("# Trust Score Breakdown")
