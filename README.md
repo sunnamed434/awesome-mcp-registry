@@ -134,7 +134,15 @@ Servers are curated entirely by AI — they earn their spot through quality and 
 
 ## A Note on Security
 
-Trust scores are computed from public metadata, the README, and [OpenSSF Scorecard](https://scorecard.dev/) data. **No entry has been code-audited or executed by this registry.** A high score means strong public signals, not a security guarantee — review any MCP server (and the credentials you grant it) before connecting it to your tools.
+Trust scores are computed from public metadata, the README, and [OpenSSF Scorecard](https://scorecard.dev/) data. Every entry's source is additionally scanned — **read, never executed** — for tool-poisoning markers (hidden instructions aimed at the model inside tool descriptions; flagged entries lose points in [SCORES.md](SCORES.md)). Entries are keyed by GitHub's immutable repository id, so renames are followed and a known name silently re-registered by someone else (repojacking) is quarantined instead of trusted. **Still: no entry has been code-audited or executed by this registry.** A high score means strong public signals, not a security guarantee — review any MCP server (and the credentials you grant it) before connecting it to your tools.
+
+## Badges
+
+Maintain a listed server? Embed your live trust score — it updates weekly and the URL survives repo renames (keyed by immutable repository id):
+
+`![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/<repo_id>.json)`
+
+Your exact copy-paste snippet is under your entry in [SCORES.md](SCORES.md).
 
 ## Contributing
 

@@ -70,7 +70,8 @@ welcome — those PRs are **not** auto-closed. The relevant code lives in:
 - `scripts/scan_repos.py` — discovery, AI analysis, re-evaluation, nomination intake
 - `scripts/metrics.py` — raw GitHub / OpenSSF Scorecard metric collection
 - `scripts/trust.py` — the pure trust-score formula (see [METHODOLOGY.md](METHODOLOGY.md))
-- `scripts/utils.py` — README/SCORES generation and parsing helpers
+- `scripts/utils.py` — README/SCORES/badge generation and parsing helpers
+- `scripts/release_notes.py` — weekly diff for the update PR body and GitHub Release
 - `scripts/test_trust.py` — unit tests (`python scripts/test_trust.py`)
 - `prompts/analyzer.prompt.yml` — the AI evaluation prompt
 - `.github/workflows/` — the automation

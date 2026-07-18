@@ -140,7 +140,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 896335270
+      "repo_id": 896335270,
+      "listed": false
     },
     {
       "full_name": "upstash/context7",
@@ -300,7 +301,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 955620917
+      "repo_id": 955620917,
+      "listed": true
     },
     {
       "full_name": "mindsdb/mindshub",
@@ -457,7 +459,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 143328315
+      "repo_id": 143328315,
+      "listed": false
     },
     {
       "full_name": "microsoft/playwright-mcp",
@@ -617,7 +620,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 952688112
+      "repo_id": 952688112,
+      "listed": true
     },
     {
       "full_name": "github/github-mcp-server",
@@ -782,7 +786,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 942771284
+      "repo_id": 942771284,
+      "listed": true
     },
     {
       "full_name": "PrefectHQ/fastmcp",
@@ -946,7 +951,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 896296825
+      "repo_id": 896296825,
+      "listed": false
     },
     {
       "full_name": "activepieces/activepieces",
@@ -1111,7 +1117,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 573661753
+      "repo_id": 573661753,
+      "listed": false
     },
     {
       "full_name": "oraios/serena",
@@ -1278,7 +1285,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 953683578
+      "repo_id": 953683578,
+      "listed": true
     },
     {
       "full_name": "GLips/Figma-Context-MCP",
@@ -1440,7 +1448,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 931892749
+      "repo_id": 931892749,
+      "listed": true
     },
     {
       "full_name": "googleapis/mcp-toolbox",
@@ -1605,7 +1614,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 812044182
+      "repo_id": 812044182,
+      "listed": true
     },
     {
       "full_name": "BeehiveInnovations/pal-mcp-server",
@@ -1773,7 +1783,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 998428732
+      "repo_id": 998428732,
+      "listed": true
     },
     {
       "full_name": "hangwin/mcp-chrome",
@@ -1928,7 +1939,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 998796026
+      "repo_id": 998796026,
+      "listed": true
     },
     {
       "full_name": "mcp-use/mcp-use",
@@ -2077,7 +2089,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 956472076
+      "repo_id": 956472076,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/inspector",
@@ -2243,7 +2256,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 867337374
+      "repo_id": 867337374,
+      "listed": false
     },
     {
       "full_name": "awslabs/mcp",
@@ -2407,7 +2421,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 952238700
+      "repo_id": 952238700,
+      "listed": false
     },
     {
       "full_name": "idosal/git-mcp",
@@ -2574,7 +2589,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 956842312
+      "repo_id": 956842312,
+      "listed": true
     },
     {
       "full_name": "LaurieWired/GhidraMCP",
@@ -2721,7 +2737,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 953335676
+      "repo_id": 953335676,
+      "listed": true
     },
     {
       "full_name": "0x4m4/hexstrike-ai",
@@ -2865,7 +2882,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1017550802
+      "repo_id": 1017550802,
+      "listed": true
     },
     {
       "full_name": "modelcontextprotocol/registry",
@@ -3027,7 +3045,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 927890076
+      "repo_id": 927890076,
+      "listed": false
     },
     {
       "full_name": "yzfly/Awesome-MCP-ZH",
@@ -3163,7 +3182,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 959543974
+      "repo_id": 959543974,
+      "listed": false
     },
     {
       "full_name": "xberg-io/xberg",
@@ -3328,7 +3348,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 925434317
+      "repo_id": 925434317,
+      "listed": false
     },
     {
       "full_name": "BrowserMCP/mcp",
@@ -3470,7 +3491,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 956283541
+      "repo_id": 956283541,
+      "listed": false
     },
     {
       "full_name": "firecrawl/firecrawl-mcp-server",
@@ -3628,7 +3650,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 899407931
+      "repo_id": 899407931,
+      "listed": true
     },
     {
       "full_name": "wonderwhy-er/DesktopCommanderMCP",
@@ -3802,7 +3825,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 898345892
+      "repo_id": 898345892,
+      "listed": true
     },
     {
       "full_name": "lharries/whatsapp-mcp",
@@ -3948,7 +3972,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 957053334
+      "repo_id": 957053334,
+      "listed": false
     },
     {
       "full_name": "executeautomation/mcp-playwright",
@@ -4111,7 +4136,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 898077246
+      "repo_id": 898077246,
+      "listed": true
     },
     {
       "full_name": "appcypher/awesome-mcp-servers",
@@ -4245,7 +4271,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 895801050
+      "repo_id": 895801050,
+      "listed": false
     },
     {
       "full_name": "nanbingxyz/5ire",
@@ -4408,7 +4435,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 739667828
+      "repo_id": 739667828,
+      "listed": false
     },
     {
       "full_name": "aipotheosis-labs/aci",
@@ -4552,7 +4580,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 859956307
+      "repo_id": 859956307,
+      "listed": false
     },
     {
       "full_name": "u14app/deep-research",
@@ -4710,7 +4739,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 936974548
+      "repo_id": 936974548,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/servers",
@@ -4861,7 +4891,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 890668799
+      "repo_id": 890668799,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/python-sdk",
@@ -5020,7 +5051,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 862584018
+      "repo_id": 862584018,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/typescript-sdk",
@@ -5182,7 +5214,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 862578138
+      "repo_id": 862578138,
+      "listed": false
     },
     {
       "full_name": "getsentry/XcodeBuildMCP",
@@ -5349,7 +5382,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 945551361
+      "repo_id": 945551361,
+      "listed": true
     },
     {
       "full_name": "modelcontextprotocol/csharp-sdk",
@@ -5507,7 +5541,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 946174307
+      "repo_id": 946174307,
+      "listed": false
     },
     {
       "full_name": "Pimzino/spec-workflow-mcp",
@@ -5674,7 +5709,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1033865617
+      "repo_id": 1033865617,
+      "listed": true
     },
     {
       "full_name": "modelcontextprotocol/go-sdk",
@@ -5842,7 +5878,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 971300888
+      "repo_id": 971300888,
+      "listed": false
     },
     {
       "full_name": "opensumi/core",
@@ -6005,7 +6042,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 429104828
+      "repo_id": 429104828,
+      "listed": false
     },
     {
       "full_name": "wong2/awesome-mcp-servers",
@@ -6141,7 +6179,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 895553015
+      "repo_id": 895553015,
+      "listed": false
     },
     {
       "full_name": "mobile-next/mobile-mcp",
@@ -6300,7 +6339,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 956657893
+      "repo_id": 956657893,
+      "listed": true
     },
     {
       "full_name": "haris-musa/excel-mcp-server",
@@ -6456,7 +6496,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 931365873
+      "repo_id": 931365873,
+      "listed": true
     },
     {
       "full_name": "IBM/mcp-context-forge",
@@ -6625,7 +6666,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 979886407
+      "repo_id": 979886407,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/java-sdk",
@@ -6783,7 +6825,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 919609219
+      "repo_id": 919609219,
+      "listed": false
     },
     {
       "full_name": "microsoft/mcp",
@@ -6951,7 +6994,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 963038660
+      "repo_id": 963038660,
+      "listed": false
     },
     {
       "full_name": "zcaceres/markdownify-mcp",
@@ -7108,7 +7152,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 905450127
+      "repo_id": 905450127,
+      "listed": true
     },
     {
       "full_name": "blazickjp/arxiv-mcp-server",
@@ -7265,7 +7310,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 896146306
+      "repo_id": 896146306,
+      "listed": true
     },
     {
       "full_name": "brightdata/brightdata-mcp",
@@ -7430,7 +7476,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 966718614
+      "repo_id": 966718614,
+      "listed": true
     },
     {
       "full_name": "GongRzhe/Office-Word-MCP-Server",
@@ -7594,7 +7641,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 954434732
+      "repo_id": 954434732,
+      "listed": false
     },
     {
       "full_name": "GongRzhe/Office-PowerPoint-MCP-Server",
@@ -7757,7 +7805,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 954558050
+      "repo_id": 954558050,
+      "listed": false
     },
     {
       "full_name": "f/mcptools",
@@ -7911,7 +7960,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 954858451
+      "repo_id": 954858451,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/php-sdk",
@@ -8062,7 +8112,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1020454748
+      "repo_id": 1020454748,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/kotlin-sdk",
@@ -8223,7 +8274,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 904281964
+      "repo_id": 904281964,
+      "listed": false
     },
     {
       "full_name": "MiniMax-AI/MiniMax-MCP",
@@ -8382,7 +8434,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 963737260
+      "repo_id": 963737260,
+      "listed": true
     },
     {
       "full_name": "modelcontextprotocol/swift-sdk",
@@ -8527,7 +8580,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 927967893
+      "repo_id": 927967893,
+      "listed": false
     },
     {
       "full_name": "qdrant/mcp-server-qdrant",
@@ -8676,7 +8730,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 897308110
+      "repo_id": 897308110,
+      "listed": true
     },
     {
       "full_name": "n8n-io/n8n",
@@ -8847,7 +8902,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 193215554
+      "repo_id": 193215554,
+      "listed": false
     },
     {
       "full_name": "google-gemini/gemini-cli",
@@ -9010,7 +9066,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 968197216
+      "repo_id": 968197216,
+      "listed": false
     },
     {
       "full_name": "sansan0/TrendRadar",
@@ -9182,7 +9239,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 974186260
+      "repo_id": 974186260,
+      "listed": true
     },
     {
       "full_name": "bytedance/UI-TARS-desktop",
@@ -9354,7 +9412,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 918932603
+      "repo_id": 918932603,
+      "listed": false
     },
     {
       "full_name": "assafelovic/gpt-researcher",
@@ -9521,7 +9580,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 639835356
+      "repo_id": 639835356,
+      "listed": false
     },
     {
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
@@ -9688,7 +9748,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1054793726
+      "repo_id": 1054793726,
+      "listed": true
     },
     {
       "full_name": "1Panel-dev/MaxKB",
@@ -9840,7 +9901,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 691347156
+      "repo_id": 691347156,
+      "listed": true
     },
     {
       "full_name": "microsoft/mcp-for-beginners",
@@ -9998,7 +10060,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 960665821
+      "repo_id": 960665821,
+      "listed": false
     },
     {
       "full_name": "ruvnet/ruflo",
@@ -10168,7 +10231,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 995029641
+      "repo_id": 995029641,
+      "listed": false
     },
     {
       "full_name": "triggerdotdev/trigger.dev",
@@ -10333,7 +10397,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 572570113
+      "repo_id": 572570113,
+      "listed": true
     },
     {
       "full_name": "czlonkowski/n8n-mcp",
@@ -10500,7 +10565,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 997890921
+      "repo_id": 997890921,
+      "listed": true
     },
     {
       "full_name": "tadata-org/fastapi_mcp",
@@ -10657,7 +10723,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 944976593
+      "repo_id": 944976593,
+      "listed": true
     },
     {
       "full_name": "0xJacky/nginx-ui",
@@ -10823,7 +10890,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 340339997
+      "repo_id": 340339997,
+      "listed": false
     },
     {
       "full_name": "JoeanAmier/XHS-Downloader",
@@ -10976,7 +11044,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 679219059
+      "repo_id": 679219059,
+      "listed": true
     },
     {
       "full_name": "yusufkaraaslan/Skill_Seekers",
@@ -11144,7 +11213,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1078319457
+      "repo_id": 1078319457,
+      "listed": true
     },
     {
       "full_name": "D4Vinci/Scrapling",
@@ -11306,7 +11376,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 872119017
+      "repo_id": 872119017,
+      "listed": false
     },
     {
       "full_name": "open-metadata/OpenMetadata",
@@ -11477,7 +11548,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 391740664
+      "repo_id": 391740664,
+      "listed": false
     },
     {
       "full_name": "modelcontextprotocol/modelcontextprotocol",
@@ -11640,7 +11712,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 862570523
+      "repo_id": 862570523,
+      "listed": false
     },
     {
       "full_name": "mrexodia/ida-pro-mcp",
@@ -11795,7 +11868,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 954963562
+      "repo_id": 954963562,
+      "listed": true
     },
     {
       "full_name": "liaokongVFX/MCP-Chinese-Getting-Started-Guide",
@@ -11930,7 +12004,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 941145803
+      "repo_id": 941145803,
+      "listed": true
     },
     {
       "full_name": "metorial/metorial",
@@ -12081,7 +12156,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 965998145
+      "repo_id": 965998145,
+      "listed": false
     },
     {
       "full_name": "supermemoryai/apple-mcp",
@@ -12241,7 +12317,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 935736274
+      "repo_id": 935736274,
+      "listed": false
     },
     {
       "full_name": "opensolon/solon",
@@ -12402,7 +12479,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 140086420
+      "repo_id": 140086420,
+      "listed": false
     },
     {
       "full_name": "Jpisnice/shadcn-ui-mcp-server",
@@ -12564,7 +12642,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 961975051
+      "repo_id": 961975051,
+      "listed": true
     },
     {
       "full_name": "mattzcarey/shippie",
@@ -12716,7 +12795,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 663247362
+      "repo_id": 663247362,
+      "listed": false
     },
     {
       "full_name": "xpzouying/xiaohongshu-mcp",
@@ -12883,7 +12963,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1031215137
+      "repo_id": 1031215137,
+      "listed": true
     },
     {
       "full_name": "perplexityai/modelcontextprotocol",
@@ -13037,7 +13118,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 946214670
+      "repo_id": 946214670,
+      "listed": true
     },
     {
       "full_name": "MCPJam/inspector",
@@ -13197,7 +13279,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 989134268
+      "repo_id": 989134268,
+      "listed": false
     },
     {
       "full_name": "snyk/agent-scan",
@@ -13363,7 +13446,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 962024783
+      "repo_id": 962024783,
+      "listed": false
     },
     {
       "full_name": "chongdashu/unreal-mcp",
@@ -13506,7 +13590,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 956687107
+      "repo_id": 956687107,
+      "listed": false
     },
     {
       "full_name": "refreshdotdev/web-eval-agent",
@@ -13670,7 +13755,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 958888851
+      "repo_id": 958888851,
+      "listed": false
     },
     {
       "full_name": "basementstudio/xmcp",
@@ -13837,7 +13923,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 985096937
+      "repo_id": 985096937,
+      "listed": false
     },
     {
       "full_name": "containers/kubernetes-mcp-server",
@@ -14001,7 +14088,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 930678258
+      "repo_id": 930678258,
+      "listed": true
     },
     {
       "full_name": "robotmcp/ros-mcp-server",
@@ -14157,7 +14245,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 964371379
+      "repo_id": 964371379,
+      "listed": true
     },
     {
       "full_name": "QuantGeekDev/mcp-framework",
@@ -14323,7 +14412,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 900493069
+      "repo_id": 900493069,
+      "listed": false
     },
     {
       "full_name": "bgauryy/octocode",
@@ -14485,7 +14575,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 996813130
+      "repo_id": 996813130,
+      "listed": true
     },
     {
       "full_name": "BigSweetPotatoStudio/HyperChat",
@@ -14648,7 +14739,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 903270862
+      "repo_id": 903270862,
+      "listed": false
     },
     {
       "full_name": "Kymo-MCP/mcpcan",
@@ -14806,7 +14898,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1059189119
+      "repo_id": 1059189119,
+      "listed": false
     },
     {
       "full_name": "tbxark/mcp-proxy",
@@ -14964,7 +15057,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 955698123
+      "repo_id": 955698123,
+      "listed": false
     },
     {
       "full_name": "obot-platform/obot",
@@ -15127,7 +15221,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 852998534
+      "repo_id": 852998534,
+      "listed": false
     },
     {
       "full_name": "truffle-ai/dexto",
@@ -15299,7 +15394,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 954321799
+      "repo_id": 954321799,
+      "listed": false
     },
     {
       "full_name": "rekog-labs/MCP-Nest",
@@ -15459,7 +15555,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 922709376
+      "repo_id": 922709376,
+      "listed": false
     },
     {
       "full_name": "casdoor/casdoor",
@@ -15626,7 +15723,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 306366900
+      "repo_id": 306366900,
+      "listed": true
     },
     {
       "full_name": "modelcontextprotocol/ext-apps",
@@ -15790,7 +15888,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1101234405
+      "repo_id": 1101234405,
+      "listed": false
     },
     {
       "full_name": "benborla/mcp-server-mysql",
@@ -15957,7 +16056,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 900806525
+      "repo_id": 900806525,
+      "listed": true
     },
     {
       "full_name": "CursorTouch/Windows-MCP",
@@ -16125,7 +16225,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 982517950
+      "repo_id": 982517950,
+      "listed": true
     },
     {
       "full_name": "stacklok/toolhive",
@@ -16290,7 +16391,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 947349598
+      "repo_id": 947349598,
+      "listed": false
     },
     {
       "full_name": "sooperset/mcp-atlassian",
@@ -16453,7 +16555,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 897809208
+      "repo_id": 897809208,
+      "listed": true
     },
     {
       "full_name": "alpic-ai/skybridge",
@@ -16610,7 +16713,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1071272475
+      "repo_id": 1071272475,
+      "listed": false
     },
     {
       "full_name": "webiny/webiny-js",
@@ -16781,7 +16885,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 116817549
+      "repo_id": 116817549,
+      "listed": false
     },
     {
       "full_name": "nukeop/nuclear",
@@ -16948,7 +17053,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 68968979
+      "repo_id": 68968979,
+      "listed": false
     },
     {
       "full_name": "datagouv/datagouv-mcp",
@@ -17103,7 +17209,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1103742564
+      "repo_id": 1103742564,
+      "listed": true
     },
     {
       "full_name": "google-labs-code/stitch-skills",
@@ -17242,7 +17349,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1135847870
+      "repo_id": 1135847870,
+      "listed": false
     },
     {
       "full_name": "mksglu/context-mode",
@@ -17407,7 +17515,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1164477708
+      "repo_id": 1164477708,
+      "listed": false
     },
     {
       "full_name": "kucherenko/jscpd",
@@ -17587,7 +17696,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 10353211
+      "repo_id": 10353211,
+      "listed": true
     },
     {
       "full_name": "coddingtonbear/obsidian-local-rest-api",
@@ -17754,7 +17864,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 451732769
+      "repo_id": 451732769,
+      "listed": true
     },
     {
       "full_name": "epiral/bb-browser",
@@ -17912,7 +18023,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1146413571
+      "repo_id": 1146413571,
+      "listed": true
     },
     {
       "full_name": "modelscope/FunASR",
@@ -18078,7 +18190,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 569959091
+      "repo_id": 569959091,
+      "listed": true
     },
     {
       "full_name": "headroomlabs-ai/headroom",
@@ -18253,7 +18366,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1129940957
+      "repo_id": 1129940957,
+      "listed": true
     },
     {
       "full_name": "jacob-bd/notebooklm-mcp-cli",
@@ -18407,7 +18521,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1121438740
+      "repo_id": 1121438740,
+      "listed": true
     },
     {
       "full_name": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -18560,7 +18675,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1177608268
+      "repo_id": 1177608268,
+      "listed": false
     },
     {
       "full_name": "BuyWhere/buywhere-mcp",
@@ -18722,7 +18838,8 @@
         "login": "BuyWhere",
         "user_id": 276059411,
         "issue_number": 14
-      }
+      },
+      "listed": true
     },
     {
       "full_name": "smallhandsome/shotapi-mcp-server",
@@ -18873,7 +18990,8 @@
         "login": "smallhandsome",
         "user_id": 26560542,
         "issue_number": 10
-      }
+      },
+      "listed": true
     },
     {
       "full_name": "DeusData/codebase-memory-mcp",
@@ -19052,7 +19170,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1166102148
+      "repo_id": 1166102148,
+      "listed": true
     },
     {
       "full_name": "zylon-ai/private-gpt",
@@ -19216,7 +19335,8 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 635240594
+      "repo_id": 635240594,
+      "listed": true
     },
     {
       "full_name": "koala73/worldmonitor",
@@ -19381,8 +19501,10 @@
       },
       "prompt_version": 2,
       "discovered_via": "github-search",
-      "repo_id": 1130564872
+      "repo_id": 1130564872,
+      "listed": true
     }
   ],
-  "last_scan": "2026-07-18"
+  "last_scan": "2026-07-18",
+  "schema_version": 2
 }

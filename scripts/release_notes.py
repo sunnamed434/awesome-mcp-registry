@@ -81,6 +81,8 @@ def render(d, total_listed):
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")  # − and → survive Windows consoles
     if len(sys.argv) != 3:
         print(__doc__)
         sys.exit(1)
