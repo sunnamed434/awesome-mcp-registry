@@ -630,6 +630,34 @@ class TestStaleness(unittest.TestCase):
         self.assertIs(ordered[2], rest)
 
 
+class TestReleaseNotes(unittest.TestCase):
+    def _srv(self, fn, final, rid=None):
+        return {"full_name": fn, "repo_id": rid,
+                "analysis": {"is_valid_mcp_server": True}, "trust": {"final": final}}
+
+    def test_diff_matches_by_repo_id_and_renders(self):
+        import release_notes
+        old = [self._srv("a/a", 80, 1), self._srv("b/b", 60, 2),
+               self._srv("c/c", 70, 3)]
+        new = [self._srv("a/a", 90, 1),        # mover +10
+               self._srv("c-new/c", 70, 3),    # renamed, same id: neither added nor removed
+               self._srv("d/d", 55, 4)]        # added; b/b dropped
+        d = release_notes.diff(old, new)
+        self.assertEqual([s["full_name"] for s in d["added"]], ["d/d"])
+        self.assertEqual([s["full_name"] for s in d["removed"]], ["b/b"])
+        self.assertEqual([(s["full_name"], o, n) for s, o, n in d["movers"]],
+                         [("a/a", 80, 90)])
+        text = release_notes.render(d, 3)
+        self.assertIn("**3** servers listed (+1 / −1)", text)
+        self.assertIn("80 → 90", text)
+
+    def test_quiet_week(self):
+        import release_notes
+        same = [self._srv("a/a", 80, 1)]
+        text = release_notes.render(release_notes.diff(same, same), 1)
+        self.assertIn("no listing changes", text)
+
+
 class TestBadges(unittest.TestCase):
     def test_generate_badges(self):
         listed = {"full_name": "a/b", "repo_id": 11, "stars": 5,

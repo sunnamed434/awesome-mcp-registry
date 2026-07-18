@@ -54,6 +54,15 @@ jobs:
         run: python scripts/scan_repos.py
         working-directory: ${{ github.workspace }}
 
+      # Diff the freshly generated cache against the committed one BEFORE the
+      # commit step: the notes feed the PR body and the weekly Release below.
+      - name: Build weekly diff notes
+        run: |
+          git show HEAD:data/known_servers.json > /tmp/known_old.json 2>/dev/null \
+            || echo '{"servers":[]}' > /tmp/known_old.json
+          python scripts/release_notes.py /tmp/known_old.json data/known_servers.json \
+            | tee /tmp/release_notes.md
+
       # Safe Outputs: the bot never force-commits to master. It pushes a branch and
       # opens a PR that auto-merges, so every automated change is an auditable, revertable diff.
       - name: Commit changes to a branch
@@ -83,6 +92,10 @@ jobs:
           script: |
             const branch = '${{ steps.commit.outputs.branch }}';
             const common = { owner: context.repo.owner, repo: context.repo.repo };
+            let notes = '';
+            try {
+              notes = require('fs').readFileSync('/tmp/release_notes.md', 'utf8').trim();
+            } catch (e) { core.info(`no release notes: ${e.message}`); }
             const pr = await github.rest.pulls.create({
               ...common,
               head: branch,
@@ -92,8 +105,10 @@ jobs:
                 'Automated weekly update from the Continuous-AI scanner.',
                 '',
                 'Only the generated files (`data/known_servers.json`, `data/star_history.jsonl`,',
-                '`README.md`, `SCORES.md`) change.',
+                '`README.md`, `SCORES.md`, `badges/`) change.',
                 'Opened and auto-merged as a PR so the diff is reviewable and revertable.',
+                '',
+                notes,
               ].join('\n'),
             });
             await github.rest.pulls.merge({
@@ -104,3 +119,16 @@ jobs:
               core.info(`branch cleanup: ${e.message}`);
             }
             core.info(`PR #${pr.data.number} opened and merged.`);
+
+      # Watchers get a notification for every release, and releases.atom is a
+      # free RSS feed of the weekly changelog.
+      - name: Publish weekly release
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="registry-$(date -u +%Y-%m-%d)"
+          gh release create "$TAG" --target master \
+            --title "Registry update $(date -u +%Y-%m-%d)" \
+            --notes-file /tmp/release_notes.md \
+            || echo "Release $TAG already exists; skipping."
