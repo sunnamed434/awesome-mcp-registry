@@ -80,7 +80,12 @@ jobs:
           BRANCH="auto/registry-update-${{ github.run_id }}"
           git checkout -b "$BRANCH"
           git add $GENERATED
-          git commit -m "Update MCP server registry [automated]"
+          # "[automated]" = the content is bot-generated (true for cron and
+          # dispatch alike); manual dispatches are additionally marked so the
+          # history shows which runs a human kicked off.
+          SUFFIX=""
+          [ "${{ github.event_name }}" = "workflow_dispatch" ] && SUFFIX=" (manual dispatch)"
+          git commit -m "Update MCP server registry [automated]$SUFFIX"
           git push origin "$BRANCH"
           echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
@@ -96,13 +101,16 @@ jobs:
             try {
               notes = require('fs').readFileSync('/tmp/release_notes.md', 'utf8').trim();
             } catch (e) { core.info(`no release notes: ${e.message}`); }
+            const manual = context.eventName === 'workflow_dispatch';
             const pr = await github.rest.pulls.create({
               ...common,
               head: branch,
               base: 'master',
-              title: 'Update MCP server registry [automated]',
+              title: 'Update MCP server registry [automated]' + (manual ? ' (manual dispatch)' : ''),
               body: [
-                'Automated weekly update from the Continuous-AI scanner.',
+                manual
+                  ? `Update from the Continuous-AI scanner (manual dispatch by @${context.actor}).`
+                  : 'Automated weekly update from the Continuous-AI scanner.',
                 '',
                 'Only the generated files (`data/known_servers.json`, `data/star_history.jsonl`,',
                 '`README.md`, `SCORES.md`, `badges/`) change.',
