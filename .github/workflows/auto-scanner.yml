@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          GENERATED="data/known_servers.json data/star_history.jsonl README.md SCORES.md"
+          GENERATED="data/known_servers.json data/star_history.jsonl README.md SCORES.md badges"
           git add -N $GENERATED  # so brand-new generated files show up in git diff
           if git diff --quiet -- $GENERATED; then
             echo "changed=false" >> "$GITHUB_OUTPUT"

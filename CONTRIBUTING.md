@@ -7,9 +7,10 @@ you contribute.
 ## Suggesting a server → open a nomination, not a PR
 
 **Do not open a pull request to add a server.** `README.md`, `SCORES.md`,
-`data/known_servers.json`, and `data/star_history.jsonl` are **machine-generated** on every
-weekly run, so any edit to them is overwritten — and PRs that touch them are **closed
-automatically** by a bot.
+`data/known_servers.json`, `data/star_history.jsonl`, and `badges/` are **machine-generated**
+on every weekly run, so any edit to them is overwritten — and PRs that touch them are **closed
+automatically** by a bot. (`known_servers.json` is a stable public data file: it carries a
+`schema_version` field — pin against it if you build on the data.)
 
 Instead, **[open a nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml)**:
 

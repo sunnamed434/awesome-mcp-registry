@@ -62,7 +62,7 @@ jobs:
                                  'data/known_servers.json', 'data/star_history.jsonl'];
               const touchesGenerated = files
                 .map(f => f.filename)
-                .some(p => generated.includes(p));
+                .some(p => generated.includes(p) || p.startsWith('badges/'));
               if (!touchesGenerated) {
                 core.info(`#${pr.number}: skip (code-only PR, left open)`);
                 return;

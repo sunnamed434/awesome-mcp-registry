@@ -18,6 +18,7 @@ from utils import (
     parse_ai_response,
     generate_readme,
     generate_scores_md,
+    generate_badges,
     load_exclusions,
     update_star_history,
     format_trust_breakdown,
@@ -78,6 +79,7 @@ README_PATH = os.path.join(os.path.dirname(__file__), "..", "README.md")
 SCORES_PATH = os.path.join(os.path.dirname(__file__), "..", "SCORES.md")
 EXCLUSIONS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "excluded-repos.txt")
 STAR_HISTORY_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "star_history.jsonl")
+BADGES_DIR = os.path.join(os.path.dirname(__file__), "..", "badges")
 EXCLUSIONS_URL = f"https://github.com/{REPO_SLUG}/blob/master/data/excluded-repos.txt"
 
 SYSTEM_PROMPT = """\
@@ -1425,6 +1427,7 @@ def main():
     save_cache(CACHE_PATH, cache)
     generate_readme(valid_servers, README_PATH, history=history)
     generate_scores_md(valid_servers, SCORES_PATH, history=history)
+    generate_badges(valid_servers, BADGES_DIR)
 
     if security_alerts:
         print(f"\nNEW INJECTION MARKERS on previously-clean listed server(s): "

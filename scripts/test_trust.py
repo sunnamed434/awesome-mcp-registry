@@ -630,6 +630,39 @@ class TestStaleness(unittest.TestCase):
         self.assertIs(ordered[2], rest)
 
 
+class TestBadges(unittest.TestCase):
+    def test_generate_badges(self):
+        listed = {"full_name": "a/b", "repo_id": 11, "stars": 5,
+                  "analysis": {"is_valid_mcp_server": True}, "trust": {"final": 87}}
+        below = {"full_name": "c/d", "repo_id": 22, "stars": 5,
+                 "analysis": {"is_valid_mcp_server": True}, "trust": {"final": 40}}
+        quarantined = {"full_name": "e/f", "repo_id": 33, "quarantined": True,
+                       "analysis": {"is_valid_mcp_server": True}, "trust": {"final": 90}}
+        no_id = {"full_name": "g/h",
+                 "analysis": {"is_valid_mcp_server": True}, "trust": {"final": 90}}
+        with tempfile.TemporaryDirectory() as tmp:
+            written = utils.generate_badges([listed, below, quarantined, no_id], tmp)
+            files = sorted(os.listdir(tmp))
+            with open(os.path.join(tmp, "11.json"), encoding="utf-8") as f:
+                b_listed = json.load(f)
+            with open(os.path.join(tmp, "22.json"), encoding="utf-8") as f:
+                b_below = json.load(f)
+        self.assertEqual(written, 2)
+        self.assertEqual(files, ["11.json", "22.json"])  # no quarantined, no id-less
+        self.assertEqual(b_listed, {"schemaVersion": 1, "label": "mcp registry",
+                                    "message": "trust 87/100 (A)", "color": "brightgreen"})
+        self.assertEqual(b_below["message"], "not listed")
+        self.assertEqual(b_below["color"], "lightgrey")
+
+    def test_save_cache_stamps_schema_version(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "cache.json")
+            utils.save_cache(path, {"servers": []})
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+        self.assertEqual(data["schema_version"], utils.SCHEMA_VERSION)
+
+
 class TestDisplayHelpers(unittest.TestCase):
     def test_trust_final_fallback(self):
         self.assertEqual(utils.trust_final({"trust": {"final": 72}}), 72)

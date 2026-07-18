@@ -14,8 +14,14 @@ def load_cache(path):
         return json.load(f)
 
 
+# Data-format version of known_servers.json, for anyone building on the file.
+# 2 = repo_id/discovered_via/nominated_by/quarantine fields (2026-07).
+SCHEMA_VERSION = 2
+
+
 def save_cache(path, data):
     """Save the known servers cache to disk."""
+    data["schema_version"] = SCHEMA_VERSION
     data["last_scan"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -255,6 +261,7 @@ CATEGORY_META = {
 
 
 # README generation controls
+REPO = "sunnamed434/awesome-mcp-registry"   # public home of this registry
 MIN_TRUST_SCORE = 50        # Don't show servers whose trust score is below this
 MAX_PER_CATEGORY = 20       # Show top N per category in README
 TRENDING_MIN_D7 = 10        # Minimum weekly star growth to appear in Trending
@@ -294,6 +301,44 @@ def is_listed(server):
     if (server.get("trust") or {}).get("fatal"):
         return False
     return trust_final(server) >= MIN_TRUST_SCORE
+
+
+BADGE_COLORS = {"A": "brightgreen", "B": "green", "C": "orange", "F": "red"}
+
+
+def badge_url(repo_id):
+    """The shields.io endpoint URL for one server's live trust badge."""
+    return (f"https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/"
+            f"{REPO}/master/badges/{repo_id}.json")
+
+
+def generate_badges(servers, out_dir):
+    """One shields.io endpoint JSON per (non-quarantined) valid server, keyed by
+    immutable repo_id so embedded badge URLs survive renames. Delisted servers
+    keep a grey 'not listed' badge rather than a broken image."""
+    os.makedirs(out_dir, exist_ok=True)
+    for name in os.listdir(out_dir):
+        if name.endswith(".json"):
+            os.remove(os.path.join(out_dir, name))
+    written = 0
+    for s in servers:
+        rid = s.get("repo_id")
+        if not rid or s.get("quarantined"):
+            continue
+        final = trust_final(s)
+        letter = grade(final)
+        if is_listed(s):
+            payload = {"schemaVersion": 1, "label": "mcp registry",
+                       "message": f"trust {final}/100 ({letter})",
+                       "color": BADGE_COLORS.get(letter, "lightgrey")}
+        else:
+            payload = {"schemaVersion": 1, "label": "mcp registry",
+                       "message": "not listed", "color": "lightgrey"}
+        with open(os.path.join(out_dir, f"{rid}.json"), "w", encoding="utf-8") as f:
+            json.dump(payload, f)
+        written += 1
+    print(f"Badges generated: {written}")
+    return written
 
 
 def gh_anchor(heading):
@@ -486,6 +531,18 @@ def generate_readme(servers, output_path, history=None):
     )
     lines.append("")
 
+    lines.append("## Badges")
+    lines.append("")
+    lines.append(
+        "Maintain a listed server? Embed your live trust score — it updates weekly and the "
+        "URL survives repo renames (keyed by immutable repository id):"
+    )
+    lines.append("")
+    lines.append(f"`![MCP trust score]({badge_url('<repo_id>')})`")
+    lines.append("")
+    lines.append("Your exact copy-paste snippet is under your entry in [SCORES.md](SCORES.md).")
+    lines.append("")
+
     lines.append("## Contributing")
     lines.append("")
     lines.append(
@@ -619,6 +676,17 @@ def generate_scores_md(servers, output_path, history=None):
         trend = f" ({', '.join(trend_bits)})" if trend_bits else ""
         lines.append(f"Stars: {s.get('stars', 0)}{trend}")
         lines.append("")
+        nb = s.get("nominated_by") or {}
+        owner = (fn or "/").split("/")[0].lower()
+        metrics_owner = ((s.get("metrics") or {}).get("owner_login") or "").lower()
+        if nb.get("login") and nb["login"].lower() in (owner, metrics_owner):
+            # Transparency, not a judgement: self-nomination is allowed.
+            lines.append("_Nominated by the repository's own maintainer._")
+            lines.append("")
+        rid = s.get("repo_id")
+        if rid:
+            lines.append(f"Badge (copy into your README): `![MCP trust score]({badge_url(rid)})`")
+            lines.append("")
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
