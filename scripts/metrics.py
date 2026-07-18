@@ -71,6 +71,7 @@ def fetch_repo_details(full_name):
         owner = info.get("owner") or {}
         return {
             "gone": False,
+            "repo_id": info.get("id"),
             "stars": info.get("stargazers_count", 0),
             "pushed_at": info.get("pushed_at", ""),
             "created_at": info.get("created_at", ""),

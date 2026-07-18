@@ -221,6 +221,7 @@ def search_github():
                 if fn not in seen:
                     seen[fn] = {
                         "full_name": fn,
+                        "repo_id": item.get("id"),
                         "name": item["name"],
                         "url": item["html_url"],
                         "stars": item.get("stargazers_count", 0),
@@ -322,6 +323,32 @@ def merge_sources(github_results, registry_results):
             merged[fn] = entry
     print(f"  Merged: {len(merged)} unique repos total")
     return list(merged.values())
+
+
+# ---------------------------------------------------------------------------
+# Provenance
+# ---------------------------------------------------------------------------
+
+# How an entry first reached the registry. The numeric GitHub repo_id (stored
+# alongside) is the canonical key — immutable across renames and transfers —
+# while the owner/name slug is just the current display name.
+DISCOVERED_VIA = {
+    "github": "github-search",
+    "github+registry": "github-search",
+    "registry": "official-registry",
+    "nominated": "nomination",
+}
+
+
+def discovered_via_for(source):
+    return DISCOVERED_VIA.get(source or "", "github-search")
+
+
+def ensure_provenance(cache):
+    """Backfill discovered_via on entries created before the field existed.
+    repo_id is backfilled lazily from live API responses during the scan."""
+    for s in cache["servers"]:
+        s.setdefault("discovered_via", discovered_via_for(s.get("source")))
 
 
 # ---------------------------------------------------------------------------
@@ -679,6 +706,7 @@ def fetch_repo_meta(full_name):
         info = resp.json()
         return {
             "full_name": info.get("full_name", full_name),  # canonical casing from GitHub
+            "repo_id": info.get("id"),
             "name": info.get("name", full_name.split("/")[-1]),
             "url": info.get("html_url", f"https://github.com/{full_name}"),
             "stars": info.get("stargazers_count", 0),
@@ -928,10 +956,12 @@ def process_nominations(cache, excluded, listed_for_squat):
 
         entry = {
             "full_name": meta.get("full_name", fn),  # canonical casing
+            "repo_id": repo_metrics.get("repo_id") or meta.get("repo_id"),
             "name": meta.get("name", ""),
             "url": meta.get("url", f"https://github.com/{fn}"),
             "stars": meta.get("stars", 0),
             "source": "nominated",
+            "discovered_via": "nomination",
             "last_checked": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "last_update": meta.get("last_update", ""),
             "description": meta.get("description", ""),
@@ -1004,10 +1034,10 @@ def main():
     print("=" * 60)
 
     # 1. Load cache + exclusion list
-    print("\n[1/10] Loading cache and exclusion list...")
+    print("\n[1/11] Loading cache and exclusion list...")
     cache = load_cache(CACHE_PATH)
-    cached_names = {s["full_name"] for s in cache["servers"]}
-    print(f"  Cache contains {len(cached_names)} servers")
+    ensure_provenance(cache)
+    print(f"  Cache contains {len(cache['servers'])} servers")
     excluded = load_exclusions(EXCLUSIONS_PATH)
     enforced = enforce_exclusions(cache, excluded)
     print(f"  Exclusion list: {len(excluded)} repo(s); {enforced} cache entr(ies) newly enforced")
@@ -1024,6 +1054,7 @@ def main():
     # 4. Merge and deduplicate
     print("\n[4/10] Merging sources...")
     all_repos = merge_sources(github_repos, registry_repos)
+    cached_names = {s["full_name"] for s in cache["servers"]}
     new_repos = [r for r in all_repos
                  if r["full_name"] not in cached_names
                  and r["full_name"].lower() not in excluded]
@@ -1060,10 +1091,12 @@ def main():
 
         cache["servers"].append({
             "full_name": fn,
+            "repo_id": repo_metrics.get("repo_id") or repo.get("repo_id"),
             "name": repo.get("name", ""),
             "url": repo.get("url", f"https://github.com/{fn}"),
             "stars": repo.get("stars", 0),
             "source": repo.get("source", ""),
+            "discovered_via": discovered_via_for(repo.get("source")),
             "last_checked": today.strftime("%Y-%m-%d"),
             "last_update": repo.get("last_update", ""),
             "description": repo.get("description", ""),
