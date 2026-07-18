@@ -452,6 +452,28 @@ class TestNominationVerdicts(unittest.TestCase):
         self.assertEqual(scan_repos.close_reason_for(
             scan_repos.result_label_for(valid, 80, fatal=True)), "not_planned")
 
+    def test_accepted_verdict_offers_badge(self):
+        import scan_repos
+        valid = {"is_valid_mcp_server": True, "reason": "x"}
+        t = {"final": 80, "fatal": False, "subscores": {}, "penalty": 0, "flags": []}
+        text = scan_repos.verdict_comment("o/r", valid, t, repo_id=123)
+        self.assertIn("badges/123.json", text)
+        self.assertIn("```markdown", text)  # copy-paste snippet included
+        low = dict(t, final=40)
+        self.assertNotIn("badges/123.json",
+                         scan_repos.verdict_comment("o/r", valid, low, repo_id=123))
+        self.assertNotIn("```markdown",
+                         scan_repos.verdict_comment("o/r", valid, t))  # no repo_id yet
+
+    def test_already_listed_offers_badge(self):
+        import scan_repos
+        listed = {"full_name": "o/r", "repo_id": 7,
+                  "analysis": {"is_valid_mcp_server": True}, "trust": {"final": 80}}
+        self.assertIn("badges/7.json", scan_repos.already_known_comment(listed))
+        below = {"full_name": "o/r", "repo_id": 7,
+                 "analysis": {"is_valid_mcp_server": True}, "trust": {"final": 40}}
+        self.assertNotIn("badges/7.json", scan_repos.already_known_comment(below))
+
     def test_verdict_comment_fatal_branch(self):
         import scan_repos
         t = {"final": 83, "fatal": True,

@@ -19,7 +19,8 @@ Instead, **[open a nomination](https://github.com/sunnamed434/awesome-mcp-regist
    pipeline computes its [trust score](METHODOLOGY.md) — 35% AI rubric, 65% verifiable metrics
    (maintenance, popularity, docs, security posture, community).
 3. The bot posts the verdict **with the full score breakdown** on your issue and closes it. If
-   the server scores **50+/100**, it appears in the README automatically. If not, it's recorded
+   the server scores **50+/100**, it appears in the README automatically — and the bot hands you
+   a ready-to-paste **live trust-score badge** for your own README. If not, it's recorded
    and re-evaluated later — if it improves, it can still make the list.
 
 Only **open-source servers with a public GitHub repo** can be nominated — the AI needs a repo to

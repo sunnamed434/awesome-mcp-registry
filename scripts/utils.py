@@ -321,6 +321,29 @@ def badge_url(repo_id):
             f"{REPO}/master/badges/{repo_id}.json")
 
 
+def badge_markdown(repo_id):
+    """Ready-to-paste README snippet: the live badge, linked to SCORES.md."""
+    return (f"[![MCP trust score]({badge_url(repo_id)})]"
+            f"(https://github.com/{REPO}/blob/master/SCORES.md)")
+
+
+def badge_offer(repo_id):
+    """Comment block offering a freshly listed server its badge, with the
+    rendered image and the exact markdown to copy. Empty without a repo_id."""
+    if not repo_id:
+        return ""
+    snippet = badge_markdown(repo_id)
+    return (
+        f"\n\n---\n**Show it off** — embed your live trust badge in your README. "
+        f"It updates with every weekly scan, and the URL survives repo renames "
+        f"(it's keyed by repository id, not name):\n\n"
+        f"{snippet}\n\n"
+        f"```markdown\n{snippet}\n```\n"
+        f"_If the badge shows \"resource not found\", this week's registry update "
+        f"hasn't merged yet — it self-heals within the hour._"
+    )
+
+
 def generate_badges(servers, out_dir):
     """One shields.io endpoint JSON per (non-quarantined) valid server, keyed by
     immutable repo_id so embedded badge URLs survive renames. Delisted servers

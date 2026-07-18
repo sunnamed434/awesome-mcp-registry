@@ -19,6 +19,7 @@ from utils import (
     generate_readme,
     generate_scores_md,
     generate_badges,
+    badge_offer,
     load_exclusions,
     update_star_history,
     format_trust_breakdown,
@@ -1023,8 +1024,9 @@ def close_reason_for(result_label):
     return "completed" if result_label == STATUS_ACCEPTED else "not_planned"
 
 
-def verdict_comment(full_name, analysis, trust_obj):
-    """Build the bot comment summarizing an AI verdict on a nominated server."""
+def verdict_comment(full_name, analysis, trust_obj, repo_id=None):
+    """Build the bot comment summarizing an AI verdict on a nominated server.
+    Accepted servers get a ready-to-paste trust-badge snippet appended."""
     valid = analysis.get("is_valid_mcp_server", False)
     final = trust_obj.get("final", 0)
     fatal = bool(trust_obj.get("fatal"))
@@ -1052,9 +1054,11 @@ def verdict_comment(full_name, analysis, trust_obj):
         breakdown = ("\n\nScore breakdown ([methodology](https://github.com/"
                      f"{REPO_SLUG}/blob/master/METHODOLOGY.md)):\n"
                      + "\n".join(format_trust_breakdown(trust_obj)))
+    accepted = valid and final >= MIN_TRUST_SCORE and not fatal
+    badge = badge_offer(repo_id) if accepted else ""
     return (f"{outcome}\n\n> _AI reason: {reason}_{breakdown}\n\n"
             f"This verdict is automated. If you believe it's wrong, leave a comment — "
-            f"the thread stays open for a few weeks before it locks.")
+            f"the thread stays open for a few weeks before it locks.{badge}")
 
 
 def already_known_comment(server):
@@ -1066,7 +1070,8 @@ def already_known_comment(server):
     final = trust_final(server)
     if is_listed(server):
         return (f"✅ **Already listed** — [`{fn}`]({url}) is already in the registry "
-                f"(scored {final}/100). Thanks for the suggestion — nothing to do here!")
+                f"(scored {final}/100). Thanks for the suggestion — nothing to do here!"
+                f"{badge_offer(server.get('repo_id'))}")
     if valid and (server.get("trust") or {}).get("fatal"):
         return (f"**Already evaluated** — [`{fn}`]({url}) scored **{final}/100**, but a blocking "
                 f"flag (archived, disabled, or unreachable repository) prevents listing "
@@ -1192,7 +1197,8 @@ def process_nominations(cache, excluded, listed_for_squat):
         by_name[entry["full_name"].lower()] = entry  # dedup repeat nominations in one run
         rl = result_label_for(analysis, trust_obj.get("final", 0),
                               fatal=bool(trust_obj.get("fatal")))
-        notify(num, author, verdict_comment(fn, analysis, trust_obj))
+        notify(num, author, verdict_comment(fn, analysis, trust_obj,
+                                            repo_id=entry.get("repo_id")))
         mark_done(num, rl)
         close_issue(num, close_reason_for(rl))
         processed += 1

@@ -78,6 +78,14 @@ jobs:
               return Math.min(100, ((srv.analysis || {}).quality_score || 0) * 10);
             }
 
+            // Ready-to-paste live-badge offer for a listed server (keyed by repo_id).
+            function badgeOffer(repoId) {
+              if (!repoId) return '';
+              const img = `https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${common.owner}/${common.repo}/master/badges/${repoId}.json`;
+              const snippet = `[![MCP trust score](${img})](https://github.com/${common.owner}/${common.repo}/blob/master/SCORES.md)`;
+              return `\n\n---\n**Show it off** — embed your live trust badge in your README. It updates with every weekly scan, and the URL survives repo renames:\n\n${snippet}\n\n\`\`\`markdown\n${snippet}\n\`\`\``;
+            }
+
             // Notice + final status label for an already-known server.
             function knownNotice(srv) {
               const a = srv.analysis || {};
@@ -87,7 +95,7 @@ jobs:
               const fatal = !!((srv.trust || {}).fatal);
               if (a.is_valid_mcp_server && score >= 50 && !fatal) {
                 return { label: 'status: accepted',
-                  text: `✅ **Already listed** — [\`${fn}\`](${url}) is already in the registry (scored ${score}/100). Thanks — nothing to do here!` };
+                  text: `✅ **Already listed** — [\`${fn}\`](${url}) is already in the registry (scored ${score}/100). Thanks — nothing to do here!` + badgeOffer(srv.repo_id) };
               }
               if (a.is_valid_mcp_server && fatal) {
                 return { label: 'status: below-threshold',
