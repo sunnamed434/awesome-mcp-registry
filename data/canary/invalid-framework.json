@@ -1,0 +1,23 @@
+{
+  "_comment": "Frozen drift canary: an obviously-INVALID entry — a framework for building MCP servers, which the rubric must always reject regardless of popularity. If this ever comes back is_valid=true, the evaluator has drifted; the scan aborts.",
+  "repo": {
+    "name": "mcp-forge",
+    "description": "The fastest way to build your own MCP servers in TypeScript.",
+    "stars": 18500,
+    "last_update": "2026-06-01T08:00:00Z",
+    "language": "TypeScript",
+    "topics": "mcp, framework, sdk, typescript"
+  },
+  "readme": "# mcp-forge\n\nBuild production-ready MCP servers in minutes, not days.\n\n## Why mcp-forge?\n\n- Decorator-based tool definitions\n- Automatic JSON-schema generation\n- Built-in stdio and streamable-http transports\n- Testing utilities included\n\n## Quickstart\n\n```bash\nnpm install mcp-forge\n```\n\nCreate your first server:\n\n```ts\nimport { Forge } from \"mcp-forge\";\n\nconst app = new Forge(\"my-server\");\n\napp.tool(\"greet\", { name: \"string\" }, async ({ name }) => {\n  return `Hello, ${name}!`;\n});\n\napp.listen();\n```\n\n## Documentation\n\nFull docs at https://mcp-forge.example.dev — guides for tools, resources, prompts, auth, deployment.\n\n## Ecosystem\n\nHundreds of community servers are built on mcp-forge. Check the showcase for examples.\n\n## License\n\nApache-2.0\n",
+  "mcp_signals": {
+    "sdk_dependencies": ["@modelcontextprotocol/sdk"],
+    "manifests_checked": ["package.json"],
+    "package_name": "mcp-forge",
+    "has_mcp_manifest": false,
+    "topics_mcp_server": false,
+    "root_files": ["README.md", "package.json", "src", "examples", "docs", "tests"]
+  },
+  "expect": {
+    "is_valid_mcp_server": false
+  }
+}

@@ -644,11 +644,13 @@ AI_FAILURE_CIRCUIT = 3
 _consecutive_ai_failures = 0
 
 
-def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3):
+def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
+                    temperature=0.3):
     """Send repo data to GitHub Models API for analysis.
 
     Retries on rate-limit / transient server errors so a momentary 429 doesn't get
     recorded as a permanent "invalid, score 0" verdict for an otherwise-good repo.
+    Canary runs pass temperature=0 for determinism.
     """
     global _consecutive_ai_failures
     if _consecutive_ai_failures >= AI_FAILURE_CIRCUIT:
@@ -673,7 +675,7 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3):
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_message},
         ],
-        "temperature": 0.3,
+        "temperature": temperature,
         "max_tokens": 700,
     }
 
@@ -697,11 +699,69 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3):
             resp.raise_for_status()
             content = resp.json()["choices"][0]["message"]["content"]
             result = parse_ai_response(content)
+            result["model"] = MODEL_NAME  # provenance: which model judged this
             _consecutive_ai_failures = 0
             return result
     except Exception:
         _consecutive_ai_failures += 1
         raise
+
+
+CANARY_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "canary")
+
+
+def check_canary(expect, analysis):
+    """Compare a canary verdict against its expected envelope.
+    Returns a list of problem strings (empty = pass). Pure."""
+    problems = []
+    want_valid = expect.get("is_valid_mcp_server")
+    got_valid = analysis.get("is_valid_mcp_server")
+    if want_valid is not None and got_valid != want_valid:
+        problems.append(f"is_valid_mcp_server={got_valid}, expected {want_valid}")
+    if want_valid and got_valid:
+        rubric = analysis.get("rubric") or {}
+        lo = expect.get("rubric_min") or {}
+        hi = expect.get("rubric_max") or {}
+        for dim in ("documentation", "utility", "maturity"):
+            value = rubric.get(dim)
+            if dim in lo and (value is None or value < lo[dim]):
+                problems.append(f"{dim}={value} below expected minimum {lo[dim]}")
+            if dim in hi and value is not None and value > hi[dim]:
+                problems.append(f"{dim}={value} above expected maximum {hi[dim]}")
+    return problems
+
+
+def run_canaries():
+    """Score the frozen fixtures in data/canary/ with the live model BEFORE
+    touching real data. Catches model/prompt drift: if a snapshot that must
+    obviously be (in)valid lands outside its envelope, the scan aborts rather
+    than re-judging the whole registry with a drifted brain. AI-call errors are
+    NOT drift — they're warned and skipped (the circuit breaker handles a dead
+    Models API). Returns False when any canary is out of envelope."""
+    if not os.path.isdir(CANARY_DIR):
+        return True
+    ok = True
+    for name in sorted(os.listdir(CANARY_DIR)):
+        if not name.endswith(".json"):
+            continue
+        with open(os.path.join(CANARY_DIR, name), encoding="utf-8") as f:
+            fixture = json.load(f)
+        try:
+            analysis = analyze_with_ai(fixture.get("repo") or {},
+                                       fixture.get("readme", ""),
+                                       fixture.get("mcp_signals") or {},
+                                       temperature=0)
+        except Exception as e:
+            print(f"  WARNING: canary {name} could not run ({e}); skipping")
+            continue
+        problems = check_canary(fixture.get("expect") or {}, analysis)
+        if problems:
+            ok = False
+            print(f"  CANARY FAILED {name}: " + "; ".join(problems))
+        else:
+            print(f"  canary {name}: ok")
+        time.sleep(2)
+    return ok
 
 
 def failed_analysis(error):
@@ -1187,6 +1247,14 @@ def main():
     print("=" * 60)
     print("MCP Server Scanner")
     print("=" * 60)
+
+    # 0. Canary drift check — abort before re-judging anything with a drifted model
+    print("\n[0/11] Canary check (model/prompt drift)...")
+    if not run_canaries():
+        print("ERROR: canary drift detected — aborting before re-judging the registry. "
+              "Review the analyzer prompt/model; if the change is intentional, adjust "
+              "the envelopes in data/canary/ and re-run.")
+        sys.exit(2)
 
     # 1. Load cache + exclusion list
     print("\n[1/11] Loading cache and exclusion list...")

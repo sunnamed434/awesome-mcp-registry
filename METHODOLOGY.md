@@ -77,6 +77,16 @@ framework, not a server), the presence of an MCP `server.json` manifest, and the
 listing (which exposes multi-server monorepos). The AI still decides — the signals exist to stop
 README-only judgment errors, and they're stored on each entry as `mcp_signals` for auditing.
 
+### Drift canaries
+
+The AI is the one component that can silently change under the pipeline (model updates, prompt
+edits). Every scan therefore starts by scoring one or two **frozen fixtures**
+([`data/canary/`](data/canary/)) with temperature 0: an obviously-valid ordinary server and an
+obviously-invalid framework. If a verdict lands outside its expected envelope, the scan **aborts
+before re-judging anything** — drift gets caught on fixtures, not by silently reshuffling the
+live list. Each stored verdict also records the model that produced it (`analysis.model`), and
+`prompt_version` bumps force a clean re-evaluation after deliberate prompt changes.
+
 ## Red flags
 
 Penalties subtract from the weighted score; fatal flags block listing outright. Every triggered

@@ -1,0 +1,25 @@
+{
+  "_comment": "Frozen drift canary: an obviously-valid, ordinary MCP server. Scored with temperature 0 at the start of every scan; a verdict outside `expect` aborts the run. Never update the readme casually — envelopes may only change together with a deliberate prompt/model change.",
+  "repo": {
+    "name": "weather-mcp",
+    "description": "MCP server exposing weather forecasts and alerts to MCP clients.",
+    "stars": 340,
+    "last_update": "2026-05-20T10:00:00Z",
+    "language": "Python",
+    "topics": "mcp, mcp-server, weather"
+  },
+  "readme": "# weather-mcp\n\nAn MCP server that gives your AI assistant live weather data via the National Weather Service API.\n\n## Installation\n\n```bash\npip install weather-mcp\n```\n\n## Configuration\n\nSet your contact email (required by the NWS API):\n\n```bash\nexport NWS_CONTACT=you@example.com\n```\n\n## Tools\n\n| Tool | Description |\n|------|-------------|\n| `get_forecast` | 7-day forecast for a latitude/longitude |\n| `get_alerts` | Active weather alerts for a US state |\n\n## Usage with Claude Desktop\n\nAdd to your `claude_desktop_config.json`:\n\n```json\n{\n  \"mcpServers\": {\n    \"weather\": {\n      \"command\": \"python\",\n      \"args\": [\"-m\", \"weather_mcp\"]\n    }\n  }\n}\n```\n\nThen ask: \"What's the forecast for Denver this weekend?\"\n\n## Example\n\n```\n> get_forecast(39.74, -104.99)\nSaturday: Sunny, high 78F. Sunday: Thunderstorms, high 71F.\n```\n\n## License\n\nMIT\n",
+  "mcp_signals": {
+    "sdk_dependencies": ["mcp (python)"],
+    "manifests_checked": ["pyproject.toml"],
+    "package_name": "weather-mcp",
+    "has_mcp_manifest": false,
+    "topics_mcp_server": true,
+    "root_files": ["README.md", "pyproject.toml", "weather_mcp", "LICENSE", "tests"]
+  },
+  "expect": {
+    "is_valid_mcp_server": true,
+    "rubric_min": {"documentation": 2, "utility": 1, "maturity": 1},
+    "rubric_max": {"documentation": 4, "utility": 3, "maturity": 3}
+  }
+}

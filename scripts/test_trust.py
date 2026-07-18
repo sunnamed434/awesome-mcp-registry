@@ -630,6 +630,34 @@ class TestStaleness(unittest.TestCase):
         self.assertIs(ordered[2], rest)
 
 
+class TestCanary(unittest.TestCase):
+    def test_check_canary_envelopes(self):
+        import scan_repos
+        expect = {"is_valid_mcp_server": True,
+                  "rubric_min": {"documentation": 2}, "rubric_max": {"utility": 3}}
+        good = {"is_valid_mcp_server": True,
+                "rubric": {"documentation": 3, "utility": 2, "maturity": 2}}
+        self.assertEqual(scan_repos.check_canary(expect, good), [])
+        flipped = {"is_valid_mcp_server": False, "rubric": {}}
+        self.assertTrue(scan_repos.check_canary(expect, flipped))
+        drifted = {"is_valid_mcp_server": True,
+                   "rubric": {"documentation": 1, "utility": 4, "maturity": 2}}
+        self.assertEqual(len(scan_repos.check_canary(expect, drifted)), 2)
+        # Invalid-expected canary only checks the verdict, not the rubric
+        self.assertEqual(scan_repos.check_canary(
+            {"is_valid_mcp_server": False}, {"is_valid_mcp_server": False}), [])
+
+    def test_fixture_files_are_wellformed(self):
+        import scan_repos
+        names = [n for n in os.listdir(scan_repos.CANARY_DIR) if n.endswith(".json")]
+        self.assertGreaterEqual(len(names), 2)
+        for name in names:
+            with open(os.path.join(scan_repos.CANARY_DIR, name), encoding="utf-8") as f:
+                fixture = json.load(f)
+            for key in ("repo", "readme", "mcp_signals", "expect"):
+                self.assertIn(key, fixture, f"{name} missing {key}")
+
+
 class TestReleaseNotes(unittest.TestCase):
     def _srv(self, fn, final, rid=None):
         return {"full_name": fn, "repo_id": rid,
