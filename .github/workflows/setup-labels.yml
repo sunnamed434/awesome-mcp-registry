@@ -29,6 +29,7 @@ jobs:
               { name: 'exclusion-appeal',       color: '0052cc', description: 'Appeal of an entry on data/excluded-repos.txt' },
               { name: 'maintainer-opt-out',     color: '0052cc', description: 'Maintainer requests removal of their repo from the registry' },
               { name: 'verified',               color: '0e8a16', description: 'Opt-out ownership verified automatically by the intake bot' },
+              { name: 'server-report',          color: 'd93f0b', description: 'Report of a malicious/deceptive listed server — human-reviewed' },
             ];
             const common = { owner: context.repo.owner, repo: context.repo.repo };
             for (const l of labels) {

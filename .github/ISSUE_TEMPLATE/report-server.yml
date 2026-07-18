@@ -1,0 +1,41 @@
+name: Report a server
+description: Report a listed (or nominated) MCP server you believe is malicious, deceptive, or compromised.
+title: "Report: owner/repo"
+labels: ["server-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens with reports
+
+        A human reviews every report — **automation never removes an entry based on a
+        report alone**. If the report is confirmed, the repository is added to
+        [`data/excluded-repos.txt`](../blob/master/data/excluded-repos.txt) as a policy
+        removal (a reviewable commit with reason, date, and a link back to this issue).
+
+        Useful signals: hidden instructions in tool descriptions (tool poisoning),
+        install scripts that fetch and execute remote code, credential exfiltration,
+        impersonation of a well-known server, a maintainer takeover followed by a
+        suspicious release.
+  - type: input
+    id: repo_url
+    attributes:
+      label: GitHub repository URL
+      description: The server you're reporting (e.g. https://github.com/owner/repo).
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you find?
+      description: Describe the behavior and where you saw it (file, tool description, install step).
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (optional)
+      description: Links to code lines, screenshots, write-ups.
+    validations:
+      required: false

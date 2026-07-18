@@ -9,6 +9,8 @@ name: Issue intake (appeals & opt-outs)
 #    repo, is a public member of the owning org, or placed a marker in the repo)
 #    and labels the issue "verified". The excluded-repos.txt commit itself stays
 #    human-reviewed, per CONTRIBUTING.
+#  - server-report: acknowledges the report, states whether the repo is currently
+#    listed, and pings the maintainer. Reports never trigger automated removal.
 #
 # SAFETY: this workflow never checks out or executes third-party code. Issue
 # bodies are handled as data inside github-script (no shell interpolation), all
@@ -111,6 +113,66 @@ jobs:
               `> \`${line.trim()}\`\n\n` +
               "Leaving this appeal **open** for the maintainer to review — every change to the " +
               "exclusion list is a human-reviewed commit.");
+
+  report:
+    if: >
+      github.event_name == 'issues' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'server-report')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const MARKER = '<!-- server-report-intake -->';
+            const issue = context.payload.issue;
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            const author = (issue.user && issue.user.login) || '';
+
+            async function upsert(msg) {
+              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}`;
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                ...common, issue_number: issue.number, per_page: 100 });
+              const prior = comments.find(c => c.user.type === 'Bot' && (c.body || '').includes(MARKER));
+              if (prior) {
+                await github.rest.issues.updateComment({ ...common, comment_id: prior.id, body });
+              } else {
+                await github.rest.issues.createComment({ ...common, issue_number: issue.number, body });
+              }
+            }
+
+            const m = (issue.body || '').match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
+            if (!m) {
+              await upsert("Thanks for the report — I couldn't find a `https://github.com/owner/repo` " +
+                "URL in it. Please edit the issue to include the repository you're reporting.");
+              return;
+            }
+            const slug = `${m[1]}/${m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '')}`;
+
+            // Is the reported repo in the registry? (raw file read, no checkout)
+            let known = null;
+            try {
+              const res = await fetch(`https://raw.githubusercontent.com/${common.owner}/${common.repo}/master/data/known_servers.json`);
+              if (res.ok) {
+                const json = await res.json();
+                known = (json.servers || []).find(s =>
+                  (s.full_name || '').toLowerCase() === slug.toLowerCase()) || null;
+              }
+            } catch (e) { core.info(`could not read registry cache: ${e.message}`); }
+
+            let status;
+            if (known) {
+              const anchor = (known.full_name || '').toLowerCase().replace(/[^\w- ]/g, '').replace(/ /g, '-');
+              status = `\`${slug}\` is known to the registry — its current score and flags are in ` +
+                `[SCORES.md](https://github.com/${common.owner}/${common.repo}/blob/master/SCORES.md#${anchor}).`;
+            } else {
+              status = `\`${slug}\` is not currently in the registry's data, but the report is still ` +
+                "useful — it can pre-empt a future listing.";
+            }
+            await upsert(`Thanks for the report. ${status}\n\n` +
+              `A human (@${common.owner}) reviews every report — **automation never removes an ` +
+              "entry based on a report alone**. If confirmed, the repository is added to " +
+              "`data/excluded-repos.txt` as a policy removal in a reviewable commit linking back " +
+              "to this issue.");
 
   optout:
     if: >

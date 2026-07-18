@@ -43,6 +43,11 @@ a human overrides the AI, reserved for two cases: repos removed for **policy rea
 listed**. Excluded repos are never analyzed, never listed, and nominations for them are declined
 automatically with a link to the list.
 
+Seen a listed server doing something malicious?
+**[Report it](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=report-server.yml)** —
+every report is human-reviewed (automation never removes an entry on its own), and confirmed
+reports become policy removals.
+
 - **Maintainer opt-out:** open a
   **[maintainer opt-out issue](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=maintainer-opt-out.yml)**.
   A bot verifies ownership automatically — you own the repo, you're a public member of the
