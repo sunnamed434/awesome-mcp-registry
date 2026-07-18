@@ -130,7 +130,8 @@ discarded and the entry quarantined.
 [`data/excluded-repos.txt`](data/excluded-repos.txt) is the only place a human overrides the AI,
 reserved for two cases: **policy removals** (spam, scams, malicious content) and **maintainer
 opt-outs**. Excluded repos are never analyzed or listed, and nominations for them are declined
-automatically with a link to the list. To appeal or opt out, open a regular issue.
+automatically with a link to the list. To appeal or opt out, use the dedicated issue forms
+(see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
 ## Phase 2 (deferred by design): live testing & source scanning
 

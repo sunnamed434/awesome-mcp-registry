@@ -1022,9 +1022,9 @@ def excluded_comment(full_name):
     return (f"`{full_name}` is on this registry's [exclusion list]({EXCLUSIONS_URL}), so it "
             f"isn't evaluated or listed. Repos are excluded for one of two reasons: a policy "
             f"removal (spam, scam, or malicious content) or the repo's maintainer asked not to "
-            f"be listed.\n\nIf you believe this is a mistake, you're welcome to appeal — open a "
-            f"regular issue (not a nomination) referencing this one, or leave a comment here "
-            f"before the thread locks.")
+            f"be listed.\n\nIf you believe this is a mistake, you're welcome to appeal — open an "
+            f"[exclusion appeal](https://github.com/{REPO_SLUG}/issues/new?template=exclusion-appeal.yml), "
+            f"or leave a comment here before the thread locks.")
 
 
 def process_nominations(cache, excluded, listed_for_squat):

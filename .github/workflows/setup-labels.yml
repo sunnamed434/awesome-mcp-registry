@@ -26,6 +26,9 @@ jobs:
               { name: 'status: excluded',       color: '5319e7', description: 'On the exclusion list (policy removal or maintainer opt-out) — not evaluated' },
               { name: 'status: withdrawn',      color: 'cccccc', description: 'Closed by the submitter before evaluation' },
               { name: 'workflow-failure',       color: 'd73a4a', description: 'Auto-opened by the failure tracker when a CI workflow fails; auto-closed on recovery' },
+              { name: 'exclusion-appeal',       color: '0052cc', description: 'Appeal of an entry on data/excluded-repos.txt' },
+              { name: 'maintainer-opt-out',     color: '0052cc', description: 'Maintainer requests removal of their repo from the registry' },
+              { name: 'verified',               color: '0e8a16', description: 'Opt-out ownership verified automatically by the intake bot' },
             ];
             const common = { owner: context.repo.owner, repo: context.repo.repo };
             for (const l of labels) {

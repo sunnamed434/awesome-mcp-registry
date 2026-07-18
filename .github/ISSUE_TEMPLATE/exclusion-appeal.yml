@@ -1,0 +1,35 @@
+name: Appeal an exclusion
+description: Ask for a repository on data/excluded-repos.txt to be reconsidered. Not for trust-score disputes.
+title: "Exclusion appeal: owner/repo"
+labels: ["exclusion-appeal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before you appeal
+
+        This form is **only** for repositories on the
+        [exclusion list](../blob/master/data/excluded-repos.txt) — the short human-maintained
+        list of policy removals and maintainer opt-outs. A bot checks it automatically:
+
+        - If the repo **isn't on the list**, this issue is closed automatically: a low score or
+          absence from the README is an AI verdict, not an exclusion. Comment on the nomination
+          issue instead — threads stay open for a few weeks, and [SCORES.md](../blob/master/SCORES.md)
+          shows exactly which component cost the points.
+        - If it **is on the list**, the bot quotes the exclusion reason and leaves this issue
+          open for the maintainer to review. One appeal per repository per 90 days.
+  - type: input
+    id: repo_url
+    attributes:
+      label: GitHub repository URL
+      description: The excluded repository (e.g. https://github.com/owner/repo).
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this exclusion be reconsidered?
+      description: What changed since the exclusion, or why do you believe it's a mistake?
+    validations:
+      required: true

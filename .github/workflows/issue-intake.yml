@@ -1,0 +1,214 @@
+name: Issue intake (appeals & opt-outs)
+
+# Auto-validates the two human-override issue forms:
+#  - exclusion-appeal:  checks data/excluded-repos.txt; closes appeals for repos
+#    that aren't excluded (those are trust-score disputes, redirected to the
+#    nomination thread), quotes the reason line for repos that are, and enforces
+#    a 90-day per-repo cooldown. Genuine appeals stay open for the maintainer.
+#  - maintainer-opt-out: verifies ownership automatically (issue author owns the
+#    repo, is a public member of the owning org, or placed a marker in the repo)
+#    and labels the issue "verified". The excluded-repos.txt commit itself stays
+#    human-reviewed, per CONTRIBUTING.
+#
+# SAFETY: this workflow never checks out or executes third-party code. Issue
+# bodies are handled as data inside github-script (no shell interpolation), all
+# lookups are read-only API calls, and writes are limited to this repo's issues.
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+
+jobs:
+  appeal:
+    if: >
+      github.event_name == 'issues' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'exclusion-appeal')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const MARKER = '<!-- exclusion-appeal-intake -->';
+            const COOLDOWN_DAYS = 90;
+            const issue = context.payload.issue;
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            const author = (issue.user && issue.user.login) || '';
+            const listUrl =
+              `https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt`;
+
+            async function upsert(msg) {
+              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}`;
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                ...common, issue_number: issue.number, per_page: 100 });
+              const prior = comments.find(c => c.user.type === 'Bot' && (c.body || '').includes(MARKER));
+              if (prior) {
+                await github.rest.issues.updateComment({ ...common, comment_id: prior.id, body });
+              } else {
+                await github.rest.issues.createComment({ ...common, issue_number: issue.number, body });
+              }
+            }
+            async function close() {
+              if (issue.state !== 'open') return;
+              await github.rest.issues.update({
+                ...common, issue_number: issue.number, state: 'closed', state_reason: 'not_planned' });
+            }
+
+            const m = (issue.body || '').match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
+            if (!m) {
+              await upsert("I couldn't find a `https://github.com/owner/repo` URL in this appeal. " +
+                "Please edit the issue to include the excluded repository's URL and I'll re-check.");
+              return;
+            }
+            const slug = `${m[1]}/${m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '')}`;
+
+            // Read the published exclusion list (raw file on master — no checkout).
+            let text = '';
+            try {
+              const res = await fetch(`https://raw.githubusercontent.com/${common.owner}/${common.repo}/master/data/excluded-repos.txt`);
+              if (res.ok) text = await res.text();
+            } catch (e) { core.info(`could not read exclusion list: ${e.message}`); }
+            const line = text.split('\n').find(l =>
+              l.split('#')[0].trim().toLowerCase() === slug.toLowerCase());
+
+            if (!line) {
+              await upsert(`\`${slug}\` is **not** on the [exclusion list](${listUrl}), so there's ` +
+                "nothing to appeal here — closing this issue.\n\nIf you're disputing a **low trust " +
+                "score** or absence from the README, that's an AI verdict, not an exclusion: comment " +
+                "on the nomination issue for the server (threads stay open a few weeks), and see " +
+                `[SCORES.md](https://github.com/${common.owner}/${common.repo}/blob/master/SCORES.md) ` +
+                "for exactly which component cost the points. Servers are also re-evaluated " +
+                "automatically (~every 90 days), so improvements count on their own.");
+              await close();
+              return;
+            }
+
+            // Cooldown: one appeal per repository per 90 days.
+            const since = new Date(Date.now() - COOLDOWN_DAYS * 24 * 3600 * 1000)
+              .toISOString().slice(0, 10);
+            let prior = null;
+            try {
+              const found = await github.rest.search.issuesAndPullRequests({
+                q: `repo:${common.owner}/${common.repo} is:issue label:exclusion-appeal ` +
+                   `created:>=${since} "${slug}"`,
+                per_page: 10 });
+              prior = found.data.items.find(i => i.number !== issue.number);
+            } catch (e) { core.info(`cooldown search failed: ${e.message}`); }
+            if (prior) {
+              await upsert(`An appeal for \`${slug}\` was already filed within the last ` +
+                `${COOLDOWN_DAYS} days (#${prior.number}), so this one is closed under the ` +
+                "per-repo cooldown. If you have genuinely new information, add it as a comment " +
+                `on #${prior.number}.`);
+              await close();
+              return;
+            }
+
+            await upsert(`\`${slug}\` is on the [exclusion list](${listUrl}). The recorded entry:\n\n` +
+              `> \`${line.trim()}\`\n\n` +
+              "Leaving this appeal **open** for the maintainer to review — every change to the " +
+              "exclusion list is a human-reviewed commit.");
+
+  optout:
+    if: >
+      contains(join(github.event.issue.labels.*.name, ','), 'maintainer-opt-out') &&
+      (github.event_name == 'issues' ||
+       (github.event_name == 'issue_comment' && github.event.action == 'created'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const MARKER = '<!-- maintainer-opt-out-intake -->';
+            const issue = context.payload.issue;
+            if (issue.pull_request) return;
+            const common = { owner: context.repo.owner, repo: context.repo.repo };
+            const author = (issue.user && issue.user.login) || '';
+            const labels = (issue.labels || []).map(l => l.name || l);
+
+            if (context.eventName === 'issue_comment') {
+              // Re-check only when the opt-out's author reports the marker is in place.
+              const c = context.payload.comment;
+              if (labels.includes('verified')) return;
+              if (!c || !c.user || c.user.login !== author) return;
+              if (!/\bdone\b/i.test(c.body || '')) return;
+            }
+
+            async function upsert(msg) {
+              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}`;
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                ...common, issue_number: issue.number, per_page: 100 });
+              const prior = comments.find(x => x.user.type === 'Bot' && (x.body || '').includes(MARKER));
+              if (prior) {
+                await github.rest.issues.updateComment({ ...common, comment_id: prior.id, body });
+              } else {
+                await github.rest.issues.createComment({ ...common, issue_number: issue.number, body });
+              }
+            }
+
+            const m = (issue.body || '').match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
+            if (!m) {
+              await upsert("I couldn't find a `https://github.com/owner/repo` URL in this opt-out. " +
+                "Please edit the issue to include your repository's URL and I'll re-check.");
+              return;
+            }
+            const repoOwner = m[1];
+            const repoName = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
+
+            let repo;
+            try {
+              repo = (await github.rest.repos.get({ owner: repoOwner, repo: repoName })).data;
+            } catch (e) {
+              await upsert(`\`${repoOwner}/${repoName}\` doesn't resolve to a public GitHub ` +
+                "repository, so ownership can't be verified automatically. Double-check the URL " +
+                "(edit the issue to fix it); the maintainer will review this manually otherwise.");
+              return;
+            }
+
+            // Ownership checks, cheapest first. All are public, read-only lookups.
+            let verified = null;
+            if (repo.owner.login.toLowerCase() === author.toLowerCase()) {
+              verified = 'the issue author owns the repository';
+            }
+            if (!verified && repo.owner.type === 'Organization') {
+              try {
+                await github.rest.orgs.checkPublicMembershipForUser({
+                  org: repo.owner.login, username: author });
+                verified = `the issue author is a public member of @${repo.owner.login}`;
+              } catch (e) { /* not a public member */ }
+            }
+            if (!verified && (repo.description || '').includes(issue.html_url)) {
+              verified = 'the repository description references this issue';
+            }
+            if (!verified) {
+              try {
+                await github.rest.repos.getContent({
+                  owner: repoOwner, repo: repoName, path: 'registry-opt-out.txt' });
+                verified = '`registry-opt-out.txt` is present in the default branch';
+              } catch (e) { /* no marker file */ }
+            }
+
+            if (verified) {
+              try {
+                await github.rest.issues.addLabels({
+                  ...common, issue_number: issue.number, labels: ['verified'] });
+              } catch (e) { core.info(`could not add label: ${e.message}`); }
+              await upsert(`✅ **Ownership verified** — ${verified}.\n\n` +
+                `The maintainer will add \`${repoOwner}/${repoName}\` to ` +
+                `[\`data/excluded-repos.txt\`](https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt) ` +
+                "in a human-reviewed commit — this issue stays open until that lands. Once " +
+                "excluded, the repository is never analyzed or listed again (and any marker " +
+                "you added can be removed).");
+            } else {
+              await upsert("I couldn't verify automatically that you maintain " +
+                `\`${repoOwner}/${repoName}\` (you don't own it and aren't a public member of ` +
+                "the owning organization). To prove ownership, do **one** of:\n\n" +
+                `1. Put this issue's URL (\`${issue.html_url}\`) in the repository's ` +
+                "**description**, or\n" +
+                "2. Commit a `registry-opt-out.txt` file (any content) to the repository's " +
+                "**default branch**.\n\n" +
+                "Then reply `done` here and I'll re-check.");
+            }

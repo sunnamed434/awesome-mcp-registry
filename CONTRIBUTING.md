@@ -43,11 +43,17 @@ a human overrides the AI, reserved for two cases: repos removed for **policy rea
 listed**. Excluded repos are never analyzed, never listed, and nominations for them are declined
 automatically with a link to the list.
 
-- **Maintainer opt-out:** if you maintain a listed server and want it removed, open a regular
-  issue from the repo's owner account (or with a verifiable link to it) and it will be added.
-- **Appeals:** if you think a repo is excluded by mistake, open a regular issue (not a
-  nomination) referencing the entry — the list is plain text with a reason next to each line,
-  and every change to it is a reviewable commit.
+- **Maintainer opt-out:** open a
+  **[maintainer opt-out issue](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=maintainer-opt-out.yml)**.
+  A bot verifies ownership automatically — you own the repo, you're a public member of the
+  owning org, or you place a marker in the repo (instructions are posted on the issue) — and
+  labels the issue `verified`. The exclusion itself is then applied as a human-reviewed commit.
+- **Appeals:** if you think a repo is excluded by mistake, open an
+  **[exclusion appeal](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=exclusion-appeal.yml)** —
+  a bot quotes the recorded reason and leaves genuine appeals open for review (one appeal per
+  repo per 90 days). A low trust score is not an exclusion: comment on the nomination issue
+  instead. The list is plain text with a reason next to each line, and every change to it is a
+  reviewable commit.
 
 ## Code contributions are welcome
 

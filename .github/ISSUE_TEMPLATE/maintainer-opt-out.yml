@@ -1,0 +1,37 @@
+name: Maintainer opt-out
+description: You maintain a listed server and want it removed from this registry.
+title: "Opt-out: owner/repo"
+labels: ["maintainer-opt-out"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## How verification works
+
+        Opt-outs are honored when they verifiably come from the repository's maintainer.
+        A bot checks automatically when you open this issue:
+
+        1. **Instant:** your account owns the repository, or is a public member of the owning
+           organization → the bot marks the issue `verified`.
+        2. **Otherwise:** the bot posts marker instructions — put this issue's URL in the
+           repository description, or commit a `registry-opt-out.txt` file to the default
+           branch — and re-checks when you comment `done`.
+
+        Once verified, the maintainer adds the repository to
+        [`data/excluded-repos.txt`](../blob/master/data/excluded-repos.txt) in a
+        human-reviewed commit. Opted-out repositories are never analyzed or listed again.
+  - type: input
+    id: repo_url
+    attributes:
+      label: GitHub repository URL
+      description: The listed repository you maintain (e.g. https://github.com/owner/repo).
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Note (optional)
+      description: Anything the maintainer should know.
+    validations:
+      required: false

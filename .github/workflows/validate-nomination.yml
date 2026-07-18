@@ -108,7 +108,7 @@ jobs:
               const repoOwner = m[1];
               const repoName = m[2].replace(/\.git$/i, '').replace(/[#?].*$/, '');
               if (await isExcluded(`${repoOwner}/${repoName}`)) {
-                msg = `\`${repoOwner}/${repoName}\` is on this registry's [exclusion list](https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt) (policy removal or maintainer opt-out), so it won't be evaluated or listed. If you believe this is a mistake, open a regular issue (not a nomination) to appeal.`;
+                msg = `\`${repoOwner}/${repoName}\` is on this registry's [exclusion list](https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt) (policy removal or maintainer opt-out), so it won't be evaluated or listed. If you believe this is a mistake, open an [exclusion appeal](https://github.com/${common.owner}/${common.repo}/issues/new?template=exclusion-appeal.yml).`;
                 resolveLabel = 'status: excluded';
               } else {
               try {
