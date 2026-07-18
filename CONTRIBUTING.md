@@ -52,8 +52,9 @@ automatically with a link to the list.
   **[exclusion appeal](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=exclusion-appeal.yml)** —
   a bot quotes the recorded reason and leaves genuine appeals open for review (one appeal per
   repo per 90 days). A low trust score is not an exclusion: comment on the nomination issue
-  instead. The list is plain text with a reason next to each line, and every change to it is a
-  reviewable commit.
+  instead. The list is plain text — each entry is
+  `owner/repo  # reason | YYYY-MM-DD | issue-link` — and every change to it is a reviewable
+  commit.
 
 ## Code contributions are welcome
 

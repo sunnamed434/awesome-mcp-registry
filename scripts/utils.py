@@ -106,9 +106,12 @@ EXCLUSION_LINE_RE = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 def load_exclusions(path):
     """Parse the exclusion file into a set of lowercase 'owner/repo' slugs.
 
-    Lines may be blank, full-line '# comments', or 'owner/repo  # optional reason'.
-    GitHub repo names are case-insensitive, so all slugs are lowercased.
-    A missing file yields an empty set (the mechanism is optional)."""
+    Lines may be blank, full-line '# comments', or a slug with a structured
+    comment: 'owner/repo  # reason | YYYY-MM-DD | issue-link'. Only the slug is
+    parsed — everything after '#' is for humans and the appeal bot — so old
+    bare 'owner/repo # reason' lines remain valid. GitHub repo names are
+    case-insensitive, so all slugs are lowercased. A missing file yields an
+    empty set (the mechanism is optional)."""
     excluded = set()
     if not os.path.exists(path):
         return excluded

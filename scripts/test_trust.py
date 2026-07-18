@@ -277,9 +277,11 @@ class TestExclusions(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             path = os.path.join(tmp, "excluded.txt")
             with open(path, "w", encoding="utf-8") as f:
-                f.write("# comment\n\nOwner/Repo  # opt-out\nbad/spammer\nnot a slug line\n")
+                f.write("# comment\n\nOwner/Repo  # opt-out\nbad/spammer\nnot a slug line\n"
+                        "new/format  # policy removal | 2026-07-18 | "
+                        "https://github.com/o/r/issues/9\n")
             excluded = utils.load_exclusions(path)
-        self.assertEqual(excluded, {"owner/repo", "bad/spammer"})
+        self.assertEqual(excluded, {"owner/repo", "bad/spammer", "new/format"})
 
     def test_missing_file(self):
         self.assertEqual(utils.load_exclusions(os.path.join("no", "such", "file.txt")), set())

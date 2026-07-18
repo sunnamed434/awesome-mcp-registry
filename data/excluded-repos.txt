@@ -1,5 +1,15 @@
 # Repositories excluded from this registry — one owner/repo per line (case-insensitive).
 #
+# Line format (structured comment after the slug):
+#
+#   owner/repo  # reason | YYYY-MM-DD | issue-link
+#
+# e.g.:
+#   some-owner/some-repo   # maintainer opt-out | 2026-07-18 | https://github.com/sunnamed434/awesome-mcp-registry/issues/123
+#
+# Older bare "owner/repo # reason" lines (or no comment at all) remain valid —
+# the parser only reads the slug; the comment is for humans and the appeal bot.
+#
 # A repo lands here for one of two reasons:
 #   - policy removal (spam, scam, malicious, or deceptive content)
 #   - maintainer opt-out (the repo's owner asked not to be listed)
@@ -7,8 +17,7 @@
 # Excluded repos are never analyzed, never listed, and nominations for them are
 # declined automatically with a link to this file.
 #
-# Inline comments after the slug are allowed and encouraged:
-#   some-owner/some-repo   # maintainer opt-out (2026-06-10)
-#
-# To appeal an exclusion or request an opt-out, open a regular issue (not a
-# nomination): https://github.com/sunnamed434/awesome-mcp-registry/issues/new
+# To appeal an exclusion:
+#   https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=exclusion-appeal.yml
+# Maintainers who want their repo removed:
+#   https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=maintainer-opt-out.yml
