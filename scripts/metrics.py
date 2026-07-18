@@ -212,11 +212,15 @@ SOURCE_SCAN_EXTENSIONS = {
     ".py", ".js", ".ts", ".tsx", ".jsx", ".mjs", ".cjs", ".go", ".rs", ".rb",
     ".java", ".cs", ".php", ".json", ".yaml", ".yml", ".toml", ".md",
 }
-# ponytail: test/fixture dirs are skipped to avoid flagging security tools'
-# own attack samples; the cost is missing malware hidden in test dirs.
+# ponytail: test/fixture and documentation dirs are skipped to avoid flagging
+# security tools' attack samples and docs QUOTING injections (e.g. a page about
+# prompt-injection protection). Tool descriptions live in code; the README the
+# model actually reads is covered by the AI's own injection_attempt flag. The
+# cost is missing payloads hidden in test/docs dirs, which agents never load.
 SOURCE_SCAN_SKIP_DIRS = {
     "node_modules", "vendor", "dist", "build", ".git",
     "test", "tests", "__tests__", "testdata", "fixtures", "spec",
+    "docs", "doc", "documentation", "website", "examples",
 }
 SOURCE_SCAN_MAX_TARBALL = 30 * 1024 * 1024   # download cap
 SOURCE_SCAN_MAX_FILE = 200 * 1024            # per-file cap
