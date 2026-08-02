@@ -16,7 +16,7 @@ trust = clamp(0, 100, Σ (weight_i × subscore_i) − red-flag penalties)
 
 | Component | Weight | What it measures | How it's computed |
 |-----------|--------|------------------|-------------------|
-| AI assessment | **35%** | Substance of the project: documentation quality, real-world utility, maturity | GPT-4.1-mini rates three anchored dimensions 0–4 each (anchors below); score = (doc + utility + maturity) / 12 × 100 |
+| AI assessment | **35%** | Substance of the project: documentation quality, real-world utility, maturity | DeepSeek-V4-Flash rates three anchored dimensions 0–4 each (anchors below); score = (doc + utility + maturity) / 12 × 100 |
 | Maintenance | **20%** | Is it alive? | 70% push recency (full credit ≤ 14 days since last push, zero at 180 days, from `pushed_at`) + 30% commit cadence (commits in last 90 days / 12, capped). Recency carries the whole component when the commit count couldn't be fetched |
 | Popularity | **15%** | Adoption | `100 × log10(1 + stars) / log10(1 + 30,000)`, capped at 100 — log scale, so mega-repos can't dominate |
 | Docs & hygiene | **15%** | Can you actually use it? | 45% GitHub community-profile health (a neutral 50 is assumed when GitHub doesn't report it) + 35% README substance (length, headings, code blocks; renormalized away if the README couldn't be fetched) + 20% license (SPDX-recognized = 100, other = 50, none = 0); +5 bonus for a SECURITY.md |

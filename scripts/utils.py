@@ -266,7 +266,7 @@ MIN_TRUST_SCORE = 50        # Entry threshold: new servers need at least this to
 LISTING_EXIT_SCORE = 48     # Hysteresis: already-listed servers stay until below this
 MAX_PER_CATEGORY = 20       # Show top N per category in README
 TRENDING_MIN_D7 = 10        # Minimum weekly star growth to appear in Trending
-MODEL_DISPLAY = "GPT-4.1-mini"   # AI model shown in the README; keep in sync with scan_repos.MODEL_NAME
+MODEL_DISPLAY = "DeepSeek-V4-Flash"   # AI model shown in the README; keep in sync with scan_repos.MODEL_NAME
 
 COMPONENT_LABELS = {
     "ai": "AI assessment",
@@ -524,7 +524,7 @@ def generate_readme(servers, output_path, history=None):
                  "[Official MCP Registry](https://registry.modelcontextprotocol.io/) for new "
                  "servers; community [nominations](CONTRIBUTING.md) join the same queue")
     lines.append(f"2. **Analyze** — each repo is evaluated by AI "
-                 f"({MODEL_DISPLAY} via [GitHub Models](https://docs.github.com/en/github-models)) "
+                 f"({MODEL_DISPLAY} via the [DeepSeek API](https://api-docs.deepseek.com/)) "
                  "on an anchored rubric, informed by deterministic scanner evidence (MCP SDK "
                  "dependencies found in the repo's manifests). Prompt-injection attempts are "
                  "flagged and penalized")

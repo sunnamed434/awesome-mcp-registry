@@ -1,6 +1,6 @@
 name: MCP Server Analyzer
 description: Analyzes GitHub repositories to verify MCP servers and rate them on an anchored rubric
-model: openai/gpt-4.1-mini
+model: deepseek-v4-flash
 modelParameters:
   temperature: 0.3
 messages:

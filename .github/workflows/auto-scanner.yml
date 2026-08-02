@@ -2,7 +2,9 @@ name: Auto Scanner
 
 on:
   schedule:
-    - cron: '0 2 * * 0'    # Every Sunday at 2:00 UTC
+    # Sunday 11:23 UTC — inside DeepSeek's off-peak "valley" (announced peak hours
+    # cost 2x: 01:00-04:00 and 06:00-10:00 UTC), with margin for cron start delays.
+    - cron: '23 11 * * 0'
   workflow_dispatch:        # Manual trigger (with optional budget overrides for catch-up runs)
     inputs:
       max_new_analyses:
@@ -20,7 +22,6 @@ on:
 
 permissions:
   contents: write          # push the update branch
-  models: read
   issues: write            # comment on / close processed nomination issues
   pull-requests: write     # open + auto-merge the update PR (Safe Outputs)
 
@@ -47,6 +48,7 @@ jobs:
       - name: Run scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           PYTHONUNBUFFERED: "1"
           MAX_NEW_ANALYSES: ${{ github.event.inputs.max_new_analyses || '' }}
           MAX_RE_EVALUATIONS: ${{ github.event.inputs.max_re_evaluations || '' }}

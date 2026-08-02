@@ -33,16 +33,19 @@ from utils import (
 # ---------------------------------------------------------------------------
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
-MODELS_API_URL = "https://models.github.ai/inference/chat/completions"
+# DeepSeek (OpenAI-compatible) replaced GitHub Models after its 2026-07-30 retirement.
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+AI_API_URL = "https://api.deepseek.com/chat/completions"
 REGISTRY_API_URL = "https://registry.modelcontextprotocol.io/v0/servers"
-MODEL_NAME = "openai/gpt-4.1-mini"
+MODEL_NAME = "deepseek-v4-flash"
 
 # Bump when the analyzer prompt changes in a way that should re-judge the whole
 # cache: entries stamped with an older version count as stale until re-analyzed.
 PROMPT_VERSION = 2
 
-# Per-run AI budgets (env-overridable for manual catch-up runs; the weekly total
-# of 25+25+10 = 60 Models calls stays well under the free tier's ~150/day).
+# Per-run AI budgets (env-overridable for manual catch-up runs). The weekly total
+# of 25+25+10 = 60 calls costs ~$0.05 at DeepSeek V4-Flash rates; the budgets
+# bound runtime and blast radius, not quota.
 MAX_NEW_ANALYSES = int(os.environ.get("MAX_NEW_ANALYSES") or 25)
 MAX_RE_EVALUATIONS = int(os.environ.get("MAX_RE_EVALUATIONS") or 25)
 MAX_NOMINATIONS = int(os.environ.get("MAX_NOMINATIONS") or 10)
@@ -638,16 +641,16 @@ def collect_mcp_signals(full_name, topics=""):
 # AI Analysis
 # ---------------------------------------------------------------------------
 
-# After this many consecutive AI failures, stop calling the Models API for the
-# rest of the run (e.g. daily quota exhausted): deterministic work still proceeds
-# and the run reaches the save/generate step instead of stalling for hours.
+# After this many consecutive AI failures, stop calling the AI API for the
+# rest of the run (e.g. balance exhausted or the API is down): deterministic work
+# still proceeds and the run reaches the save/generate step instead of stalling.
 AI_FAILURE_CIRCUIT = 3
 _consecutive_ai_failures = 0
 
 
 def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
                     temperature=0.3):
-    """Send repo data to GitHub Models API for analysis.
+    """Send repo data to the DeepSeek API (OpenAI-compatible) for analysis.
 
     Retries on rate-limit / transient server errors so a momentary 429 doesn't get
     recorded as a permanent "invalid, score 0" verdict for an otherwise-good repo.
@@ -656,7 +659,7 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
     global _consecutive_ai_failures
     if _consecutive_ai_failures >= AI_FAILURE_CIRCUIT:
         raise RuntimeError(
-            f"Models API circuit breaker open after {_consecutive_ai_failures} "
+            f"AI API circuit breaker open after {_consecutive_ai_failures} "
             f"consecutive failures; skipping AI calls for the rest of this run")
 
     user_message = USER_PROMPT_TEMPLATE.format(
@@ -682,19 +685,17 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
 
     headers = {
         "Content-Type": "application/json",
-        "Accept": "application/vnd.github+json",
-        "Authorization": f"Bearer {GITHUB_TOKEN}",
-        "X-GitHub-Api-Version": "2022-11-28",
+        "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
     }
 
     try:
         for attempt in range(max_retries):
-            resp = requests.post(MODELS_API_URL, headers=headers, json=payload, timeout=60)
+            resp = requests.post(AI_API_URL, headers=headers, json=payload, timeout=60)
             if resp.status_code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
                 # Cap the honored Retry-After: a quota-exhausted 429 can ask for
                 # hours, which would stall the run past the job timeout.
                 wait = min(int(resp.headers.get("Retry-After") or 0) or (2 ** attempt) * 5, 120)
-                print(f"    (HTTP {resp.status_code} from Models API; retrying in {wait}s)")
+                print(f"    (HTTP {resp.status_code} from AI API; retrying in {wait}s)")
                 time.sleep(wait)
                 continue
             resp.raise_for_status()
@@ -1252,6 +1253,9 @@ def main():
     if not GITHUB_TOKEN:
         print("ERROR: GITHUB_TOKEN environment variable is required")
         sys.exit(1)
+    if not DEEPSEEK_API_KEY:
+        print("ERROR: DEEPSEEK_API_KEY environment variable is required")
+        sys.exit(1)
 
     print("=" * 60)
     print("MCP Server Scanner")
@@ -1362,7 +1366,7 @@ def main():
         })
         touched.add(fn.lower())
         analyzed += 1
-        time.sleep(4)  # Rate limit: stay under 15 req/min for Models API
+        time.sleep(4)  # Pace the loop (GitHub API calls inside; DeepSeek has no fixed rate limit)
 
     # 7. Re-evaluate stale entries
     print(f"\n[7/11] Re-evaluating stale entries (prompt v{PROMPT_VERSION}, "
