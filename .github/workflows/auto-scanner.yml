@@ -93,6 +93,13 @@ jobs:
           SUFFIX=""
           [ "${{ github.event_name }}" = "workflow_dispatch" ] && SUFFIX=" (manual dispatch)"
           git commit -m "Update MCP server registry [automated]$SUFFIX"
+          # Rebase onto live master before pushing: if workflow files changed on
+          # master mid-run, a branch whose tree still carries the stale copies is
+          # rejected (GITHUB_TOKEN has no `workflows` permission). Generated files
+          # can't conflict — scans are serialised by the concurrency group and
+          # humans don't edit them.
+          git fetch origin master
+          git rebase origin/master
           git push origin "$BRANCH"
           echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
