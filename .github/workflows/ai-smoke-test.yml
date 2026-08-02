@@ -1,0 +1,36 @@
+name: AI smoke test
+
+# One cheap DeepSeek call to verify the API key, model name and payload shape
+# in ~30 seconds, instead of waiting out a full 30-minute scan. Manual only.
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Call DeepSeek once
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          curl -sS https://api.deepseek.com/chat/completions \
+            -H "Authorization: Bearer $DEEPSEEK_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "model": "deepseek-v4-flash",
+              "messages": [
+                {"role": "system", "content": "Reply with a single JSON object and nothing else: no markdown fences, no commentary."},
+                {"role": "user", "content": "Return exactly this JSON: {\"ok\": true}"}
+              ],
+              "thinking": {"type": "disabled"},
+              "temperature": 0,
+              "max_tokens": 700
+            }' | tee /tmp/resp.json | jq '{content: .choices[0].message.content,
+                   reasoning_present: (.choices[0].message.reasoning_content != null),
+                   finish_reason: .choices[0].finish_reason, usage}'
+          jq -e '.choices[0].message.content | fromjson | .ok == true' /tmp/resp.json > /dev/null \
+            && echo "SMOKE OK: content is parseable JSON"

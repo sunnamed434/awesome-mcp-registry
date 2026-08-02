@@ -679,6 +679,10 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_message},
         ],
+        # V4 models think by default, and reasoning tokens are billed out of
+        # max_tokens — leaving it on returns HTTP 200 with an empty/truncated
+        # verdict. This is classification, not reasoning; keep it off.
+        "thinking": {"type": "disabled"},
         "temperature": temperature,
         "max_tokens": 700,
     }
