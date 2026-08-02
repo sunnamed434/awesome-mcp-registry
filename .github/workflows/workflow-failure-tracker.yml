@@ -40,6 +40,7 @@ jobs:
             const label = 'workflow-failure';
             // Stable per-workflow key — survives workflow renames, unlike the title.
             const marker = `<!-- failure-tracker:workflow-${run.workflow_id} -->`;
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human.*\n<!-- ai-generated: false; source: template; workflow: workflow-failure-tracker -->`;
 
             // Find the open tracking issue for THIS workflow, if any.
             const open = await github.paginate(github.rest.issues.listForRepo, {
@@ -68,7 +69,7 @@ jobs:
               if (issue) {
                 await github.rest.issues.createComment({
                   ...common, issue_number: issue.number,
-                  body: `🔴 **Still failing.**\n\n${facts}`,
+                  body: `🔴 **Still failing.**\n\n${facts}${FOOTER}`,
                 });
                 core.info(`Updated tracking issue #${issue.number} for "${run.name}".`);
               } else {
@@ -93,7 +94,7 @@ jobs:
               if (issue) {
                 await github.rest.issues.createComment({
                   ...common, issue_number: issue.number,
-                  body: `🟢 **Recovered.** ${run.name} succeeded again.\n\n${facts}`,
+                  body: `🟢 **Recovered.** ${run.name} succeeded again.\n\n${facts}${FOOTER}`,
                 });
                 await github.rest.issues.update({
                   ...common, issue_number: issue.number,

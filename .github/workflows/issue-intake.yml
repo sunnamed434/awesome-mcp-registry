@@ -36,6 +36,7 @@ jobs:
         with:
           script: |
             const MARKER = '<!-- exclusion-appeal-intake -->';
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: issue-intake -->`;
             const COOLDOWN_DAYS = 90;
             const issue = context.payload.issue;
             const common = { owner: context.repo.owner, repo: context.repo.repo };
@@ -44,7 +45,7 @@ jobs:
               `https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt`;
 
             async function upsert(msg) {
-              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}`;
+              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}${FOOTER}`;
               const comments = await github.paginate(github.rest.issues.listComments, {
                 ...common, issue_number: issue.number, per_page: 100 });
               const prior = comments.find(c => c.user.type === 'Bot' && (c.body || '').includes(MARKER));
@@ -124,12 +125,13 @@ jobs:
         with:
           script: |
             const MARKER = '<!-- server-report-intake -->';
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: issue-intake -->`;
             const issue = context.payload.issue;
             const common = { owner: context.repo.owner, repo: context.repo.repo };
             const author = (issue.user && issue.user.login) || '';
 
             async function upsert(msg) {
-              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}`;
+              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}${FOOTER}`;
               const comments = await github.paginate(github.rest.issues.listComments, {
                 ...common, issue_number: issue.number, per_page: 100 });
               const prior = comments.find(c => c.user.type === 'Bot' && (c.body || '').includes(MARKER));
@@ -185,6 +187,7 @@ jobs:
         with:
           script: |
             const MARKER = '<!-- maintainer-opt-out-intake -->';
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: issue-intake -->`;
             const issue = context.payload.issue;
             if (issue.pull_request) return;
             const common = { owner: context.repo.owner, repo: context.repo.repo };
@@ -200,7 +203,7 @@ jobs:
             }
 
             async function upsert(msg) {
-              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}`;
+              const body = `${MARKER}\n${author ? `@${author} ` : ''}${msg}${FOOTER}`;
               const comments = await github.paginate(github.rest.issues.listComments, {
                 ...common, issue_number: issue.number, per_page: 100 });
               const prior = comments.find(x => x.user.type === 'Bot' && (x.body || '').includes(MARKER));

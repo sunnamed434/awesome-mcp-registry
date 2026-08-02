@@ -32,6 +32,7 @@ jobs:
         with:
           script: |
             const MARKER = '<!-- nomination-validation -->';
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: validate-nomination -->`;
             const issue = context.payload.issue;
             const body = issue.body || '';
             const common = { owner: context.repo.owner, repo: context.repo.repo };
@@ -154,7 +155,7 @@ jobs:
 
             // Post or update our single marked comment (@-mentioning the author).
             const author = (issue.user && issue.user.login) || '';
-            const bodyOut = author ? `${MARKER}\n@${author} ${msg}` : `${MARKER}\n${msg}`;
+            const bodyOut = (author ? `${MARKER}\n@${author} ${msg}` : `${MARKER}\n${msg}`) + FOOTER;
             const comments = await github.paginate(github.rest.issues.listComments, {
               ...common, issue_number: issue.number, per_page: 100 });
             const prior = comments.find(c => c.user.type === 'Bot' && (c.body || '').includes(MARKER));
@@ -237,9 +238,10 @@ jobs:
                 ...common, issue_number: issue.number, state: 'closed', state_reason: 'not_planned' });
             } catch (e) { core.info(`could not set close reason: ${e.message}`); }
             const author = (issue.user && issue.user.login) || '';
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: validate-nomination -->`;
             const msg = "This nomination was closed before evaluation, so it's **withdrawn** and won't be scanned. Reopen it (or open a new nomination) if you'd like it re-queued.";
             await github.rest.issues.createComment({
-              ...common, issue_number: issue.number, body: author ? `@${author} ${msg}` : msg });
+              ...common, issue_number: issue.number, body: (author ? `@${author} ${msg}` : msg) + FOOTER });
 
   adopt-legacy:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
@@ -251,6 +253,7 @@ jobs:
             const common = { owner: context.repo.owner, repo: context.repo.repo };
             const QUEUED_MARKER = '<!-- nomination-adopted -->';
             const NOREPO_MARKER = '<!-- nomination-no-repo -->';
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: validate-nomination -->`;
             const contributing =
               `https://github.com/${common.owner}/${common.repo}/blob/master/CONTRIBUTING.md`;
             // Conservative heuristic: an open issue whose title reads like
@@ -269,7 +272,7 @@ jobs:
                 "",
                 `_How it works: [CONTRIBUTING.md](${contributing})._`,
               ].join('\n');
-              return author ? `${QUEUED_MARKER}\n@${author} ${msg}` : `${QUEUED_MARKER}\n${msg}`;
+              return (author ? `${QUEUED_MARKER}\n@${author} ${msg}` : `${QUEUED_MARKER}\n${msg}`) + FOOTER;
             };
             const noRepoExplain = (author) => {
               const msg = [
@@ -282,7 +285,7 @@ jobs:
                 "",
                 `_How it works: [CONTRIBUTING.md](${contributing})._`,
               ].join('\n');
-              return author ? `${NOREPO_MARKER}\n@${author} ${msg}` : `${NOREPO_MARKER}\n${msg}`;
+              return (author ? `${NOREPO_MARKER}\n@${author} ${msg}` : `${NOREPO_MARKER}\n${msg}`) + FOOTER;
             };
 
             const removeLabel = async (n, name) => {

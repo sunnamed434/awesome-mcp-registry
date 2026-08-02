@@ -27,6 +27,7 @@ jobs:
                 {"role": "user", "content": "Return exactly this JSON: {\"ok\": true}"}
               ],
               "thinking": {"type": "disabled"},
+              "response_format": {"type": "json_object"},
               "temperature": 0,
               "max_tokens": 700
             }' | tee /tmp/resp.json | jq '{content: .choices[0].message.content,

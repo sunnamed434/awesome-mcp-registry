@@ -49,6 +49,8 @@ jobs:
               "PRs are not auto-closed. See `CONTRIBUTING.md`._",
             ].join('\n');
 
+            const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: reject-content-prs -->`;
+
             async function triagePR(pr) {
               const login = (pr.user && pr.user.login) || '';
               const trustedBots = ['dependabot[bot]', 'github-actions[bot]'];
@@ -68,7 +70,7 @@ jobs:
                 return;
               }
 
-              const commentBody = login ? `@${login}\n\n${body}` : body;
+              const commentBody = (login ? `@${login}\n\n${body}` : body) + FOOTER;
               await github.rest.issues.createComment({ ...common, issue_number: pr.number, body: commentBody });
               await github.rest.pulls.update({ ...common, pull_number: pr.number, state: 'closed' });
               core.info(`#${pr.number}: commented + closed`);
