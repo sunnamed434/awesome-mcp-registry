@@ -39,9 +39,11 @@ AI_API_URL = "https://api.deepseek.com/chat/completions"
 REGISTRY_API_URL = "https://registry.modelcontextprotocol.io/v0/servers"
 MODEL_NAME = "deepseek-v4-flash"
 
-# Bump when the analyzer prompt changes in a way that should re-judge the whole
-# cache: entries stamped with an older version count as stale until re-analyzed.
-PROMPT_VERSION = 2
+# Bump when the analyzer prompt OR the judge model changes in a way that should
+# re-judge the whole cache: entries stamped with an older version count as stale
+# until re-analyzed. v3 = the GitHub Models -> DeepSeek judge swap: re-baseline
+# every gpt-4.1-mini verdict under the new judge, 25/week.
+PROMPT_VERSION = 3
 
 # Per-run AI budgets (env-overridable for manual catch-up runs). The weekly total
 # of 25+25+10 = 60 calls costs ~$0.05 at DeepSeek V4-Flash rates; the budgets
@@ -664,7 +666,7 @@ _consecutive_ai_failures = 0
 
 
 def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
-                    temperature=0):
+                    temperature=0, thinking=False):
     """Send repo data to the DeepSeek API (OpenAI-compatible) for analysis.
 
     Retries on rate-limit / transient server errors so a momentary 429 doesn't get
@@ -708,6 +710,13 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
         "temperature": temperature,
         "max_tokens": 700,
     }
+    if thinking:
+        # A/B shadow mode. Thinking ignores temperature (documented); low
+        # effort keeps the CoT short; 8000 leaves headroom for reasoning
+        # plus the JSON verdict inside the shared completion budget.
+        payload["thinking"] = {"type": "enabled"}
+        payload["reasoning_effort"] = "low"
+        payload["max_tokens"] = 8000
 
     headers = {
         "Content-Type": "application/json",
@@ -739,6 +748,39 @@ def analyze_with_ai(repo_data, readme_content, mcp_signals=None, max_retries=3,
     except Exception:
         _consecutive_ai_failures += 1
         raise
+
+
+# A/B experiment (started 2026-08-02): every real non-thinking verdict gets a
+# shadow thinking(low) verdict logged next to it in data/ab_thinking.jsonl.
+# Shadow calls never affect real results, canaries, or the circuit breaker.
+# Kill switch: AB_THINKING=0. Decide and remove after a few weeks of pairs.
+AB_THINKING = (os.environ.get("AB_THINKING") or "1") == "1"
+AB_LOG_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "ab_thinking.jsonl")
+
+
+def ab_shadow(repo_data, full_name, readme, signals, baseline):
+    """Judge the same repo with thinking(low) and append the verdict pair.
+    Never raises; a shadow failure is logged and must not trip the breaker."""
+    global _consecutive_ai_failures
+    if not AB_THINKING or _consecutive_ai_failures >= AI_FAILURE_CIRCUIT:
+        return
+    before = _consecutive_ai_failures
+    try:
+        alt = analyze_with_ai(repo_data, readme, signals, thinking=True)
+    except Exception as e:
+        _consecutive_ai_failures = before
+        print(f"    (A/B shadow call failed: {e})")
+        return
+    keys = ("is_valid_mcp_server", "confidence", "category", "rubric")
+    row = {
+        "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "repo": full_name,
+        "baseline": {k: baseline.get(k) for k in keys},
+        "thinking_low": {k: alt.get(k) for k in keys},
+        "agree_valid": baseline.get("is_valid_mcp_server") == alt.get("is_valid_mcp_server"),
+    }
+    with open(AB_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(row) + "\n")
 
 
 CANARY_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "canary")
@@ -839,6 +881,8 @@ def evaluate_repo(repo_data, full_name, listed_for_squat, include_owner=False):
         analysis = analyze_with_ai(repo_data, readme, signals)
     except Exception as e:
         error = e
+    if analysis is not None:
+        ab_shadow(repo_data, full_name, readme, signals, analysis)
 
     repo_metrics = metrics.collect_metrics(full_name, readme_statistics=readme_statistics,
                                            include_owner=include_owner)
@@ -1558,6 +1602,13 @@ def main():
               f"until manually cleared:")
         for s in quarantined_all:
             print(f"  - {s.get('full_name')}: {s.get('quarantine_reason', '')}")
+
+    if AB_THINKING and os.path.exists(AB_LOG_PATH):
+        with open(AB_LOG_PATH, encoding="utf-8") as f:
+            rows = [json.loads(line) for line in f if line.strip()]
+        agree = sum(1 for r in rows if r.get("agree_valid"))
+        print(f"\nA/B thinking(low): {len(rows)} paired verdicts so far, "
+              f"{agree} agree on validity")
 
     print(f"\nDone! Analyzed {analyzed} new repos, re-evaluated {re_evaluated} stale. "
           f"Total valid servers: {len(valid_servers)}")
