@@ -540,6 +540,12 @@ def generate_readme(servers, output_path, history=None):
                  "[exclusion list](data/excluded-repos.txt) overrides the AI only for spam/scam "
                  "removals and maintainer opt-outs (see [CONTRIBUTING.md](CONTRIBUTING.md))")
     lines.append("")
+    lines.append(f"> **Model history:** until August 2026 servers were judged by GPT-4.1-mini via "
+                 f"GitHub Models, which GitHub [shut down on July 30, 2026]"
+                 f"(https://github.blog/changelog/2026-07-30-github-models-is-now-retired), "
+                 f"so the judge is now {MODEL_DISPLAY}. The story: "
+                 f"[#36](https://github.com/{REPO}/issues/36).")
+    lines.append("")
     lines.append(
         "Servers are curated entirely by AI — they earn their spot through quality and lose it "
         "if they fall behind. Maintainers don't hand-pick entries. Every automated change lands as "

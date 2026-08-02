@@ -1,8 +1,8 @@
 # Awesome MCP Registry
 
-![Servers](https://img.shields.io/badge/servers-58-blue) ![Categories](https://img.shields.io/badge/categories-12-green) ![Avg Trust](https://img.shields.io/badge/avg%20trust-80%2F100-orange) ![Updated](https://img.shields.io/badge/updated-2026--08--02-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-GPT--4.1--mini-purple)
+![Servers](https://img.shields.io/badge/servers-58-blue) ![Categories](https://img.shields.io/badge/categories-12-green) ![Avg Trust](https://img.shields.io/badge/avg%20trust-80%2F100-orange) ![Updated](https://img.shields.io/badge/updated-2026--08--02-lightgrey) ![Auto-curated](https://img.shields.io/badge/curated%20by-DeepSeek--V4--Flash-purple)
 
-A self-curating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers — a [Continuous AI](https://githubnext.com/projects/continuous-ai/) experiment. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed by GPT-4.1-mini weekly and scored with a published, reproducible [trust formula](METHODOLOGY.md).
+A self-curating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers — a [Continuous AI](https://githubnext.com/projects/continuous-ai/) experiment. Discovered from GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/), analyzed by DeepSeek-V4-Flash weekly and scored with a published, reproducible [trust formula](METHODOLOGY.md).
 
 > **Our bet:** curation is a job for AI, not gatekeepers. No maintainers deciding what's "in", no PR queues, no politics — just a [Continuous AI](https://githubnext.com/projects/continuous-ai/) workflow that discovers, judges, and re-judges every server on merit, week after week. This list is a small proof of a bigger idea: that AI can own a real, useful, self-maintaining system end to end. Humans set the rules once; the AI runs it.
 
@@ -136,11 +136,13 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 This registry is automatically maintained by a [GitHub Actions workflow](.github/workflows/auto-scanner.yml) that runs weekly:
 
 1. **Discover** — searches GitHub and the [Official MCP Registry](https://registry.modelcontextprotocol.io/) for new servers; community [nominations](CONTRIBUTING.md) join the same queue
-2. **Analyze** — each repo is evaluated by AI (GPT-4.1-mini via [GitHub Models](https://docs.github.com/en/github-models)) on an anchored rubric, informed by deterministic scanner evidence (MCP SDK dependencies found in the repo's manifests). Prompt-injection attempts are flagged and penalized
+2. **Analyze** — each repo is evaluated by AI (DeepSeek-V4-Flash via the [DeepSeek API](https://api-docs.deepseek.com/)) on an anchored rubric, informed by deterministic scanner evidence (MCP SDK dependencies found in the repo's manifests). Prompt-injection attempts are flagged and penalized
 3. **Score** — a transparent 0-100 trust score: 35% AI rubric + 65% verifiable metrics (maintenance, popularity, docs, security posture, community). The exact formula is published in [METHODOLOGY.md](METHODOLOGY.md); every server's breakdown is in [SCORES.md](SCORES.md)
 4. **Re-evaluate** — the AI re-judges servers every ~90 days; metrics and trust scores refresh every week. Projects that stagnate fall off the list
 5. **Rank** — only servers scoring 50+/100 appear here, top 20 per category, sorted by trust then stars
 6. **Exclude** — a small human-maintained [exclusion list](data/excluded-repos.txt) overrides the AI only for spam/scam removals and maintainer opt-outs (see [CONTRIBUTING.md](CONTRIBUTING.md))
+
+> **Model history:** until August 2026 servers were judged by GPT-4.1-mini via GitHub Models, which GitHub [shut down on July 30, 2026](https://github.blog/changelog/2026-07-30-github-models-is-now-retired), so the judge is now DeepSeek-V4-Flash. The story: [#36](https://github.com/sunnamed434/awesome-mcp-registry/issues/36).
 
 Servers are curated entirely by AI — they earn their spot through quality and lose it if they fall behind. Maintainers don't hand-pick entries. Every automated change lands as an auto-merged pull request, so the full history stays auditable and revertable.
 
