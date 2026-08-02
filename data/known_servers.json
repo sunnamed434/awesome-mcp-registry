@@ -147,7 +147,7 @@
       "full_name": "upstash/context7",
       "name": "context7",
       "url": "https://github.com/upstash/context7",
-      "stars": 60130,
+      "stars": 60131,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -170,14 +170,14 @@
         "short_description": "Context7 is an MCP server providing up-to-date, version-specific code documentation and examples for programming libraries and frameworks to enhance LLM prompts.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:18:17Z",
+      "last_update": "2026-08-02T07:22:22Z",
       "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
       "language": "TypeScript",
       "topics": "llm, mcp, mcp-server, vibe-coding",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 60130,
+        "stars": 60131,
         "pushed_at": "2026-08-01T10:37:13Z",
         "created_at": "2025-03-26T23:40:39Z",
         "archived": false,
@@ -200,7 +200,7 @@
         "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
         "language": "TypeScript",
         "topics": "llm, mcp, mcp-server, vibe-coding",
-        "last_update": "2026-08-02T05:18:17Z",
+        "last_update": "2026-08-02T07:22:22Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 184,
@@ -236,7 +236,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 60130
+              "stars": 60131
             },
             "weight": 0.1667
           },
@@ -472,7 +472,7 @@
       "full_name": "microsoft/playwright-mcp",
       "name": "playwright-mcp",
       "url": "https://github.com/microsoft/playwright-mcp",
-      "stars": 35729,
+      "stars": 35730,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -495,14 +495,14 @@
         "short_description": "A Model Context Protocol server providing browser automation capabilities through Playwright's accessibility tree for LLM-driven web interactions.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:35:37Z",
+      "last_update": "2026-08-02T06:47:21Z",
       "description": "Playwright MCP server",
       "language": "TypeScript",
       "topics": "mcp, playwright",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 35729,
+        "stars": 35730,
         "pushed_at": "2026-07-25T08:58:14Z",
         "created_at": "2025-03-21T17:48:36Z",
         "archived": false,
@@ -525,7 +525,7 @@
         "description": "Playwright MCP server",
         "language": "TypeScript",
         "topics": "mcp, playwright",
-        "last_update": "2026-08-02T05:35:37Z",
+        "last_update": "2026-08-02T06:47:21Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 19,
@@ -561,7 +561,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 35729
+              "stars": 35730
             },
             "weight": 0.1667
           },
@@ -639,7 +639,7 @@
       "full_name": "github/github-mcp-server",
       "name": "github-mcp-server",
       "url": "https://github.com/github/github-mcp-server",
-      "stars": 31895,
+      "stars": 31897,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -662,14 +662,14 @@
         "short_description": "An MCP server hosted by GitHub that exposes tools for repository management, issue and PR automation, CI/CD monitoring, and code analysis via a natural language interface.",
         "quality_score": 10
       },
-      "last_update": "2026-08-02T05:35:47Z",
+      "last_update": "2026-08-02T06:32:46Z",
       "description": "GitHub's official MCP Server",
       "language": "Go",
       "topics": "github, mcp, mcp-server",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 31895,
+        "stars": 31897,
         "pushed_at": "2026-07-31T22:23:38Z",
         "created_at": "2025-03-04T16:42:04Z",
         "archived": false,
@@ -692,7 +692,7 @@
         "description": "GitHub's official MCP Server",
         "language": "Go",
         "topics": "github, mcp, mcp-server",
-        "last_update": "2026-08-02T05:35:47Z",
+        "last_update": "2026-08-02T06:32:46Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 262,
@@ -728,7 +728,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 31895
+              "stars": 31897
             },
             "weight": 0.1667
           },
@@ -1142,7 +1142,7 @@
       "full_name": "oraios/serena",
       "name": "serena",
       "url": "https://github.com/oraios/serena",
-      "stars": 27385,
+      "stars": 27387,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -1165,14 +1165,14 @@
         "short_description": "A Python-based MCP server offering semantic code editing and refactoring tools designed as an IDE for AI coding agents.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:38:31Z",
+      "last_update": "2026-08-02T07:14:47Z",
       "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
       "language": "Python",
       "topics": "agent, ai, ai-coding, claude, claude-code, codex, ide, jetbrains, language-server, mcp-server, programming, vibe-coding",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 27385,
+        "stars": 27387,
         "pushed_at": "2026-08-01T18:37:25Z",
         "created_at": "2025-03-23T22:35:24Z",
         "archived": false,
@@ -1195,7 +1195,7 @@
         "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
         "language": "Python",
         "topics": "agent, ai, ai-coding, claude, claude-code, codex, ide, jetbrains, language-server, mcp-server, programming, vibe-coding",
-        "last_update": "2026-08-02T05:38:31Z",
+        "last_update": "2026-08-02T07:14:47Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 246,
@@ -1231,7 +1231,7 @@
           "popularity": {
             "score": 99,
             "detail": {
-              "stars": 27385
+              "stars": 27387
             },
             "weight": 0.1667
           },
@@ -1508,7 +1508,7 @@
         "short_description": "An open source MCP server in Go that connects AI agents and applications to enterprise databases, offering tools for querying, schema exploration, and code generation.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:39:11Z",
+      "last_update": "2026-08-02T07:21:05Z",
       "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
       "language": "Go",
       "topics": "agent, agents, ai, bigquery, clickhouse, cockroachdb, database, elasticsearch, firestore, genai, llm, mcp, mongodb, mysql, oracle, postgresql, redis, server, spanner, tidb",
@@ -1538,7 +1538,7 @@
         "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
         "language": "Go",
         "topics": "agent, agents, ai, bigquery, clickhouse, cockroachdb, database, elasticsearch, firestore, genai, llm, mcp, mongodb, mysql, oracle, postgresql, redis, server, spanner, tidb",
-        "last_update": "2026-08-02T05:39:11Z",
+        "last_update": "2026-08-02T07:21:05Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -1566,7 +1566,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -2476,7 +2476,7 @@
       "full_name": "idosal/git-mcp",
       "name": "git-mcp",
       "url": "https://github.com/idosal/git-mcp",
-      "stars": 8308,
+      "stars": 8309,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -2499,14 +2499,14 @@
         "short_description": "GitMCP is a remote MCP server that provides AI tools access to the latest documentation and code from any GitHub project to improve code correctness and reduce hallucinations.",
         "quality_score": 8
       },
-      "last_update": "2026-08-01T18:23:59Z",
+      "last_update": "2026-08-02T06:24:05Z",
       "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
       "language": "TypeScript",
       "topics": "agentic-ai, agents, ai, claude, copilot, cursor, git, llm, mcp",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 8308,
+        "stars": 8309,
         "pushed_at": "2026-05-08T14:21:24Z",
         "created_at": "2025-03-29T00:44:19Z",
         "archived": false,
@@ -2529,7 +2529,7 @@
         "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
         "language": "TypeScript",
         "topics": "agentic-ai, agents, ai, claude, copilot, cursor, git, llm, mcp",
-        "last_update": "2026-08-01T18:23:59Z",
+        "last_update": "2026-08-02T06:24:05Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -2565,7 +2565,7 @@
           "popularity": {
             "score": 88,
             "detail": {
-              "stars": 8308
+              "stars": 8309
             },
             "weight": 0.1667
           },
@@ -2650,7 +2650,7 @@
       "full_name": "LaurieWired/GhidraMCP",
       "name": "GhidraMCP",
       "url": "https://github.com/LaurieWired/GhidraMCP",
-      "stars": 9674,
+      "stars": 9675,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -2673,14 +2673,14 @@
         "short_description": "An MCP server integrating with Ghidra to expose reverse engineering tools like decompilation, method renaming, and code analysis to MCP clients.",
         "quality_score": 6
       },
-      "last_update": "2026-08-02T02:12:16Z",
+      "last_update": "2026-08-02T06:43:05Z",
       "description": "MCP Server for Ghidra",
       "language": "Java",
       "topics": "",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 9674,
+        "stars": 9675,
         "pushed_at": "2025-06-23T04:18:18Z",
         "created_at": "2025-03-23T05:36:55Z",
         "archived": false,
@@ -2703,7 +2703,7 @@
         "description": "MCP Server for Ghidra",
         "language": "Java",
         "topics": "",
-        "last_update": "2026-08-02T02:12:16Z",
+        "last_update": "2026-08-02T06:43:05Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 4,
@@ -2739,7 +2739,7 @@
           "popularity": {
             "score": 89,
             "detail": {
-              "stars": 9674
+              "stars": 9675
             },
             "weight": 0.1667
           },
@@ -2804,7 +2804,7 @@
       "full_name": "0x4m4/hexstrike-ai",
       "name": "hexstrike-ai",
       "url": "https://github.com/0x4m4/hexstrike-ai",
-      "stars": 10751,
+      "stars": 10752,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -2827,14 +2827,14 @@
         "short_description": "HexStrike AI MCP Agents is an MCP server enabling AI agents to autonomously run over 150 cybersecurity tools for automated penetration testing and security research.",
         "quality_score": 7
       },
-      "last_update": "2026-08-02T05:14:01Z",
+      "last_update": "2026-08-02T07:25:16Z",
       "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
       "language": "Python",
       "topics": "0x4m4, ai, ai-agents, ai-cybersecurity, ai-hacking, ai-penetration-testing, ai-security-tool, artificial-intelligence, ctf-tools, generative-ai, hexstrike, kali-linux, kali-tools, llm, llm-integration, mcp, mcp-server, mcp-tools, pentesting, pentesting-tools",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 10751,
+        "stars": 10752,
         "pushed_at": "2026-04-27T08:56:07Z",
         "created_at": "2025-07-10T17:53:18Z",
         "archived": false,
@@ -2857,7 +2857,7 @@
         "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
         "language": "Python",
         "topics": "0x4m4, ai, ai-agents, ai-cybersecurity, ai-hacking, ai-penetration-testing, ai-security-tool, artificial-intelligence, ctf-tools, generative-ai, hexstrike, kali-linux, kali-tools, llm, llm-integration, mcp, mcp-server, mcp-tools, pentesting, pentesting-tools",
-        "last_update": "2026-08-02T05:14:01Z",
+        "last_update": "2026-08-02T07:25:16Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 2,
@@ -2893,7 +2893,7 @@
           "popularity": {
             "score": 90,
             "detail": {
-              "stars": 10751
+              "stars": 10752
             },
             "weight": 0.1667
           },
@@ -3564,7 +3564,7 @@
       "full_name": "firecrawl/firecrawl-mcp-server",
       "name": "firecrawl-mcp-server",
       "url": "https://github.com/firecrawl/firecrawl-mcp-server",
-      "stars": 7105,
+      "stars": 7106,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -3587,14 +3587,14 @@
         "short_description": "An MCP server providing web scraping, search, and interactive web browsing tools for LLM clients.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T04:32:29Z",
+      "last_update": "2026-08-02T07:17:23Z",
       "description": "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
       "language": "JavaScript",
       "topics": "batch-processing, claude, content-extraction, data-collection, firecrawl, firecrawl-ai, javascript-rendering, llm-tools, mcp, mcp-server, model-context-protocol, search-api, web-crawler, web-scraping",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 7105,
+        "stars": 7106,
         "pushed_at": "2026-07-31T21:46:30Z",
         "created_at": "2024-12-06T07:50:27Z",
         "archived": false,
@@ -3617,7 +3617,7 @@
         "description": "🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
         "language": "JavaScript",
         "topics": "batch-processing, claude, content-extraction, data-collection, firecrawl, firecrawl-ai, javascript-rendering, llm-tools, mcp, mcp-server, model-context-protocol, search-api, web-crawler, web-scraping",
-        "last_update": "2026-08-02T04:32:29Z",
+        "last_update": "2026-08-02T07:17:23Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 24,
@@ -3653,7 +3653,7 @@
           "popularity": {
             "score": 86,
             "detail": {
-              "stars": 7105
+              "stars": 7106
             },
             "weight": 0.1667
           },
@@ -3729,7 +3729,7 @@
       "full_name": "wonderwhy-er/DesktopCommanderMCP",
       "name": "DesktopCommanderMCP",
       "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-      "stars": 9052,
+      "stars": 9053,
       "source": "github",
       "last_checked": "2026-06-28",
       "analysis": {
@@ -3752,14 +3752,14 @@
         "short_description": "An MCP server enabling AI-driven terminal control, file search, and file editing capabilities for development workflows.",
         "quality_score": 7
       },
-      "last_update": "2026-08-02T05:01:27Z",
+      "last_update": "2026-08-02T07:19:26Z",
       "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
       "language": "TypeScript",
       "topics": "agent, ai, code-analysis, code-generation, gemini-cli-extension, mcp, terminal-ai, terminal-automation, vibe-coding",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 9052,
+        "stars": 9053,
         "pushed_at": "2026-07-30T08:15:01Z",
         "created_at": "2024-12-04T08:26:08Z",
         "archived": false,
@@ -3782,7 +3782,7 @@
         "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
         "language": "TypeScript",
         "topics": "agent, ai, code-analysis, code-generation, gemini-cli-extension, mcp, terminal-ai, terminal-automation, vibe-coding",
-        "last_update": "2026-08-02T05:01:27Z",
+        "last_update": "2026-08-02T07:19:26Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -3818,7 +3818,7 @@
           "popularity": {
             "score": 88,
             "detail": {
-              "stars": 9052
+              "stars": 9053
             },
             "weight": 0.1667
           },
@@ -6288,7 +6288,7 @@
       "full_name": "mobile-next/mobile-mcp",
       "name": "mobile-mcp",
       "url": "https://github.com/mobile-next/mobile-mcp",
-      "stars": 5740,
+      "stars": 5744,
       "source": "github",
       "last_checked": "2026-07-05",
       "analysis": {
@@ -6311,14 +6311,14 @@
         "short_description": "A Model Context Protocol server providing platform-agnostic mobile automation and interaction for iOS and Android devices, including emulators and real hardware.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:33:04Z",
+      "last_update": "2026-08-02T07:29:46Z",
       "description": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
       "language": "TypeScript",
       "topics": "agent, android, emulator, ios, mcp, mobile, physical, real, simulator",
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 5740,
+        "stars": 5744,
         "pushed_at": "2026-08-01T22:45:35Z",
         "created_at": "2025-03-28T16:21:06Z",
         "archived": false,
@@ -6341,7 +6341,7 @@
         "description": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
         "language": "TypeScript",
         "topics": "agent, android, emulator, ios, mcp, mobile, physical, real, simulator",
-        "last_update": "2026-08-02T05:33:04Z",
+        "last_update": "2026-08-02T07:29:46Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 30,
@@ -6377,7 +6377,7 @@
           "popularity": {
             "score": 84,
             "detail": {
-              "stars": 5740
+              "stars": 5744
             },
             "weight": 0.1667
           },
@@ -6537,7 +6537,7 @@
           "maintenance": {
             "score": 29,
             "detail": {
-              "days_since_push": 111,
+              "days_since_push": 112,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -9229,7 +9229,7 @@
       "full_name": "sansan0/TrendRadar",
       "name": "TrendRadar",
       "url": "https://github.com/sansan0/TrendRadar",
-      "stars": 61069,
+      "stars": 61070,
       "source": "github",
       "last_checked": "2026-06-14",
       "analysis": {
@@ -9252,7 +9252,7 @@
         "short_description": "TrendRadar is an AI-driven public opinion and trend monitoring MCP server that aggregates multi-platform news, provides AI analysis, and supports smart alerts with multi-channel push notifications.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:16:43Z",
+      "last_update": "2026-08-02T05:59:39Z",
       "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
       "language": "Python",
       "topics": "ai, bark, data-analysis, docker, hot-news, llm, mail, mcp, mcp-server, news, ntfy, python, rss, trending-topics, wechat, wework",
@@ -9300,7 +9300,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 61069,
+        "stars": 61070,
         "pushed_at": "2026-07-17T13:54:28Z",
         "created_at": "2025-04-28T11:42:16Z",
         "archived": false,
@@ -9323,7 +9323,7 @@
         "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
         "language": "Python",
         "topics": "ai, bark, data-analysis, docker, hot-news, llm, mail, mcp, mcp-server, news, ntfy, python, rss, trending-topics, wechat, wework",
-        "last_update": "2026-08-02T05:16:43Z",
+        "last_update": "2026-08-02T05:59:39Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 91,
@@ -9359,7 +9359,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 61069
+              "stars": 61070
             },
             "weight": 0.1667
           },
@@ -9749,7 +9749,7 @@
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
       "name": "chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": 48356,
+      "stars": 48361,
       "source": "github",
       "last_checked": "2026-06-14",
       "analysis": {
@@ -9772,7 +9772,7 @@
         "short_description": "An MCP server that exposes Chrome DevTools functionality to AI coding agents for browser automation, debugging, and performance analysis.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T05:35:54Z",
+      "last_update": "2026-08-02T07:11:04Z",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
       "topics": "browser, chrome, chrome-devtools, debugging, devtools, mcp, mcp-server, puppeteer",
@@ -9822,7 +9822,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 48356,
+        "stars": 48361,
         "pushed_at": "2026-08-02T00:04:41Z",
         "created_at": "2025-09-11T10:39:55Z",
         "archived": false,
@@ -9845,7 +9845,7 @@
         "description": "Chrome DevTools for coding agents",
         "language": "TypeScript",
         "topics": "browser, chrome, chrome-devtools, debugging, devtools, mcp, mcp-server, puppeteer",
-        "last_update": "2026-08-02T05:35:54Z",
+        "last_update": "2026-08-02T07:11:04Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 161,
@@ -9881,7 +9881,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 48356
+              "stars": 48361
             },
             "weight": 0.1667
           },
@@ -9923,7 +9923,7 @@
       "full_name": "1Panel-dev/MaxKB",
       "name": "MaxKB",
       "url": "https://github.com/1Panel-dev/MaxKB",
-      "stars": 22353,
+      "stars": 22354,
       "source": "github",
       "last_checked": "2026-06-14",
       "analysis": {
@@ -9946,7 +9946,7 @@
         "short_description": "MaxKB is an open-source platform providing enterprise-grade AI agents with retrieval-augmented generation, workflow orchestration, and multi-model integration exposed via an MCP-compatible server.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T04:39:54Z",
+      "last_update": "2026-08-02T05:50:34Z",
       "description": "🔥 MaxKB is an open-source platform for building enterprise-grade agents.  强大易用的开源企业级智能体平台。",
       "language": "Python",
       "topics": "agent, agentic-ai, chatbot, deepseek-r1, knowledgebase, langchain, llama3, llm, maxkb, mcp-server, ollama, pgvector, qwen3, rag",
@@ -9981,7 +9981,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 22353,
+        "stars": 22354,
         "pushed_at": "2026-07-31T11:49:49Z",
         "created_at": "2023-09-14T02:05:12Z",
         "archived": false,
@@ -10004,7 +10004,7 @@
         "description": "🔥 MaxKB is an open-source platform for building enterprise-grade agents.  强大易用的开源企业级智能体平台。",
         "language": "Python",
         "topics": "agent, agentic-ai, chatbot, deepseek-r1, knowledgebase, langchain, llama3, llm, maxkb, mcp-server, ollama, pgvector, qwen3, rag",
-        "last_update": "2026-08-02T04:39:54Z",
+        "last_update": "2026-08-02T05:50:34Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -10040,7 +10040,7 @@
           "popularity": {
             "score": 97,
             "detail": {
-              "stars": 22353
+              "stars": 22354
             },
             "weight": 0.1667
           },
@@ -10584,7 +10584,7 @@
       "full_name": "czlonkowski/n8n-mcp",
       "name": "n8n-mcp",
       "url": "https://github.com/czlonkowski/n8n-mcp",
-      "stars": 22467,
+      "stars": 22468,
       "source": "github",
       "last_checked": "2026-06-14",
       "analysis": {
@@ -10607,7 +10607,7 @@
         "short_description": "An MCP server providing AI assistants deep access to n8n workflow automation nodes, properties, operations, and templates to enable workflow building.",
         "quality_score": 9
       },
-      "last_update": "2026-08-02T03:50:00Z",
+      "last_update": "2026-08-02T07:32:23Z",
       "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you ",
       "language": "TypeScript",
       "topics": "mcp, mcp-server, n8n, workflows",
@@ -10657,7 +10657,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 22467,
+        "stars": 22468,
         "pushed_at": "2026-07-30T09:33:53Z",
         "created_at": "2025-06-07T12:15:57Z",
         "archived": false,
@@ -10680,7 +10680,7 @@
         "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you ",
         "language": "TypeScript",
         "topics": "mcp, mcp-server, n8n, workflows",
-        "last_update": "2026-08-02T03:50:00Z",
+        "last_update": "2026-08-02T07:32:23Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -10716,7 +10716,7 @@
           "popularity": {
             "score": 97,
             "detail": {
-              "stars": 22467
+              "stars": 22468
             },
             "weight": 0.1667
           },
@@ -11089,7 +11089,7 @@
       "full_name": "JoeanAmier/XHS-Downloader",
       "name": "XHS-Downloader",
       "url": "https://github.com/JoeanAmier/XHS-Downloader",
-      "stars": 12186,
+      "stars": 12189,
       "source": "github",
       "last_checked": "2026-06-14",
       "analysis": {
@@ -11112,7 +11112,7 @@
         "short_description": "An MCP server for extracting and downloading content from XiaoHongShu (RedNote) including posts, user links, and media files.",
         "quality_score": 8
       },
-      "last_update": "2026-08-02T05:39:52Z",
+      "last_update": "2026-08-02T07:31:12Z",
       "description": "小红书（XiaoHongShu、RedNote）链接提取/作品采集工具：提取账号发布、收藏、点赞、专辑作品链接；提取搜索结果作品、用户链接；采集小红书作品信息；提取小红书作品下载地址；下载小红书作品文件",
       "language": "Python",
       "topics": "api, docker, downloader, fastapi, httpx, javascript, json, linux, macos, mcp-server, pyinstaller, python, rednote, server, sqlite, tampermonkey, textual, userscript, windows, xiaohongshu",
@@ -11148,7 +11148,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 12186,
+        "stars": 12189,
         "pushed_at": "2026-08-01T14:37:56Z",
         "created_at": "2023-08-16T11:03:36Z",
         "archived": false,
@@ -11171,7 +11171,7 @@
         "description": "小红书（XiaoHongShu、RedNote）链接提取/作品采集工具：提取账号发布、收藏、点赞、专辑作品链接；提取搜索结果作品、用户链接；采集小红书作品信息；提取小红书作品下载地址；下载小红书作品文件",
         "language": "Python",
         "topics": "api, docker, downloader, fastapi, httpx, javascript, json, linux, macos, mcp-server, pyinstaller, python, rednote, server, sqlite, tampermonkey, textual, userscript, windows, xiaohongshu",
-        "last_update": "2026-08-02T05:39:52Z",
+        "last_update": "2026-08-02T07:31:12Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 65,
@@ -11207,7 +11207,7 @@
           "popularity": {
             "score": 91,
             "detail": {
-              "stars": 12186
+              "stars": 12189
             },
             "weight": 0.1667
           },
@@ -11923,7 +11923,7 @@
       "full_name": "mrexodia/ida-pro-mcp",
       "name": "ida-pro-mcp",
       "url": "https://github.com/mrexodia/ida-pro-mcp",
-      "stars": 10986,
+      "stars": 10993,
       "source": "github",
       "last_checked": "2026-06-14",
       "analysis": {
@@ -11946,7 +11946,7 @@
         "short_description": "An MCP server integrating IDA Pro with language models to assist reverse engineering tasks.",
         "quality_score": 8
       },
-      "last_update": "2026-08-02T05:41:10Z",
+      "last_update": "2026-08-02T07:05:51Z",
       "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
       "language": "Python",
       "topics": "ai, aiagent, binary-analysis, ida-plugin, ida-pro, mcp, mcp-server, modelcontextprotocol, reverse-engineering",
@@ -11984,7 +11984,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 10986,
+        "stars": 10993,
         "pushed_at": "2026-07-30T22:40:18Z",
         "created_at": "2025-03-25T22:23:41Z",
         "archived": false,
@@ -12007,7 +12007,7 @@
         "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
         "language": "Python",
         "topics": "ai, aiagent, binary-analysis, ida-plugin, ida-pro, mcp, mcp-server, modelcontextprotocol, reverse-engineering",
-        "last_update": "2026-08-02T05:41:10Z",
+        "last_update": "2026-08-02T07:05:51Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 52,
@@ -12043,7 +12043,7 @@
           "popularity": {
             "score": 90,
             "detail": {
-              "stars": 10986
+              "stars": 10993
             },
             "weight": 0.1667
           },
@@ -13030,7 +13030,7 @@
       "full_name": "xpzouying/xiaohongshu-mcp",
       "name": "xiaohongshu-mcp",
       "url": "https://github.com/xpzouying/xiaohongshu-mcp",
-      "stars": 15021,
+      "stars": 15024,
       "source": "github",
       "last_checked": "2026-06-21",
       "analysis": {
@@ -13056,8 +13056,8 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 15021,
-        "pushed_at": "2026-08-01T21:15:27Z",
+        "stars": 15024,
+        "pushed_at": "2026-08-02T07:27:21Z",
         "created_at": "2025-08-03T09:08:45Z",
         "archived": false,
         "disabled": false,
@@ -13079,7 +13079,7 @@
         "description": "MCP for xiaohongshu.com",
         "language": "Go",
         "topics": "mcp, mcp-server, xiaohongshu-mcp",
-        "last_update": "2026-08-02T05:17:10Z",
+        "last_update": "2026-08-02T07:21:44Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -13115,7 +13115,7 @@
           "popularity": {
             "score": 93,
             "detail": {
-              "stars": 15021
+              "stars": 15024
             },
             "weight": 0.1667
           },
@@ -13148,7 +13148,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-08-02T05:17:10Z",
+      "last_update": "2026-08-02T07:21:44Z",
       "description": "MCP for xiaohongshu.com",
       "language": "Go",
       "topics": "mcp, mcp-server, xiaohongshu-mcp",
@@ -15832,7 +15832,7 @@
       "full_name": "casdoor/casdoor",
       "name": "casdoor",
       "url": "https://github.com/casdoor/casdoor",
-      "stars": 14108,
+      "stars": 14110,
       "source": "github",
       "last_checked": "2026-06-21",
       "analysis": {
@@ -15858,7 +15858,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 14108,
+        "stars": 14110,
         "pushed_at": "2026-08-01T16:27:39Z",
         "created_at": "2020-10-22T14:40:03Z",
         "archived": false,
@@ -15881,7 +15881,7 @@
         "description": "An open-source Agent-first Identity and Access Management (IAM) /LLM MCP & agent gateway and auth server with web UI supporting OpenClaw, MCP, OAuth, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, Google Workspace, Azure AD",
         "language": "Go",
         "topics": "agent, agentic-ai, agi, ai-gateway, auth, authentication, iam, llm, mcp, mcp-gateway, mfa, oauth, oidc, openclaw, radius, saml, scim, single-sign-on, sso, webauthn",
-        "last_update": "2026-08-02T04:48:21Z",
+        "last_update": "2026-08-02T06:41:07Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -15917,7 +15917,7 @@
           "popularity": {
             "score": 93,
             "detail": {
-              "stars": 14108
+              "stars": 14110
             },
             "weight": 0.1667
           },
@@ -15950,7 +15950,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-08-02T04:48:21Z",
+      "last_update": "2026-08-02T06:41:07Z",
       "description": "An open-source Agent-first Identity and Access Management (IAM) /LLM MCP & agent gateway and auth server with web UI supporting OpenClaw, MCP, OAuth, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, Google Workspace, Azure AD",
       "language": "Go",
       "topics": "agent, agentic-ai, agi, ai-gateway, auth, authentication, iam, llm, mcp, mcp-gateway, mfa, oauth, oidc, openclaw, radius, saml, scim, single-sign-on, sso, webauthn",
@@ -16345,7 +16345,7 @@
       "full_name": "CursorTouch/Windows-MCP",
       "name": "Windows-MCP",
       "url": "https://github.com/CursorTouch/Windows-MCP",
-      "stars": 6552,
+      "stars": 6555,
       "source": "github",
       "last_checked": "2026-06-21",
       "analysis": {
@@ -16371,7 +16371,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 6552,
+        "stars": 6555,
         "pushed_at": "2026-08-01T17:38:26Z",
         "created_at": "2025-05-13T02:27:53Z",
         "archived": false,
@@ -16394,7 +16394,7 @@
         "description": "MCP Server for Computer Use in Windows",
         "language": "Python",
         "topics": "ai, desktop, mcp, tools, windows, windows-automation",
-        "last_update": "2026-08-01T21:30:58Z",
+        "last_update": "2026-08-02T07:34:22Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 79,
@@ -16430,7 +16430,7 @@
           "popularity": {
             "score": 85,
             "detail": {
-              "stars": 6552
+              "stars": 6555
             },
             "weight": 0.1667
           },
@@ -16470,7 +16470,7 @@
         "penalty": 15,
         "fatal": false
       },
-      "last_update": "2026-08-01T21:30:58Z",
+      "last_update": "2026-08-02T07:34:22Z",
       "description": "MCP Server for Computer Use in Windows",
       "language": "Python",
       "topics": "ai, desktop, mcp, tools, windows, windows-automation",
@@ -16713,7 +16713,7 @@
         "fetched_at": "2026-08-02",
         "gone": false,
         "stars": 5682,
-        "pushed_at": "2026-07-28T20:43:12Z",
+        "pushed_at": "2026-08-02T07:26:11Z",
         "created_at": "2024-12-03T09:25:20Z",
         "archived": false,
         "disabled": false,
@@ -16735,7 +16735,7 @@
         "description": "MCP server for Atlassian tools (Confluence, Jira)",
         "language": "Python",
         "topics": "atlassian, confluence, jira, mcp",
-        "last_update": "2026-08-02T01:49:11Z",
+        "last_update": "2026-08-02T07:26:33Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 155,
@@ -16763,7 +16763,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 4,
+              "days_since_push": 0,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -16804,7 +16804,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-08-02T01:49:11Z",
+      "last_update": "2026-08-02T07:26:33Z",
       "description": "MCP server for Atlassian tools (Confluence, Jira)",
       "language": "Python",
       "topics": "atlassian, confluence, jira, mcp",
@@ -18348,7 +18348,7 @@
       "full_name": "modelscope/FunASR",
       "name": "FunASR",
       "url": "https://github.com/modelscope/FunASR",
-      "stars": 19588,
+      "stars": 19589,
       "source": "github",
       "last_checked": "2026-07-05",
       "analysis": {
@@ -18374,7 +18374,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 19588,
+        "stars": 19589,
         "pushed_at": "2026-07-31T03:39:55Z",
         "created_at": "2022-11-24T02:28:11Z",
         "archived": false,
@@ -18397,7 +18397,7 @@
         "description": "Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.",
         "language": "Python",
         "topics": "asr, audio, chinese, emotion-recognition, funasr, mcp-server, multilingual-asr, openai-compatible-api, paraformer, punctuation, pytorch, real-time-asr, speaker-diarization, speech-recognition, speech-to-text, streaming-asr, transcription, vllm, voice-activity-detection, whisper-alternative",
-        "last_update": "2026-08-02T05:22:09Z",
+        "last_update": "2026-08-02T07:17:30Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -18433,7 +18433,7 @@
           "popularity": {
             "score": 96,
             "detail": {
-              "stars": 19588
+              "stars": 19589
             },
             "weight": 0.1667
           },
@@ -18466,7 +18466,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-08-02T05:22:09Z",
+      "last_update": "2026-08-02T07:17:30Z",
       "description": "Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving.",
       "language": "Python",
       "topics": "asr, audio, chinese, emotion-recognition, funasr, mcp-server, multilingual-asr, openai-compatible-api, paraformer, punctuation, pytorch, real-time-asr, speaker-diarization, speech-recognition, speech-to-text, streaming-asr, transcription, vllm, voice-activity-detection, whisper-alternative",
@@ -18521,7 +18521,7 @@
       "full_name": "headroomlabs-ai/headroom",
       "name": "headroom",
       "url": "https://github.com/headroomlabs-ai/headroom",
-      "stars": 63926,
+      "stars": 63938,
       "source": "github",
       "last_checked": "2026-07-05",
       "analysis": {
@@ -18547,7 +18547,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 63926,
+        "stars": 63938,
         "pushed_at": "2026-08-01T04:33:33Z",
         "created_at": "2026-01-07T19:58:51Z",
         "archived": false,
@@ -18570,7 +18570,7 @@
         "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "language": "Python",
         "topics": "agent, ai, anthropic, claude-code, compression, context-engineering, context-window, cursor, fastapi, langchain, llm, mcp, openai, prompt-engineering, proxy, python, rag, token-optimization, tokens, typescript",
-        "last_update": "2026-08-02T05:44:27Z",
+        "last_update": "2026-08-02T07:34:58Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -18606,7 +18606,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 63926
+              "stars": 63938
             },
             "weight": 0.1667
           },
@@ -18646,7 +18646,7 @@
         "penalty": 15,
         "fatal": false
       },
-      "last_update": "2026-08-02T05:44:27Z",
+      "last_update": "2026-08-02T07:34:58Z",
       "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
       "language": "Python",
       "topics": "agent, ai, anthropic, claude-code, compression, context-engineering, context-window, cursor, fastapi, langchain, llm, mcp, openai, prompt-engineering, proxy, python, rag, token-optimization, tokens, typescript",
@@ -18703,10 +18703,10 @@
       "full_name": "jacob-bd/gemini-notebook-mcp-cli",
       "name": "gemini-notebook-mcp-cli",
       "url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli",
-      "stars": 5702,
+      "stars": 5704,
       "source": "github",
       "last_checked": "2026-06-14",
-      "last_update": "2026-08-01T23:24:07Z",
+      "last_update": "2026-08-02T07:29:13Z",
       "description": "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills.",
       "language": "Python",
       "topics": "",
@@ -18763,7 +18763,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 5702,
+        "stars": 5704,
         "pushed_at": "2026-07-28T18:45:18Z",
         "created_at": "2025-12-23T02:07:42Z",
         "archived": false,
@@ -18786,7 +18786,7 @@
         "description": "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills.",
         "language": "Python",
         "topics": "",
-        "last_update": "2026-08-01T23:24:07Z",
+        "last_update": "2026-08-02T07:29:13Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 129,
@@ -18822,7 +18822,7 @@
           "popularity": {
             "score": 84,
             "detail": {
-              "stars": 5702
+              "stars": 5704
             },
             "weight": 0.1667
           },
@@ -19345,10 +19345,10 @@
       "full_name": "DeusData/codebase-memory-mcp",
       "name": "codebase-memory-mcp",
       "url": "https://github.com/DeusData/codebase-memory-mcp",
-      "stars": 37003,
+      "stars": 37019,
       "source": "github",
       "last_checked": "2026-06-21",
-      "last_update": "2026-08-02T05:29:07Z",
+      "last_update": "2026-08-02T07:36:44Z",
       "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
       "language": "C",
       "topics": "aider, ast, claude-code, code-analysis, code-intelligence, codex, cursor, cypher, developer-tools, gemini-cli, graph-visualization, kilocode, knowledge-graph, mcp, mcp-server, model-context-protocol, opencode, sqlite, tree-sitter, windsurf",
@@ -19414,7 +19414,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 37003,
+        "stars": 37019,
         "pushed_at": "2026-08-01T05:49:09Z",
         "created_at": "2026-02-24T22:01:00Z",
         "archived": false,
@@ -19446,7 +19446,7 @@
         "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
         "language": "C",
         "topics": "aider, ast, claude-code, code-analysis, code-intelligence, codex, cursor, cypher, developer-tools, gemini-cli, graph-visualization, kilocode, knowledge-graph, mcp, mcp-server, model-context-protocol, opencode, sqlite, tree-sitter, windsurf",
-        "last_update": "2026-08-02T05:29:07Z",
+        "last_update": "2026-08-02T07:36:44Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -19474,7 +19474,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2
@@ -19482,7 +19482,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 37003
+              "stars": 37019
             },
             "weight": 0.15
           },
@@ -19531,10 +19531,10 @@
       "full_name": "zylon-ai/private-gpt",
       "name": "private-gpt",
       "url": "https://github.com/zylon-ai/private-gpt",
-      "stars": 57393,
+      "stars": 57394,
       "source": "github",
       "last_checked": "2026-07-12",
-      "last_update": "2026-08-02T03:15:50Z",
+      "last_update": "2026-08-02T07:08:13Z",
       "description": "Complete API layer for private AI applications on local models: RAG, skills, tools, MCP, text-to-sql, and more. Works with any OpenAI-compatible inference server.",
       "language": "Python",
       "topics": "ai, ai-tools, on-premise",
@@ -19594,7 +19594,7 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 57393,
+        "stars": 57394,
         "pushed_at": "2026-07-30T15:48:52Z",
         "created_at": "2023-05-02T09:15:31Z",
         "archived": false,
@@ -19617,7 +19617,7 @@
         "description": "Complete API layer for private AI applications on local models: RAG, skills, tools, MCP, text-to-sql, and more. Works with any OpenAI-compatible inference server.",
         "language": "Python",
         "topics": "ai, ai-tools, on-premise",
-        "last_update": "2026-08-02T03:15:50Z",
+        "last_update": "2026-08-02T07:08:13Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -19653,7 +19653,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 57393
+              "stars": 57394
             },
             "weight": 0.1667
           },
@@ -19702,10 +19702,10 @@
       "full_name": "koala73/worldmonitor",
       "name": "worldmonitor",
       "url": "https://github.com/koala73/worldmonitor",
-      "stars": 77866,
+      "stars": 77894,
       "source": "github",
       "last_checked": "2026-07-12",
-      "last_update": "2026-08-02T05:42:55Z",
+      "last_update": "2026-08-02T07:35:49Z",
       "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
       "language": "TypeScript",
       "topics": "agent, ai, dashboard, geopolitics, mcp, mcp-server, monitoring, news, opensource, osint, palantir, situation",
@@ -19773,8 +19773,8 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 77866,
-        "pushed_at": "2026-08-02T05:33:57Z",
+        "stars": 77894,
+        "pushed_at": "2026-08-02T07:23:17Z",
         "created_at": "2026-01-08T17:26:06Z",
         "archived": false,
         "disabled": false,
@@ -19782,7 +19782,7 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 126,
+        "contributors": 127,
         "health_percentage": 100,
         "security_policy": true,
         "scorecard": null,
@@ -19796,7 +19796,7 @@
         "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
         "language": "TypeScript",
         "topics": "agent, ai, dashboard, geopolitics, mcp, mcp-server, monitoring, news, opensource, osint, palantir, situation",
-        "last_update": "2026-08-02T05:42:55Z",
+        "last_update": "2026-08-02T07:35:49Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -19832,7 +19832,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 77866
+              "stars": 77894
             },
             "weight": 0.1667
           },
@@ -19856,7 +19856,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 126
+              "contributors": 127
             },
             "weight": 0.0556
           }
@@ -20385,11 +20385,11 @@
       "repo_id": 1224172037,
       "name": "dbx",
       "url": "https://github.com/t8y2/dbx",
-      "stars": 12933,
+      "stars": 12947,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-07-26",
-      "last_update": "2026-08-02T05:39:09Z",
+      "last_update": "2026-08-02T07:35:27Z",
       "description": "20 MB lightweight cross-platform database client for 70+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 70+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP Server。",
       "language": "Rust",
       "topics": "ai, cli, clickhouse, database, database-client, database-management, docker, gui, mcp, mongodb, mysql, postgresql, redis, rust, sql-server, sqlite, tauri, vue",
@@ -20460,8 +20460,8 @@
       "metrics": {
         "fetched_at": "2026-08-02",
         "gone": false,
-        "stars": 12933,
-        "pushed_at": "2026-08-02T05:30:58Z",
+        "stars": 12947,
+        "pushed_at": "2026-08-02T07:05:37Z",
         "created_at": "2026-04-29T03:00:36Z",
         "archived": false,
         "disabled": false,
@@ -20483,7 +20483,7 @@
         "description": "20 MB lightweight cross-platform database client for 70+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 70+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP Server。",
         "language": "Rust",
         "topics": "ai, cli, clickhouse, database, database-client, database-management, docker, gui, mcp, mongodb, mysql, postgresql, redis, rust, sql-server, sqlite, tauri, vue",
-        "last_update": "2026-08-02T05:39:09Z",
+        "last_update": "2026-08-02T07:35:27Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -20519,7 +20519,7 @@
           "popularity": {
             "score": 92,
             "detail": {
-              "stars": 12933
+              "stars": 12947
             },
             "weight": 0.1667
           },
