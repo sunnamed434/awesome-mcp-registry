@@ -278,6 +278,7 @@
 {"d": "2026-07-19", "r": "datagouv/datagouv-mcp", "s": 1567}
 {"d": "2026-07-26", "r": "datagouv/datagouv-mcp", "s": 1571}
 {"d": "2026-08-02", "r": "datagouv/datagouv-mcp", "s": 1574}
+{"d": "2026-08-02", "r": "doteyeso-ops/mcp-server-vibes-coded", "s": 2}
 {"d": "2026-06-10", "r": "epiral/bb-browser", "s": 5612}
 {"d": "2026-06-14", "r": "epiral/bb-browser", "s": 5779}
 {"d": "2026-06-21", "r": "epiral/bb-browser", "s": 5836}
@@ -611,6 +612,7 @@
 {"d": "2026-07-19", "r": "upstash/context7", "s": 59385}
 {"d": "2026-07-26", "r": "upstash/context7", "s": 59755}
 {"d": "2026-08-02", "r": "upstash/context7", "s": 60130}
+{"d": "2026-08-02", "r": "vbkotecha/agentservices-api", "s": 1}
 {"d": "2026-06-10", "r": "webiny/webiny-js", "s": 7955}
 {"d": "2026-06-14", "r": "webiny/webiny-js", "s": 7991}
 {"d": "2026-06-10", "r": "wonderwhy-er/DesktopCommanderMCP", "s": 6070}
