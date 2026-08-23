@@ -10,6 +10,7 @@
 {"d": "2026-08-02", "r": "0x4m4/hexstrike-ai", "s": 10751}
 {"d": "2026-08-09", "r": "0x4m4/hexstrike-ai", "s": 10894}
 {"d": "2026-08-16", "r": "0x4m4/hexstrike-ai", "s": 11063}
+{"d": "2026-08-23", "r": "0x4m4/hexstrike-ai", "s": 11303}
 {"d": "2026-06-14", "r": "1Panel-dev/MaxKB", "s": 21295}
 {"d": "2026-06-21", "r": "1Panel-dev/MaxKB", "s": 21371}
 {"d": "2026-06-28", "r": "1Panel-dev/MaxKB", "s": 21534}
@@ -21,6 +22,7 @@
 {"d": "2026-08-02", "r": "1Panel-dev/MaxKB", "s": 22353}
 {"d": "2026-08-09", "r": "Autoposting-ai/autoposting-mcp", "s": 0}
 {"d": "2026-08-16", "r": "Autoposting-ai/autoposting-mcp", "s": 0}
+{"d": "2026-08-23", "r": "Autoposting-ai/autoposting-mcp", "s": 0}
 {"d": "2026-06-10", "r": "BeehiveInnovations/pal-mcp-server", "s": 11540}
 {"d": "2026-06-14", "r": "BeehiveInnovations/pal-mcp-server", "s": 11599}
 {"d": "2026-06-21", "r": "BeehiveInnovations/pal-mcp-server", "s": 11601}
@@ -33,6 +35,7 @@
 {"d": "2026-08-02", "r": "BeehiveInnovations/pal-mcp-server", "s": 11704}
 {"d": "2026-08-09", "r": "BeehiveInnovations/pal-mcp-server", "s": 11717}
 {"d": "2026-08-16", "r": "BeehiveInnovations/pal-mcp-server", "s": 11725}
+{"d": "2026-08-23", "r": "BeehiveInnovations/pal-mcp-server", "s": 11726}
 {"d": "2026-06-10", "r": "BigSweetPotatoStudio/HyperChat", "s": 712}
 {"d": "2026-06-14", "r": "BigSweetPotatoStudio/HyperChat", "s": 711}
 {"d": "2026-06-10", "r": "BrowserMCP/mcp", "s": 6550}
@@ -40,6 +43,7 @@
 {"d": "2026-06-21", "r": "BrowserMCP/mcp", "s": 6706}
 {"d": "2026-06-28", "r": "BrowserMCP/mcp", "s": 6734}
 {"d": "2026-07-05", "r": "BrowserMCP/mcp", "s": 6766}
+{"d": "2026-08-23", "r": "BrowserMCP/mcp", "s": 7009}
 {"d": "2026-06-14", "r": "BuyWhere/buywhere-mcp", "s": 4}
 {"d": "2026-06-21", "r": "BuyWhere/buywhere-mcp", "s": 4}
 {"d": "2026-06-28", "r": "BuyWhere/buywhere-mcp", "s": 3}
@@ -51,6 +55,7 @@
 {"d": "2026-08-02", "r": "BuyWhere/buywhere-mcp", "s": 6}
 {"d": "2026-08-09", "r": "BuyWhere/buywhere-mcp", "s": 6}
 {"d": "2026-08-16", "r": "BuyWhere/buywhere-mcp", "s": 9}
+{"d": "2026-08-23", "r": "BuyWhere/buywhere-mcp", "s": 9}
 {"d": "2026-06-14", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 43560}
 {"d": "2026-06-21", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 44093}
 {"d": "2026-06-28", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 44580}
@@ -62,6 +67,7 @@
 {"d": "2026-08-02", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 48356}
 {"d": "2026-08-09", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 48794}
 {"d": "2026-08-16", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 49245}
+{"d": "2026-08-23", "r": "ChromeDevTools/chrome-devtools-mcp", "s": 49597}
 {"d": "2026-06-10", "r": "CursorTouch/Windows-MCP", "s": 4706}
 {"d": "2026-06-14", "r": "CursorTouch/Windows-MCP", "s": 5974}
 {"d": "2026-06-21", "r": "CursorTouch/Windows-MCP", "s": 6176}
@@ -74,8 +80,10 @@
 {"d": "2026-08-02", "r": "CursorTouch/Windows-MCP", "s": 6552}
 {"d": "2026-08-09", "r": "CursorTouch/Windows-MCP", "s": 6696}
 {"d": "2026-08-16", "r": "CursorTouch/Windows-MCP", "s": 6757}
+{"d": "2026-08-23", "r": "CursorTouch/Windows-MCP", "s": 6802}
 {"d": "2026-06-10", "r": "D4Vinci/Scrapling", "s": 8937}
 {"d": "2026-08-16", "r": "D4Vinci/Scrapling", "s": 74387}
+{"d": "2026-08-23", "r": "D4Vinci/Scrapling", "s": 75985}
 {"d": "2026-06-21", "r": "DeusData/codebase-memory-mcp", "s": 9591}
 {"d": "2026-06-28", "r": "DeusData/codebase-memory-mcp", "s": 18085}
 {"d": "2026-07-05", "r": "DeusData/codebase-memory-mcp", "s": 26297}
@@ -86,6 +94,7 @@
 {"d": "2026-08-02", "r": "DeusData/codebase-memory-mcp", "s": 37003}
 {"d": "2026-08-09", "r": "DeusData/codebase-memory-mcp", "s": 38254}
 {"d": "2026-08-16", "r": "DeusData/codebase-memory-mcp", "s": 39076}
+{"d": "2026-08-23", "r": "DeusData/codebase-memory-mcp", "s": 40040}
 {"d": "2026-06-10", "r": "GLips/Figma-Context-MCP", "s": 14691}
 {"d": "2026-06-14", "r": "GLips/Figma-Context-MCP", "s": 15099}
 {"d": "2026-06-21", "r": "GLips/Figma-Context-MCP", "s": 15168}
@@ -98,6 +107,7 @@
 {"d": "2026-08-02", "r": "GLips/Figma-Context-MCP", "s": 15562}
 {"d": "2026-08-09", "r": "GLips/Figma-Context-MCP", "s": 15621}
 {"d": "2026-08-16", "r": "GLips/Figma-Context-MCP", "s": 15663}
+{"d": "2026-08-23", "r": "GLips/Figma-Context-MCP", "s": 15705}
 {"d": "2026-06-10", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1765}
 {"d": "2026-06-14", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1787}
 {"d": "2026-06-21", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1803}
@@ -110,6 +120,7 @@
 {"d": "2026-08-02", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1847}
 {"d": "2026-08-09", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1851}
 {"d": "2026-08-16", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1853}
+{"d": "2026-08-23", "r": "GongRzhe/Office-PowerPoint-MCP-Server", "s": 1854}
 {"d": "2026-06-10", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2030}
 {"d": "2026-06-14", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2047}
 {"d": "2026-06-21", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2059}
@@ -122,6 +133,7 @@
 {"d": "2026-08-02", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2118}
 {"d": "2026-08-09", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2117}
 {"d": "2026-08-16", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2113}
+{"d": "2026-08-23", "r": "GongRzhe/Office-Word-MCP-Server", "s": 2108}
 {"d": "2026-06-10", "r": "IBM/mcp-context-forge", "s": 3834}
 {"d": "2026-06-14", "r": "IBM/mcp-context-forge", "s": 3883}
 {"d": "2026-06-21", "r": "IBM/mcp-context-forge", "s": 3933}
@@ -138,6 +150,7 @@
 {"d": "2026-08-02", "r": "JoeanAmier/XHS-Downloader", "s": 12186}
 {"d": "2026-08-09", "r": "JoeanAmier/XHS-Downloader", "s": 12282}
 {"d": "2026-08-16", "r": "JoeanAmier/XHS-Downloader", "s": 12367}
+{"d": "2026-08-23", "r": "JoeanAmier/XHS-Downloader", "s": 12454}
 {"d": "2026-06-10", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2642}
 {"d": "2026-06-14", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2796}
 {"d": "2026-06-21", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2799}
@@ -150,6 +163,7 @@
 {"d": "2026-08-02", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2907}
 {"d": "2026-08-09", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2923}
 {"d": "2026-08-16", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2934}
+{"d": "2026-08-23", "r": "Jpisnice/shadcn-ui-mcp-server", "s": 2951}
 {"d": "2026-06-10", "r": "Kymo-MCP/mcpcan", "s": 646}
 {"d": "2026-06-14", "r": "Kymo-MCP/mcpcan", "s": 723}
 {"d": "2026-06-10", "r": "LaurieWired/GhidraMCP", "s": 8905}
@@ -164,6 +178,7 @@
 {"d": "2026-08-02", "r": "LaurieWired/GhidraMCP", "s": 9674}
 {"d": "2026-08-09", "r": "LaurieWired/GhidraMCP", "s": 9748}
 {"d": "2026-08-16", "r": "LaurieWired/GhidraMCP", "s": 9800}
+{"d": "2026-08-23", "r": "LaurieWired/GhidraMCP", "s": 9841}
 {"d": "2026-06-10", "r": "MCPJam/inspector", "s": 1712}
 {"d": "2026-06-14", "r": "MCPJam/inspector", "s": 2013}
 {"d": "2026-06-14", "r": "MiniMax-AI/MiniMax-MCP", "s": 1513}
@@ -177,6 +192,7 @@
 {"d": "2026-08-02", "r": "MiniMax-AI/MiniMax-MCP", "s": 1548}
 {"d": "2026-08-09", "r": "MiniMax-AI/MiniMax-MCP", "s": 1557}
 {"d": "2026-08-16", "r": "MiniMax-AI/MiniMax-MCP", "s": 1561}
+{"d": "2026-08-23", "r": "MiniMax-AI/MiniMax-MCP", "s": 1566}
 {"d": "2026-06-10", "r": "Pimzino/spec-workflow-mcp", "s": 4212}
 {"d": "2026-06-14", "r": "Pimzino/spec-workflow-mcp", "s": 4226}
 {"d": "2026-06-21", "r": "Pimzino/spec-workflow-mcp", "s": 4240}
@@ -189,11 +205,13 @@
 {"d": "2026-08-02", "r": "Pimzino/spec-workflow-mcp", "s": 4274}
 {"d": "2026-08-09", "r": "Pimzino/spec-workflow-mcp", "s": 4280}
 {"d": "2026-08-16", "r": "Pimzino/spec-workflow-mcp", "s": 4291}
+{"d": "2026-08-23", "r": "Pimzino/spec-workflow-mcp", "s": 4292}
 {"d": "2026-07-19", "r": "Xquik-dev/x-twitter-scraper", "s": 156}
 {"d": "2026-07-26", "r": "Xquik-dev/x-twitter-scraper", "s": 167}
 {"d": "2026-08-02", "r": "Xquik-dev/x-twitter-scraper", "s": 174}
 {"d": "2026-08-09", "r": "Xquik-dev/x-twitter-scraper", "s": 177}
 {"d": "2026-08-16", "r": "Xquik-dev/x-twitter-scraper", "s": 181}
+{"d": "2026-08-23", "r": "Xquik-dev/x-twitter-scraper", "s": 186}
 {"d": "2026-06-10", "r": "activepieces/activepieces", "s": 22123}
 {"d": "2026-06-14", "r": "activepieces/activepieces", "s": 22751}
 {"d": "2026-06-21", "r": "activepieces/activepieces", "s": 22882}
@@ -214,6 +232,7 @@
 {"d": "2026-08-02", "r": "benborla/mcp-server-mysql", "s": 2001}
 {"d": "2026-08-09", "r": "benborla/mcp-server-mysql", "s": 2020}
 {"d": "2026-08-16", "r": "benborla/mcp-server-mysql", "s": 2047}
+{"d": "2026-08-23", "r": "benborla/mcp-server-mysql", "s": 2067}
 {"d": "2026-06-10", "r": "bgauryy/octocode", "s": 845}
 {"d": "2026-06-14", "r": "bgauryy/octocode", "s": 864}
 {"d": "2026-06-21", "r": "bgauryy/octocode", "s": 867}
@@ -226,6 +245,7 @@
 {"d": "2026-08-02", "r": "bgauryy/octocode", "s": 902}
 {"d": "2026-08-09", "r": "bgauryy/octocode", "s": 904}
 {"d": "2026-08-16", "r": "bgauryy/octocode", "s": 911}
+{"d": "2026-08-23", "r": "bgauryy/octocode", "s": 919}
 {"d": "2026-06-10", "r": "bgauryy/octocode-mcp", "s": 725}
 {"d": "2026-06-14", "r": "bgauryy/octocode-mcp", "s": 864}
 {"d": "2026-06-10", "r": "blazickjp/arxiv-mcp-server", "s": 2828}
@@ -240,6 +260,7 @@
 {"d": "2026-08-02", "r": "blazickjp/arxiv-mcp-server", "s": 3014}
 {"d": "2026-08-09", "r": "blazickjp/arxiv-mcp-server", "s": 3033}
 {"d": "2026-08-16", "r": "blazickjp/arxiv-mcp-server", "s": 3061}
+{"d": "2026-08-23", "r": "blazickjp/arxiv-mcp-server", "s": 3068}
 {"d": "2026-06-10", "r": "brightdata/brightdata-mcp", "s": 2436}
 {"d": "2026-06-14", "r": "brightdata/brightdata-mcp", "s": 2449}
 {"d": "2026-06-21", "r": "brightdata/brightdata-mcp", "s": 2461}
@@ -252,6 +273,7 @@
 {"d": "2026-08-02", "r": "brightdata/brightdata-mcp", "s": 2556}
 {"d": "2026-08-09", "r": "brightdata/brightdata-mcp", "s": 2575}
 {"d": "2026-08-16", "r": "brightdata/brightdata-mcp", "s": 2592}
+{"d": "2026-08-23", "r": "brightdata/brightdata-mcp", "s": 2607}
 {"d": "2026-06-10", "r": "cameroncooke/XcodeBuildMCP", "s": 5792}
 {"d": "2026-06-14", "r": "cameroncooke/XcodeBuildMCP", "s": 5899}
 {"d": "2026-06-21", "r": "cameroncooke/XcodeBuildMCP", "s": 5945}
@@ -277,6 +299,7 @@
 {"d": "2026-08-02", "r": "chongdashu/unreal-mcp", "s": 2048}
 {"d": "2026-08-09", "r": "chongdashu/unreal-mcp", "s": 2057}
 {"d": "2026-08-16", "r": "chongdashu/unreal-mcp", "s": 2058}
+{"d": "2026-08-23", "r": "chongdashu/unreal-mcp", "s": 2061}
 {"d": "2026-06-10", "r": "chopratejas/headroom", "s": 16123}
 {"d": "2026-06-14", "r": "chopratejas/headroom", "s": 26980}
 {"d": "2026-06-21", "r": "chopratejas/headroom", "s": 42376}
@@ -293,6 +316,7 @@
 {"d": "2026-08-02", "r": "coddingtonbear/obsidian-local-rest-api", "s": 2731}
 {"d": "2026-08-09", "r": "coddingtonbear/obsidian-local-rest-api", "s": 2766}
 {"d": "2026-08-16", "r": "coddingtonbear/obsidian-local-rest-api", "s": 2798}
+{"d": "2026-08-23", "r": "coddingtonbear/obsidian-local-rest-api", "s": 2833}
 {"d": "2026-06-10", "r": "containers/kubernetes-mcp-server", "s": 1147}
 {"d": "2026-06-14", "r": "containers/kubernetes-mcp-server", "s": 1684}
 {"d": "2026-06-21", "r": "containers/kubernetes-mcp-server", "s": 1710}
@@ -305,6 +329,7 @@
 {"d": "2026-08-02", "r": "containers/kubernetes-mcp-server", "s": 1872}
 {"d": "2026-08-09", "r": "containers/kubernetes-mcp-server", "s": 1918}
 {"d": "2026-08-16", "r": "containers/kubernetes-mcp-server", "s": 1968}
+{"d": "2026-08-23", "r": "containers/kubernetes-mcp-server", "s": 2002}
 {"d": "2026-06-10", "r": "czlonkowski/n8n-mcp", "s": 13294}
 {"d": "2026-06-14", "r": "czlonkowski/n8n-mcp", "s": 21733}
 {"d": "2026-06-21", "r": "czlonkowski/n8n-mcp", "s": 21887}
@@ -317,6 +342,7 @@
 {"d": "2026-08-02", "r": "czlonkowski/n8n-mcp", "s": 22467}
 {"d": "2026-08-09", "r": "czlonkowski/n8n-mcp", "s": 22645}
 {"d": "2026-08-16", "r": "czlonkowski/n8n-mcp", "s": 22704}
+{"d": "2026-08-23", "r": "czlonkowski/n8n-mcp", "s": 22764}
 {"d": "2026-06-10", "r": "datagouv/datagouv-mcp", "s": 1388}
 {"d": "2026-06-14", "r": "datagouv/datagouv-mcp", "s": 1535}
 {"d": "2026-06-21", "r": "datagouv/datagouv-mcp", "s": 1541}
@@ -329,9 +355,11 @@
 {"d": "2026-08-02", "r": "datagouv/datagouv-mcp", "s": 1574}
 {"d": "2026-08-09", "r": "datagouv/datagouv-mcp", "s": 1579}
 {"d": "2026-08-16", "r": "datagouv/datagouv-mcp", "s": 1580}
+{"d": "2026-08-23", "r": "datagouv/datagouv-mcp", "s": 1584}
 {"d": "2026-08-02", "r": "doteyeso-ops/mcp-server-vibes-coded", "s": 2}
 {"d": "2026-08-09", "r": "doteyeso-ops/mcp-server-vibes-coded", "s": 3}
 {"d": "2026-08-16", "r": "doteyeso-ops/mcp-server-vibes-coded", "s": 3}
+{"d": "2026-08-23", "r": "doteyeso-ops/mcp-server-vibes-coded", "s": 3}
 {"d": "2026-06-10", "r": "epiral/bb-browser", "s": 5612}
 {"d": "2026-06-14", "r": "epiral/bb-browser", "s": 5779}
 {"d": "2026-06-21", "r": "epiral/bb-browser", "s": 5836}
@@ -344,6 +372,7 @@
 {"d": "2026-08-02", "r": "epiral/bb-browser", "s": 6024}
 {"d": "2026-08-09", "r": "epiral/bb-browser", "s": 6034}
 {"d": "2026-08-16", "r": "epiral/bb-browser", "s": 6054}
+{"d": "2026-08-23", "r": "epiral/bb-browser", "s": 6106}
 {"d": "2026-06-10", "r": "executeautomation/mcp-playwright", "s": 5531}
 {"d": "2026-06-14", "r": "executeautomation/mcp-playwright", "s": 5554}
 {"d": "2026-06-21", "r": "executeautomation/mcp-playwright", "s": 5554}
@@ -356,6 +385,7 @@
 {"d": "2026-08-02", "r": "executeautomation/mcp-playwright", "s": 5624}
 {"d": "2026-08-09", "r": "executeautomation/mcp-playwright", "s": 5630}
 {"d": "2026-08-16", "r": "executeautomation/mcp-playwright", "s": 5632}
+{"d": "2026-08-23", "r": "executeautomation/mcp-playwright", "s": 5632}
 {"d": "2026-06-10", "r": "firecrawl/firecrawl-mcp-server", "s": 6370}
 {"d": "2026-06-14", "r": "firecrawl/firecrawl-mcp-server", "s": 6568}
 {"d": "2026-06-21", "r": "firecrawl/firecrawl-mcp-server", "s": 6642}
@@ -368,6 +398,7 @@
 {"d": "2026-08-02", "r": "firecrawl/firecrawl-mcp-server", "s": 7105}
 {"d": "2026-08-09", "r": "firecrawl/firecrawl-mcp-server", "s": 7183}
 {"d": "2026-08-16", "r": "firecrawl/firecrawl-mcp-server", "s": 7245}
+{"d": "2026-08-23", "r": "firecrawl/firecrawl-mcp-server", "s": 7297}
 {"d": "2026-06-10", "r": "getsentry/XcodeBuildMCP", "s": 4287}
 {"d": "2026-06-14", "r": "getsentry/XcodeBuildMCP", "s": 5899}
 {"d": "2026-06-21", "r": "getsentry/XcodeBuildMCP", "s": 5944}
@@ -380,6 +411,7 @@
 {"d": "2026-08-02", "r": "getsentry/XcodeBuildMCP", "s": 6180}
 {"d": "2026-08-09", "r": "getsentry/XcodeBuildMCP", "s": 6207}
 {"d": "2026-08-16", "r": "getsentry/XcodeBuildMCP", "s": 6245}
+{"d": "2026-08-23", "r": "getsentry/XcodeBuildMCP", "s": 6274}
 {"d": "2026-06-10", "r": "github/github-mcp-server", "s": 29669}
 {"d": "2026-06-14", "r": "github/github-mcp-server", "s": 30658}
 {"d": "2026-06-21", "r": "github/github-mcp-server", "s": 30851}
@@ -392,6 +424,7 @@
 {"d": "2026-08-02", "r": "github/github-mcp-server", "s": 31895}
 {"d": "2026-08-09", "r": "github/github-mcp-server", "s": 32083}
 {"d": "2026-08-16", "r": "github/github-mcp-server", "s": 32284}
+{"d": "2026-08-23", "r": "github/github-mcp-server", "s": 32439}
 {"d": "2026-06-10", "r": "googleapis/genai-toolbox", "s": 15101}
 {"d": "2026-06-14", "r": "googleapis/genai-toolbox", "s": 15610}
 {"d": "2026-06-21", "r": "googleapis/genai-toolbox", "s": 15674}
@@ -407,6 +440,7 @@
 {"d": "2026-08-02", "r": "googleapis/mcp-toolbox", "s": 16098}
 {"d": "2026-08-09", "r": "googleapis/mcp-toolbox", "s": 16139}
 {"d": "2026-08-16", "r": "googleapis/mcp-toolbox", "s": 16180}
+{"d": "2026-08-23", "r": "googleapis/mcp-toolbox", "s": 16242}
 {"d": "2026-06-10", "r": "hangwin/mcp-chrome", "s": 11637}
 {"d": "2026-06-14", "r": "hangwin/mcp-chrome", "s": 11918}
 {"d": "2026-06-21", "r": "hangwin/mcp-chrome", "s": 11966}
@@ -419,6 +453,7 @@
 {"d": "2026-08-02", "r": "hangwin/mcp-chrome", "s": 12244}
 {"d": "2026-08-09", "r": "hangwin/mcp-chrome", "s": 12274}
 {"d": "2026-08-16", "r": "hangwin/mcp-chrome", "s": 12305}
+{"d": "2026-08-23", "r": "hangwin/mcp-chrome", "s": 12336}
 {"d": "2026-06-10", "r": "haris-musa/excel-mcp-server", "s": 3906}
 {"d": "2026-06-14", "r": "haris-musa/excel-mcp-server", "s": 3930}
 {"d": "2026-06-21", "r": "haris-musa/excel-mcp-server", "s": 3947}
@@ -431,6 +466,7 @@
 {"d": "2026-08-02", "r": "haris-musa/excel-mcp-server", "s": 4085}
 {"d": "2026-08-09", "r": "haris-musa/excel-mcp-server", "s": 4095}
 {"d": "2026-08-16", "r": "haris-musa/excel-mcp-server", "s": 4109}
+{"d": "2026-08-23", "r": "haris-musa/excel-mcp-server", "s": 4124}
 {"d": "2026-07-05", "r": "headroomlabs-ai/headroom", "s": 56599}
 {"d": "2026-07-12", "r": "headroomlabs-ai/headroom", "s": 58598}
 {"d": "2026-07-18", "r": "headroomlabs-ai/headroom", "s": 59815}
@@ -439,6 +475,7 @@
 {"d": "2026-08-02", "r": "headroomlabs-ai/headroom", "s": 63926}
 {"d": "2026-08-09", "r": "headroomlabs-ai/headroom", "s": 65586}
 {"d": "2026-08-16", "r": "headroomlabs-ai/headroom", "s": 66494}
+{"d": "2026-08-23", "r": "headroomlabs-ai/headroom", "s": 67242}
 {"d": "2026-06-10", "r": "idosal/git-mcp", "s": 8082}
 {"d": "2026-06-14", "r": "idosal/git-mcp", "s": 8168}
 {"d": "2026-06-21", "r": "idosal/git-mcp", "s": 8191}
@@ -451,10 +488,12 @@
 {"d": "2026-08-02", "r": "idosal/git-mcp", "s": 8308}
 {"d": "2026-08-09", "r": "idosal/git-mcp", "s": 8319}
 {"d": "2026-08-16", "r": "idosal/git-mcp", "s": 8331}
+{"d": "2026-08-23", "r": "idosal/git-mcp", "s": 8341}
 {"d": "2026-07-26", "r": "jacob-bd/gemini-notebook-mcp-cli", "s": 5620}
 {"d": "2026-08-02", "r": "jacob-bd/gemini-notebook-mcp-cli", "s": 5702}
 {"d": "2026-08-09", "r": "jacob-bd/gemini-notebook-mcp-cli", "s": 5790}
 {"d": "2026-08-16", "r": "jacob-bd/gemini-notebook-mcp-cli", "s": 5865}
+{"d": "2026-08-23", "r": "jacob-bd/gemini-notebook-mcp-cli", "s": 5917}
 {"d": "2026-06-14", "r": "jacob-bd/notebooklm-mcp-cli", "s": 4873}
 {"d": "2026-06-21", "r": "jacob-bd/notebooklm-mcp-cli", "s": 4989}
 {"d": "2026-06-28", "r": "jacob-bd/notebooklm-mcp-cli", "s": 5080}
@@ -495,6 +534,7 @@
 {"d": "2026-08-02", "r": "lharries/whatsapp-mcp", "s": 5972}
 {"d": "2026-08-09", "r": "lharries/whatsapp-mcp", "s": 6127}
 {"d": "2026-08-16", "r": "lharries/whatsapp-mcp", "s": 6154}
+{"d": "2026-08-23", "r": "lharries/whatsapp-mcp", "s": 6188}
 {"d": "2026-06-10", "r": "liaokongVFX/MCP-Chinese-Getting-Started-Guide", "s": 3316}
 {"d": "2026-06-14", "r": "liaokongVFX/MCP-Chinese-Getting-Started-Guide", "s": 3518}
 {"d": "2026-06-21", "r": "liaokongVFX/MCP-Chinese-Getting-Started-Guide", "s": 3521}
@@ -521,6 +561,7 @@
 {"d": "2026-08-02", "r": "microsoft/playwright-mcp", "s": 35729}
 {"d": "2026-08-09", "r": "microsoft/playwright-mcp", "s": 35932}
 {"d": "2026-08-16", "r": "microsoft/playwright-mcp", "s": 36173}
+{"d": "2026-08-23", "r": "microsoft/playwright-mcp", "s": 36381}
 {"d": "2026-06-10", "r": "mindsdb/mindsdb", "s": 39142}
 {"d": "2026-06-14", "r": "mindsdb/mindsdb", "s": 39299}
 {"d": "2026-06-21", "r": "mindsdb/mindsdb", "s": 39318}
@@ -528,9 +569,11 @@
 {"d": "2026-08-02", "r": "mixelpixx/KiCAD-MCP-Server", "s": 1732}
 {"d": "2026-08-09", "r": "mixelpixx/KiCAD-MCP-Server", "s": 1806}
 {"d": "2026-08-16", "r": "mixelpixx/KiCAD-MCP-Server", "s": 1888}
+{"d": "2026-08-23", "r": "mixelpixx/KiCAD-MCP-Server", "s": 1938}
 {"d": "2026-06-10", "r": "mksglu/context-mode", "s": 12064}
 {"d": "2026-06-14", "r": "mksglu/context-mode", "s": 17405}
 {"d": "2026-08-16", "r": "mksglu/context-mode", "s": 19892}
+{"d": "2026-08-23", "r": "mksglu/context-mode", "s": 20099}
 {"d": "2026-06-10", "r": "mobile-next/mobile-mcp", "s": 5078}
 {"d": "2026-06-14", "r": "mobile-next/mobile-mcp", "s": 5196}
 {"d": "2026-06-21", "r": "mobile-next/mobile-mcp", "s": 5241}
@@ -543,6 +586,7 @@
 {"d": "2026-08-02", "r": "mobile-next/mobile-mcp", "s": 5740}
 {"d": "2026-08-09", "r": "mobile-next/mobile-mcp", "s": 5852}
 {"d": "2026-08-16", "r": "mobile-next/mobile-mcp", "s": 5928}
+{"d": "2026-08-23", "r": "mobile-next/mobile-mcp", "s": 5975}
 {"d": "2026-06-10", "r": "modelscope/FunASR", "s": 16655}
 {"d": "2026-06-14", "r": "modelscope/FunASR", "s": 17968}
 {"d": "2026-06-21", "r": "modelscope/FunASR", "s": 18387}
@@ -565,8 +609,10 @@
 {"d": "2026-08-02", "r": "mrexodia/ida-pro-mcp", "s": 10986}
 {"d": "2026-08-09", "r": "mrexodia/ida-pro-mcp", "s": 11200}
 {"d": "2026-08-16", "r": "mrexodia/ida-pro-mcp", "s": 11372}
+{"d": "2026-08-23", "r": "mrexodia/ida-pro-mcp", "s": 11506}
 {"d": "2026-08-09", "r": "neka-nat/freecad-mcp", "s": 1718}
 {"d": "2026-08-16", "r": "neka-nat/freecad-mcp", "s": 1819}
+{"d": "2026-08-23", "r": "neka-nat/freecad-mcp", "s": 1882}
 {"d": "2026-06-10", "r": "nukeop/nuclear", "s": 17138}
 {"d": "2026-06-14", "r": "nukeop/nuclear", "s": 17796}
 {"d": "2026-06-10", "r": "obot-platform/obot", "s": 606}
@@ -585,7 +631,9 @@
 {"d": "2026-08-02", "r": "oraios/serena", "s": 27385}
 {"d": "2026-08-09", "r": "oraios/serena", "s": 27774}
 {"d": "2026-08-16", "r": "oraios/serena", "s": 28086}
+{"d": "2026-08-23", "r": "oraios/serena", "s": 28392}
 {"d": "2026-08-16", "r": "palisadeemail/palisade-mcp", "s": 0}
+{"d": "2026-08-23", "r": "palisadeemail/palisade-mcp", "s": 0}
 {"d": "2026-06-10", "r": "perplexityai/modelcontextprotocol", "s": 1950}
 {"d": "2026-06-14", "r": "perplexityai/modelcontextprotocol", "s": 2301}
 {"d": "2026-06-21", "r": "perplexityai/modelcontextprotocol", "s": 2324}
@@ -598,6 +646,7 @@
 {"d": "2026-08-02", "r": "perplexityai/modelcontextprotocol", "s": 2428}
 {"d": "2026-08-09", "r": "perplexityai/modelcontextprotocol", "s": 2439}
 {"d": "2026-08-16", "r": "perplexityai/modelcontextprotocol", "s": 2443}
+{"d": "2026-08-23", "r": "perplexityai/modelcontextprotocol", "s": 2475}
 {"d": "2026-06-14", "r": "qdrant/mcp-server-qdrant", "s": 1434}
 {"d": "2026-06-21", "r": "qdrant/mcp-server-qdrant", "s": 1440}
 {"d": "2026-06-28", "r": "qdrant/mcp-server-qdrant", "s": 1445}
@@ -609,6 +658,7 @@
 {"d": "2026-08-02", "r": "qdrant/mcp-server-qdrant", "s": 1485}
 {"d": "2026-08-09", "r": "qdrant/mcp-server-qdrant", "s": 1493}
 {"d": "2026-08-16", "r": "qdrant/mcp-server-qdrant", "s": 1502}
+{"d": "2026-08-23", "r": "qdrant/mcp-server-qdrant", "s": 1511}
 {"d": "2026-07-05", "r": "refreshdotdev/web-eval-agent", "s": 1243}
 {"d": "2026-07-12", "r": "refreshdotdev/web-eval-agent", "s": 1241}
 {"d": "2026-07-18", "r": "refreshdotdev/web-eval-agent", "s": 1241}
@@ -617,6 +667,7 @@
 {"d": "2026-08-02", "r": "refreshdotdev/web-eval-agent", "s": 1240}
 {"d": "2026-08-09", "r": "refreshdotdev/web-eval-agent", "s": 1240}
 {"d": "2026-08-16", "r": "refreshdotdev/web-eval-agent", "s": 1240}
+{"d": "2026-08-23", "r": "refreshdotdev/web-eval-agent", "s": 1240}
 {"d": "2026-06-10", "r": "rekog-labs/MCP-Nest", "s": 577}
 {"d": "2026-06-14", "r": "rekog-labs/MCP-Nest", "s": 662}
 {"d": "2026-06-10", "r": "robotmcp/ros-mcp-server", "s": 1010}
@@ -631,6 +682,7 @@
 {"d": "2026-08-02", "r": "robotmcp/ros-mcp-server", "s": 1370}
 {"d": "2026-08-09", "r": "robotmcp/ros-mcp-server", "s": 1381}
 {"d": "2026-08-16", "r": "robotmcp/ros-mcp-server", "s": 1395}
+{"d": "2026-08-23", "r": "robotmcp/ros-mcp-server", "s": 1409}
 {"d": "2026-06-10", "r": "ruvnet/claude-flow", "s": 13789}
 {"d": "2026-06-10", "r": "ruvnet/ruflo", "s": 16632}
 {"d": "2026-06-14", "r": "ruvnet/ruflo", "s": 59388}
@@ -645,6 +697,7 @@
 {"d": "2026-08-02", "r": "sansan0/TrendRadar", "s": 61069}
 {"d": "2026-08-09", "r": "sansan0/TrendRadar", "s": 61294}
 {"d": "2026-08-16", "r": "sansan0/TrendRadar", "s": 61494}
+{"d": "2026-08-23", "r": "sansan0/TrendRadar", "s": 61682}
 {"d": "2026-06-14", "r": "smallhandsome/shotapi-mcp-server", "s": 0}
 {"d": "2026-06-21", "r": "smallhandsome/shotapi-mcp-server", "s": 0}
 {"d": "2026-06-28", "r": "smallhandsome/shotapi-mcp-server", "s": 0}
@@ -656,6 +709,7 @@
 {"d": "2026-08-02", "r": "smallhandsome/shotapi-mcp-server", "s": 1}
 {"d": "2026-08-09", "r": "smallhandsome/shotapi-mcp-server", "s": 1}
 {"d": "2026-08-16", "r": "smallhandsome/shotapi-mcp-server", "s": 1}
+{"d": "2026-08-23", "r": "smallhandsome/shotapi-mcp-server", "s": 1}
 {"d": "2026-06-10", "r": "sooperset/mcp-atlassian", "s": 4754}
 {"d": "2026-06-14", "r": "sooperset/mcp-atlassian", "s": 5393}
 {"d": "2026-06-21", "r": "sooperset/mcp-atlassian", "s": 5425}
@@ -668,6 +722,7 @@
 {"d": "2026-08-02", "r": "sooperset/mcp-atlassian", "s": 5682}
 {"d": "2026-08-09", "r": "sooperset/mcp-atlassian", "s": 5710}
 {"d": "2026-08-16", "r": "sooperset/mcp-atlassian", "s": 5744}
+{"d": "2026-08-23", "r": "sooperset/mcp-atlassian", "s": 5786}
 {"d": "2026-06-10", "r": "stacklok/toolhive", "s": 1665}
 {"d": "2026-06-14", "r": "stacklok/toolhive", "s": 1878}
 {"d": "2026-06-10", "r": "supermemoryai/apple-mcp", "s": 2993}
@@ -682,6 +737,7 @@
 {"d": "2026-08-02", "r": "supermemoryai/apple-mcp", "s": 3128}
 {"d": "2026-08-09", "r": "supermemoryai/apple-mcp", "s": 3128}
 {"d": "2026-08-16", "r": "supermemoryai/apple-mcp", "s": 3129}
+{"d": "2026-08-23", "r": "supermemoryai/apple-mcp", "s": 3129}
 {"d": "2026-07-26", "r": "t8y2/dbx", "s": 11698}
 {"d": "2026-08-02", "r": "t8y2/dbx", "s": 12933}
 {"d": "2026-06-10", "r": "tadata-org/fastapi_mcp", "s": 11509}
@@ -696,6 +752,8 @@
 {"d": "2026-08-02", "r": "tadata-org/fastapi_mcp", "s": 11974}
 {"d": "2026-08-09", "r": "tadata-org/fastapi_mcp", "s": 11977}
 {"d": "2026-08-16", "r": "tadata-org/fastapi_mcp", "s": 11985}
+{"d": "2026-08-23", "r": "tadata-org/fastapi_mcp", "s": 11983}
+{"d": "2026-08-23", "r": "tbxark/mcp-proxy", "s": 717}
 {"d": "2026-06-10", "r": "triggerdotdev/trigger.dev", "s": 13583}
 {"d": "2026-06-14", "r": "triggerdotdev/trigger.dev", "s": 15341}
 {"d": "2026-06-21", "r": "triggerdotdev/trigger.dev", "s": 15422}
@@ -723,9 +781,11 @@
 {"d": "2026-08-02", "r": "upstash/context7", "s": 60130}
 {"d": "2026-08-09", "r": "upstash/context7", "s": 60475}
 {"d": "2026-08-16", "r": "upstash/context7", "s": 60828}
+{"d": "2026-08-23", "r": "upstash/context7", "s": 61101}
 {"d": "2026-08-02", "r": "vbkotecha/agentservices-api", "s": 1}
 {"d": "2026-08-09", "r": "vbkotecha/agentservices-api", "s": 1}
 {"d": "2026-08-16", "r": "vbkotecha/agentservices-api", "s": 1}
+{"d": "2026-08-23", "r": "vbkotecha/agentservices-api", "s": 1}
 {"d": "2026-06-10", "r": "webiny/webiny-js", "s": 7955}
 {"d": "2026-06-14", "r": "webiny/webiny-js", "s": 7991}
 {"d": "2026-06-10", "r": "wonderwhy-er/DesktopCommanderMCP", "s": 6070}
@@ -740,6 +800,7 @@
 {"d": "2026-08-02", "r": "wonderwhy-er/DesktopCommanderMCP", "s": 9052}
 {"d": "2026-08-09", "r": "wonderwhy-er/DesktopCommanderMCP", "s": 9280}
 {"d": "2026-08-16", "r": "wonderwhy-er/DesktopCommanderMCP", "s": 9334}
+{"d": "2026-08-23", "r": "wonderwhy-er/DesktopCommanderMCP", "s": 9382}
 {"d": "2026-06-28", "r": "xberg-io/xberg", "s": 8565}
 {"d": "2026-07-05", "r": "xberg-io/xberg", "s": 8594}
 {"d": "2026-07-12", "r": "xberg-io/xberg", "s": 8610}
@@ -755,6 +816,7 @@
 {"d": "2026-08-02", "r": "xpzouying/xiaohongshu-mcp", "s": 15021}
 {"d": "2026-08-09", "r": "xpzouying/xiaohongshu-mcp", "s": 15151}
 {"d": "2026-08-16", "r": "xpzouying/xiaohongshu-mcp", "s": 15279}
+{"d": "2026-08-23", "r": "xpzouying/xiaohongshu-mcp", "s": 15439}
 {"d": "2026-06-10", "r": "yusufkaraaslan/Skill_Seekers", "s": 9084}
 {"d": "2026-06-14", "r": "yusufkaraaslan/Skill_Seekers", "s": 14072}
 {"d": "2026-06-21", "r": "yusufkaraaslan/Skill_Seekers", "s": 14213}
@@ -767,6 +829,7 @@
 {"d": "2026-08-02", "r": "yusufkaraaslan/Skill_Seekers", "s": 14676}
 {"d": "2026-08-09", "r": "yusufkaraaslan/Skill_Seekers", "s": 14731}
 {"d": "2026-08-16", "r": "yusufkaraaslan/Skill_Seekers", "s": 14770}
+{"d": "2026-08-23", "r": "yusufkaraaslan/Skill_Seekers", "s": 14805}
 {"d": "2026-06-10", "r": "zcaceres/markdownify-mcp", "s": 2728}
 {"d": "2026-06-14", "r": "zcaceres/markdownify-mcp", "s": 2735}
 {"d": "2026-06-21", "r": "zcaceres/markdownify-mcp", "s": 2754}
@@ -779,6 +842,7 @@
 {"d": "2026-08-02", "r": "zcaceres/markdownify-mcp", "s": 2898}
 {"d": "2026-08-09", "r": "zcaceres/markdownify-mcp", "s": 2907}
 {"d": "2026-08-16", "r": "zcaceres/markdownify-mcp", "s": 2910}
+{"d": "2026-08-23", "r": "zcaceres/markdownify-mcp", "s": 2971}
 {"d": "2026-07-12", "r": "zylon-ai/private-gpt", "s": 57330}
 {"d": "2026-07-18", "r": "zylon-ai/private-gpt", "s": 57338}
 {"d": "2026-07-19", "r": "zylon-ai/private-gpt", "s": 57341}
