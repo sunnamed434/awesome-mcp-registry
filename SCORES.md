@@ -8,18 +8,18 @@ Per-server breakdown of the registry's 0-100 trust score. The formula is publish
 
 [https://github.com/github/github-mcp-server](https://github.com/github/github-mcp-server)
 
-**100/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**100/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 100/100 | 17% | 32439 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
+| Popularity | 100/100 | 17% | 32608 stars (log-scaled) |
 | Docs & hygiene | 100/100 | 17% | community health 100%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 155 contributor(s) |
+| Community | 100/100 | 6% | 157 contributor(s) |
 
-Stars: 32439 (Δ7d +155, Δ30d +719)
+Stars: 32608 (Δ7d +169, Δ30d +713)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/942771284.json)`
 
@@ -27,18 +27,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
 
-**99/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**99/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 1 days ago, 22 commits in 90 days |
-| Popularity | 100/100 | 17% | 36381 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 1 days ago, 23 commits in 90 days |
+| Popularity | 100/100 | 17% | 36626 stars (log-scaled) |
 | Docs & hygiene | 94/100 | 17% | community health 75%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 70 contributor(s) |
 
-Stars: 36381 (Δ7d +208, Δ30d +890)
+Stars: 36626 (Δ7d +245, Δ30d +897)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/952688112.json)`
 
@@ -46,18 +46,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/googleapis/mcp-toolbox](https://github.com/googleapis/mcp-toolbox)
 
-**99/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**99/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
 | Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 94/100 | 17% | 16242 stars (log-scaled) |
+| Popularity | 94/100 | 17% | 16279 stars (log-scaled) |
 | Docs & hygiene | 99/100 | 17% | community health 87%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 155 contributor(s) |
+| Community | 100/100 | 6% | 158 contributor(s) |
 
-Stars: 16242 (Δ7d +62, Δ30d +221)
+Stars: 16279 (Δ7d +37, Δ30d +181)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/812044182.json)`
 
@@ -65,18 +65,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 
-**98/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**98/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
 | Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 100/100 | 17% | 49597 stars (log-scaled) |
+| Popularity | 100/100 | 17% | 50198 stars (log-scaled) |
 | Docs & hygiene | 88/100 | 17% | community health 62%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 118 contributor(s) |
 
-Stars: 49597 (Δ7d +352, Δ30d +1987)
+Stars: 50198 (Δ7d +601, Δ30d +1842)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1054793726.json)`
 
@@ -84,18 +84,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian)
 
-**97/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**97/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
 | Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
-| Popularity | 84/100 | 17% | 5786 stars (log-scaled) |
+| Popularity | 84/100 | 17% | 5813 stars (log-scaled) |
 | Docs & hygiene | 98/100 | 17% | community health 85%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 173 contributor(s) |
+| Community | 100/100 | 6% | 177 contributor(s) |
 
-Stars: 5786 (Δ7d +42, Δ30d +172)
+Stars: 5813 (Δ7d +27, Δ30d +131)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/897809208.json)`
 
@@ -103,18 +103,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling)
 
-**95/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**95/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 100/100 | 17% | 75985 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 4 days ago, 30 commits in 90 days |
+| Popularity | 100/100 | 17% | 77321 stars (log-scaled) |
 | Docs & hygiene | 93/100 | 17% | community health 85%, license BSD-3-Clause, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 92/100 | 6% | 30 contributor(s) |
+| Community | 93/100 | 6% | 31 contributor(s) |
 
-Stars: 75985 (Δ7d +1598)
+Stars: 77321 (Δ7d +1336)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/872119017.json)`
 
@@ -122,56 +122,37 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp)
 
-**95/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**95/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 4 days ago, 30 commits in 90 days |
-| Popularity | 97/100 | 17% | 22764 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 97/100 | 17% | 22805 stars (log-scaled) |
 | Docs & hygiene | 92/100 | 17% | community health 71%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 92/100 | 6% | 30 contributor(s) |
 
-Stars: 22764 (Δ7d +60, Δ30d +358)
+Stars: 22805 (Δ7d +41, Δ30d +338)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/997890921.json)`
-
-### GLips/Figma-Context-MCP
-
-[https://github.com/GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP)
-
-**95/100 (A)** — Listed — formula v1.0, computed 2026-08-23
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 99/100 | 22% | last push 16 days ago, 28 commits in 90 days |
-| Popularity | 94/100 | 17% | 15705 stars (log-scaled) |
-| Docs & hygiene | 98/100 | 17% | community health 85%, license MIT, security policy yes |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 92/100 | 6% | 30 contributor(s) |
-
-Stars: 15705 (Δ7d +42, Δ30d +210)
-
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/931892749.json)`
 
 ### upstash/context7
 
 [https://github.com/upstash/context7](https://github.com/upstash/context7)
 
-**94/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
-| Popularity | 100/100 | 17% | 61101 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 100/100 | 17% | 61416 stars (log-scaled) |
 | Docs & hygiene | 82/100 | 17% | community health 50%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 127 contributor(s) |
 
-Stars: 61101 (Δ7d +273, Δ30d +1346)
+Stars: 61416 (Δ7d +315, Δ30d +1286)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/955620917.json)`
 
@@ -179,37 +160,56 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/oraios/serena](https://github.com/oraios/serena)
 
-**94/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 3 days ago, 30 commits in 90 days |
-| Popularity | 99/100 | 17% | 28392 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 100/100 | 17% | 28648 stars (log-scaled) |
 | Docs & hygiene | 83/100 | 17% | community health 62%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 204 contributor(s) |
 
-Stars: 28392 (Δ7d +306, Δ30d +1485)
+Stars: 28648 (Δ7d +256, Δ30d +1263)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/953683578.json)`
+
+### GLips/Figma-Context-MCP
+
+[https://github.com/GLips/Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP)
+
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
+| Maintenance | 96/100 | 22% | last push 23 days ago, 22 commits in 90 days |
+| Popularity | 94/100 | 17% | 15738 stars (log-scaled) |
+| Docs & hygiene | 98/100 | 17% | community health 85%, license MIT, security policy yes |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 92/100 | 6% | 30 contributor(s) |
+
+Stars: 15738 (Δ7d +33, Δ30d +176)
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/931892749.json)`
 
 ### yusufkaraaslan/Skill_Seekers
 
 [https://github.com/yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers)
 
-**94/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 13 days ago, 30 commits in 90 days |
-| Popularity | 93/100 | 17% | 14805 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 93/100 | 17% | 14860 stars (log-scaled) |
 | Docs & hygiene | 87/100 | 17% | community health 71%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 43 contributor(s) |
 
-Stars: 14805 (Δ7d +35, Δ30d +244)
+Stars: 14860 (Δ7d +55, Δ30d +184)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1078319457.json)`
 
@@ -217,18 +217,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/mrexodia/ida-pro-mcp](https://github.com/mrexodia/ida-pro-mcp)
 
-**94/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 5 days ago, 30 commits in 90 days |
-| Popularity | 91/100 | 17% | 11506 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
+| Popularity | 91/100 | 17% | 11699 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 68 contributor(s) |
+| Community | 100/100 | 6% | 70 contributor(s) |
 
-Stars: 11506 (Δ7d +134, Δ30d +735)
+Stars: 11699 (Δ7d +193, Δ30d +713)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/954963562.json)`
 
@@ -236,18 +236,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/mobile-next/mobile-mcp](https://github.com/mobile-next/mobile-mcp)
 
-**94/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 5 days ago, 30 commits in 90 days |
-| Popularity | 84/100 | 17% | 5975 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 85/100 | 17% | 6228 stars (log-scaled) |
 | Docs & hygiene | 99/100 | 17% | community health 87%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 91/100 | 6% | 28 contributor(s) |
 
-Stars: 5975 (Δ7d +47, Δ30d +336)
+Stars: 6228 (Δ7d +253, Δ30d +488)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/956657893.json)`
 
@@ -255,18 +255,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server)
 
-**94/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**94/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 78/100 | 17% | 3068 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 3 days ago, 30 commits in 90 days |
+| Popularity | 78/100 | 17% | 3096 stars (log-scaled) |
 | Docs & hygiene | 92/100 | 17% | community health 71%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 78/100 | 6% | 17 contributor(s) |
 
-Stars: 3068 (Δ7d +7, Δ30d +83)
+Stars: 3096 (Δ7d +28, Δ30d +82)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/896146306.json)`
 
@@ -274,18 +274,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server)
 
-**93/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**93/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 86/100 | 17% | 7297 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
+| Popularity | 86/100 | 17% | 7353 stars (log-scaled) |
 | Docs & hygiene | 72/100 | 17% | community health 37%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 91/100 | 6% | 28 contributor(s) |
 
-Stars: 7297 (Δ7d +52, Δ30d +254)
+Stars: 7353 (Δ7d +56, Δ30d +248)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/899407931.json)`
 
@@ -293,18 +293,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/getsentry/XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP)
 
-**92/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**92/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 10 days ago, 30 commits in 90 days |
-| Popularity | 85/100 | 17% | 6274 stars (log-scaled) |
+| Maintenance | 99/100 | 22% | last push 17 days ago, 30 commits in 90 days |
+| Popularity | 85/100 | 17% | 6311 stars (log-scaled) |
 | Docs & hygiene | 88/100 | 17% | community health 62%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 44 contributor(s) |
+| Community | 100/100 | 6% | 43 contributor(s) |
 
-Stars: 6274 (Δ7d +29, Δ30d +128)
+Stars: 6311 (Δ7d +37, Δ30d +131)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/945551361.json)`
 
@@ -312,56 +312,37 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/coddingtonbear/obsidian-local-rest-api](https://github.com/coddingtonbear/obsidian-local-rest-api)
 
-**91/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**92/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 97/100 | 22% | last push 20 days ago, 30 commits in 90 days |
-| Popularity | 77/100 | 17% | 2833 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 77/100 | 17% | 2867 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 82/100 | 6% | 20 contributor(s) |
+| Community | 87/100 | 6% | 24 contributor(s) |
 
-Stars: 2833 (Δ7d +35, Δ30d +140)
+Stars: 2867 (Δ7d +34, Δ30d +136)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/451732769.json)`
-
-### benborla/mcp-server-mysql
-
-[https://github.com/benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql)
-
-**91/100 (A)** — Listed — formula v1.0, computed 2026-08-23
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 95/100 | 22% | last push 26 days ago, 24 commits in 90 days |
-| Popularity | 74/100 | 17% | 2067 stars (log-scaled) |
-| Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 92/100 | 6% | 30 contributor(s) |
-
-Stars: 2067 (Δ7d +20, Δ30d +90)
-
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/900806525.json)`
 
 ### containers/kubernetes-mcp-server
 
 [https://github.com/containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server)
 
-**91/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**91/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
-| Popularity | 74/100 | 17% | 2002 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 74/100 | 17% | 2038 stars (log-scaled) |
 | Docs & hygiene | 88/100 | 17% | community health 62%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 72 contributor(s) |
+| Community | 100/100 | 6% | 73 contributor(s) |
 
-Stars: 2002 (Δ7d +34, Δ30d +155)
+Stars: 2038 (Δ7d +36, Δ30d +166)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/930678258.json)`
 
@@ -369,18 +350,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/brightdata/brightdata-mcp](https://github.com/brightdata/brightdata-mcp)
 
-**90/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**90/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 11 days ago, 21 commits in 90 days |
-| Popularity | 76/100 | 17% | 2607 stars (log-scaled) |
+| Maintenance | 98/100 | 22% | last push 18 days ago, 12 commits in 90 days |
+| Popularity | 76/100 | 17% | 2616 stars (log-scaled) |
 | Docs & hygiene | 72/100 | 17% | community health 37%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 79/100 | 6% | 18 contributor(s) |
 
-Stars: 2607 (Δ7d +15, Δ30d +72)
+Stars: 2616 (Δ7d +9, Δ30d +60)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/966718614.json)`
 
@@ -388,37 +369,56 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/perplexityai/modelcontextprotocol](https://github.com/perplexityai/modelcontextprotocol)
 
-**90/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**90/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 5 days ago, 30 commits in 90 days |
-| Popularity | 76/100 | 17% | 2475 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 3 days ago, 30 commits in 90 days |
+| Popularity | 76/100 | 17% | 2492 stars (log-scaled) |
 | Docs & hygiene | 88/100 | 17% | community health 62%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 79/100 | 6% | 18 contributor(s) |
 
-Stars: 2475 (Δ7d +32, Δ30d +66)
+Stars: 2492 (Δ7d +17, Δ30d +64)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/946214670.json)`
+
+### benborla/mcp-server-mysql
+
+[https://github.com/benborla/mcp-server-mysql](https://github.com/benborla/mcp-server-mysql)
+
+**90/100 (A)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
+| Maintenance | 92/100 | 22% | last push 34 days ago, 24 commits in 90 days |
+| Popularity | 74/100 | 17% | 2089 stars (log-scaled) |
+| Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 92/100 | 6% | 30 contributor(s) |
+
+Stars: 2089 (Δ7d +22, Δ30d +88)
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/900806525.json)`
 
 ### datagouv/datagouv-mcp
 
 [https://github.com/datagouv/datagouv-mcp](https://github.com/datagouv/datagouv-mcp)
 
-**89/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**88/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 91/100 | 22% | last push 36 days ago, 21 commits in 90 days |
-| Popularity | 71/100 | 17% | 1584 stars (log-scaled) |
+| Maintenance | 88/100 | 22% | last push 43 days ago, 20 commits in 90 days |
+| Popularity | 71/100 | 17% | 1588 stars (log-scaled) |
 | Docs & hygiene | 83/100 | 17% | community health 62%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 75/100 | 6% | 15 contributor(s) |
 
-Stars: 1584 (Δ7d +4, Δ30d +13)
+Stars: 1588 (Δ7d +4, Δ30d +14)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1103742564.json)`
 
@@ -426,18 +426,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/mksglu/context-mode](https://github.com/mksglu/context-mode)
 
-**86/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**86/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
 | Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 96/100 | 17% | 20099 stars (log-scaled) |
+| Popularity | 96/100 | 17% | 20253 stars (log-scaled) |
 | Docs & hygiene | 77/100 | 17% | community health 71%, license NOASSERTION, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 110 contributor(s) |
 
-Stars: 20099 (Δ7d +207)
+Stars: 20253 (Δ7d +154)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1164477708.json)`
 
@@ -445,18 +445,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp)
 
-**86/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**86/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 3 days ago, 30 commits in 90 days |
-| Popularity | 94/100 | 17% | 15439 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 6 days ago, 30 commits in 90 days |
+| Popularity | 94/100 | 17% | 15554 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license Apache-2.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 93/100 | 6% | 31 contributor(s) |
 
-Stars: 15439 (Δ7d +160, Δ30d +581)
+Stars: 15554 (Δ7d +115, Δ30d +533)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1031215137.json)`
 
@@ -464,18 +464,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/mixelpixx/KiCAD-MCP-Server](https://github.com/mixelpixx/KiCAD-MCP-Server)
 
-**86/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**86/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
-| Popularity | 73/100 | 17% | 1938 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 9 days ago, 30 commits in 90 days |
+| Popularity | 74/100 | 17% | 1983 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 100/100 | 6% | 60 contributor(s) |
 
-Stars: 1938 (Δ7d +50, Δ30d +289)
+Stars: 1983 (Δ7d +45, Δ30d +251)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/973208983.json)`
 
@@ -483,18 +483,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/JoeanAmier/XHS-Downloader](https://github.com/JoeanAmier/XHS-Downloader)
 
-**84/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**84/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
 | Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 91/100 | 17% | 12454 stars (log-scaled) |
+| Popularity | 92/100 | 17% | 12535 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license GPL-3.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 62/100 | 6% | 9 contributor(s) |
+| Community | 59/100 | 6% | 8 contributor(s) |
 
-Stars: 12454 (Δ7d +87, Δ30d +368)
+Stars: 12535 (Δ7d +81, Δ30d +349)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/679219059.json)`
 
@@ -502,18 +502,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/jacob-bd/gemini-notebook-mcp-cli](https://github.com/jacob-bd/gemini-notebook-mcp-cli)
 
-**84/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**84/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
 | Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
-| Popularity | 84/100 | 17% | 5917 stars (log-scaled) |
+| Popularity | 84/100 | 17% | 5976 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 52 contributor(s) |
+| Community | 100/100 | 6% | 54 contributor(s) |
 
-Stars: 5917 (Δ7d +52, Δ30d +297)
+Stars: 5976 (Δ7d +59, Δ30d +274)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1121438740.json)`
 
@@ -521,18 +521,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/bgauryy/octocode](https://github.com/bgauryy/octocode)
 
-**84/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**84/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 4 days ago, 23 commits in 90 days |
-| Popularity | 66/100 | 17% | 919 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 4 days ago, 24 commits in 90 days |
+| Popularity | 66/100 | 17% | 920 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 19/100 | 6% | 1 contributor(s) |
 
-Stars: 919 (Δ7d +8, Δ30d +20)
+Stars: 920 (Δ7d +1, Δ30d +18)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/996813130.json)`
 
@@ -540,21 +540,21 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)
 
-**82/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**82/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
 | Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 100/100 | 17% | 67242 stars (log-scaled) |
+| Popularity | 100/100 | 17% | 68082 stars (log-scaled) |
 | Docs & hygiene | 99/100 | 17% | community health 87%, license Apache-2.0, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 246 contributor(s) |
+| Community | 100/100 | 6% | 247 contributor(s) |
 
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 67242 (Δ7d +748, Δ30d +4793)
+Stars: 68082 (Δ7d +840, Δ30d +4156)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1129940957.json)`
 
@@ -562,18 +562,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/robotmcp/ros-mcp-server](https://github.com/robotmcp/ros-mcp-server)
 
-**82/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**82/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
 | Maintenance | 92/100 | 22% | last push 0 days ago, 9 commits in 90 days |
-| Popularity | 70/100 | 17% | 1409 stars (log-scaled) |
+| Popularity | 70/100 | 17% | 1420 stars (log-scaled) |
 | Docs & hygiene | 78/100 | 17% | community health 50%, license Apache-2.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 79/100 | 6% | 18 contributor(s) |
 
-Stars: 1409 (Δ7d +14, Δ30d +49)
+Stars: 1420 (Δ7d +11, Δ30d +50)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/964371379.json)`
 
@@ -581,13 +581,13 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP)
 
-**81/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**81/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 89/100 | 17% | 9382 stars (log-scaled) |
+| Maintenance | 100/100 | 22% | last push 2 days ago, 30 commits in 90 days |
+| Popularity | 89/100 | 17% | 9441 stars (log-scaled) |
 | Docs & hygiene | 86/100 | 17% | community health 57%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 95/100 | 6% | 33 contributor(s) |
@@ -595,7 +595,7 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 9382 (Δ7d +48, Δ30d +532)
+Stars: 9441 (Δ7d +59, Δ30d +389)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/898345892.json)`
 
@@ -603,18 +603,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/neka-nat/freecad-mcp](https://github.com/neka-nat/freecad-mcp)
 
-**81/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**81/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
 | Maintenance | 100/100 | 22% | last push 4 days ago, 30 commits in 90 days |
-| Popularity | 73/100 | 17% | 1882 stars (log-scaled) |
+| Popularity | 73/100 | 17% | 1946 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 86/100 | 6% | 23 contributor(s) |
+| Community | 87/100 | 6% | 24 contributor(s) |
 
-Stars: 1882 (Δ7d +63)
+Stars: 1946 (Δ7d +64)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/723307046.json)`
 
@@ -622,40 +622,59 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp)
 
-**80/100 (A)** — Listed — formula v1.0, computed 2026-08-23
+**80/100 (A)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 35% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 100/100 | 20% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 100/100 | 15% | 40040 stars (log-scaled) |
+| Maintenance | 100/100 | 20% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 100/100 | 15% | 41253 stars (log-scaled) |
 | Docs & hygiene | 100/100 | 15% | community health 100%, license MIT, security policy yes |
 | Security posture | 78/100 | 10% | OpenSSF Scorecard 7.8/10 |
-| Community | 100/100 | 5% | 122 contributor(s) |
+| Community | 100/100 | 5% | 127 contributor(s) |
 
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 40040 (Δ7d +964, Δ30d +4656)
+Stars: 41253 (Δ7d +1213, Δ30d +4250)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1166102148.json)`
+
+### duty1g/x64dbg-mcp-server
+
+[https://github.com/duty1g/x64dbg-mcp-server](https://github.com/duty1g/x64dbg-mcp-server)
+
+**80/100 (A)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
+| Maintenance | 100/100 | 22% | last push 3 days ago, 18 commits in 90 days |
+| Popularity | 73/100 | 17% | 1766 stars (log-scaled) |
+| Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 19/100 | 6% | 1 contributor(s) |
+
+Stars: 1766
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1342886503.json)`
 
 ### Xquik-dev/x-twitter-scraper
 
 [https://github.com/Xquik-dev/x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper)
 
-**79/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**79/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 35% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 100/100 | 20% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 51/100 | 15% | 186 stars (log-scaled) |
-| Docs & hygiene | 100/100 | 15% | community health 100%, license MIT, security policy yes |
-| Security posture | 84/100 | 10% | OpenSSF Scorecard 8.4/10 |
-| Community | 37/100 | 5% | 3 contributor(s) |
+| Maintenance | 100/100 | 20% | last push 3 days ago, 30 commits in 90 days |
+| Popularity | 51/100 | 15% | 191 stars (log-scaled) |
+| Docs & hygiene | 100/100 | 15% | community health 100%, license MIT, security policy no |
+| Security posture | 83/100 | 10% | OpenSSF Scorecard 8.3/10 |
+| Community | 30/100 | 5% | 2 contributor(s) |
 
-Stars: 186 (Δ7d +5, Δ30d +19)
+Stars: 191 (Δ7d +5, Δ30d +17)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1168120544.json)`
 
@@ -663,116 +682,100 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/CursorTouch/Windows-MCP](https://github.com/CursorTouch/Windows-MCP)
 
-**78/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**78/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
 | Maintenance | 100/100 | 22% | last push 1 days ago, 30 commits in 90 days |
-| Popularity | 86/100 | 17% | 6802 stars (log-scaled) |
+| Popularity | 86/100 | 17% | 6854 stars (log-scaled) |
 | Docs & hygiene | 88/100 | 17% | community health 62%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 100/100 | 6% | 43 contributor(s) |
+| Community | 100/100 | 6% | 44 contributor(s) |
 
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 6802 (Δ7d +45, Δ30d +300)
+Stars: 6854 (Δ7d +52, Δ30d +302)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/982517950.json)`
-
-### epiral/bb-browser
-
-[https://github.com/epiral/bb-browser](https://github.com/epiral/bb-browser)
-
-**78/100 (B)** — Listed — formula v1.0, computed 2026-08-23
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 70/100 | 22% | last push 86 days ago, 30 commits in 90 days |
-| Popularity | 85/100 | 17% | 6106 stars (log-scaled) |
-| Docs & hygiene | 78/100 | 17% | community health 50%, license MIT, security policy no |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 62/100 | 6% | 9 contributor(s) |
-
-Stars: 6106 (Δ7d +52, Δ30d +104)
-
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1146413571.json)`
-
-### 0x4m4/hexstrike-ai
-
-[https://github.com/0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai)
-
-**77/100 (B)** — Listed — formula v1.0, computed 2026-08-23
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 70/100 | 22% | last push 19 days ago, 1 commits in 90 days |
-| Popularity | 91/100 | 17% | 11303 stars (log-scaled) |
-| Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 30/100 | 6% | 2 contributor(s) |
-
-Stars: 11303 (Δ7d +240, Δ30d +819)
-
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1017550802.json)`
 
 ### zcaceres/markdownify-mcp
 
 [https://github.com/zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp)
 
-**77/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**77/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 4/4, utility 3/4, maturity 3/4 |
-| Maintenance | 70/100 | 22% | last push 12 days ago, 0 commits in 90 days |
-| Popularity | 78/100 | 17% | 2971 stars (log-scaled) |
+| Maintenance | 70/100 | 22% | last push 2 days ago, 0 commits in 90 days |
+| Popularity | 78/100 | 17% | 2982 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 62/100 | 6% | 9 contributor(s) |
 
-Stars: 2971 (Δ7d +61, Δ30d +83)
+Stars: 2982 (Δ7d +11, Δ30d +84)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/905450127.json)`
 
-### qdrant/mcp-server-qdrant
+### 0x4m4/hexstrike-ai
 
-[https://github.com/qdrant/mcp-server-qdrant](https://github.com/qdrant/mcp-server-qdrant)
+[https://github.com/0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai)
 
-**75/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**76/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
-| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 75/100 | 22% | last push 9 days ago, 2 commits in 90 days |
-| Popularity | 71/100 | 17% | 1511 stars (log-scaled) |
-| Docs & hygiene | 78/100 | 17% | community health 50%, license Apache-2.0, security policy no |
+| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
+| Maintenance | 67/100 | 22% | last push 27 days ago, 1 commits in 90 days |
+| Popularity | 91/100 | 17% | 11450 stars (log-scaled) |
+| Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 69/100 | 6% | 12 contributor(s) |
+| Community | 30/100 | 6% | 2 contributor(s) |
 
-Stars: 1511 (Δ7d +9, Δ30d +31)
+Stars: 11450 (Δ7d +147, Δ30d +699)
 
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/897308110.json)`
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1017550802.json)`
+
+### MODSetter/SurfSense
+
+[https://github.com/MODSetter/SurfSense](https://github.com/MODSetter/SurfSense)
+
+**75/100 (B)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
+| Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
+| Popularity | 94/100 | 17% | 16035 stars (log-scaled) |
+| Docs & hygiene | 83/100 | 17% | community health 85%, license NOASSERTION, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 100/100 | 6% | 84 contributor(s) |
+
+Flags:
+- ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
+
+Stars: 16035
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/835975784.json)`
 
 ### tbxark/mcp-proxy
 
 [https://github.com/tbxark/mcp-proxy](https://github.com/tbxark/mcp-proxy)
 
-**75/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**75/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 90/100 | 22% | last push 7 days ago, 8 commits in 90 days |
-| Popularity | 64/100 | 17% | 717 stars (log-scaled) |
+| Maintenance | 90/100 | 22% | last push 14 days ago, 8 commits in 90 days |
+| Popularity | 64/100 | 17% | 718 stars (log-scaled) |
 | Docs & hygiene | 70/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
 
-Stars: 717
+Stars: 718 (Δ7d +1)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/955698123.json)`
 
@@ -780,77 +783,96 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server)
 
-**74/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**74/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 4/4, utility 3/4, maturity 4/4 |
-| Maintenance | 35/100 | 22% | last push 98 days ago, 0 commits in 90 days |
-| Popularity | 78/100 | 17% | 2951 stars (log-scaled) |
+| Maintenance | 31/100 | 22% | last push 106 days ago, 0 commits in 90 days |
+| Popularity | 78/100 | 17% | 2969 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 78/100 | 6% | 17 contributor(s) |
 
-Stars: 2951 (Δ7d +17, Δ30d +63)
+Stars: 2969 (Δ7d +18, Δ30d +62)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/961975051.json)`
 
-### idosal/git-mcp
+### qdrant/mcp-server-qdrant
 
-[https://github.com/idosal/git-mcp](https://github.com/idosal/git-mcp)
+[https://github.com/qdrant/mcp-server-qdrant](https://github.com/qdrant/mcp-server-qdrant)
 
-**73/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**74/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
-| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 31/100 | 22% | last push 106 days ago, 0 commits in 90 days |
-| Popularity | 88/100 | 17% | 8341 stars (log-scaled) |
-| Docs & hygiene | 92/100 | 17% | community health 71%, license Apache-2.0, security policy yes |
+| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
+| Maintenance | 74/100 | 22% | last push 16 days ago, 2 commits in 90 days |
+| Popularity | 71/100 | 17% | 1516 stars (log-scaled) |
+| Docs & hygiene | 78/100 | 17% | community health 50%, license Apache-2.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 76/100 | 6% | 16 contributor(s) |
+| Community | 69/100 | 6% | 12 contributor(s) |
 
-Stars: 8341 (Δ7d +10, Δ30d +54)
+Stars: 1516 (Δ7d +5, Δ30d +31)
 
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/956842312.json)`
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/897308110.json)`
 
 ### BuyWhere/buywhere-mcp
 
 [https://github.com/BuyWhere/buywhere-mcp](https://github.com/BuyWhere/buywhere-mcp)
 
-**73/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**74/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
 | Maintenance | 100/100 | 22% | last push 0 days ago, 30 commits in 90 days |
-| Popularity | 22/100 | 17% | 9 stars (log-scaled) |
+| Popularity | 23/100 | 17% | 10 stars (log-scaled) |
 | Docs & hygiene | 98/100 | 17% | community health 85%, license MIT, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 37/100 | 6% | 3 contributor(s) |
 
-Stars: 9 (Δ7d +0, Δ30d +3)
+Stars: 10 (Δ7d +1, Δ30d +4)
 
 _Nominated by the repository's own maintainer._
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1212338943.json)`
 
+### idosal/git-mcp
+
+[https://github.com/idosal/git-mcp](https://github.com/idosal/git-mcp)
+
+**73/100 (B)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
+| Maintenance | 28/100 | 22% | last push 114 days ago, 0 commits in 90 days |
+| Popularity | 88/100 | 17% | 8360 stars (log-scaled) |
+| Docs & hygiene | 92/100 | 17% | community health 71%, license Apache-2.0, security policy yes |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 76/100 | 6% | 16 contributor(s) |
+
+Stars: 8360 (Δ7d +19, Δ30d +52)
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/956842312.json)`
+
 ### tadata-org/fastapi_mcp
 
 [https://github.com/tadata-org/fastapi_mcp](https://github.com/tadata-org/fastapi_mcp)
 
-**72/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**72/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 100/100 | 39% | rubric: documentation 4/4, utility 4/4, maturity 4/4 |
-| Maintenance | 0/100 | 22% | last push 271 days ago, 0 commits in 90 days |
-| Popularity | 91/100 | 17% | 11983 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 279 days ago, 0 commits in 90 days |
+| Popularity | 91/100 | 17% | 11991 stars (log-scaled) |
 | Docs & hygiene | 83/100 | 17% | community health 62%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 75/100 | 6% | 15 contributor(s) |
 
-Stars: 11983 (Δ7d -2, Δ30d +28)
+Stars: 11991 (Δ7d +8, Δ30d +17)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/944976593.json)`
 
@@ -858,37 +880,56 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp)
 
-**72/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**72/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 57/100 | 22% | last push 50 days ago, 1 commits in 90 days |
-| Popularity | 81/100 | 17% | 4292 stars (log-scaled) |
+| Maintenance | 54/100 | 22% | last push 57 days ago, 1 commits in 90 days |
+| Popularity | 81/100 | 17% | 4291 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license GPL-3.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 81/100 | 6% | 19 contributor(s) |
 
-Stars: 4292 (Δ7d +1, Δ30d +19)
+Stars: 4291 (Δ7d -1, Δ30d +17)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1033865617.json)`
+
+### epiral/bb-browser
+
+[https://github.com/epiral/bb-browser](https://github.com/epiral/bb-browser)
+
+**71/100 (B)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
+| Maintenance | 37/100 | 22% | last push 93 days ago, 0 commits in 90 days |
+| Popularity | 85/100 | 17% | 6158 stars (log-scaled) |
+| Docs & hygiene | 78/100 | 17% | community health 50%, license MIT, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 59/100 | 6% | 8 contributor(s) |
+
+Stars: 6158 (Δ7d +52, Δ30d +134)
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1146413571.json)`
 
 ### haris-musa/excel-mcp-server
 
 [https://github.com/haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server)
 
-**70/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**69/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 4/4, utility 3/4, maturity 4/4 |
-| Maintenance | 20/100 | 22% | last push 133 days ago, 0 commits in 90 days |
-| Popularity | 81/100 | 17% | 4124 stars (log-scaled) |
+| Maintenance | 17/100 | 22% | last push 140 days ago, 0 commits in 90 days |
+| Popularity | 81/100 | 17% | 4145 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
 
-Stars: 4124 (Δ7d +15, Δ30d +65)
+Stars: 4145 (Δ7d +21, Δ30d +60)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/931365873.json)`
 
@@ -896,18 +937,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/executeautomation/mcp-playwright](https://github.com/executeautomation/mcp-playwright)
 
-**67/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**67/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 92/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 4/4 |
-| Maintenance | 0/100 | 22% | last push 253 days ago, 0 commits in 90 days |
-| Popularity | 84/100 | 17% | 5632 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 260 days ago, 0 commits in 90 days |
+| Popularity | 84/100 | 17% | 5637 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 91/100 | 6% | 28 contributor(s) |
 
-Stars: 5632 (Δ7d +0, Δ30d +17)
+Stars: 5637 (Δ7d +5, Δ30d +13)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/898077246.json)`
 
@@ -915,18 +956,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/doteyeso-ops/mcp-server-vibes-coded](https://github.com/doteyeso-ops/mcp-server-vibes-coded)
 
-**67/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**67/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 100/100 | 22% | last push 3 days ago, 30 commits in 90 days |
+| Maintenance | 100/100 | 22% | last push 4 days ago, 30 commits in 90 days |
 | Popularity | 13/100 | 17% | 3 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 19/100 | 6% | 1 contributor(s) |
 
-Stars: 3 (Δ7d +0)
+Stars: 3 (Δ7d +0, Δ30d +1)
 
 _Nominated by the repository's own maintainer._
 
@@ -936,59 +977,37 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/BeehiveInnovations/pal-mcp-server](https://github.com/BeehiveInnovations/pal-mcp-server)
 
-**66/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**66/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 0/100 | 22% | last push 250 days ago, 0 commits in 90 days |
-| Popularity | 91/100 | 17% | 11726 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 257 days ago, 0 commits in 90 days |
+| Popularity | 91/100 | 17% | 11728 stars (log-scaled) |
 | Docs & hygiene | 78/100 | 17% | community health 62%, license NOASSERTION, security policy yes |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 94/100 | 6% | 32 contributor(s) |
 
-Stars: 11726 (Δ7d +1, Δ30d +30)
+Stars: 11728 (Δ7d +2, Δ30d +24)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/998428732.json)`
-
-### sansan0/TrendRadar
-
-[https://github.com/sansan0/TrendRadar](https://github.com/sansan0/TrendRadar)
-
-**65/100 (B)** — Listed — formula v1.0, computed 2026-08-23
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
-| Maintenance | 88/100 | 22% | last push 36 days ago, 11 commits in 90 days |
-| Popularity | 100/100 | 17% | 61682 stars (log-scaled) |
-| Docs & hygiene | 74/100 | 17% | community health 42%, license GPL-3.0, security policy no |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 37/100 | 6% | 3 contributor(s) |
-
-Flags:
-- ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
-
-Stars: 61682 (Δ7d +188, Δ30d +799)
-
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/974186260.json)`
 
 ### hangwin/mcp-chrome
 
 [https://github.com/hangwin/mcp-chrome](https://github.com/hangwin/mcp-chrome)
 
-**65/100 (B)** — Listed — formula v1.0, computed 2026-08-23
+**65/100 (B)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 0/100 | 22% | last push 228 days ago, 0 commits in 90 days |
-| Popularity | 91/100 | 17% | 12336 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 236 days ago, 0 commits in 90 days |
+| Popularity | 91/100 | 17% | 12364 stars (log-scaled) |
 | Docs & hygiene | 81/100 | 17% | community health 57%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 75/100 | 6% | 15 contributor(s) |
 
-Stars: 12336 (Δ7d +31, Δ30d +134)
+Stars: 12364 (Δ7d +28, Δ30d +120)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/998796026.json)`
 
@@ -996,7 +1015,7 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/vbkotecha/agentservices-api](https://github.com/vbkotecha/agentservices-api)
 
-**64/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**64/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
@@ -1007,28 +1026,50 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 43/100 | 6% | 4 contributor(s) |
 
-Stars: 1 (Δ7d +0)
+Stars: 1 (Δ7d +0, Δ30d +0)
 
 _Nominated by the repository's own maintainer._
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1284628499.json)`
 
+### sansan0/TrendRadar
+
+[https://github.com/sansan0/TrendRadar](https://github.com/sansan0/TrendRadar)
+
+**63/100 (C)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 3/4 |
+| Maintenance | 82/100 | 22% | last push 44 days ago, 10 commits in 90 days |
+| Popularity | 100/100 | 17% | 61938 stars (log-scaled) |
+| Docs & hygiene | 74/100 | 17% | community health 42%, license GPL-3.0, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 37/100 | 6% | 3 contributor(s) |
+
+Flags:
+- ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
+
+Stars: 61938 (Δ7d +256, Δ30d +869)
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/974186260.json)`
+
 ### LaurieWired/GhidraMCP
 
 [https://github.com/LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP)
 
-**63/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**63/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 0/100 | 22% | last push 426 days ago, 0 commits in 90 days |
-| Popularity | 89/100 | 17% | 9841 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 433 days ago, 0 commits in 90 days |
+| Popularity | 89/100 | 17% | 9890 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license Apache-2.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
 
-Stars: 9841 (Δ7d +41, Δ30d +259)
+Stars: 9890 (Δ7d +49, Δ30d +216)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/953335676.json)`
 
@@ -1036,13 +1077,13 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/MiniMax-AI/MiniMax-MCP](https://github.com/MiniMax-AI/MiniMax-MCP)
 
-**63/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**63/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 82/100 | 22% | last push 2 days ago, 5 commits in 90 days |
-| Popularity | 71/100 | 17% | 1566 stars (log-scaled) |
+| Maintenance | 82/100 | 22% | last push 10 days ago, 5 commits in 90 days |
+| Popularity | 71/100 | 17% | 1572 stars (log-scaled) |
 | Docs & hygiene | 72/100 | 17% | community health 37%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
@@ -1050,7 +1091,7 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 Flags:
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 1566 (Δ7d +5, Δ30d +25)
+Stars: 1572 (Δ7d +6, Δ30d +24)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/963737260.json)`
 
@@ -1058,13 +1099,13 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/supermemoryai/apple-mcp](https://github.com/supermemoryai/apple-mcp)
 
-**61/100 (C)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-23
+**61/100 (C)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 0/100 | 22% | last push 377 days ago, 0 commits in 90 days |
-| Popularity | 78/100 | 17% | 3129 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 384 days ago, 0 commits in 90 days |
+| Popularity | 78/100 | 17% | 3130 stars (log-scaled) |
 | Docs & hygiene | 72/100 | 17% | community health 37%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 69/100 | 6% | 12 contributor(s) |
@@ -1072,7 +1113,7 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 Flags:
 - ⚠ Repository is archived (blocks listing)
 
-Stars: 3129 (Δ7d +0, Δ30d +6)
+Stars: 3130 (Δ7d +1, Δ30d +2)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/935736274.json)`
 
@@ -1080,13 +1121,13 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/GongRzhe/Office-Word-MCP-Server](https://github.com/GongRzhe/Office-Word-MCP-Server)
 
-**61/100 (C)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-23
+**61/100 (C)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 0/100 | 22% | last push 234 days ago, 0 commits in 90 days |
-| Popularity | 74/100 | 17% | 2108 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 242 days ago, 0 commits in 90 days |
+| Popularity | 74/100 | 17% | 2106 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 76/100 | 6% | 16 contributor(s) |
@@ -1094,7 +1135,7 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 Flags:
 - ⚠ Repository is archived (blocks listing)
 
-Stars: 2108 (Δ7d -5, Δ30d -4)
+Stars: 2106 (Δ7d -2, Δ30d -12)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/954434732.json)`
 
@@ -1102,13 +1143,13 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/GongRzhe/Office-PowerPoint-MCP-Server](https://github.com/GongRzhe/Office-PowerPoint-MCP-Server)
 
-**60/100 (C)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-23
+**60/100 (C)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 83/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 3/4 |
-| Maintenance | 0/100 | 22% | last push 234 days ago, 0 commits in 90 days |
-| Popularity | 73/100 | 17% | 1854 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 242 days ago, 0 commits in 90 days |
+| Popularity | 73/100 | 17% | 1852 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 65/100 | 6% | 10 contributor(s) |
@@ -1116,7 +1157,7 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 Flags:
 - ⚠ Repository is archived (blocks listing)
 
-Stars: 1854 (Δ7d +1, Δ30d +11)
+Stars: 1852 (Δ7d -2, Δ30d +5)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/954558050.json)`
 
@@ -1124,12 +1165,12 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/smallhandsome/shotapi-mcp-server](https://github.com/smallhandsome/shotapi-mcp-server)
 
-**58/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**57/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 67/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 2/4 |
-| Maintenance | 78/100 | 22% | last push 66 days ago, 13 commits in 90 days |
+| Maintenance | 75/100 | 22% | last push 74 days ago, 13 commits in 90 days |
 | Popularity | 7/100 | 17% | 1 stars (log-scaled) |
 | Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
@@ -1145,18 +1186,18 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/BrowserMCP/mcp](https://github.com/BrowserMCP/mcp)
 
-**53/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**53/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 67/100 | 39% | rubric: documentation 2/4, utility 4/4, maturity 2/4 |
-| Maintenance | 0/100 | 22% | last push 485 days ago, 0 commits in 90 days |
-| Popularity | 86/100 | 17% | 7009 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 492 days ago, 0 commits in 90 days |
+| Popularity | 86/100 | 17% | 7032 stars (log-scaled) |
 | Docs & hygiene | 70/100 | 17% | community health 50%, license Apache-2.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 19/100 | 6% | 1 contributor(s) |
 
-Stars: 7009
+Stars: 7032 (Δ7d +23)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/956283541.json)`
 
@@ -1164,12 +1205,12 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/palisadeemail/palisade-mcp](https://github.com/palisadeemail/palisade-mcp)
 
-**53/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**53/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 4/4, utility 3/4, maturity 2/4 |
-| Maintenance | 88/100 | 22% | last push 1 days ago, 7 commits in 90 days |
+| Maintenance | 88/100 | 22% | last push 8 days ago, 7 commits in 90 days |
 | Popularity | 0/100 | 17% | 0 stars (log-scaled) |
 | Docs & hygiene | 78/100 | 17% | community health 50%, license MIT, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
@@ -1186,31 +1227,75 @@ Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoi
 
 [https://github.com/chongdashu/unreal-mcp](https://github.com/chongdashu/unreal-mcp)
 
-**51/100 (C)** — Listed — formula v1.0, computed 2026-08-23
+**51/100 (C)** — Listed — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 2/4 |
-| Maintenance | 0/100 | 22% | last push 488 days ago, 0 commits in 90 days |
-| Popularity | 74/100 | 17% | 2061 stars (log-scaled) |
+| Maintenance | 0/100 | 22% | last push 495 days ago, 0 commits in 90 days |
+| Popularity | 74/100 | 17% | 2069 stars (log-scaled) |
 | Docs & hygiene | 48/100 | 17% | community health 28%, license none, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
 | Community | 30/100 | 6% | 2 contributor(s) |
 
-Stars: 2061 (Δ7d +3, Δ30d +21)
+Stars: 2069 (Δ7d +8, Δ30d +21)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/956687107.json)`
+
+### worklittle/jobs-mcp
+
+[https://github.com/worklittle/jobs-mcp](https://github.com/worklittle/jobs-mcp)
+
+**51/100 (C)** — Listed — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 67/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 2/4 |
+| Maintenance | 98/100 | 22% | last push 5 days ago, 11 commits in 90 days |
+| Popularity | 0/100 | 17% | 0 stars (log-scaled) |
+| Docs & hygiene | 74/100 | 17% | community health 50%, license MIT, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 19/100 | 6% | 1 contributor(s) |
+
+Flags:
+- ⚠ Repository is less than 30 days old (-10)
+
+Stars: 0
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1345425908.json)`
+
+### lharries/whatsapp-mcp
+
+[https://github.com/lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp)
+
+**43/100 (F)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-30
+
+| Component | Score | Weight | Evidence |
+|-----------|-------|--------|----------|
+| AI assessment | 75/100 | 39% | rubric: documentation 3/4, utility 4/4, maturity 2/4 |
+| Maintenance | 0/100 | 22% | last push 412 days ago, 0 commits in 90 days |
+| Popularity | 85/100 | 17% | 6208 stars (log-scaled) |
+| Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
+| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
+| Community | 48/100 | 6% | 5 contributor(s) |
+
+Flags:
+- ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
+
+Stars: 6208 (Δ7d +20, Δ30d +236)
+
+Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/957053334.json)`
 
 ### Autoposting-ai/autoposting-mcp
 
 [https://github.com/Autoposting-ai/autoposting-mcp](https://github.com/Autoposting-ai/autoposting-mcp)
 
-**43/100 (F)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-23
+**43/100 (F)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 67/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 2/4 |
-| Maintenance | 79/100 | 22% | last push 16 days ago, 4 commits in 90 days |
+| Maintenance | 76/100 | 22% | last push 23 days ago, 4 commits in 90 days |
 | Popularity | 0/100 | 17% | 0 stars (log-scaled) |
 | Docs & hygiene | 52/100 | 17% | community health 37%, license none, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
@@ -1223,38 +1308,16 @@ Stars: 0 (Δ7d +0)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/1326426770.json)`
 
-### lharries/whatsapp-mcp
-
-[https://github.com/lharries/whatsapp-mcp](https://github.com/lharries/whatsapp-mcp)
-
-**40/100 (F)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-23
-
-| Component | Score | Weight | Evidence |
-|-----------|-------|--------|----------|
-| AI assessment | 67/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 2/4 |
-| Maintenance | 0/100 | 22% | last push 405 days ago, 0 commits in 90 days |
-| Popularity | 85/100 | 17% | 6188 stars (log-scaled) |
-| Docs & hygiene | 74/100 | 17% | community health 42%, license MIT, security policy no |
-| Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
-| Community | 48/100 | 6% | 5 contributor(s) |
-
-Flags:
-- ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
-
-Stars: 6188 (Δ7d +34, Δ30d +254)
-
-Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/957053334.json)`
-
 ### refreshdotdev/web-eval-agent
 
 [https://github.com/refreshdotdev/web-eval-agent](https://github.com/refreshdotdev/web-eval-agent)
 
-**38/100 (F)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-23
+**38/100 (F)** — Not listed (needs 50+) — formula v1.0, computed 2026-08-30
 
 | Component | Score | Weight | Evidence |
 |-----------|-------|--------|----------|
 | AI assessment | 67/100 | 39% | rubric: documentation 3/4, utility 3/4, maturity 2/4 |
-| Maintenance | 0/100 | 22% | last push 192 days ago, 0 commits in 90 days |
+| Maintenance | 0/100 | 22% | last push 200 days ago, 0 commits in 90 days |
 | Popularity | 69/100 | 17% | 1240 stars (log-scaled) |
 | Docs & hygiene | 78/100 | 17% | community health 50%, license Apache-2.0, security policy no |
 | Security posture | n/a | 0% | not indexed by OpenSSF Scorecard; weight redistributed |
@@ -1264,6 +1327,6 @@ Flags:
 - ⚠ Repository is archived (blocks listing)
 - ⚠ README instructs piping a download into a shell (e.g. curl | bash) (-15)
 
-Stars: 1240 (Δ7d +0, Δ30d -1)
+Stars: 1240 (Δ7d +0, Δ30d +0)
 
 Badge (copy into your README): `![MCP trust score](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/sunnamed434/awesome-mcp-registry/master/badges/958888851.json)`
