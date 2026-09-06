@@ -12,6 +12,13 @@ name: Issue intake (appeals & opt-outs)
 #  - server-report: acknowledges the report, states whether the repo is currently
 #    listed, and pings the maintainer. Reports never trigger automated removal.
 #
+# INTAKE: none of these jobs is gated on its form's label. GitHub has never
+# applied this repo's issue-form `labels:` at creation, so a label gate meant
+# every job here was skipped on every real submission — appeals, opt-outs and
+# reports all went unanswered. Each job now recognises its own form from the
+# issue body (the forms' distinguishing sections) or the title prefix, and
+# applies the label itself. Same fix as validate-nomination.yml.
+#
 # SAFETY: this workflow never checks out or executes third-party code. Issue
 # bodies are handled as data inside github-script (no shell interpolation), all
 # lookups are read-only API calls, and writes are limited to this repo's issues.
@@ -27,9 +34,11 @@ permissions:
 
 jobs:
   appeal:
-    if: >
-      github.event_name == 'issues' &&
-      contains(join(github.event.issue.labels.*.name, ','), 'exclusion-appeal')
+    # Deliberately NOT gated on the 'exclusion-appeal' label: GitHub has never
+    # applied this repo's issue-form `labels:` at creation, so a label gate here
+    # skipped every real submission. Each script identifies its own form instead
+    # and applies the label itself (same fix as validate-nomination.yml).
+    if: github.event_name == 'issues'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v9
@@ -40,6 +49,37 @@ jobs:
             const COOLDOWN_DAYS = 90;
             const issue = context.payload.issue;
             const common = { owner: context.repo.owner, repo: context.repo.repo };
+
+            // All four issue forms open with "### GitHub repository URL", so that heading
+            // can't tell them apart; these sections and title prefixes can.
+            const isForm = (want, title, body, labels) => {
+              const S = { 'exclusion-appeal': '### Why should this exclusion be reconsidered?',
+                          'maintainer-opt-out': '### Note (optional)',
+                          'server-report': '### What did you find?',
+                          'server-nomination': '### Before you submit' };
+              const T = { 'exclusion-appeal': /^\s*exclusion appeal\s*:/i,
+                          'maintainer-opt-out': /^\s*opt-?out\s*:/i,
+                          'server-report': /^\s*report\s*:/i,
+                          'server-nomination': /^\s*nominat\w*\s*:/i };
+              return want === (Object.keys(S).find(n => labels.includes(n)) ||
+                               Object.keys(S).find(n => body.includes(S[n])) ||
+                               Object.keys(T).find(n => T[n].test(title)));
+            };
+            const ensureLabel = async (name, labels) => {
+              if (labels.includes(name)) return;
+              try {
+                await github.rest.issues.addLabels({
+                  ...common, issue_number: issue.number, labels: [name] });
+              } catch (e) { core.info(`could not add ${name}: ${e.message}`); }
+            };
+
+            const labels = (issue.labels || []).map(l => l.name || l);
+            if (!isForm('exclusion-appeal', issue.title || '', issue.body || '', labels)) {
+              core.info(`#${issue.number} isn't an exclusion appeal; nothing to do.`);
+              return;
+            }
+            await ensureLabel('exclusion-appeal', labels);
+
             const author = (issue.user && issue.user.login) || '';
             const listUrl =
               `https://github.com/${common.owner}/${common.repo}/blob/master/data/excluded-repos.txt`;
@@ -116,9 +156,8 @@ jobs:
               "exclusion list is a human-reviewed commit.");
 
   report:
-    if: >
-      github.event_name == 'issues' &&
-      contains(join(github.event.issue.labels.*.name, ','), 'server-report')
+    # Not label-gated — see the note on `appeal`.
+    if: github.event_name == 'issues'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v9
@@ -128,6 +167,34 @@ jobs:
             const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: issue-intake -->`;
             const issue = context.payload.issue;
             const common = { owner: context.repo.owner, repo: context.repo.repo };
+
+            // See the note on `appeal` — the form is identified by its own content.
+            const isForm = (want, title, body, labels) => {
+              const S = { 'exclusion-appeal': '### Why should this exclusion be reconsidered?',
+                          'maintainer-opt-out': '### Note (optional)',
+                          'server-report': '### What did you find?',
+                          'server-nomination': '### Before you submit' };
+              const T = { 'exclusion-appeal': /^\s*exclusion appeal\s*:/i,
+                          'maintainer-opt-out': /^\s*opt-?out\s*:/i,
+                          'server-report': /^\s*report\s*:/i,
+                          'server-nomination': /^\s*nominat\w*\s*:/i };
+              return want === (Object.keys(S).find(n => labels.includes(n)) ||
+                               Object.keys(S).find(n => body.includes(S[n])) ||
+                               Object.keys(T).find(n => T[n].test(title)));
+            };
+
+            const labels = (issue.labels || []).map(l => l.name || l);
+            if (!isForm('server-report', issue.title || '', issue.body || '', labels)) {
+              core.info(`#${issue.number} isn't a server report; nothing to do.`);
+              return;
+            }
+            if (!labels.includes('server-report')) {
+              try {
+                await github.rest.issues.addLabels({
+                  ...common, issue_number: issue.number, labels: ['server-report'] });
+              } catch (e) { core.info(`could not add server-report: ${e.message}`); }
+            }
+
             const author = (issue.user && issue.user.login) || '';
 
             async function upsert(msg) {
@@ -177,10 +244,10 @@ jobs:
               "to this issue.");
 
   optout:
+    # Not label-gated — see the note on `appeal`.
     if: >
-      contains(join(github.event.issue.labels.*.name, ','), 'maintainer-opt-out') &&
-      (github.event_name == 'issues' ||
-       (github.event_name == 'issue_comment' && github.event.action == 'created'))
+      github.event_name == 'issues' ||
+      (github.event_name == 'issue_comment' && github.event.action == 'created')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v9
@@ -193,6 +260,31 @@ jobs:
             const common = { owner: context.repo.owner, repo: context.repo.repo };
             const author = (issue.user && issue.user.login) || '';
             const labels = (issue.labels || []).map(l => l.name || l);
+
+            // See the note on `appeal` — the form is identified by its own content.
+            const isForm = (want, title, body, lbls) => {
+              const S = { 'exclusion-appeal': '### Why should this exclusion be reconsidered?',
+                          'maintainer-opt-out': '### Note (optional)',
+                          'server-report': '### What did you find?',
+                          'server-nomination': '### Before you submit' };
+              const T = { 'exclusion-appeal': /^\s*exclusion appeal\s*:/i,
+                          'maintainer-opt-out': /^\s*opt-?out\s*:/i,
+                          'server-report': /^\s*report\s*:/i,
+                          'server-nomination': /^\s*nominat\w*\s*:/i };
+              return want === (Object.keys(S).find(n => lbls.includes(n)) ||
+                               Object.keys(S).find(n => body.includes(S[n])) ||
+                               Object.keys(T).find(n => T[n].test(title)));
+            };
+            if (!isForm('maintainer-opt-out', issue.title || '', issue.body || '', labels)) {
+              core.info(`#${issue.number} isn't a maintainer opt-out; nothing to do.`);
+              return;
+            }
+            if (!labels.includes('maintainer-opt-out')) {
+              try {
+                await github.rest.issues.addLabels({
+                  ...common, issue_number: issue.number, labels: ['maintainer-opt-out'] });
+              } catch (e) { core.info(`could not add maintainer-opt-out: ${e.message}`); }
+            }
 
             if (context.eventName === 'issue_comment') {
               // Re-check only when the opt-out's author reports the marker is in place.
