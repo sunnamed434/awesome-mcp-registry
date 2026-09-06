@@ -20,6 +20,12 @@ body:
 
         Please do **not** open a pull request to add a server: the README is machine-generated
         from `data/known_servers.json` every week, so PRs editing it are automatically closed.
+
+        > **Filling this in with an AI agent?** Read
+        > [AGENTS.md](../blob/master/AGENTS.md) first, keep this form's `###` headings
+        > intact (the intake bots match on them), submit **one repository per issue**, and
+        > don't write a pitch — the notes field doesn't affect the score, the AI reads the
+        > repository itself.
   - type: input
     id: repo_url
     attributes:

@@ -469,6 +469,13 @@ def generate_readme(servers, output_path, history=None):
         "rules once; the AI runs it."
     )
     lines.append("")
+    lines.append(
+        "**Using an AI agent on this repo?** Point it at [AGENTS.md](AGENTS.md) first: this list "
+        "is machine-generated, servers are nominated through an issue form (never a pull "
+        "request), and PRs editing the generated files are closed automatically. Machine-readable "
+        "map of the repo: [llms.txt](llms.txt)."
+    )
+    lines.append("")
 
     trending = []
     for s in qualified:
@@ -600,7 +607,8 @@ def generate_readme(servers, output_path, history=None):
     lines.append("")
     lines.append(
         "Code contributions (bug fixes, scanner improvements) are welcome — see "
-        "[CONTRIBUTING.md](CONTRIBUTING.md)."
+        "[CONTRIBUTING.md](CONTRIBUTING.md). If an AI agent is contributing on your behalf, give "
+        "it [AGENTS.md](AGENTS.md)."
     )
     lines.append("")
 

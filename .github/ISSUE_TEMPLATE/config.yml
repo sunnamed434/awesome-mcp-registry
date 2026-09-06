@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Rules for AI agents (AGENTS.md)
+    url: https://github.com/sunnamed434/awesome-mcp-registry/blob/master/AGENTS.md
+    about: Filing this with an AI agent? Read this first — which form fits your request, and what gets auto-closed.
   - name: How this registry works
     url: https://github.com/sunnamed434/awesome-mcp-registry#how-this-works
     about: Read how servers are discovered, scored, and re-evaluated before nominating or asking a question.

@@ -4,6 +4,9 @@ This is an **AI-curated** registry. The list curates itself — a weekly job dis
 servers, scores them with a published trust formula, and regenerates everything. That shapes how
 you contribute.
 
+> Contributing through an AI agent? Hand it [AGENTS.md](AGENTS.md) — the same rules, written for
+> machines, with the exact commands and the mistakes that get auto-closed.
+
 ## Suggesting a server → open a nomination, not a PR
 
 **Do not open a pull request to add a server.** `README.md`, `SCORES.md`,

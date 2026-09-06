@@ -6,6 +6,8 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 
 > **Our bet:** curation is a job for AI, not gatekeepers. No maintainers deciding what's "in", no PR queues, no politics — just a [Continuous AI](https://githubnext.com/projects/continuous-ai/) workflow that discovers, judges, and re-judges every server on merit, week after week. This list is a small proof of a bigger idea: that AI can own a real, useful, self-maintaining system end to end. Humans set the rules once; the AI runs it.
 
+**Using an AI agent on this repo?** Point it at [AGENTS.md](AGENTS.md) first: this list is machine-generated, servers are nominated through an issue form (never a pull request), and PRs editing the generated files are closed automatically. Machine-readable map of the repo: [llms.txt](llms.txt).
+
 ## Trending This Week
 
 | Server | Stars | Δ 7 days |
@@ -161,4 +163,4 @@ Your exact copy-paste snippet is under your entry in [SCORES.md](SCORES.md).
 
 To suggest a server, [open a nomination](https://github.com/sunnamed434/awesome-mcp-registry/issues/new?template=server-nomination.yml). The same AI evaluates it on the next weekly run and posts the verdict; if it scores 50+/100 it appears here automatically.
 
-Code contributions (bug fixes, scanner improvements) are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Code contributions (bug fixes, scanner improvements) are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). If an AI agent is contributing on your behalf, give it [AGENTS.md](AGENTS.md).

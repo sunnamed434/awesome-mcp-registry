@@ -47,6 +47,8 @@ jobs:
               "",
               "_Code contributions (bug fixes, scanner/workflow improvements) are welcome — those",
               "PRs are not auto-closed. See `CONTRIBUTING.md`._",
+              "",
+              `_If an AI agent opened this PR: the rules for this repository are in [AGENTS.md](https://github.com/${owner}/${repo}/blob/master/AGENTS.md) — read it before retrying._`,
             ].join('\n');
 
             const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: reject-content-prs -->`;
