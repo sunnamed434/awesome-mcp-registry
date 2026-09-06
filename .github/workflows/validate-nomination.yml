@@ -143,7 +143,7 @@ jobs:
               if (!repoId) return '';
               const img = `https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${common.owner}/${common.repo}/master/badges/${repoId}.json`;
               const snippet = `[![MCP trust score](${img})](https://github.com/${common.owner}/${common.repo}/blob/master/SCORES.md)`;
-              return `\n\n---\n**Show it off** — embed your live trust badge in your README. It updates with every weekly scan, and the URL survives repo renames:\n\n${snippet}\n\n\`\`\`markdown\n${snippet}\n\`\`\``;
+              return `\n\n---\n**Optional: show it off** — totally up to you, but you can embed your live trust badge in your README. It updates with every weekly scan, and the URL survives repo renames:\n\n${snippet}\n\n\`\`\`markdown\n${snippet}\n\`\`\``;
             }
 
             // Notice + final status label for an already-known server.

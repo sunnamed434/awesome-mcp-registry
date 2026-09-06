@@ -334,7 +334,8 @@ def badge_offer(repo_id):
         return ""
     snippet = badge_markdown(repo_id)
     return (
-        f"\n\n---\n**Show it off** — embed your live trust badge in your README. "
+        f"\n\n---\n**Optional: show it off** — totally up to you, but you can embed "
+        f"your live trust badge in your README. "
         f"It updates with every weekly scan, and the URL survives repo renames "
         f"(it's keyed by repository id, not name):\n\n"
         f"{snippet}\n\n"
