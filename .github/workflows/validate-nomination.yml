@@ -22,10 +22,12 @@ permissions:
 
 jobs:
   validate:
+    # Deliberately NOT gated on the 'server-nomination' label: GitHub has never
+    # applied this repo's issue-form `labels:` at creation, so a label gate here
+    # skipped every real nomination. The script identifies nominations itself.
     if: >
       github.event_name == 'issues' &&
-      (github.event.action == 'opened' || github.event.action == 'edited' || github.event.action == 'reopened') &&
-      contains(join(github.event.issue.labels.*.name, ','), 'server-nomination')
+      (github.event.action == 'opened' || github.event.action == 'edited' || github.event.action == 'reopened')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v9
@@ -33,9 +35,66 @@ jobs:
           script: |
             const MARKER = '<!-- nomination-validation -->';
             const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: validate-nomination -->`;
+
+            // --- Nomination detection ------------------------------------------------
+            // All four issue forms open with "### GitHub repository URL", so that heading
+            // can't tell them apart. Key off the nomination form's unique section, and
+            // bail out on the other forms' sections/titles/labels.
+            const NOMINATION_SECTION = '### Before you submit';
+            const OTHER_FORM_SECTIONS = [
+              '### Why should this exclusion be reconsidered?',  // exclusion-appeal
+              '### What did you find?',                          // report-server
+            ];
+            const OTHER_FORM_TITLES = /^\s*(exclusion appeal|opt-?out|report)\s*:/i;
+            const OTHER_FORM_LABELS = ['exclusion-appeal', 'maintainer-opt-out',
+                                       'server-report', 'workflow-failure'];
+            // The form's default title is "Nominate: owner/repo", so match that shape
+            // first; the looser add/nominate + mcp/server pattern catches free-form
+            // legacy issues that predate the form.
+            // Strong signals: the label, the form's own section, or the form's default
+            // title shape ("Nominate: owner/repo"). The looser add/nominate + mcp/server
+            // pattern is opt-in (`legacyTitles`) because it also matches ordinary issues
+            // like "Add retry to server fetch" — only the sweep uses it, and only after
+            // separately confirming a repo URL in the body.
+            const NOMINATION_TITLE = /^\s*nominat\w*\s*:/i;
+            const looksLikeLegacyNomination = t =>
+              /\b(add|nominat)/i.test(t) && /\b(mcp|server)\b/i.test(t);
+            const isNomination = (title, body, labels, { legacyTitles = false } = {}) => {
+              if (labels.some(l => OTHER_FORM_LABELS.includes(l))) return false;
+              if (OTHER_FORM_TITLES.test(title)) return false;
+              if (OTHER_FORM_SECTIONS.some(h => body.includes(h))) return false;
+              return labels.includes('server-nomination') ||
+                     body.includes(NOMINATION_SECTION) ||
+                     NOMINATION_TITLE.test(title) ||
+                     (legacyTitles && looksLikeLegacyNomination(title));
+            };
+
             const issue = context.payload.issue;
             const body = issue.body || '';
             const common = { owner: context.repo.owner, repo: context.repo.repo };
+
+            // Read live labels rather than the payload snapshot (an edit may race the
+            // daily sweep), decide whether this is a nomination at all, then apply the
+            // label ourselves — the weekly scanner queries GitHub *by label*, so an
+            // unlabelled nomination is invisible to it no matter what we comment here.
+            let labels;
+            try {
+              labels = (await github.rest.issues.listLabelsOnIssue({
+                ...common, issue_number: issue.number })).data.map(l => l.name);
+            } catch (e) {
+              labels = (issue.labels || []).map(l => (l.name || l));
+            }
+            if (!isNomination(issue.title || '', body, labels)) {
+              core.info(`#${issue.number} isn't a server nomination; nothing to do.`);
+              return;
+            }
+            if (!labels.includes('server-nomination')) {
+              try {
+                await github.rest.issues.addLabels({
+                  ...common, issue_number: issue.number, labels: ['server-nomination'] });
+              } catch (e) { core.info(`could not add server-nomination: ${e.message}`); }
+            }
+
             const m = body.match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
 
             // Look up a repo in the published registry (public raw file, case-insensitive).
@@ -256,10 +315,39 @@ jobs:
             const FOOTER = `\n\n---\n*Automated comment from this repository's workflows — not written by a human. Questions or appeals: reply here or mention @${context.repo.owner}.*\n<!-- ai-generated: false; source: template; workflow: validate-nomination -->`;
             const contributing =
               `https://github.com/${common.owner}/${common.repo}/blob/master/CONTRIBUTING.md`;
-            // Conservative heuristic: an open issue whose title reads like
-            // "add/nominate ... mcp/server" is treated as a legacy nomination.
-            const looksLikeNomination = t => /\b(add|nominat)/i.test(t) && /\b(mcp|server)\b/i.test(t);
+            // Same detection as the `validate` job. The old version keyed on the title
+            // alone and demanded the literal word "mcp" or "server" in it — which the
+            // form's own default title ("Nominate: owner/repo") doesn't contain, so
+            // whether a nomination was ever seen came down to whether the nominated
+            // repo happened to be named "*-mcp".
+            const NOMINATION_SECTION = '### Before you submit';
+            const OTHER_FORM_SECTIONS = [
+              '### Why should this exclusion be reconsidered?',  // exclusion-appeal
+              '### What did you find?',                          // report-server
+            ];
+            const OTHER_FORM_TITLES = /^\s*(exclusion appeal|opt-?out|report)\s*:/i;
+            const OTHER_FORM_LABELS = ['exclusion-appeal', 'maintainer-opt-out',
+                                       'server-report', 'workflow-failure'];
+            // Strong signals: the label, the form's own section, or the form's default
+            // title shape ("Nominate: owner/repo"). The looser add/nominate + mcp/server
+            // pattern is opt-in (`legacyTitles`) because it also matches ordinary issues
+            // like "Add retry to server fetch" — only the sweep uses it, and only after
+            // separately confirming a repo URL in the body.
+            const NOMINATION_TITLE = /^\s*nominat\w*\s*:/i;
+            const looksLikeLegacyNomination = t =>
+              /\b(add|nominat)/i.test(t) && /\b(mcp|server)\b/i.test(t);
+            const isNomination = (title, body, labels, { legacyTitles = false } = {}) => {
+              if (labels.some(l => OTHER_FORM_LABELS.includes(l))) return false;
+              if (OTHER_FORM_TITLES.test(title)) return false;
+              if (OTHER_FORM_SECTIONS.some(h => body.includes(h))) return false;
+              return labels.includes('server-nomination') ||
+                     body.includes(NOMINATION_SECTION) ||
+                     NOMINATION_TITLE.test(title) ||
+                     (legacyTitles && looksLikeLegacyNomination(title));
+            };
             const repoRe = /github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+/i;
+            // Anything human-filed and older than this with no bot reply gets reported.
+            const STALE_DAYS = 3;
 
             const queuedExplain = (author) => {
               const msg = [
@@ -296,19 +384,34 @@ jobs:
             const issues = await github.paginate(github.rest.issues.listForRepo, {
               ...common, state: 'open', per_page: 100 });
             let queued = 0, declined = 0;
+            const unanswered = [];
+            const listComments = (n) => github.paginate(github.rest.issues.listComments, {
+              ...common, issue_number: n, per_page: 100 });
             for (const issue of issues) {
               if (issue.pull_request) continue;  // skip PRs
               const labels = (issue.labels || []).map(l => (l.name || l));
               const labeledNomination = labels.includes('server-nomination');
-              if (!labeledNomination && !looksLikeNomination(issue.title || '')) continue;
+              const body = issue.body || '';
+              const humanFiled = ((issue.user || {}).type || '') !== 'Bot';
+              const ageDays = (Date.now() - Date.parse(issue.created_at)) / 86400000;
+              const stale = ageDays >= STALE_DAYS && humanFiled;
+
+              if (!isNomination(issue.title || '', body, labels, { legacyTitles: true })) {
+                // This used to `continue` silently — which is exactly how an issue the
+                // heuristic didn't recognise could sit open for weeks with nothing, and
+                // nobody, reporting it. Collect it instead of dropping it.
+                if (stale && !(await listComments(issue.number)).some(c => c.user.type === 'Bot')) {
+                  unanswered.push(`#${issue.number} (${Math.floor(ageDays)}d old): ${issue.title}`);
+                }
+                continue;
+              }
 
               const author = (issue.user && issue.user.login) || '';
-              const comments = await github.paginate(github.rest.issues.listComments, {
-                ...common, issue_number: issue.number, per_page: 100 });
+              const comments = await listComments(issue.number);
               const hasMarker = (mk) => comments.some(c =>
                 c.user.type === 'Bot' && (c.body || '').includes(mk));
 
-              if (repoRe.test(issue.body || '')) {
+              if (repoRe.test(body)) {
                 // Real nomination — ensure labeled + queued; clear any stale 'declined'.
                 const want = ['server-nomination', 'status: queued'].filter(l => !labels.includes(l));
                 if (want.length) {
@@ -321,10 +424,12 @@ jobs:
                 }
                 core.info(`Queued #${issue.number}: ${issue.title}`);
                 queued++;
-              } else if (labeledNomination) {
+              } else if ((labeledNomination || body.includes(NOMINATION_SECTION)) && ageDays >= 1) {
                 // A confirmed nomination with no repo to evaluate — decline + close as
-                // "not planned". Guarded to already-labeled issues so a stray title match
-                // isn't auto-closed.
+                // "not planned". Guarded to nominations we're sure of (already labelled,
+                // or filed through the form) so a stray title match isn't auto-closed,
+                // and to ones at least a day old so a typo'd URL can still be edited in
+                // time — `validate` now labels on open, so this fires far more often.
                 await removeLabel(issue.number, 'status: queued');
                 if (!labels.includes('status: declined')) {
                   await github.rest.issues.addLabels({
@@ -345,7 +450,14 @@ jobs:
                   ...common, issue_number: issue.number, state: 'closed', state_reason: 'not_planned' });
                 core.info(`Declined (no repo) #${issue.number}: ${issue.title}`);
                 declined++;
+              } else if (stale && !comments.some(c => c.user.type === 'Bot')) {
+                // Title-only match with no repo URL — too weak to auto-close, but it
+                // deserves a human rather than silence.
+                unanswered.push(`#${issue.number} (${Math.floor(ageDays)}d old): ${issue.title}`);
               }
-              // else: title-only heuristic match with no repo — too weak to act on; leave it.
             }
-            core.info(`Queued ${queued}, declined ${declined} (no repo)`);
+            if (unanswered.length) {
+              core.warning(`${unanswered.length} open issue(s) have had no automated reply ` +
+                `and need a human:\n${unanswered.join('\n')}`);
+            }
+            core.info(`Queued ${queued}, declined ${declined} (no repo), unanswered ${unanswered.length}`);
