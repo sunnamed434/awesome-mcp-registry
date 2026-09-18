@@ -91,6 +91,7 @@ A self-curating directory of [Model Context Protocol](https://modelcontextprotoc
 
 | Server | Trust | Stars | Description |
 |--------|-------|-------|-------------|
+| [Statsnet](https://github.com/usenetstate/statsnet-mcp) | Background check any company in the world: registration, executives, courts and finances. Remote: `https://statsnet.co/mcp` |
 | [vbkotecha/agentservices-api](https://github.com/vbkotecha/agentservices-api) | [64/100](SCORES.md#vbkotechaagentservices-api) | 1 | AgentServices is a paid API for AI agents providing crypto data, market intelligence, and dispute resolution endpoints with x402 micropayments on Base. |
 
 ## Security (2)
