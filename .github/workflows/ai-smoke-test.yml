@@ -21,7 +21,7 @@ jobs:
             -H "Authorization: Bearer $DEEPSEEK_API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
-              "model": "deepseek-v4-flash",
+              "model": "deepseek-flash",
               "messages": [
                 {"role": "system", "content": "Reply with a single JSON object and nothing else: no markdown fences, no commentary."},
                 {"role": "user", "content": "Return exactly this JSON: {\"ok\": true}"}

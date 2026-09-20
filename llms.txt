@@ -1,6 +1,6 @@
 # Awesome MCP Registry
 
-> A self-curating directory of Model Context Protocol (MCP) servers. A weekly GitHub Actions job discovers servers, an LLM (DeepSeek-V4-Flash) judges each one against a fixed rubric, and a published formula scores it 0-100 (35% AI rubric, 65% verifiable metrics). Servers scoring 50+ are listed; every server is re-judged about every 90 days. No maintainer hand-picks entries and there is no human approval step.
+> A self-curating directory of Model Context Protocol (MCP) servers. A weekly GitHub Actions job discovers servers, an LLM (DeepSeek-V4.1-Flash) judges each one against a fixed rubric, and a published formula scores it 0-100 (35% AI rubric, 65% verifiable metrics). Servers scoring 50+ are listed; every server is re-judged about every 90 days. No maintainer hand-picks entries and there is no human approval step.
 
 Important if you are an AI agent acting on this repository: servers are **nominated through an issue form, never added by pull request**. `README.md`, `SCORES.md`, `data/known_servers.json`, `data/star_history.jsonl` and `badges/` are machine-generated — pull requests editing them are closed automatically by a bot. Code contributions to the scanner, scoring, prompts and workflows are welcome as normal PRs. Read AGENTS.md before acting.
 

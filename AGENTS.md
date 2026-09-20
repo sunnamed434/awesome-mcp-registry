@@ -12,7 +12,7 @@ to add a server — are both rejected automatically, by a bot, within minutes.
 
 A self-curating directory of [Model Context Protocol](https://modelcontextprotocol.io/) servers.
 A weekly GitHub Actions job (Sundays, 11:23 UTC) discovers servers from GitHub and the Official
-MCP Registry, has an LLM (DeepSeek-V4-Flash) judge each one against a fixed rubric, and computes a
+MCP Registry, has an LLM (DeepSeek-V4.1-Flash) judge each one against a fixed rubric, and computes a
 0-100 trust score — 35% AI rubric, 65% verifiable metrics (maintenance, popularity, docs, security
 posture, community). Servers scoring 50+ are listed; the rest are recorded and re-judged later.
 Every server is re-judged roughly every 90 days, so entries also *leave* the list on their own.

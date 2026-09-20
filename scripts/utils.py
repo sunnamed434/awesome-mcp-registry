@@ -266,7 +266,7 @@ MIN_TRUST_SCORE = 50        # Entry threshold: new servers need at least this to
 LISTING_EXIT_SCORE = 48     # Hysteresis: already-listed servers stay until below this
 MAX_PER_CATEGORY = 20       # Show top N per category in README
 TRENDING_MIN_D7 = 10        # Minimum weekly star growth to appear in Trending
-MODEL_DISPLAY = "DeepSeek-V4-Flash"   # AI model shown in the README; keep in sync with scan_repos.MODEL_NAME
+MODEL_DISPLAY = "DeepSeek-V4.1-Flash"  # README badge/name; API id is scan_repos.MODEL_NAME (`deepseek-flash`)
 
 COMPONENT_LABELS = {
     "ai": "AI assessment",
@@ -550,9 +550,9 @@ def generate_readme(servers, output_path, history=None):
     lines.append("")
     lines.append(f"> **Model history:** until August 2026 servers were judged by GPT-4.1-mini via "
                  f"GitHub Models, which GitHub [shut down on July 30, 2026]"
-                 f"(https://github.blog/changelog/2026-07-30-github-models-is-now-retired), "
-                 f"so the judge is now {MODEL_DISPLAY}. The story: "
-                 f"[#36](https://github.com/{REPO}/issues/36).")
+                 f"(https://github.blog/changelog/2026-07-30-github-models-is-now-retired) "
+                 f"([#36](https://github.com/{REPO}/issues/36)). From August 2026 the judge was "
+                 f"DeepSeek-V4-Flash; since September 2026 it is {MODEL_DISPLAY}.")
     lines.append("")
     lines.append(
         "Servers are curated entirely by AI — they earn their spot through quality and lose it "

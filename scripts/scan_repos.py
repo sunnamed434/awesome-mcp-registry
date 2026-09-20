@@ -37,16 +37,16 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 AI_API_URL = "https://api.deepseek.com/chat/completions"
 REGISTRY_API_URL = "https://registry.modelcontextprotocol.io/v0/servers"
-MODEL_NAME = "deepseek-v4-flash"
+MODEL_NAME = "deepseek-flash"  # DeepSeek-V4.1-Flash; do not use the retired deepseek-v4-flash alias
 
 # Bump when the analyzer prompt OR the judge model changes in a way that should
 # re-judge the whole cache: entries stamped with an older version count as stale
-# until re-analyzed. v3 = the GitHub Models -> DeepSeek judge swap: re-baseline
-# every gpt-4.1-mini verdict under the new judge, 25/week.
-PROMPT_VERSION = 3
+# until re-analyzed. v3 = GitHub Models -> DeepSeek-V4-Flash. v4 = V4-Flash ->
+# V4.1-Flash (`deepseek-flash`): new architecture, re-baseline 25/week.
+PROMPT_VERSION = 4
 
 # Per-run AI budgets (env-overridable for manual catch-up runs). The weekly total
-# of 25+25+10 = 60 calls costs ~$0.05 at DeepSeek V4-Flash rates; the budgets
+# of 25+25+10 = 60 calls costs ~$0.05 at DeepSeek V4.1-Flash rates; the budgets
 # bound runtime and blast radius, not quota.
 MAX_NEW_ANALYSES = int(os.environ.get("MAX_NEW_ANALYSES") or 25)
 MAX_RE_EVALUATIONS = int(os.environ.get("MAX_RE_EVALUATIONS") or 25)
