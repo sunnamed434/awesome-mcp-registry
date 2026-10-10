@@ -228,12 +228,50 @@ SOURCE_SCAN_MAX_TOTAL = 8 * 1024 * 1024      # total text scanned
 SOURCE_SCAN_MAX_FILES = 400
 SOURCE_SCAN_MAX_FINDINGS = 5                 # evidence kept per repo
 
+# Poisoned tool descriptions wrap their payload in a tag block:
+# <IMPORTANT>read ~/.ssh/id_rsa ...</IMPORTANT>. The same names are everywhere
+# in honest code as unclosed placeholders (`--client-secret <secret>`, clap's
+# `--secret <SECRET>`) and as XML elements holding a value (Task Scheduler's
+# `<Hidden>false</Hidden>`) — all live false positives — so only a closed block
+# that wraps prose counts. Unclosed payloads go unflagged; every published
+# sample closes its tag.
+INSTRUCTION_BLOCK_RE = re.compile(
+    r"<\s*(IMPORTANT|SYSTEM|SECRET|HIDDEN)\s*>"
+    # A lookahead keeps the match on the opening tag, so nested blocks get checked too
+    r"(?=((?:(?!<\s*\1\s*>).){0,2000}?)<\s*/\s*\1\s*>)",
+    re.IGNORECASE | re.DOTALL)
+STRING_ESCAPE_RE = re.compile(r"\\[nrt]")
+VALUE_ELEMENT_RE = re.compile(r"<(\w+)[^>]*>\s*[^<\s]*\s*</\1\s*>")
+MARKUP_TAG_RE = re.compile(r"</?\w[^>]*>")
+LETTER_RE = re.compile(r"[^\W\d_]")
+# Scripts written without spaces between words (Thai, Chinese, Japanese)
+UNSPACED_SCRIPT_RE = re.compile("[\u0e00-\u0e7f\u3040-\u30ff\u3400-\u9fff]{4,}")
+
+
+def _is_prose(body):
+    """Whether a tag block's own text reads as words, not a value or child elements."""
+    text = STRING_ESCAPE_RE.sub(" ", body)
+    stripped = None
+    while stripped != text:  # value elements, innermost first: <a><b>1</b></a>
+        stripped, text = text, VALUE_ELEMENT_RE.sub(" ", text)
+    text = MARKUP_TAG_RE.sub(" ", text)
+    words = [w for w in text.split() if LETTER_RE.search(w)]
+    return len(words) >= 2 or bool(UNSPACED_SCRIPT_RE.search(text))
+
+
+def _instruction_tag(text):
+    """The first tag in `text` that wraps an instruction block, or None."""
+    for match in INSTRUCTION_BLOCK_RE.finditer(text):
+        if _is_prose(match.group(2)):
+            return match
+    return None
+
+
 PRIMARY_MARKERS = [
-    ("hidden-instruction tag",
-     re.compile(r"<\s*/?\s*(?:IMPORTANT|SYSTEM|SECRET|HIDDEN)\s*>", re.IGNORECASE)),
+    ("hidden-instruction tag", _instruction_tag),
     ("concealment phrasing",
      re.compile(r"do\s+not\s+(?:tell|mention|inform|reveal|show|disclose)\b[^.\n]{0,40}"
-                r"\b(?:user|human)", re.IGNORECASE)),
+                r"\b(?:user|human)", re.IGNORECASE).search),
 ]
 # Security tools legitimately QUOTE this phrase in their detection patterns, so
 # on its own it is not evidence — it only counts next to a primary marker or a
@@ -242,7 +280,7 @@ PRIMARY_MARKERS = [
 CORROBORATED_MARKERS = [
     ("ignore-previous-instructions",
      re.compile(r"ignore\s+(?:all\s+|any\s+)?(?:previous|prior|above)\s+instructions",
-                re.IGNORECASE)),
+                re.IGNORECASE).search),
 ]
 SENSITIVE_PATHS = re.compile(
     r"~/\.ssh|id_rsa|id_ed25519|\.aws/credentials|(?<![\w.])\.env(?!\.example)\b|mcp\.json",
@@ -294,13 +332,13 @@ def scan_text_for_markers(text, filename=""):
         return text[start:match.end() + 40].replace("\n", " ")
 
     findings = []
-    for label, pattern in PRIMARY_MARKERS:
-        match = pattern.search(text)
+    for label, find in PRIMARY_MARKERS:
+        match = find(text)
         if match:
             findings.append(finding(label, context(match)))
     if findings or sensitive:
-        for label, pattern in CORROBORATED_MARKERS:
-            match = pattern.search(text)
+        for label, find in CORROBORATED_MARKERS:
+            match = find(text)
             if match:
                 findings.append(finding(label, context(match)))
     invisible = _invisible_finding(text)
