@@ -155,7 +155,7 @@
       "full_name": "upstash/context7",
       "name": "context7",
       "url": "https://github.com/upstash/context7",
-      "stars": 64355,
+      "stars": 64854,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -180,15 +180,15 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T16:50:43Z",
+      "last_update": "2026-11-15T17:47:39Z",
       "description": "Context7 Platform -- Up-to-date docs for AI agents",
       "language": "TypeScript",
       "topics": "llm, mcp, mcp-server, vibe-coding",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 64355,
-        "pushed_at": "2026-11-06T21:31:21Z",
+        "stars": 64854,
+        "pushed_at": "2026-11-14T15:55:37Z",
         "created_at": "2025-03-26T23:40:39Z",
         "archived": false,
         "disabled": false,
@@ -196,7 +196,7 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 143,
+        "contributors": 144,
         "health_percentage": 50,
         "security_policy": true,
         "scorecard": null,
@@ -210,16 +210,16 @@
         "description": "Context7 Platform -- Up-to-date docs for AI agents",
         "language": "TypeScript",
         "topics": "llm, mcp, mcp-server, vibe-coding",
-        "last_update": "2026-11-08T16:50:43Z",
+        "last_update": "2026-11-15T17:47:39Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 257,
+          "files_scanned": 268,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 90,
         "grade": "A",
         "subscores": {
@@ -246,7 +246,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 64355
+              "stars": 64854
             },
             "weight": 0.1667
           },
@@ -270,7 +270,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 143
+              "contributors": 144
             },
             "weight": 0.0556
           }
@@ -486,7 +486,7 @@
       "full_name": "microsoft/playwright-mcp",
       "name": "playwright-mcp",
       "url": "https://github.com/microsoft/playwright-mcp",
-      "stars": 39336,
+      "stars": 39681,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -510,15 +510,15 @@
         "model": "deepseek-flash",
         "quality_score": 10
       },
-      "last_update": "2026-11-08T17:15:58Z",
+      "last_update": "2026-11-15T17:55:38Z",
       "description": "Playwright MCP server",
       "language": "TypeScript",
       "topics": "mcp, playwright",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 39336,
-        "pushed_at": "2026-11-06T22:49:45Z",
+        "stars": 39681,
+        "pushed_at": "2026-11-13T14:49:49Z",
         "created_at": "2025-03-21T17:48:36Z",
         "archived": false,
         "disabled": false,
@@ -530,7 +530,7 @@
         "health_percentage": 75,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 69666,
+        "readme_chars": 70096,
         "readme_headings": 24,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -540,16 +540,16 @@
         "description": "Playwright MCP server",
         "language": "TypeScript",
         "topics": "mcp, playwright",
-        "last_update": "2026-11-08T17:15:58Z",
+        "last_update": "2026-11-15T17:55:38Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 27,
+          "files_scanned": 26,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 99,
         "grade": "A",
         "subscores": {
@@ -568,7 +568,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 2,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -576,7 +576,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 39336
+              "stars": 39681
             },
             "weight": 0.1667
           },
@@ -656,7 +656,7 @@
       "full_name": "github/github-mcp-server",
       "name": "github-mcp-server",
       "url": "https://github.com/github/github-mcp-server",
-      "stars": 34322,
+      "stars": 34490,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -681,15 +681,15 @@
         "model": "deepseek-flash",
         "quality_score": 10
       },
-      "last_update": "2026-11-08T17:15:41Z",
+      "last_update": "2026-11-15T17:04:00Z",
       "description": "GitHub's official MCP Server",
       "language": "Go",
       "topics": "github, mcp, mcp-server",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 34322,
-        "pushed_at": "2026-11-06T23:25:36Z",
+        "stars": 34490,
+        "pushed_at": "2026-11-13T20:25:40Z",
         "created_at": "2025-03-04T16:42:04Z",
         "archived": false,
         "disabled": false,
@@ -697,12 +697,12 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 172,
+        "contributors": 173,
         "health_percentage": 100,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 120041,
-        "readme_headings": 46,
+        "readme_chars": 127106,
+        "readme_headings": 47,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 942771284,
@@ -711,10 +711,10 @@
         "description": "GitHub's official MCP Server",
         "language": "Go",
         "topics": "github, mcp, mcp-server",
-        "last_update": "2026-11-08T17:15:41Z",
+        "last_update": "2026-11-15T17:04:00Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 359,
+          "files_scanned": 400,
           "markers": [
             {
               "file": ".github/workflows/issue-triage.lock.yml",
@@ -733,7 +733,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 85,
         "grade": "A",
         "subscores": {
@@ -760,7 +760,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 34322
+              "stars": 34490
             },
             "weight": 0.1667
           },
@@ -784,7 +784,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 172
+              "contributors": 173
             },
             "weight": 0.0556
           }
@@ -1200,7 +1200,7 @@
       "full_name": "oraios/serena",
       "name": "serena",
       "url": "https://github.com/oraios/serena",
-      "stars": 31209,
+      "stars": 31404,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -1224,15 +1224,15 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T16:49:51Z",
+      "last_update": "2026-11-15T17:45:07Z",
       "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
       "language": "Python",
       "topics": "agent, ai, ai-coding, claude, claude-code, codex, ide, jetbrains, language-server, mcp-server, programming, vibe-coding",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 31209,
-        "pushed_at": "2026-10-28T10:45:55Z",
+        "stars": 31404,
+        "pushed_at": "2026-11-15T16:01:19Z",
         "created_at": "2025-03-23T22:35:24Z",
         "archived": false,
         "disabled": false,
@@ -1240,10 +1240,19 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 249,
+        "contributors": 252,
         "health_percentage": 62,
         "security_policy": false,
-        "scorecard": null,
+        "scorecard": {
+          "score": 6.3,
+          "date": "2026-11-15T16:01:44Z",
+          "checks": {
+            "Maintained": 10,
+            "Code-Review": 5,
+            "Dangerous-Workflow": 10,
+            "Vulnerabilities": 0
+          }
+        },
         "readme_chars": 15307,
         "readme_headings": 18,
         "readme_has_code_block": true,
@@ -1254,17 +1263,17 @@
         "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
         "language": "Python",
         "topics": "agent, ai, ai-coding, claude, claude-code, codex, ide, jetbrains, language-server, mcp-server, programming, vibe-coding",
-        "last_update": "2026-11-08T16:49:51Z",
+        "last_update": "2026-11-15T17:45:07Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 289,
+          "files_scanned": 291,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 92,
+        "computed_at": "2026-11-15",
+        "final": 89,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -1277,22 +1286,22 @@
                 "maturity": 4
               }
             },
-            "weight": 0.3889
+            "weight": 0.35
           },
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 11,
+              "days_since_push": 0,
               "commits_90d": 30
             },
-            "weight": 0.2222
+            "weight": 0.2
           },
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 31209
+              "stars": 31404
             },
-            "weight": 0.1667
+            "weight": 0.15
           },
           "docs": {
             "score": 73,
@@ -1301,22 +1310,22 @@
               "license": "NOASSERTION",
               "security_policy": false
             },
-            "weight": 0.1667
+            "weight": 0.15
           },
           "security": {
-            "score": null,
+            "score": 63,
             "detail": {
-              "scorecard": null,
-              "note": "not indexed by OpenSSF Scorecard; weight redistributed"
+              "scorecard": 6.3,
+              "note": null
             },
-            "weight": 0.0
+            "weight": 0.1
           },
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 249
+              "contributors": 252
             },
-            "weight": 0.0556
+            "weight": 0.05
           }
         },
         "flags": [],
@@ -1375,7 +1384,7 @@
       "full_name": "GLips/Figma-Context-MCP",
       "name": "Figma-Context-MCP",
       "url": "https://github.com/GLips/Figma-Context-MCP",
-      "stars": 16176,
+      "stars": 16212,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -1399,14 +1408,14 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T15:36:43Z",
+      "last_update": "2026-11-15T09:53:40Z",
       "description": "MCP server to provide Figma layout information to AI coding agents like Cursor",
       "language": "TypeScript",
       "topics": "ai, cursor, figma, mcp, typescript",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 16176,
+        "stars": 16212,
         "pushed_at": "2026-10-27T05:37:12Z",
         "created_at": "2025-02-13T02:55:06Z",
         "archived": false,
@@ -1429,7 +1438,7 @@
         "description": "MCP server to provide Figma layout information to AI coding agents like Cursor",
         "language": "TypeScript",
         "topics": "ai, cursor, figma, mcp, typescript",
-        "last_update": "2026-11-08T15:36:43Z",
+        "last_update": "2026-11-15T09:53:40Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 81,
@@ -1438,7 +1447,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 88,
         "grade": "A",
         "subscores": {
@@ -1455,9 +1464,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 70,
+            "score": 68,
             "detail": {
-              "days_since_push": 12,
+              "days_since_push": 19,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -1465,7 +1474,7 @@
           "popularity": {
             "score": 94,
             "detail": {
-              "stars": 16176
+              "stars": 16212
             },
             "weight": 0.1667
           },
@@ -1545,7 +1554,7 @@
       "full_name": "googleapis/mcp-toolbox",
       "name": "mcp-toolbox",
       "url": "https://github.com/googleapis/mcp-toolbox",
-      "stars": 16824,
+      "stars": 16880,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -1570,15 +1579,15 @@
         "model": "deepseek-flash",
         "quality_score": 10
       },
-      "last_update": "2026-11-08T15:59:46Z",
+      "last_update": "2026-11-15T10:33:25Z",
       "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
       "language": "Go",
       "topics": "agent, agents, ai, bigquery, clickhouse, cockroachdb, database, elasticsearch, firestore, genai, llm, mcp, mongodb, mysql, oracle, postgresql, redis, server, spanner, tidb",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 16824,
-        "pushed_at": "2026-11-07T02:51:35Z",
+        "stars": 16880,
+        "pushed_at": "2026-11-14T03:23:50Z",
         "created_at": "2024-06-07T20:52:54Z",
         "archived": false,
         "disabled": false,
@@ -1586,7 +1595,7 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 173,
+        "contributors": 177,
         "health_percentage": 87,
         "security_policy": true,
         "scorecard": null,
@@ -1600,7 +1609,7 @@
         "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
         "language": "Go",
         "topics": "agent, agents, ai, bigquery, clickhouse, cockroachdb, database, elasticsearch, firestore, genai, llm, mcp, mongodb, mysql, oracle, postgresql, redis, server, spanner, tidb",
-        "last_update": "2026-11-08T15:59:46Z",
+        "last_update": "2026-11-15T10:33:25Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -1609,7 +1618,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 96,
         "grade": "A",
         "subscores": {
@@ -1636,7 +1645,7 @@
           "popularity": {
             "score": 94,
             "detail": {
-              "stars": 16824
+              "stars": 16880
             },
             "weight": 0.1667
           },
@@ -1660,7 +1669,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 173
+              "contributors": 177
             },
             "weight": 0.0556
           }
@@ -1719,7 +1728,7 @@
       "full_name": "BeehiveInnovations/pal-mcp-server",
       "name": "pal-mcp-server",
       "url": "https://github.com/BeehiveInnovations/pal-mcp-server",
-      "stars": 11830,
+      "stars": 11840,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -1743,14 +1752,14 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-08T16:48:11Z",
+      "last_update": "2026-11-15T10:45:28Z",
       "description": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
       "language": "Python",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 11830,
+        "stars": 11840,
         "pushed_at": "2025-12-15T17:07:31Z",
         "created_at": "2025-06-08T15:36:50Z",
         "archived": false,
@@ -1773,7 +1782,7 @@
         "description": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
         "language": "Python",
         "topics": "",
-        "last_update": "2026-11-08T16:48:11Z",
+        "last_update": "2026-11-15T10:45:28Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 176,
@@ -1782,7 +1791,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 66,
         "grade": "B",
         "subscores": {
@@ -1801,7 +1810,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 328,
+              "days_since_push": 335,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -1809,7 +1818,7 @@
           "popularity": {
             "score": 91,
             "detail": {
-              "stars": 11830
+              "stars": 11840
             },
             "weight": 0.1667
           },
@@ -1895,7 +1904,7 @@
       "full_name": "hangwin/mcp-chrome",
       "name": "mcp-chrome",
       "url": "https://github.com/hangwin/mcp-chrome",
-      "stars": 12538,
+      "stars": 12545,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -1919,14 +1928,14 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-08T16:55:29Z",
+      "last_update": "2026-11-15T01:42:10Z",
       "description": "Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.",
       "language": "TypeScript",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 12538,
+        "stars": 12545,
         "pushed_at": "2026-01-06T13:05:39Z",
         "created_at": "2025-06-09T09:07:06Z",
         "archived": false,
@@ -1949,7 +1958,7 @@
         "description": "Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-08T16:55:29Z",
+        "last_update": "2026-11-15T01:42:10Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -1958,7 +1967,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 56,
         "grade": "C",
         "subscores": {
@@ -1977,7 +1986,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 306,
+              "days_since_push": 313,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -1985,7 +1994,7 @@
           "popularity": {
             "score": 92,
             "detail": {
-              "stars": 12538
+              "stars": 12545
             },
             "weight": 0.1667
           },
@@ -2568,7 +2577,7 @@
       "full_name": "idosal/git-mcp",
       "name": "git-mcp",
       "url": "https://github.com/idosal/git-mcp",
-      "stars": 8506,
+      "stars": 8521,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -2592,14 +2601,14 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-08T16:11:18Z",
+      "last_update": "2026-11-15T09:08:37Z",
       "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
       "language": "TypeScript",
       "topics": "agentic-ai, agents, ai, claude, copilot, cursor, git, llm, mcp",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 8506,
+        "stars": 8521,
         "pushed_at": "2026-05-08T14:21:24Z",
         "created_at": "2025-03-29T00:44:19Z",
         "archived": false,
@@ -2622,7 +2631,7 @@
         "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
         "language": "TypeScript",
         "topics": "agentic-ai, agents, ai, claude, copilot, cursor, git, llm, mcp",
-        "last_update": "2026-11-08T16:11:18Z",
+        "last_update": "2026-11-15T09:08:37Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -2631,7 +2640,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 63,
         "grade": "C",
         "subscores": {
@@ -2650,7 +2659,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 184,
+              "days_since_push": 191,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -2658,7 +2667,7 @@
           "popularity": {
             "score": 88,
             "detail": {
-              "stars": 8506
+              "stars": 8521
             },
             "weight": 0.1667
           },
@@ -2743,7 +2752,7 @@
       "full_name": "LaurieWired/GhidraMCP",
       "name": "GhidraMCP",
       "url": "https://github.com/LaurieWired/GhidraMCP",
-      "stars": 11840,
+      "stars": 11942,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -2767,14 +2776,14 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-08T17:12:30Z",
+      "last_update": "2026-11-15T16:14:49Z",
       "description": "MCP Server for Ghidra",
       "language": "Java",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 11840,
+        "stars": 11942,
         "pushed_at": "2026-10-10T20:08:37Z",
         "created_at": "2025-03-23T05:36:55Z",
         "archived": false,
@@ -2797,7 +2806,7 @@
         "description": "MCP Server for Ghidra",
         "language": "Java",
         "topics": "",
-        "last_update": "2026-11-08T17:12:30Z",
+        "last_update": "2026-11-15T16:14:49Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 22,
@@ -2806,7 +2815,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 79,
         "grade": "B",
         "subscores": {
@@ -2823,9 +2832,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 72,
+            "score": 69,
             "detail": {
-              "days_since_push": 28,
+              "days_since_push": 35,
               "commits_90d": 3
             },
             "weight": 0.2222
@@ -2833,7 +2842,7 @@
           "popularity": {
             "score": 91,
             "detail": {
-              "stars": 11840
+              "stars": 11942
             },
             "weight": 0.1667
           },
@@ -2898,7 +2907,7 @@
       "full_name": "0x4m4/hexstrike-ai",
       "name": "hexstrike-ai",
       "url": "https://github.com/0x4m4/hexstrike-ai",
-      "stars": 13441,
+      "stars": 13608,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -2922,14 +2931,14 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-08T17:20:32Z",
+      "last_update": "2026-11-15T16:32:40Z",
       "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
       "language": "Python",
       "topics": "0x4m4, ai, ai-agents, ai-cybersecurity, ai-hacking, ai-penetration-testing, ai-security-tool, artificial-intelligence, ctf-tools, generative-ai, hexstrike, kali-linux, kali-tools, llm, llm-integration, mcp, mcp-server, mcp-tools, pentesting, pentesting-tools",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 13441,
+        "stars": 13608,
         "pushed_at": "2026-08-03T14:33:09Z",
         "created_at": "2025-07-10T17:53:18Z",
         "archived": false,
@@ -2952,7 +2961,7 @@
         "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
         "language": "Python",
         "topics": "0x4m4, ai, ai-agents, ai-cybersecurity, ai-hacking, ai-penetration-testing, ai-security-tool, artificial-intelligence, ctf-tools, generative-ai, hexstrike, kali-linux, kali-tools, llm, llm-integration, mcp, mcp-server, mcp-tools, pentesting, pentesting-tools",
-        "last_update": "2026-11-08T17:20:32Z",
+        "last_update": "2026-11-15T16:32:40Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 2,
@@ -2961,7 +2970,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 69,
         "grade": "B",
         "subscores": {
@@ -2978,9 +2987,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 35,
+            "score": 32,
             "detail": {
-              "days_since_push": 97,
+              "days_since_push": 104,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -2988,7 +2997,7 @@
           "popularity": {
             "score": 92,
             "detail": {
-              "stars": 13441
+              "stars": 13608
             },
             "weight": 0.1667
           },
@@ -3536,7 +3545,7 @@
       "full_name": "BrowserMCP/mcp",
       "name": "mcp",
       "url": "https://github.com/BrowserMCP/mcp",
-      "stars": 7315,
+      "stars": 7362,
       "source": "github",
       "last_checked": "2026-10-04",
       "analysis": {
@@ -3560,22 +3569,22 @@
         "model": "deepseek-flash",
         "quality_score": 5
       },
-      "last_update": "2026-11-08T13:15:24Z",
+      "last_update": "2026-11-15T14:16:12Z",
       "description": "Browser MCP is a Model Context Provider (MCP) server that allows AI applications to control your browser",
       "language": "TypeScript",
       "topics": "browser-automation, browser-extension, claude, cursor, mcp, mcp-server",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 7315,
-        "pushed_at": "2026-11-07T10:48:19Z",
+        "stars": 7362,
+        "pushed_at": "2026-11-12T16:35:15Z",
         "created_at": "2025-03-28T02:01:22Z",
         "archived": false,
         "disabled": false,
         "license_spdx": "Apache-2.0",
         "owner_type": "Organization",
         "owner_created_at": null,
-        "commits_90d": 23,
+        "commits_90d": 30,
         "contributors": 1,
         "health_percentage": 75,
         "security_policy": true,
@@ -3590,16 +3599,16 @@
         "description": "Browser MCP is a Model Context Provider (MCP) server that allows AI applications to control your browser",
         "language": "TypeScript",
         "topics": "browser-automation, browser-extension, claude, cursor, mcp, mcp-server",
-        "last_update": "2026-11-08T13:15:24Z",
+        "last_update": "2026-11-15T14:16:12Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 137,
+          "files_scanned": 140,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 76,
         "grade": "B",
         "subscores": {
@@ -3618,15 +3627,15 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
-              "commits_90d": 23
+              "days_since_push": 3,
+              "commits_90d": 30
             },
             "weight": 0.2222
           },
           "popularity": {
             "score": 86,
             "detail": {
-              "stars": 7315
+              "stars": 7362
             },
             "weight": 0.1667
           },
@@ -3688,7 +3697,7 @@
       "full_name": "firecrawl/firecrawl-mcp-server",
       "name": "firecrawl-mcp-server",
       "url": "https://github.com/firecrawl/firecrawl-mcp-server",
-      "stars": 7780,
+      "stars": 7829,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -3713,15 +3722,15 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T16:17:05Z",
+      "last_update": "2026-11-15T16:26:09Z",
       "description": "Official Firecrawl MCP server, the context API for AI agents: search, scrape, and interact with the web, plus parse, crawl, map, Agent and Monitor, from any MCP client.",
       "language": "JavaScript",
       "topics": "batch-processing, claude, content-extraction, data-collection, firecrawl, firecrawl-ai, gemini-cli-extension, javascript-rendering, llm-tools, mcp, mcp-server, model-context-protocol, search-api, web-crawler, web-scraping",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 7780,
-        "pushed_at": "2026-11-08T16:40:05Z",
+        "stars": 7829,
+        "pushed_at": "2026-11-14T12:12:20Z",
         "created_at": "2024-12-06T07:50:27Z",
         "archived": false,
         "disabled": false,
@@ -3733,8 +3742,8 @@
         "health_percentage": 37,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 74424,
-        "readme_headings": 61,
+        "readme_chars": 80163,
+        "readme_headings": 64,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 899407931,
@@ -3743,16 +3752,16 @@
         "description": "Official Firecrawl MCP server, the context API for AI agents: search, scrape, and interact with the web, plus parse, crawl, map, Agent and Monitor, from any MCP client.",
         "language": "JavaScript",
         "topics": "batch-processing, claude, content-extraction, data-collection, firecrawl, firecrawl-ai, gemini-cli-extension, javascript-rendering, llm-tools, mcp, mcp-server, model-context-protocol, search-api, web-crawler, web-scraping",
-        "last_update": "2026-11-08T16:17:05Z",
+        "last_update": "2026-11-15T16:26:09Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 57,
+          "files_scanned": 58,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 90,
         "grade": "A",
         "subscores": {
@@ -3771,7 +3780,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -3779,7 +3788,7 @@
           "popularity": {
             "score": 87,
             "detail": {
-              "stars": 7780
+              "stars": 7829
             },
             "weight": 0.1667
           },
@@ -3861,7 +3870,7 @@
       "full_name": "wonderwhy-er/DesktopCommanderMCP",
       "name": "DesktopCommanderMCP",
       "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-      "stars": 10254,
+      "stars": 10319,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -3886,15 +3895,15 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-08T16:33:44Z",
+      "last_update": "2026-11-15T15:29:20Z",
       "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
       "language": "JavaScript",
       "topics": "agent, ai, code-analysis, code-generation, gemini-cli-extension, mcp, terminal-ai, terminal-automation, vibe-coding",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 10254,
-        "pushed_at": "2026-11-07T01:54:50Z",
+        "stars": 10319,
+        "pushed_at": "2026-11-12T12:53:43Z",
         "created_at": "2024-12-04T08:26:08Z",
         "archived": false,
         "disabled": false,
@@ -3916,7 +3925,7 @@
         "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
         "language": "JavaScript",
         "topics": "agent, ai, code-analysis, code-generation, gemini-cli-extension, mcp, terminal-ai, terminal-automation, vibe-coding",
-        "last_update": "2026-11-08T16:33:44Z",
+        "last_update": "2026-11-15T15:29:20Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -3925,7 +3934,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 74,
         "grade": "B",
         "subscores": {
@@ -3944,7 +3953,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 3,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -3952,7 +3961,7 @@
           "popularity": {
             "score": 90,
             "detail": {
-              "stars": 10254
+              "stars": 10319
             },
             "weight": 0.1667
           },
@@ -4044,7 +4053,7 @@
       "full_name": "lharries/whatsapp-mcp",
       "name": "whatsapp-mcp",
       "url": "https://github.com/lharries/whatsapp-mcp",
-      "stars": 6838,
+      "stars": 6891,
       "source": "github",
       "last_checked": "2026-10-18",
       "analysis": {
@@ -4071,14 +4080,14 @@
         "model": "deepseek-flash",
         "quality_score": 3
       },
-      "last_update": "2026-11-08T14:43:44Z",
+      "last_update": "2026-11-15T17:25:58Z",
       "description": "WhatsApp MCP server",
       "language": "Go",
       "topics": "ai, mcp, whatsapp, whatsapp-api",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 6838,
+        "stars": 6891,
         "pushed_at": "2025-07-13T17:22:00Z",
         "created_at": "2025-03-29T12:49:33Z",
         "archived": false,
@@ -4101,7 +4110,7 @@
         "description": "WhatsApp MCP server",
         "language": "Go",
         "topics": "ai, mcp, whatsapp, whatsapp-api",
-        "last_update": "2026-11-08T14:43:44Z",
+        "last_update": "2026-11-15T17:25:58Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 6,
@@ -4110,7 +4119,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 34,
         "grade": "F",
         "subscores": {
@@ -4129,7 +4138,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 483,
+              "days_since_push": 490,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -4137,7 +4146,7 @@
           "popularity": {
             "score": 86,
             "detail": {
-              "stars": 6838
+              "stars": 6891
             },
             "weight": 0.1667
           },
@@ -4207,7 +4216,7 @@
       "full_name": "executeautomation/mcp-playwright",
       "name": "mcp-playwright",
       "url": "https://github.com/executeautomation/mcp-playwright",
-      "stars": 5679,
+      "stars": 5681,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -4231,14 +4240,14 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-08T04:23:23Z",
+      "last_update": "2026-11-15T01:42:50Z",
       "description": "Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE and More 🔌",
       "language": "TypeScript",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 5679,
+        "stars": 5681,
         "pushed_at": "2025-12-13T04:28:38Z",
         "created_at": "2024-12-03T18:43:20Z",
         "archived": false,
@@ -4261,7 +4270,7 @@
         "description": "Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE and More 🔌",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-08T04:23:23Z",
+        "last_update": "2026-11-15T01:42:50Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 57,
@@ -4270,7 +4279,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 64,
         "grade": "C",
         "subscores": {
@@ -4289,7 +4298,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 330,
+              "days_since_push": 337,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -4297,7 +4306,7 @@
           "popularity": {
             "score": 84,
             "detail": {
-              "stars": 5679
+              "stars": 5681
             },
             "weight": 0.1667
           },
@@ -5533,7 +5542,7 @@
       "full_name": "getsentry/MobileBuildMCP",
       "name": "MobileBuildMCP",
       "url": "https://github.com/getsentry/MobileBuildMCP",
-      "stars": 6551,
+      "stars": 6577,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -5558,15 +5567,15 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T13:12:00Z",
+      "last_update": "2026-11-15T18:02:38Z",
       "description": "A Model Context Protocol (MCP) server and CLI that provides tools for agent use when working on iOS and macOS projects.",
       "language": "TypeScript",
       "topics": "mcp, mcp-server, model-context-protocol, model-context-protocol-servers, tag-non-production, xcode, xcodebuild",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 6551,
-        "pushed_at": "2026-11-07T03:33:42Z",
+        "stars": 6577,
+        "pushed_at": "2026-11-13T11:42:17Z",
         "created_at": "2025-03-09T17:31:18Z",
         "archived": false,
         "disabled": false,
@@ -5588,7 +5597,7 @@
         "description": "A Model Context Protocol (MCP) server and CLI that provides tools for agent use when working on iOS and macOS projects.",
         "language": "TypeScript",
         "topics": "mcp, mcp-server, model-context-protocol, model-context-protocol-servers, tag-non-production, xcode, xcodebuild",
-        "last_update": "2026-11-08T13:12:00Z",
+        "last_update": "2026-11-15T18:02:38Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -5597,7 +5606,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 91,
         "grade": "A",
         "subscores": {
@@ -5616,7 +5625,7 @@
           "maintenance": {
             "score": 95,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 2,
               "commits_90d": 10
             },
             "weight": 0.2222
@@ -5624,7 +5633,7 @@
           "popularity": {
             "score": 85,
             "detail": {
-              "stars": 6551
+              "stars": 6577
             },
             "weight": 0.1667
           },
@@ -5904,12 +5913,12 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-06T09:15:17Z",
+      "last_update": "2026-11-13T18:49:23Z",
       "description": "A Model Context Protocol (MCP) server that provides structured spec-driven development workflow tools for AI-assisted software development, featuring a real-time web dashboard and VSCode extension for monitoring and managing your project's progress directly in your development environment.",
       "language": "TypeScript",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 4306,
         "pushed_at": "2026-07-03T19:19:12Z",
@@ -5934,7 +5943,7 @@
         "description": "A Model Context Protocol (MCP) server that provides structured spec-driven development workflow tools for AI-assisted software development, featuring a real-time web dashboard and VSCode extension for monitoring and managing your project's progress directly in your development environment.",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-06T09:15:17Z",
+        "last_update": "2026-11-13T18:49:23Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 238,
@@ -5943,7 +5952,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 64,
         "grade": "C",
         "subscores": {
@@ -5960,9 +5969,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 22,
+            "score": 19,
             "detail": {
-              "days_since_push": 127,
+              "days_since_push": 134,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -6547,7 +6556,7 @@
       "full_name": "mobile-next/mobile-mcp",
       "name": "mobile-mcp",
       "url": "https://github.com/mobile-next/mobile-mcp",
-      "stars": 10404,
+      "stars": 10589,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -6571,15 +6580,15 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T17:26:58Z",
+      "last_update": "2026-11-15T17:25:48Z",
       "description": "Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simulators, emulators and real devices. Works with Claude Code, Codex, Cursor and any MCP client.",
       "language": "TypeScript",
       "topics": "agent, android, android-automation, appium-alternative, claude-code, codex, cursor, emulator, ios, ios-automation, mcp, mcp-server, mobile, mobile-automation, mobile-testing, real-device, simulator, skills",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 10404,
-        "pushed_at": "2026-11-07T08:39:20Z",
+        "stars": 10589,
+        "pushed_at": "2026-11-11T14:34:17Z",
         "created_at": "2025-03-28T16:21:06Z",
         "archived": false,
         "disabled": false,
@@ -6601,7 +6610,7 @@
         "description": "Mobile MCP: let AI agents drive your iOS and Android apps. MCP server for simulators, emulators and real devices. Works with Claude Code, Codex, Cursor and any MCP client.",
         "language": "TypeScript",
         "topics": "agent, android, android-automation, appium-alternative, claude-code, codex, cursor, emulator, ios, ios-automation, mcp, mcp-server, mobile, mobile-automation, mobile-testing, real-device, simulator, skills",
-        "last_update": "2026-11-08T17:26:58Z",
+        "last_update": "2026-11-15T17:25:48Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 50,
@@ -6610,7 +6619,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 91,
         "grade": "A",
         "subscores": {
@@ -6629,7 +6638,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 4,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -6637,7 +6646,7 @@
           "popularity": {
             "score": 90,
             "detail": {
-              "stars": 10404
+              "stars": 10589
             },
             "weight": 0.1667
           },
@@ -6720,7 +6729,7 @@
       "full_name": "haris-musa/excel-mcp-server",
       "name": "excel-mcp-server",
       "url": "https://github.com/haris-musa/excel-mcp-server",
-      "stars": 4283,
+      "stars": 4307,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -6746,15 +6755,15 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-08T09:10:10Z",
+      "last_update": "2026-11-15T16:27:36Z",
       "description": "Excel MCP server: let AI (Claude, Cursor, Codex) create and edit Excel files with charts, PivotTables, slicers and formulas. No Excel required.",
       "language": "Python",
       "topics": "ai, automation, charts, claude, cursor, excel, formulas, llm, mcp, mcp-server, model-context-protocol, openpyxl, pivot-table, python, spreadsheet, stdio, streamable-http, toolcalling, vba, xlsx",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 4283,
-        "pushed_at": "2026-11-04T19:26:32Z",
+        "stars": 4307,
+        "pushed_at": "2026-11-15T17:51:48Z",
         "created_at": "2025-02-12T06:39:48Z",
         "archived": false,
         "disabled": false,
@@ -6766,7 +6775,7 @@
         "health_percentage": 71,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 22992,
+        "readme_chars": 23441,
         "readme_headings": 16,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -6776,16 +6785,16 @@
         "description": "Excel MCP server: let AI (Claude, Cursor, Codex) create and edit Excel files with charts, PivotTables, slicers and formulas. No Excel required.",
         "language": "Python",
         "topics": "ai, automation, charts, claude, cursor, excel, formulas, llm, mcp, mcp-server, model-context-protocol, openpyxl, pivot-table, python, spreadsheet, stdio, streamable-http, toolcalling, vba, xlsx",
-        "last_update": "2026-11-08T09:10:10Z",
+        "last_update": "2026-11-15T16:27:36Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 244,
+          "files_scanned": 280,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 84,
         "grade": "A",
         "subscores": {
@@ -6804,7 +6813,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 3,
+              "days_since_push": 0,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -6812,7 +6821,7 @@
           "popularity": {
             "score": 81,
             "detail": {
-              "stars": 4283
+              "stars": 4307
             },
             "weight": 0.1667
           },
@@ -7407,7 +7416,7 @@
       "full_name": "zcaceres/markdownify-mcp",
       "name": "markdownify-mcp",
       "url": "https://github.com/zcaceres/markdownify-mcp",
-      "stars": 3003,
+      "stars": 3005,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -7432,14 +7441,14 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-07T03:58:05Z",
+      "last_update": "2026-11-14T06:58:46Z",
       "description": "A Model Context Protocol server for converting almost anything to Markdown",
       "language": "TypeScript",
       "topics": "ai, anthropic, anthropic-ai, anthropic-claude, markdown, mcp, model-context-protocol, ocr, tools",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3003,
+        "stars": 3005,
         "pushed_at": "2026-11-05T16:38:25Z",
         "created_at": "2024-12-18T21:14:52Z",
         "archived": false,
@@ -7462,7 +7471,7 @@
         "description": "A Model Context Protocol server for converting almost anything to Markdown",
         "language": "TypeScript",
         "topics": "ai, anthropic, anthropic-ai, anthropic-claude, markdown, mcp, model-context-protocol, ocr, tools",
-        "last_update": "2026-11-07T03:58:05Z",
+        "last_update": "2026-11-14T06:58:46Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 14,
@@ -7471,7 +7480,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 74,
         "grade": "B",
         "subscores": {
@@ -7490,7 +7499,7 @@
           "maintenance": {
             "score": 70,
             "detail": {
-              "days_since_push": 3,
+              "days_since_push": 10,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -7498,7 +7507,7 @@
           "popularity": {
             "score": 78,
             "detail": {
-              "stars": 3003
+              "stars": 3005
             },
             "weight": 0.1667
           },
@@ -7573,7 +7582,7 @@
       "full_name": "blazickjp/arxiv-mcp-server",
       "name": "arxiv-mcp-server",
       "url": "https://github.com/blazickjp/arxiv-mcp-server",
-      "stars": 3259,
+      "stars": 3281,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -7598,15 +7607,15 @@
         "model": "deepseek-flash",
         "quality_score": 8
       },
-      "last_update": "2026-11-08T05:10:57Z",
+      "last_update": "2026-11-15T14:04:58Z",
       "description": "A local MCP server for agent literature work. Original-LaTeX section reads, BibTeX from arXiv metadata, and topic watches. Papers stay on disk. Search is optional.",
       "language": "Python",
       "topics": "ai, arxiv, claude-ai, gpt, llm, mcp-server, model-context-protocol, papers, python, research",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3259,
-        "pushed_at": "2026-10-08T13:08:10Z",
+        "stars": 3281,
+        "pushed_at": "2026-11-14T17:47:28Z",
         "created_at": "2024-11-29T16:34:00Z",
         "archived": false,
         "disabled": false,
@@ -7628,7 +7637,7 @@
         "description": "A local MCP server for agent literature work. Original-LaTeX section reads, BibTeX from arXiv metadata, and topic watches. Papers stay on disk. Search is optional.",
         "language": "Python",
         "topics": "ai, arxiv, claude-ai, gpt, llm, mcp-server, model-context-protocol, papers, python, research",
-        "last_update": "2026-11-08T05:10:57Z",
+        "last_update": "2026-11-15T14:04:58Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 56,
@@ -7637,8 +7646,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 83,
+        "computed_at": "2026-11-15",
+        "final": 84,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -7654,17 +7663,17 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 93,
+            "score": 100,
             "detail": {
-              "days_since_push": 31,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2222
           },
           "popularity": {
-            "score": 78,
+            "score": 79,
             "detail": {
-              "stars": 3259
+              "stars": 3281
             },
             "weight": 0.1667
           },
@@ -7745,7 +7754,7 @@
       "full_name": "brightdata/brightdata-mcp",
       "name": "brightdata-mcp",
       "url": "https://github.com/brightdata/brightdata-mcp",
-      "stars": 2715,
+      "stars": 2728,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -7770,15 +7779,15 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T05:11:50Z",
+      "last_update": "2026-11-15T00:40:18Z",
       "description": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
       "language": "JavaScript",
       "topics": "ai-agents, ai-integrations, anti-bot-detection, browser-automation, data-collection, data-extraction, llm, mcp, mcp-server, modelcontextprotocol, scraping, scraping-tools, structured-data, web-crawling, web-data, web-scraping",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2715,
-        "pushed_at": "2026-11-05T11:06:34Z",
+        "stars": 2728,
+        "pushed_at": "2026-11-12T15:18:36Z",
         "created_at": "2025-04-15T10:55:56Z",
         "archived": false,
         "disabled": false,
@@ -7786,12 +7795,12 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 20,
+        "contributors": 21,
         "health_percentage": 37,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 27449,
-        "readme_headings": 33,
+        "readme_chars": 25465,
+        "readme_headings": 32,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 966718614,
@@ -7800,7 +7809,7 @@
         "description": "A powerful Model Context Protocol (MCP) server that provides an all-in-one solution for public web access.",
         "language": "JavaScript",
         "topics": "ai-agents, ai-integrations, anti-bot-detection, browser-automation, data-collection, data-extraction, llm, mcp, mcp-server, modelcontextprotocol, scraping, scraping-tools, structured-data, web-crawling, web-data, web-scraping",
-        "last_update": "2026-11-08T05:11:50Z",
+        "last_update": "2026-11-15T00:40:18Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -7809,7 +7818,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 87,
         "grade": "A",
         "subscores": {
@@ -7836,7 +7845,7 @@
           "popularity": {
             "score": 77,
             "detail": {
-              "stars": 2715
+              "stars": 2728
             },
             "weight": 0.1667
           },
@@ -7858,9 +7867,9 @@
             "weight": 0.0
           },
           "community": {
-            "score": 82,
+            "score": 83,
             "detail": {
-              "contributors": 20
+              "contributors": 21
             },
             "weight": 0.0556
           }
@@ -7920,7 +7929,7 @@
       "full_name": "GongRzhe/Office-Word-MCP-Server",
       "name": "Office-Word-MCP-Server",
       "url": "https://github.com/GongRzhe/Office-Word-MCP-Server",
-      "stars": 2111,
+      "stars": 2115,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -7945,14 +7954,14 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-06T13:54:45Z",
+      "last_update": "2026-11-14T09:30:41Z",
       "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
       "language": "Python",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2111,
+        "stars": 2115,
         "pushed_at": "2025-12-31T13:23:05Z",
         "created_at": "2025-03-25T04:37:15Z",
         "archived": true,
@@ -7975,7 +7984,7 @@
         "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.",
         "language": "Python",
         "topics": "",
-        "last_update": "2026-11-06T13:54:45Z",
+        "last_update": "2026-11-14T09:30:41Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 32,
@@ -7984,7 +7993,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 58,
         "grade": "C",
         "subscores": {
@@ -8003,7 +8012,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 312,
+              "days_since_push": 319,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -8011,7 +8020,7 @@
           "popularity": {
             "score": 74,
             "detail": {
-              "stars": 2111
+              "stars": 2115
             },
             "weight": 0.1667
           },
@@ -8093,7 +8102,7 @@
       "full_name": "GongRzhe/Office-PowerPoint-MCP-Server",
       "name": "Office-PowerPoint-MCP-Server",
       "url": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server",
-      "stars": 1862,
+      "stars": 1863,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -8117,14 +8126,14 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-07T16:13:15Z",
+      "last_update": "2026-11-15T03:39:18Z",
       "description": "A MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. This server provides tools for creating, editing, and manipulating PowerPoint presentations through the MCP protocol.",
       "language": "Python",
       "topics": "",
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 1862,
+        "stars": 1863,
         "pushed_at": "2025-12-31T13:23:39Z",
         "created_at": "2025-03-25T09:10:52Z",
         "archived": true,
@@ -8147,7 +8156,7 @@
         "description": "A MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. This server provides tools for creating, editing, and manipulating PowerPoint presentations through the MCP protocol.",
         "language": "Python",
         "topics": "",
-        "last_update": "2026-11-07T16:13:15Z",
+        "last_update": "2026-11-15T03:39:18Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -8156,7 +8165,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 57,
         "grade": "C",
         "subscores": {
@@ -8175,7 +8184,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 312,
+              "days_since_push": 319,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -8183,7 +8192,7 @@
           "popularity": {
             "score": 73,
             "detail": {
-              "stars": 1862
+              "stars": 1863
             },
             "weight": 0.1667
           },
@@ -8765,7 +8774,7 @@
       "full_name": "MiniMax-AI/MiniMax-MCP",
       "name": "MiniMax-MCP",
       "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
-      "stars": 1597,
+      "stars": 1601,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -8789,7 +8798,7 @@
         "model": "deepseek-flash",
         "quality_score": 5
       },
-      "last_update": "2026-11-08T05:14:44Z",
+      "last_update": "2026-11-15T12:18:35Z",
       "description": "Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs.",
       "language": "Python",
       "topics": "image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning",
@@ -8821,23 +8830,23 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 1597,
-        "pushed_at": "2026-08-20T12:06:49Z",
+        "stars": 1601,
+        "pushed_at": "2026-11-10T09:49:32Z",
         "created_at": "2025-04-10T06:15:56Z",
         "archived": false,
         "disabled": false,
         "license_spdx": "MIT",
         "owner_type": "Organization",
         "owner_created_at": null,
-        "commits_90d": 5,
-        "contributors": 10,
+        "commits_90d": 8,
+        "contributors": 11,
         "health_percentage": 37,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 11930,
-        "readme_headings": 19,
+        "readme_chars": 12659,
+        "readme_headings": 22,
         "readme_has_code_block": true,
         "pipe_to_shell": true,
         "repo_id": 963737260,
@@ -8846,7 +8855,7 @@
         "description": "Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech, image generation and video generation APIs.",
         "language": "Python",
         "topics": "image-generation, image-to-video, mcp, mcp-server, mcp-tools, text-to-image, text-to-speech, text-to-video, video-generation, voice-cloning",
-        "last_update": "2026-11-08T05:14:44Z",
+        "last_update": "2026-11-15T12:18:35Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 16,
@@ -8855,9 +8864,9 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 47,
-        "grade": "F",
+        "computed_at": "2026-11-15",
+        "final": 55,
+        "grade": "C",
         "subscores": {
           "ai": {
             "score": 58,
@@ -8872,17 +8881,17 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 55,
+            "score": 90,
             "detail": {
-              "days_since_push": 80,
-              "commits_90d": 5
+              "days_since_push": 5,
+              "commits_90d": 8
             },
             "weight": 0.2222
           },
           "popularity": {
             "score": 72,
             "detail": {
-              "stars": 1597
+              "stars": 1601
             },
             "weight": 0.1667
           },
@@ -8904,9 +8913,9 @@
             "weight": 0.0
           },
           "community": {
-            "score": 65,
+            "score": 67,
             "detail": {
-              "contributors": 10
+              "contributors": 11
             },
             "weight": 0.0556
           }
@@ -8925,7 +8934,7 @@
       "prompt_version": 4,
       "discovered_via": "github-search",
       "repo_id": 963737260,
-      "listed": false
+      "listed": true
     },
     {
       "full_name": "modelcontextprotocol/swift-sdk",
@@ -9084,7 +9093,7 @@
       "full_name": "qdrant/mcp-server-qdrant",
       "name": "mcp-server-qdrant",
       "url": "https://github.com/qdrant/mcp-server-qdrant",
-      "stars": 1565,
+      "stars": 1570,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -9110,7 +9119,7 @@
         "model": "deepseek-flash",
         "quality_score": 7
       },
-      "last_update": "2026-11-08T05:14:47Z",
+      "last_update": "2026-11-13T23:54:34Z",
       "description": "An official Qdrant Model Context Protocol (MCP) server implementation",
       "language": "Python",
       "topics": "claude, cursor, llm, mcp, mcp-server, semantic-search, windsurf",
@@ -9141,22 +9150,22 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 1565,
-        "pushed_at": "2026-09-04T00:13:58Z",
+        "stars": 1570,
+        "pushed_at": "2026-11-10T10:43:48Z",
         "created_at": "2024-12-02T12:07:39Z",
         "archived": false,
         "disabled": false,
         "license_spdx": "Apache-2.0",
         "owner_type": "Organization",
         "owner_created_at": null,
-        "commits_90d": 1,
-        "contributors": 12,
+        "commits_90d": 3,
+        "contributors": 13,
         "health_percentage": 50,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 22620,
+        "readme_chars": 22322,
         "readme_headings": 26,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -9166,7 +9175,7 @@
         "description": "An official Qdrant Model Context Protocol (MCP) server implementation",
         "language": "Python",
         "topics": "claude, cursor, llm, mcp, mcp-server, semantic-search, windsurf",
-        "last_update": "2026-11-08T05:14:47Z",
+        "last_update": "2026-11-13T23:54:34Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 25,
@@ -9175,8 +9184,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 69,
+        "computed_at": "2026-11-15",
+        "final": 75,
         "grade": "B",
         "subscores": {
           "ai": {
@@ -9192,17 +9201,17 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 51,
+            "score": 78,
             "detail": {
-              "days_since_push": 65,
-              "commits_90d": 1
+              "days_since_push": 5,
+              "commits_90d": 3
             },
             "weight": 0.2222
           },
           "popularity": {
             "score": 71,
             "detail": {
-              "stars": 1565
+              "stars": 1570
             },
             "weight": 0.1667
           },
@@ -9224,9 +9233,9 @@
             "weight": 0.0
           },
           "community": {
-            "score": 69,
+            "score": 71,
             "detail": {
-              "contributors": 12
+              "contributors": 13
             },
             "weight": 0.0556
           }
@@ -10145,7 +10154,7 @@
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
       "name": "chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": 54969,
+      "stars": 56783,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -10172,7 +10181,7 @@
         "model": "deepseek-flash",
         "quality_score": 8
       },
-      "last_update": "2026-11-08T16:20:00Z",
+      "last_update": "2026-11-15T18:01:45Z",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
       "topics": "browser, chrome, chrome-devtools, debugging, devtools, mcp, mcp-server, puppeteer",
@@ -10220,10 +10229,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 54969,
-        "pushed_at": "2026-11-08T01:06:56Z",
+        "stars": 56783,
+        "pushed_at": "2026-11-15T03:06:25Z",
         "created_at": "2025-09-11T10:39:55Z",
         "archived": false,
         "disabled": false,
@@ -10231,11 +10240,11 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 163,
+        "contributors": 167,
         "health_percentage": 62,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 9517,
+        "readme_chars": 9583,
         "readme_headings": 19,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -10245,16 +10254,16 @@
         "description": "Chrome DevTools for coding agents",
         "language": "TypeScript",
         "topics": "browser, chrome, chrome-devtools, debugging, devtools, mcp, mcp-server, puppeteer",
-        "last_update": "2026-11-08T16:20:00Z",
+        "last_update": "2026-11-15T18:01:45Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 226,
+          "files_scanned": 235,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 85,
         "grade": "A",
         "subscores": {
@@ -10281,7 +10290,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 54969
+              "stars": 56783
             },
             "weight": 0.1667
           },
@@ -10305,7 +10314,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 163
+              "contributors": 167
             },
             "weight": 0.0556
           }
@@ -11013,7 +11022,7 @@
       "full_name": "czlonkowski/n8n-mcp",
       "name": "n8n-mcp",
       "url": "https://github.com/czlonkowski/n8n-mcp",
-      "stars": 23227,
+      "stars": 23256,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -11038,8 +11047,8 @@
         "model": "deepseek-flash",
         "quality_score": 10
       },
-      "last_update": "2026-11-08T15:29:26Z",
-      "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you ",
+      "last_update": "2026-11-15T17:58:34Z",
+      "description": "MCP server that lets Claude, ChatGPT, Cursor and other AI assistants operate n8n: debug, edit, validate, test and build workflows on any n8n instance",
       "language": "TypeScript",
       "topics": "mcp, mcp-server, n8n, workflows",
       "mcp_signals": {
@@ -11086,10 +11095,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 23227,
-        "pushed_at": "2026-11-07T18:39:38Z",
+        "stars": 23256,
+        "pushed_at": "2026-11-11T21:15:59Z",
         "created_at": "2025-06-07T12:15:57Z",
         "archived": false,
         "disabled": false,
@@ -11101,26 +11110,26 @@
         "health_percentage": 71,
         "security_policy": true,
         "scorecard": {
-          "score": 7,
-          "date": "2026-11-07T18:30:23Z",
+          "score": 7.4,
+          "date": "2026-11-11T21:14:04Z",
           "checks": {
-            "Code-Review": 0,
             "Maintained": 10,
+            "Code-Review": 0,
             "Dangerous-Workflow": 10,
             "Vulnerabilities": 0
           }
         },
-        "readme_chars": 24572,
-        "readme_headings": 55,
+        "readme_chars": 29889,
+        "readme_headings": 57,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 997890921,
         "default_branch": "main",
         "owner_login": "czlonkowski",
-        "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you ",
+        "description": "MCP server that lets Claude, ChatGPT, Cursor and other AI assistants operate n8n: debug, edit, validate, test and build workflows on any n8n instance",
         "language": "TypeScript",
         "topics": "mcp, mcp-server, n8n, workflows",
-        "last_update": "2026-11-08T15:29:26Z",
+        "last_update": "2026-11-15T17:58:34Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -11129,8 +11138,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 92,
+        "computed_at": "2026-11-15",
+        "final": 93,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -11148,7 +11157,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 3,
               "commits_90d": 30
             },
             "weight": 0.2
@@ -11156,7 +11165,7 @@
           "popularity": {
             "score": 98,
             "detail": {
-              "stars": 23227
+              "stars": 23256
             },
             "weight": 0.15
           },
@@ -11170,9 +11179,9 @@
             "weight": 0.15
           },
           "security": {
-            "score": 70,
+            "score": 74,
             "detail": {
-              "scorecard": 7,
+              "scorecard": 7.4,
               "note": null
             },
             "weight": 0.1
@@ -11698,7 +11707,7 @@
       "full_name": "yusufkaraaslan/Skill_Seekers",
       "name": "Skill_Seekers",
       "url": "https://github.com/yusufkaraaslan/Skill_Seekers",
-      "stars": 15292,
+      "stars": 15318,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -11723,7 +11732,7 @@
         "model": "deepseek-flash",
         "quality_score": 8
       },
-      "last_update": "2026-11-08T12:21:04Z",
+      "last_update": "2026-11-15T17:38:34Z",
       "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
       "language": "Python",
       "topics": "ai-tools, ast-parser, automation, claude-ai, claude-skills, code-analysis, conflict-detection, documentation, documentation-generator, github, github-scraper, mcp, mcp-server, multi-source, ocr, pdf, python, web-scraping",
@@ -11772,9 +11781,9 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 15292,
+        "stars": 15318,
         "pushed_at": "2026-09-30T18:49:17Z",
         "created_at": "2025-10-17T14:43:48Z",
         "archived": false,
@@ -11797,7 +11806,7 @@
         "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
         "language": "Python",
         "topics": "ai-tools, ast-parser, automation, claude-ai, claude-skills, code-analysis, conflict-detection, documentation, documentation-generator, github, github-scraper, mcp, mcp-server, multi-source, ocr, pdf, python, web-scraping",
-        "last_update": "2026-11-08T12:21:04Z",
+        "last_update": "2026-11-15T17:38:34Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -11806,8 +11815,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 82,
+        "computed_at": "2026-11-15",
+        "final": 81,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -11823,9 +11832,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 90,
+            "score": 87,
             "detail": {
-              "days_since_push": 38,
+              "days_since_push": 45,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -11833,7 +11842,7 @@
           "popularity": {
             "score": 93,
             "detail": {
-              "stars": 15292
+              "stars": 15318
             },
             "weight": 0.1667
           },
@@ -12397,7 +12406,7 @@
       "full_name": "mrexodia/ida-pro-mcp",
       "name": "ida-pro-mcp",
       "url": "https://github.com/mrexodia/ida-pro-mcp",
-      "stars": 13411,
+      "stars": 13485,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -12421,7 +12430,7 @@
         "model": "deepseek-flash",
         "quality_score": 9
       },
-      "last_update": "2026-11-08T17:12:25Z",
+      "last_update": "2026-11-15T16:50:40Z",
       "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
       "language": "Python",
       "topics": "ai, aiagent, binary-analysis, ida-plugin, ida-pro, mcp, mcp-server, modelcontextprotocol, reverse-engineering",
@@ -12459,10 +12468,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 13411,
-        "pushed_at": "2026-09-26T15:42:10Z",
+        "stars": 13485,
+        "pushed_at": "2026-11-12T11:01:58Z",
         "created_at": "2025-03-25T22:23:41Z",
         "archived": false,
         "disabled": false,
@@ -12470,7 +12479,7 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 27,
-        "contributors": 74,
+        "contributors": 75,
         "health_percentage": 42,
         "security_policy": false,
         "scorecard": null,
@@ -12484,7 +12493,7 @@
         "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
         "language": "Python",
         "topics": "ai, aiagent, binary-analysis, ida-plugin, ida-pro, mcp, mcp-server, modelcontextprotocol, reverse-engineering",
-        "last_update": "2026-11-08T17:12:25Z",
+        "last_update": "2026-11-15T16:50:40Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 53,
@@ -12493,8 +12502,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 85,
+        "computed_at": "2026-11-15",
+        "final": 88,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -12510,9 +12519,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 88,
+            "score": 100,
             "detail": {
-              "days_since_push": 43,
+              "days_since_push": 3,
               "commits_90d": 27
             },
             "weight": 0.2222
@@ -12520,7 +12529,7 @@
           "popularity": {
             "score": 92,
             "detail": {
-              "stars": 13411
+              "stars": 13485
             },
             "weight": 0.1667
           },
@@ -12544,7 +12553,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 74
+              "contributors": 75
             },
             "weight": 0.0556
           }
@@ -12869,7 +12878,7 @@
       "full_name": "supermemoryai/apple-mcp",
       "name": "apple-mcp",
       "url": "https://github.com/supermemoryai/apple-mcp",
-      "stars": 3113,
+      "stars": 3112,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -12893,7 +12902,7 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-05T01:18:06Z",
+      "last_update": "2026-11-09T08:21:10Z",
       "description": "Collection of apple-native tools for the model context protocol.",
       "language": "TypeScript",
       "topics": "applescripts, modelcontextprotocol",
@@ -12927,9 +12936,9 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3113,
+        "stars": 3112,
         "pushed_at": "2025-08-11T03:13:27Z",
         "created_at": "2025-02-19T23:50:49Z",
         "archived": true,
@@ -12952,7 +12961,7 @@
         "description": "Collection of apple-native tools for the model context protocol.",
         "language": "TypeScript",
         "topics": "applescripts, modelcontextprotocol",
-        "last_update": "2026-11-05T01:18:06Z",
+        "last_update": "2026-11-09T08:21:10Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 18,
@@ -12961,7 +12970,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 55,
         "grade": "C",
         "subscores": {
@@ -12980,7 +12989,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 454,
+              "days_since_push": 461,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -12988,7 +12997,7 @@
           "popularity": {
             "score": 78,
             "detail": {
-              "stars": 3113
+              "stars": 3112
             },
             "weight": 0.1667
           },
@@ -13206,7 +13215,7 @@
       "full_name": "Jpisnice/shadcn-ui-mcp-server",
       "name": "shadcn-ui-mcp-server",
       "url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
-      "stars": 3091,
+      "stars": 3098,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -13231,7 +13240,7 @@
         "model": "deepseek-flash",
         "quality_score": 6
       },
-      "last_update": "2026-11-08T09:28:29Z",
+      "last_update": "2026-11-12T20:49:02Z",
       "description": "A mcp server to allow LLMS gain context about shadcn ui component structure,usage and installation,compaitable with react,svelte 5,vue & React Native",
       "language": "TypeScript",
       "topics": "ai, expo, mcp, modelcontextprotocol, nextjs, npm, npm-package, npx, react, react-native, shadcn-ui, svelte, sveltekit, ts, typescript, ui, vue, vuejs, webdev",
@@ -13274,9 +13283,9 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3091,
+        "stars": 3098,
         "pushed_at": "2026-10-03T15:17:41Z",
         "created_at": "2025-04-07T13:10:12Z",
         "archived": false,
@@ -13299,7 +13308,7 @@
         "description": "A mcp server to allow LLMS gain context about shadcn ui component structure,usage and installation,compaitable with react,svelte 5,vue & React Native",
         "language": "TypeScript",
         "topics": "ai, expo, mcp, modelcontextprotocol, nextjs, npm, npm-package, npx, react, react-native, shadcn-ui, svelte, sveltekit, ts, typescript, ui, vue, vuejs, webdev",
-        "last_update": "2026-11-08T09:28:29Z",
+        "last_update": "2026-11-12T20:49:02Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 72,
@@ -13308,7 +13317,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 80,
         "grade": "A",
         "subscores": {
@@ -13325,9 +13334,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 91,
+            "score": 88,
             "detail": {
-              "days_since_push": 36,
+              "days_since_push": 43,
               "commits_90d": 14
             },
             "weight": 0.2222
@@ -13335,7 +13344,7 @@
           "popularity": {
             "score": 78,
             "detail": {
-              "stars": 3091
+              "stars": 3098
             },
             "weight": 0.1667
           },
@@ -13544,7 +13553,7 @@
       "full_name": "xpzouying/xiaohongshu-mcp",
       "name": "xiaohongshu-mcp",
       "url": "https://github.com/xpzouying/xiaohongshu-mcp",
-      "stars": 17023,
+      "stars": 17134,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -13571,10 +13580,10 @@
         "quality_score": 8
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 17023,
-        "pushed_at": "2026-11-06T06:56:15Z",
+        "stars": 17134,
+        "pushed_at": "2026-11-10T17:46:09Z",
         "created_at": "2025-08-03T09:08:45Z",
         "archived": false,
         "disabled": false,
@@ -13582,11 +13591,11 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 41,
+        "contributors": 42,
         "health_percentage": 57,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 38643,
+        "readme_chars": 39884,
         "readme_headings": 68,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -13596,7 +13605,7 @@
         "description": "MCP for xiaohongshu.com",
         "language": "Go",
         "topics": "mcp, mcp-server, xiaohongshu-mcp",
-        "last_update": "2026-11-08T16:02:48Z",
+        "last_update": "2026-11-15T14:58:59Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -13605,7 +13614,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 81,
         "grade": "A",
         "subscores": {
@@ -13624,7 +13633,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 2,
+              "days_since_push": 5,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -13632,7 +13641,7 @@
           "popularity": {
             "score": 95,
             "detail": {
-              "stars": 17023
+              "stars": 17134
             },
             "weight": 0.1667
           },
@@ -13656,7 +13665,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 41
+              "contributors": 42
             },
             "weight": 0.0556
           }
@@ -13672,7 +13681,7 @@
         "penalty": 5,
         "fatal": false
       },
-      "last_update": "2026-11-08T16:02:48Z",
+      "last_update": "2026-11-15T14:58:59Z",
       "description": "MCP for xiaohongshu.com",
       "language": "Go",
       "topics": "mcp, mcp-server, xiaohongshu-mcp",
@@ -13728,7 +13737,7 @@
       "full_name": "perplexityai/modelcontextprotocol",
       "name": "modelcontextprotocol",
       "url": "https://github.com/perplexityai/modelcontextprotocol",
-      "stars": 2614,
+      "stars": 2631,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -13754,9 +13763,9 @@
         "quality_score": 9
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2614,
+        "stars": 2631,
         "pushed_at": "2026-10-21T23:47:09Z",
         "created_at": "2025-03-10T19:44:02Z",
         "archived": false,
@@ -13779,7 +13788,7 @@
         "description": "The official MCP server implementation for the Perplexity API Platform",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-08T15:58:15Z",
+        "last_update": "2026-11-15T11:39:41Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 27,
@@ -13788,8 +13797,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 90,
+        "computed_at": "2026-11-15",
+        "final": 89,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -13805,9 +13814,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 99,
+            "score": 96,
             "detail": {
-              "days_since_push": 17,
+              "days_since_push": 24,
               "commits_90d": 16
             },
             "weight": 0.2222
@@ -13815,7 +13824,7 @@
           "popularity": {
             "score": 76,
             "detail": {
-              "stars": 2614
+              "stars": 2631
             },
             "weight": 0.1667
           },
@@ -13848,7 +13857,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T15:58:15Z",
+      "last_update": "2026-11-15T11:39:41Z",
       "description": "The official MCP server implementation for the Perplexity API Platform",
       "language": "TypeScript",
       "topics": "",
@@ -14245,7 +14254,7 @@
       "full_name": "chongdashu/unreal-mcp",
       "name": "unreal-mcp",
       "url": "https://github.com/chongdashu/unreal-mcp",
-      "stars": 2112,
+      "stars": 2118,
       "source": "github",
       "last_checked": "2026-10-04",
       "analysis": {
@@ -14270,9 +14279,9 @@
         "quality_score": 5
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2112,
+        "stars": 2118,
         "pushed_at": "2025-04-22T02:02:27Z",
         "created_at": "2025-03-28T17:22:11Z",
         "archived": false,
@@ -14295,7 +14304,7 @@
         "description": "Enable AI assistant clients like Cursor, Windsurf and Claude Desktop to control Unreal Engine through natural language using the Model Context Protocol (MCP).",
         "language": "C++",
         "topics": "mcp-server, modelcontextprotocol, unreal-engine-5",
-        "last_update": "2026-11-08T05:12:53Z",
+        "last_update": "2026-11-14T18:55:49Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 29,
@@ -14304,7 +14313,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 48,
         "grade": "F",
         "subscores": {
@@ -14323,7 +14332,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 565,
+              "days_since_push": 572,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -14331,7 +14340,7 @@
           "popularity": {
             "score": 74,
             "detail": {
-              "stars": 2112
+              "stars": 2118
             },
             "weight": 0.1667
           },
@@ -14364,7 +14373,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T05:12:53Z",
+      "last_update": "2026-11-14T18:55:49Z",
       "description": "Enable AI assistant clients like Cursor, Windsurf and Claude Desktop to control Unreal Engine through natural language using the Model Context Protocol (MCP).",
       "language": "C++",
       "topics": "mcp-server, modelcontextprotocol, unreal-engine-5",
@@ -14455,7 +14464,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 1232,
         "pushed_at": "2026-02-11T14:55:42Z",
@@ -14489,7 +14498,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 28,
         "grade": "F",
         "subscores": {
@@ -14508,7 +14517,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 270,
+              "days_since_push": 277,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -14749,7 +14758,7 @@
       "full_name": "containers/kubernetes-mcp-server",
       "name": "kubernetes-mcp-server",
       "url": "https://github.com/containers/kubernetes-mcp-server",
-      "stars": 2229,
+      "stars": 2252,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -14775,10 +14784,10 @@
         "quality_score": 9
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2229,
-        "pushed_at": "2026-11-06T22:31:59Z",
+        "stars": 2252,
+        "pushed_at": "2026-11-14T17:30:24Z",
         "created_at": "2025-02-11T02:57:36Z",
         "archived": false,
         "disabled": false,
@@ -14786,7 +14795,7 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 95,
+        "contributors": 98,
         "health_percentage": 62,
         "security_policy": true,
         "scorecard": null,
@@ -14800,7 +14809,7 @@
         "description": "Model Context Protocol (MCP) server for Kubernetes and OpenShift",
         "language": "Go",
         "topics": "containers, context, kubernetes, kubernetes-mcp, mcp, model, modelcontextprotocol, openshift, protocol",
-        "last_update": "2026-11-07T11:14:14Z",
+        "last_update": "2026-11-15T06:33:39Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -14809,7 +14818,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 91,
         "grade": "A",
         "subscores": {
@@ -14836,7 +14845,7 @@
           "popularity": {
             "score": 75,
             "detail": {
-              "stars": 2229
+              "stars": 2252
             },
             "weight": 0.1667
           },
@@ -14860,7 +14869,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 95
+              "contributors": 98
             },
             "weight": 0.0556
           }
@@ -14869,7 +14878,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-07T11:14:14Z",
+      "last_update": "2026-11-15T06:33:39Z",
       "description": "Model Context Protocol (MCP) server for Kubernetes and OpenShift",
       "language": "Go",
       "topics": "containers, context, kubernetes, kubernetes-mcp, mcp, model, modelcontextprotocol, openshift, protocol",
@@ -14924,7 +14933,7 @@
       "full_name": "robotmcp/ros-mcp-server",
       "name": "ros-mcp-server",
       "url": "https://github.com/robotmcp/ros-mcp-server",
-      "stars": 1518,
+      "stars": 1527,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -14949,10 +14958,10 @@
         "quality_score": 7
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 1518,
-        "pushed_at": "2026-11-08T14:38:36Z",
+        "stars": 1527,
+        "pushed_at": "2026-11-15T15:06:13Z",
         "created_at": "2025-04-11T05:40:09Z",
         "archived": false,
         "disabled": false,
@@ -14974,7 +14983,7 @@
         "description": "Connect AI models like Claude & GPT with robots using MCP and ROS.",
         "language": "Python",
         "topics": "mcp, mcp-server, modelcontextprotocol, ros, ros-mcp-server, ros2, ros2-mcp-server",
-        "last_update": "2026-11-08T05:15:32Z",
+        "last_update": "2026-11-15T09:19:02Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -14983,7 +14992,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 75,
         "grade": "B",
         "subscores": {
@@ -15010,7 +15019,7 @@
           "popularity": {
             "score": 71,
             "detail": {
-              "stars": 1518
+              "stars": 1527
             },
             "weight": 0.1667
           },
@@ -15043,7 +15052,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T05:15:32Z",
+      "last_update": "2026-11-15T09:19:02Z",
       "description": "Connect AI models like Claude & GPT with robots using MCP and ROS.",
       "language": "Python",
       "topics": "mcp, mcp-server, modelcontextprotocol, ros, ros-mcp-server, ros2, ros2-mcp-server",
@@ -15266,7 +15275,7 @@
       "full_name": "bgauryy/octocode",
       "name": "octocode",
       "url": "https://github.com/bgauryy/octocode",
-      "stars": 957,
+      "stars": 965,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -15292,9 +15301,9 @@
         "quality_score": 8
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 957,
+        "stars": 965,
         "pushed_at": "2026-11-06T18:36:24Z",
         "created_at": "2025-06-05T13:56:40Z",
         "archived": false,
@@ -15302,7 +15311,7 @@
         "license_spdx": "MIT",
         "owner_type": "User",
         "owner_created_at": null,
-        "commits_90d": 5,
+        "commits_90d": 3,
         "contributors": 1,
         "health_percentage": 57,
         "security_policy": false,
@@ -15317,7 +15326,7 @@
         "description": "Code research platform for AI agents; find, understand, and prove context across your code and all of GitHub, in a fraction of the tokens. One toolset, MCP or CLI  ",
         "language": "TypeScript",
         "topics": "agent, ai, ai-agents, ai-tools, claude-ai, code-intelligence, code-search, context, cursor, cursor-ai, development, github, github-api, llm, mcp, model-context-protocol, modelcontextprotocol, octocode, semantic-search, vibe-coding",
-        "last_update": "2026-11-05T14:05:51Z",
+        "last_update": "2026-11-14T23:39:39Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -15326,8 +15335,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 73,
+        "computed_at": "2026-11-15",
+        "final": 72,
         "grade": "B",
         "subscores": {
           "ai": {
@@ -15343,17 +15352,17 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 82,
+            "score": 78,
             "detail": {
-              "days_since_push": 1,
-              "commits_90d": 5
+              "days_since_push": 8,
+              "commits_90d": 3
             },
             "weight": 0.2222
           },
           "popularity": {
             "score": 67,
             "detail": {
-              "stars": 957
+              "stars": 965
             },
             "weight": 0.1667
           },
@@ -15386,7 +15395,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-05T14:05:51Z",
+      "last_update": "2026-11-14T23:39:39Z",
       "description": "Code research platform for AI agents; find, understand, and prove context across your code and all of GitHub, in a fraction of the tokens. One toolset, MCP or CLI  ",
       "language": "TypeScript",
       "topics": "agent, ai, ai-agents, ai-tools, claude-ai, code-intelligence, code-search, context, cursor, cursor-ai, development, github, github-api, llm, mcp, model-context-protocol, modelcontextprotocol, octocode, semantic-search, vibe-coding",
@@ -16832,7 +16841,7 @@
       "full_name": "benborla/mcp-server-mysql",
       "name": "mcp-server-mysql",
       "url": "https://github.com/benborla/mcp-server-mysql",
-      "stars": 2210,
+      "stars": 2221,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -16858,9 +16867,9 @@
         "quality_score": 8
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2210,
+        "stars": 2221,
         "pushed_at": "2026-07-27T13:36:52Z",
         "created_at": "2024-12-09T14:02:55Z",
         "archived": false,
@@ -16883,7 +16892,7 @@
         "description": "A Model Context Protocol server that provides read-only access to MySQL databases. This server enables LLMs to inspect database schemas and execute read-only queries.",
         "language": "JavaScript",
         "topics": "",
-        "last_update": "2026-11-07T02:04:00Z",
+        "last_update": "2026-11-15T15:08:43Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 34,
@@ -16892,8 +16901,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 74,
+        "computed_at": "2026-11-15",
+        "final": 73,
         "grade": "B",
         "subscores": {
           "ai": {
@@ -16909,9 +16918,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 32,
+            "score": 29,
             "detail": {
-              "days_since_push": 104,
+              "days_since_push": 111,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -16919,7 +16928,7 @@
           "popularity": {
             "score": 75,
             "detail": {
-              "stars": 2210
+              "stars": 2221
             },
             "weight": 0.1667
           },
@@ -16952,7 +16961,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-07T02:04:00Z",
+      "last_update": "2026-11-15T15:08:43Z",
       "description": "A Model Context Protocol server that provides read-only access to MySQL databases. This server enables LLMs to inspect database schemas and execute read-only queries.",
       "language": "JavaScript",
       "topics": "",
@@ -17008,7 +17017,7 @@
       "full_name": "CursorTouch/Windows-MCP",
       "name": "Windows-MCP",
       "url": "https://github.com/CursorTouch/Windows-MCP",
-      "stars": 11339,
+      "stars": 11717,
       "source": "github",
       "last_checked": "2026-09-20",
       "analysis": {
@@ -17033,10 +17042,10 @@
         "quality_score": 7
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 11339,
-        "pushed_at": "2026-11-08T13:06:55Z",
+        "stars": 11717,
+        "pushed_at": "2026-11-14T00:55:21Z",
         "created_at": "2025-05-13T02:27:53Z",
         "archived": false,
         "disabled": false,
@@ -17044,11 +17053,11 @@
         "owner_type": "Organization",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 73,
+        "contributors": 76,
         "health_percentage": 62,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 43994,
+        "readme_chars": 44316,
         "readme_headings": 47,
         "readme_has_code_block": true,
         "pipe_to_shell": true,
@@ -17058,16 +17067,16 @@
         "description": "MCP Server for Computer Use in Windows",
         "language": "Python",
         "topics": "ai, desktop, mcp, tools, windows, windows-automation",
-        "last_update": "2026-11-08T17:14:35Z",
+        "last_update": "2026-11-15T17:21:39Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 96,
+          "files_scanned": 97,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 72,
         "grade": "B",
         "subscores": {
@@ -17086,7 +17095,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -17094,7 +17103,7 @@
           "popularity": {
             "score": 91,
             "detail": {
-              "stars": 11339
+              "stars": 11717
             },
             "weight": 0.1667
           },
@@ -17118,7 +17127,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 73
+              "contributors": 76
             },
             "weight": 0.0556
           }
@@ -17134,7 +17143,7 @@
         "penalty": 15,
         "fatal": false
       },
-      "last_update": "2026-11-08T17:14:35Z",
+      "last_update": "2026-11-15T17:21:39Z",
       "description": "MCP Server for Computer Use in Windows",
       "language": "Python",
       "topics": "ai, desktop, mcp, tools, windows, windows-automation",
@@ -17352,7 +17361,7 @@
       "full_name": "sooperset/mcp-atlassian",
       "name": "mcp-atlassian",
       "url": "https://github.com/sooperset/mcp-atlassian",
-      "stars": 6099,
+      "stars": 6122,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -17377,10 +17386,10 @@
         "quality_score": 10
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 6099,
-        "pushed_at": "2026-11-08T15:23:05Z",
+        "stars": 6122,
+        "pushed_at": "2026-11-15T12:10:55Z",
         "created_at": "2024-12-03T09:25:20Z",
         "archived": false,
         "disabled": false,
@@ -17388,7 +17397,7 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 186,
+        "contributors": 196,
         "health_percentage": 85,
         "security_policy": true,
         "scorecard": null,
@@ -17402,16 +17411,16 @@
         "description": "MCP server for Atlassian tools (Confluence, Jira)",
         "language": "Python",
         "topics": "atlassian, confluence, jira, mcp",
-        "last_update": "2026-11-08T15:23:10Z",
+        "last_update": "2026-11-15T15:46:36Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 161,
+          "files_scanned": 162,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 97,
         "grade": "A",
         "subscores": {
@@ -17438,7 +17447,7 @@
           "popularity": {
             "score": 85,
             "detail": {
-              "stars": 6099
+              "stars": 6122
             },
             "weight": 0.1667
           },
@@ -17462,7 +17471,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 186
+              "contributors": 196
             },
             "weight": 0.0556
           }
@@ -17471,7 +17480,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T15:23:10Z",
+      "last_update": "2026-11-15T15:46:36Z",
       "description": "MCP server for Atlassian tools (Confluence, Jira)",
       "language": "Python",
       "topics": "atlassian, confluence, jira, mcp",
@@ -18043,7 +18052,7 @@
       "full_name": "datagouv/datagouv-mcp",
       "name": "datagouv-mcp",
       "url": "https://github.com/datagouv/datagouv-mcp",
-      "stars": 1608,
+      "stars": 1611,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -18069,17 +18078,17 @@
         "quality_score": 8
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 1608,
-        "pushed_at": "2026-11-05T11:11:37Z",
+        "stars": 1611,
+        "pushed_at": "2026-11-13T09:50:42Z",
         "created_at": "2025-11-25T09:23:15Z",
         "archived": false,
         "disabled": false,
         "license_spdx": "MIT",
         "owner_type": "Organization",
         "owner_created_at": null,
-        "commits_90d": 12,
+        "commits_90d": 15,
         "contributors": 15,
         "health_percentage": 62,
         "security_policy": false,
@@ -18094,7 +18103,7 @@
         "description": "Official data.gouv.fr Model Context Protocol (MCP) server that allows AI chatbots to search, explore, and analyze datasets from the French national Open Data platform, directly through conversation.",
         "language": "Python",
         "topics": "mcp, mcp-server, open-data, opendata",
-        "last_update": "2026-11-08T17:02:05Z",
+        "last_update": "2026-11-15T13:31:57Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 36,
@@ -18103,7 +18112,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 85,
         "grade": "A",
         "subscores": {
@@ -18122,15 +18131,15 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 3,
-              "commits_90d": 12
+              "days_since_push": 2,
+              "commits_90d": 15
             },
             "weight": 0.2222
           },
           "popularity": {
             "score": 72,
             "detail": {
-              "stars": 1608
+              "stars": 1611
             },
             "weight": 0.1667
           },
@@ -18163,7 +18172,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T17:02:05Z",
+      "last_update": "2026-11-15T13:31:57Z",
       "description": "Official data.gouv.fr Model Context Protocol (MCP) server that allows AI chatbots to search, explore, and analyze datasets from the French national Open Data platform, directly through conversation.",
       "language": "Python",
       "topics": "mcp, mcp-server, open-data, opendata",
@@ -18355,7 +18364,7 @@
       "full_name": "mksglu/context-mode",
       "name": "context-mode",
       "url": "https://github.com/mksglu/context-mode",
-      "stars": 33686,
+      "stars": 34136,
       "source": "github",
       "last_checked": "2026-10-04",
       "analysis": {
@@ -18380,10 +18389,10 @@
         "quality_score": 8
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 33686,
-        "pushed_at": "2026-11-08T15:00:17Z",
+        "stars": 34136,
+        "pushed_at": "2026-11-15T13:38:48Z",
         "created_at": "2026-02-23T05:56:28Z",
         "archived": false,
         "disabled": false,
@@ -18395,17 +18404,17 @@
         "health_percentage": 57,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 48756,
-        "readme_headings": 47,
+        "readme_chars": 49037,
+        "readme_headings": 50,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 1164477708,
         "default_branch": "main",
         "owner_login": "mksglu",
-        "description": "Free, local plugin that keeps tool output out of your coding agent's context window. Sandbox and SQLite FTS5 search, 99% fewer bytes in context. Works with Claude Code, Codex, Pi, OpenCode, Gemini CLI, Copilot CLI and 4 more agents. Zero telemetry.",
+        "description": "Free, local plugin that keeps tool output out of your coding agent's context window. Sandbox and SQLite FTS5 search, 99% fewer bytes in context. Works with Claude Code, Codex, Pi, OMP, OpenCode, Gemini CLI, Copilot CLI and 4 more agents. Zero telemetry.",
         "language": "JavaScript",
         "topics": "antigravity, claude, claude-code, claude-code-hooks, claude-code-plugins, claude-code-skill, codex, codex-cli, context-mode, copilot, cursor-plugin, kiro, mcp, mcp-server, mcp-tools, openclaw, opencode, pi-agent, skills, zed-extension",
-        "last_update": "2026-11-08T17:16:51Z",
+        "last_update": "2026-11-15T17:33:03Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -18414,7 +18423,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 82,
         "grade": "A",
         "subscores": {
@@ -18441,7 +18450,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 33686
+              "stars": 34136
             },
             "weight": 0.1667
           },
@@ -18474,8 +18483,8 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T17:16:51Z",
-      "description": "Free, local plugin that keeps tool output out of your coding agent's context window. Sandbox and SQLite FTS5 search, 99% fewer bytes in context. Works with Claude Code, Codex, Pi, OpenCode, Gemini CLI, Copilot CLI and 4 more agents. Zero telemetry.",
+      "last_update": "2026-11-15T17:33:03Z",
+      "description": "Free, local plugin that keeps tool output out of your coding agent's context window. Sandbox and SQLite FTS5 search, 99% fewer bytes in context. Works with Claude Code, Codex, Pi, OMP, OpenCode, Gemini CLI, Copilot CLI and 4 more agents. Zero telemetry.",
       "language": "JavaScript",
       "topics": "antigravity, claude, claude-code, claude-code-hooks, claude-code-plugins, claude-code-skill, codex, codex-cli, context-mode, copilot, cursor-plugin, kiro, mcp, mcp-server, mcp-tools, openclaw, opencode, pi-agent, skills, zed-extension",
       "mcp_signals": {
@@ -18713,7 +18722,7 @@
       "full_name": "coddingtonbear/obsidian-local-rest-api",
       "name": "obsidian-local-rest-api",
       "url": "https://github.com/coddingtonbear/obsidian-local-rest-api",
-      "stars": 3128,
+      "stars": 3152,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -18738,9 +18747,9 @@
         "quality_score": 9
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3128,
+        "stars": 3152,
         "pushed_at": "2026-10-17T16:30:40Z",
         "created_at": "2022-01-25T04:20:29Z",
         "archived": false,
@@ -18763,7 +18772,7 @@
         "description": "A secure REST API and Model Context Protocol (MCP) server for your vault.",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-08T08:19:47Z",
+        "last_update": "2026-11-15T17:08:45Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 87,
@@ -18772,8 +18781,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 92,
+        "computed_at": "2026-11-15",
+        "final": 91,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -18789,9 +18798,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 97,
+            "score": 94,
             "detail": {
-              "days_since_push": 22,
+              "days_since_push": 29,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -18799,7 +18808,7 @@
           "popularity": {
             "score": 78,
             "detail": {
-              "stars": 3128
+              "stars": 3152
             },
             "weight": 0.1667
           },
@@ -18832,7 +18841,7 @@
         "penalty": 0,
         "fatal": false
       },
-      "last_update": "2026-11-08T08:19:47Z",
+      "last_update": "2026-11-15T17:08:45Z",
       "description": "A secure REST API and Model Context Protocol (MCP) server for your vault.",
       "language": "TypeScript",
       "topics": "",
@@ -18888,7 +18897,7 @@
       "full_name": "epiral/bb-browser",
       "name": "bb-browser",
       "url": "https://github.com/epiral/bb-browser",
-      "stars": 6259,
+      "stars": 6266,
       "source": "github",
       "last_checked": "2026-09-27",
       "analysis": {
@@ -18915,9 +18924,9 @@
         "quality_score": 6
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 6259,
+        "stars": 6266,
         "pushed_at": "2026-05-29T08:14:51Z",
         "created_at": "2026-01-31T03:55:42Z",
         "archived": false,
@@ -18940,7 +18949,7 @@
         "description": "Your browser is the API. CLI + MCP server for AI agents to control Chrome with your login state.",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-08T14:47:15Z",
+        "last_update": "2026-11-14T23:36:43Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 93,
@@ -18949,7 +18958,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 56,
         "grade": "C",
         "subscores": {
@@ -18966,9 +18975,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 7,
+            "score": 4,
             "detail": {
-              "days_since_push": 163,
+              "days_since_push": 170,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -18976,7 +18985,7 @@
           "popularity": {
             "score": 85,
             "detail": {
-              "stars": 6259
+              "stars": 6266
             },
             "weight": 0.1667
           },
@@ -19016,7 +19025,7 @@
         "penalty": 5,
         "fatal": false
       },
-      "last_update": "2026-11-08T14:47:15Z",
+      "last_update": "2026-11-14T23:36:43Z",
       "description": "Your browser is the API. CLI + MCP server for AI agents to control Chrome with your login state.",
       "language": "TypeScript",
       "topics": "",
@@ -19416,10 +19425,10 @@
       "full_name": "jacob-bd/gemini-notebook-mcp-cli",
       "name": "gemini-notebook-mcp-cli",
       "url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli",
-      "stars": 6478,
+      "stars": 6516,
       "source": "github",
       "last_checked": "2026-09-27",
-      "last_update": "2026-11-08T13:40:58Z",
+      "last_update": "2026-11-15T17:28:13Z",
       "description": "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills.",
       "language": "Python",
       "topics": "",
@@ -19476,10 +19485,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 6478,
-        "pushed_at": "2026-11-06T19:51:18Z",
+        "stars": 6516,
+        "pushed_at": "2026-11-14T22:05:43Z",
         "created_at": "2025-12-23T02:07:42Z",
         "archived": false,
         "disabled": false,
@@ -19487,7 +19496,7 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 61,
+        "contributors": 65,
         "health_percentage": 71,
         "security_policy": true,
         "scorecard": null,
@@ -19501,16 +19510,16 @@
         "description": "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills.",
         "language": "Python",
         "topics": "",
-        "last_update": "2026-11-08T13:40:58Z",
+        "last_update": "2026-11-15T17:28:13Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 158,
+          "files_scanned": 160,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 86,
         "grade": "A",
         "subscores": {
@@ -19529,7 +19538,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 0,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -19537,7 +19546,7 @@
           "popularity": {
             "score": 85,
             "detail": {
-              "stars": 6478
+              "stars": 6516
             },
             "weight": 0.1667
           },
@@ -19561,7 +19570,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 61
+              "contributors": 65
             },
             "weight": 0.0556
           }
@@ -19815,10 +19824,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 15,
-        "pushed_at": "2026-11-02T06:30:44Z",
+        "pushed_at": "2026-11-09T06:31:40Z",
         "created_at": "2026-04-16T09:26:09Z",
         "archived": false,
         "disabled": false,
@@ -19849,7 +19858,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 68,
         "grade": "B",
         "subscores": {
@@ -19977,7 +19986,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 1,
         "pushed_at": "2026-06-17T15:32:37Z",
@@ -20011,8 +20020,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 44,
+        "computed_at": "2026-11-15",
+        "final": 43,
         "grade": "F",
         "subscores": {
           "ai": {
@@ -20028,9 +20037,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 15,
+            "score": 12,
             "detail": {
-              "days_since_push": 144,
+              "days_since_push": 151,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -20085,10 +20094,10 @@
       "full_name": "DeusData/codebase-memory-mcp",
       "name": "codebase-memory-mcp",
       "url": "https://github.com/DeusData/codebase-memory-mcp",
-      "stars": 48341,
+      "stars": 48675,
       "source": "github",
       "last_checked": "2026-09-27",
-      "last_update": "2026-11-08T17:17:18Z",
+      "last_update": "2026-11-15T18:05:50Z",
       "description": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent integrations and change-aware test selection.",
       "language": "C",
       "topics": "aider, ast, claude-code, code-analysis, code-intelligence, codex, cursor, cypher, developer-tools, gemini-cli, graph-visualization, kilocode, knowledge-graph, mcp, mcp-server, model-context-protocol, opencode, sqlite, tree-sitter, windsurf",
@@ -20153,10 +20162,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 48341,
-        "pushed_at": "2026-11-07T05:43:50Z",
+        "stars": 48675,
+        "pushed_at": "2026-11-14T22:03:40Z",
         "created_at": "2026-02-24T22:01:00Z",
         "archived": false,
         "disabled": false,
@@ -20164,20 +20173,20 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 201,
+        "contributors": 206,
         "health_percentage": 100,
         "security_policy": true,
         "scorecard": {
-          "score": 8.5,
-          "date": "2026-11-04T23:23:09Z",
+          "score": 8,
+          "date": "2026-11-14T22:04:34Z",
           "checks": {
-            "Code-Review": 8,
+            "Code-Review": 2,
             "Maintained": 10,
             "Dangerous-Workflow": 10,
             "Vulnerabilities": 7
           }
         },
-        "readme_chars": 119527,
+        "readme_chars": 119798,
         "readme_headings": 78,
         "readme_has_code_block": true,
         "pipe_to_shell": true,
@@ -20187,7 +20196,7 @@
         "description": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent integrations and change-aware test selection.",
         "language": "C",
         "topics": "aider, ast, claude-code, code-analysis, code-intelligence, codex, cursor, cypher, developer-tools, gemini-cli, graph-visualization, kilocode, knowledge-graph, mcp, mcp-server, model-context-protocol, opencode, sqlite, tree-sitter, windsurf",
-        "last_update": "2026-11-08T17:17:18Z",
+        "last_update": "2026-11-15T18:05:50Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -20196,8 +20205,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 78,
+        "computed_at": "2026-11-15",
+        "final": 77,
         "grade": "B",
         "subscores": {
           "ai": {
@@ -20215,7 +20224,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 0,
               "commits_90d": 30
             },
             "weight": 0.2
@@ -20223,7 +20232,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 48341
+              "stars": 48675
             },
             "weight": 0.15
           },
@@ -20237,9 +20246,9 @@
             "weight": 0.15
           },
           "security": {
-            "score": 85,
+            "score": 80,
             "detail": {
-              "scorecard": 8.5,
+              "scorecard": 8,
               "note": null
             },
             "weight": 0.1
@@ -20247,7 +20256,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 201
+              "contributors": 206
             },
             "weight": 0.05
           }
@@ -20937,7 +20946,7 @@
       "repo_id": 1168120544,
       "name": "x-twitter-scraper",
       "url": "https://github.com/Xquik-dev/x-twitter-scraper",
-      "stars": 227,
+      "stars": 229,
       "source": "nominated",
       "discovered_via": "nomination",
       "nominated_by": {
@@ -20946,8 +20955,8 @@
         "issue_number": 24
       },
       "last_checked": "2026-10-04",
-      "last_update": "2026-11-07T20:55:19Z",
-      "description": "X (Twitter) scraper API, Twitter MCP server, Claude skill to scrape tweets & followers. Not affiliated with X Corp.",
+      "last_update": "2026-11-12T16:14:58Z",
+      "description": "X (Twitter) scraper API, MCP server & Claude skill to scrape tweets & followers. Not affiliated with X Corp.",
       "language": "TypeScript",
       "topics": "agent-skill, claude-code, follower-export, mcp, mcp-server, social-media-api, tweet-scraper, tweet-search, twitter, twitter-api, twitter-api-alternative, twitter-automation, twitter-mcp, twitter-scraper, twitter-scraper-api, x-api, x-api-alternative, x-mcp, x-scraper, xquik",
       "analysis": {
@@ -21015,10 +21024,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 227,
-        "pushed_at": "2026-11-08T14:19:48Z",
+        "stars": 229,
+        "pushed_at": "2026-11-13T18:42:04Z",
         "created_at": "2026-02-27T03:10:09Z",
         "archived": false,
         "disabled": false,
@@ -21039,26 +21048,26 @@
             "Vulnerabilities": 10
           }
         },
-        "readme_chars": 29145,
+        "readme_chars": 26907,
         "readme_headings": 34,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 1168120544,
         "default_branch": "master",
         "owner_login": "Xquik-dev",
-        "description": "X (Twitter) scraper API, Twitter MCP server, Claude skill to scrape tweets & followers. Not affiliated with X Corp.",
+        "description": "X (Twitter) scraper API, MCP server & Claude skill to scrape tweets & followers. Not affiliated with X Corp.",
         "language": "TypeScript",
         "topics": "agent-skill, claude-code, follower-export, mcp, mcp-server, social-media-api, tweet-scraper, tweet-search, twitter, twitter-api, twitter-api-alternative, twitter-automation, twitter-mcp, twitter-scraper, twitter-scraper-api, x-api, x-api-alternative, x-mcp, x-scraper, xquik",
-        "last_update": "2026-11-07T20:55:19Z",
+        "last_update": "2026-11-12T16:14:58Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 329,
+          "files_scanned": 331,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 74,
         "grade": "B",
         "subscores": {
@@ -21077,7 +21086,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2
@@ -21085,7 +21094,7 @@
           "popularity": {
             "score": 53,
             "detail": {
-              "stars": 227
+              "stars": 229
             },
             "weight": 0.15
           },
@@ -21305,14 +21314,14 @@
       "repo_id": 973208983,
       "name": "KiCAD-MCP-Server",
       "url": "https://github.com/mixelpixx/KiCAD-MCP-Server",
-      "stars": 3214,
+      "stars": 3346,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-10-04",
-      "last_update": "2026-11-08T16:02:42Z",
+      "last_update": "2026-11-15T18:03:20Z",
       "description": "KiCAD MCP is a Model Context Protocol (MCP) implementation that enables Large Language Models (LLMs) like Claude to directly interact with KiCAD for printed circuit board design.",
       "language": "Python",
-      "topics": "",
+      "topics": "ai, claude, eda, electronics, hardware, kicad, llm, mcp, mcp-server, model-context-protocol, pcb, pcb-design, python, typescript",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 78,
@@ -21380,10 +21389,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3214,
-        "pushed_at": "2026-11-08T00:39:43Z",
+        "stars": 3346,
+        "pushed_at": "2026-11-15T17:05:29Z",
         "created_at": "2025-04-26T13:56:18Z",
         "archived": false,
         "disabled": false,
@@ -21391,12 +21400,12 @@
         "owner_type": "User",
         "owner_created_at": null,
         "commits_90d": 30,
-        "contributors": 77,
+        "contributors": 83,
         "health_percentage": 57,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 7083,
-        "readme_headings": 13,
+        "readme_chars": 9493,
+        "readme_headings": 12,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 973208983,
@@ -21404,18 +21413,18 @@
         "owner_login": "mixelpixx",
         "description": "KiCAD MCP is a Model Context Protocol (MCP) implementation that enables Large Language Models (LLMs) like Claude to directly interact with KiCAD for printed circuit board design.",
         "language": "Python",
-        "topics": "",
-        "last_update": "2026-11-08T16:02:42Z",
+        "topics": "ai, claude, eda, electronics, hardware, kicad, llm, mcp, mcp-server, model-context-protocol, pcb, pcb-design, python, typescript",
+        "last_update": "2026-11-15T18:03:20Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 199,
+          "files_scanned": 211,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 83,
+        "computed_at": "2026-11-15",
+        "final": 84,
         "grade": "A",
         "subscores": {
           "ai": {
@@ -21439,9 +21448,9 @@
             "weight": 0.2222
           },
           "popularity": {
-            "score": 78,
+            "score": 79,
             "detail": {
-              "stars": 3214
+              "stars": 3346
             },
             "weight": 0.1667
           },
@@ -21465,7 +21474,7 @@
           "community": {
             "score": 100,
             "detail": {
-              "contributors": 77
+              "contributors": 83
             },
             "weight": 0.0556
           }
@@ -21558,7 +21567,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 2,
         "pushed_at": "2026-10-02T01:53:06Z",
@@ -21592,8 +21601,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 66,
+        "computed_at": "2026-11-15",
+        "final": 65,
         "grade": "B",
         "subscores": {
           "ai": {
@@ -21609,9 +21618,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 90,
+            "score": 87,
             "detail": {
-              "days_since_push": 37,
+              "days_since_push": 44,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -21731,7 +21740,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 3,
         "pushed_at": "2026-10-30T03:29:07Z",
@@ -21741,7 +21750,7 @@
         "license_spdx": "MIT",
         "owner_type": "User",
         "owner_created_at": null,
-        "commits_90d": 23,
+        "commits_90d": 21,
         "contributors": 1,
         "health_percentage": 42,
         "security_policy": false,
@@ -21765,7 +21774,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 50,
         "grade": "C",
         "subscores": {
@@ -21782,10 +21791,10 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 100,
+            "score": 99,
             "detail": {
-              "days_since_push": 9,
-              "commits_90d": 23
+              "days_since_push": 16,
+              "commits_90d": 21
             },
             "weight": 0.2222
           },
@@ -21840,11 +21849,11 @@
       "repo_id": 723307046,
       "name": "freecad-mcp",
       "url": "https://github.com/neka-nat/freecad-mcp",
-      "stars": 3259,
+      "stars": 3347,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-10-04",
-      "last_update": "2026-11-08T17:17:11Z",
+      "last_update": "2026-11-15T17:24:15Z",
       "description": "FreeCAD MCP(Model Context Protocol) server",
       "language": "Python",
       "topics": "claude, freecad, mcp",
@@ -21897,10 +21906,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 3259,
-        "pushed_at": "2026-11-07T11:15:19Z",
+        "stars": 3347,
+        "pushed_at": "2026-11-12T14:33:11Z",
         "created_at": "2023-11-25T08:46:42Z",
         "archived": false,
         "disabled": false,
@@ -21912,7 +21921,7 @@
         "health_percentage": 42,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 2808,
+        "readme_chars": 2859,
         "readme_headings": 7,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -21922,16 +21931,16 @@
         "description": "FreeCAD MCP(Model Context Protocol) server",
         "language": "Python",
         "topics": "claude, freecad, mcp",
-        "last_update": "2026-11-08T17:17:11Z",
+        "last_update": "2026-11-15T17:24:15Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 34,
+          "files_scanned": 35,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 85,
         "grade": "A",
         "subscores": {
@@ -21950,15 +21959,15 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 1,
+              "days_since_push": 3,
               "commits_90d": 30
             },
             "weight": 0.2222
           },
           "popularity": {
-            "score": 78,
+            "score": 79,
             "detail": {
-              "stars": 3259
+              "stars": 3347
             },
             "weight": 0.1667
           },
@@ -22048,7 +22057,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
         "pushed_at": "2026-08-07T10:21:02Z",
@@ -22082,7 +22091,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 50,
         "grade": "C",
         "subscores": {
@@ -22099,9 +22108,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 37,
+            "score": 34,
             "detail": {
-              "days_since_push": 93,
+              "days_since_push": 100,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -22206,7 +22215,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
         "pushed_at": "2026-09-11T14:10:22Z",
@@ -22216,7 +22225,7 @@
         "license_spdx": "MIT",
         "owner_type": "Organization",
         "owner_created_at": null,
-        "commits_90d": 13,
+        "commits_90d": 10,
         "contributors": 2,
         "health_percentage": 50,
         "security_policy": false,
@@ -22240,9 +22249,9 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 65,
-        "grade": "B",
+        "computed_at": "2026-11-15",
+        "final": 63,
+        "grade": "C",
         "subscores": {
           "ai": {
             "score": 83,
@@ -22257,10 +22266,10 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 81,
+            "score": 73,
             "detail": {
-              "days_since_push": 58,
-              "commits_90d": 13
+              "days_since_push": 65,
+              "commits_90d": 10
             },
             "weight": 0.2222
           },
@@ -22661,11 +22670,11 @@
       "repo_id": 1342886503,
       "name": "x64dbg-mcp-server",
       "url": "https://github.com/duty1g/x64dbg-mcp-server",
-      "stars": 2807,
+      "stars": 2829,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-10-04",
-      "last_update": "2026-11-08T17:10:53Z",
+      "last_update": "2026-11-15T17:45:26Z",
       "description": "x64dbg-MCP Server is a native MCP (Model Context Protocol) plugin for x64dbg that exposes the debugger's full functionality over HTTP. Connect any MCP-compatible AI assistant and control x64dbg programmatically: set breakpoints, step through code, read memory, dump registers, and more.  Built with Zig — zero dependencies, single-binary output, cros",
       "language": "Zig",
       "topics": "ai-agents, ai-debugging, binary-analysis, claude, claude-code, malware-analysis, malware-research, malware-scanner, mcp, mcp-server, mcp-servers, x64dbg, x64dbg-mcp, x64dbg-plugin, x64dbg-tools, xdbg, zig, zig-lang, ziglang",
@@ -22712,10 +22721,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2807,
-        "pushed_at": "2026-11-03T11:09:20Z",
+        "stars": 2829,
+        "pushed_at": "2026-11-15T07:30:44Z",
         "created_at": "2026-08-22T14:28:41Z",
         "archived": false,
         "disabled": false,
@@ -22737,7 +22746,7 @@
         "description": "x64dbg-MCP Server is a native MCP (Model Context Protocol) plugin for x64dbg that exposes the debugger's full functionality over HTTP. Connect any MCP-compatible AI assistant and control x64dbg programmatically: set breakpoints, step through code, read memory, dump registers, and more.  Built with Zig — zero dependencies, single-binary output, cros",
         "language": "Zig",
         "topics": "ai-agents, ai-debugging, binary-analysis, claude, claude-code, malware-analysis, malware-research, malware-scanner, mcp, mcp-server, mcp-servers, x64dbg, x64dbg-mcp, x64dbg-plugin, x64dbg-tools, xdbg, zig, zig-lang, ziglang",
-        "last_update": "2026-11-08T17:10:53Z",
+        "last_update": "2026-11-15T17:45:26Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 4,
@@ -22746,7 +22755,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 78,
         "grade": "B",
         "subscores": {
@@ -22765,7 +22774,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 5,
+              "days_since_push": 0,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -22773,7 +22782,7 @@
           "popularity": {
             "score": 77,
             "detail": {
-              "stars": 2807
+              "stars": 2829
             },
             "weight": 0.1667
           },
@@ -22830,8 +22839,8 @@
         "issue_number": 47
       },
       "last_checked": "2026-10-04",
-      "last_update": "2026-10-05T08:43:42Z",
-      "description": "Swipe to apply for jobs using the Worklittle MCP app, and search over 4 million jobs with filters like visa status, distance, and salary, and connect your Worklittle account to save jobs you love.",
+      "last_update": "2026-11-12T18:10:08Z",
+      "description": "Swipe to apply for jobs using the Worklittle MCP app, search over 7.5 million jobs with filters like visa status, distance, and salary, and connect your Worklittle account to save jobs you love.",
       "language": "JavaScript",
       "topics": "jobs, mcp, model-context-protocol",
       "analysis": {
@@ -22879,32 +22888,32 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
-        "pushed_at": "2026-10-05T08:43:38Z",
+        "pushed_at": "2026-11-12T07:17:39Z",
         "created_at": "2026-08-24T21:35:17Z",
         "archived": false,
         "disabled": false,
         "license_spdx": "MIT",
         "owner_type": "Organization",
         "owner_created_at": null,
-        "commits_90d": 13,
+        "commits_90d": 17,
         "contributors": 1,
         "health_percentage": 50,
         "security_policy": false,
         "scorecard": null,
-        "readme_chars": 2144,
+        "readme_chars": 2242,
         "readme_headings": 7,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 1345425908,
         "default_branch": "main",
         "owner_login": "worklittle",
-        "description": "Swipe to apply for jobs using the Worklittle MCP app, and search over 4 million jobs with filters like visa status, distance, and salary, and connect your Worklittle account to save jobs you love.",
+        "description": "Swipe to apply for jobs using the Worklittle MCP app, search over 7.5 million jobs with filters like visa status, distance, and salary, and connect your Worklittle account to save jobs you love.",
         "language": "JavaScript",
         "topics": "jobs, mcp, model-context-protocol",
-        "last_update": "2026-10-05T08:43:42Z",
+        "last_update": "2026-11-12T18:10:08Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 26,
@@ -22913,8 +22922,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 60,
+        "computed_at": "2026-11-15",
+        "final": 62,
         "grade": "C",
         "subscores": {
           "ai": {
@@ -22930,10 +22939,10 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 92,
+            "score": 100,
             "detail": {
-              "days_since_push": 34,
-              "commits_90d": 13
+              "days_since_push": 3,
+              "commits_90d": 17
             },
             "weight": 0.2222
           },
@@ -23498,7 +23507,7 @@
         "issue_number": 48
       },
       "last_checked": "2026-10-04",
-      "last_update": "2026-11-06T16:46:28Z",
+      "last_update": "2026-11-09T17:09:48Z",
       "description": "Empirical notary: hash locally, OpenTimestamps, Bitcoin-anchored receipts. MCP server + CLI + GitHub Action.",
       "language": "Python",
       "topics": "anthropic, bitcoin, claude, content-authenticity, mcp, mcp-server, model-context-protocol, notary, opentimestamps, provenance, timestamping",
@@ -23563,10 +23572,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
-        "pushed_at": "2026-11-06T16:46:21Z",
+        "pushed_at": "2026-11-12T13:54:30Z",
         "created_at": "2026-05-16T01:56:04Z",
         "archived": false,
         "disabled": false,
@@ -23588,16 +23597,16 @@
         "description": "Empirical notary: hash locally, OpenTimestamps, Bitcoin-anchored receipts. MCP server + CLI + GitHub Action.",
         "language": "Python",
         "topics": "anthropic, bitcoin, claude, content-authenticity, mcp, mcp-server, model-context-protocol, notary, opentimestamps, provenance, timestamping",
-        "last_update": "2026-11-06T16:46:28Z",
+        "last_update": "2026-11-09T17:09:48Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 324,
+          "files_scanned": 326,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 68,
         "grade": "B",
         "subscores": {
@@ -23616,7 +23625,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 2,
+              "days_since_push": 3,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -24009,11 +24018,11 @@
       "repo_id": 952088451,
       "name": "minecraft-mcp-server",
       "url": "https://github.com/yuniko-software/minecraft-mcp-server",
-      "stars": 811,
+      "stars": 817,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-10-04",
-      "last_update": "2026-11-08T15:09:53Z",
+      "last_update": "2026-11-14T14:14:44Z",
       "description": "A Minecraft MCP Server powered by Mineflayer API. It allows to control a Minecraft character in real-time, allowing AI assistants to build structures, explore the world, and interact with the game environment through natural language instruction",
       "language": "TypeScript",
       "topics": "artificial-intelligence, claude, javascript, large-language-models, mcp, mcp-server, minecraft, modelcontextprotocol, natural-language-processing, nodejs, typescript",
@@ -24066,9 +24075,9 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 811,
+        "stars": 817,
         "pushed_at": "2026-04-04T20:59:29Z",
         "created_at": "2025-03-20T17:59:31Z",
         "archived": false,
@@ -24091,7 +24100,7 @@
         "description": "A Minecraft MCP Server powered by Mineflayer API. It allows to control a Minecraft character in real-time, allowing AI assistants to build structures, explore the world, and interact with the game environment through natural language instruction",
         "language": "TypeScript",
         "topics": "artificial-intelligence, claude, javascript, large-language-models, mcp, mcp-server, minecraft, modelcontextprotocol, natural-language-processing, nodejs, typescript",
-        "last_update": "2026-11-08T15:09:53Z",
+        "last_update": "2026-11-14T14:14:44Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 27,
@@ -24100,7 +24109,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 58,
         "grade": "C",
         "subscores": {
@@ -24119,7 +24128,7 @@
           "maintenance": {
             "score": 0,
             "detail": {
-              "days_since_push": 217,
+              "days_since_push": 224,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -24127,7 +24136,7 @@
           "popularity": {
             "score": 65,
             "detail": {
-              "stars": 811
+              "stars": 817
             },
             "weight": 0.1667
           },
@@ -24231,7 +24240,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
         "pushed_at": "2026-10-22T14:26:56Z",
@@ -24265,8 +24274,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 61,
+        "computed_at": "2026-11-15",
+        "final": 60,
         "grade": "C",
         "subscores": {
           "ai": {
@@ -24282,9 +24291,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 99,
+            "score": 96,
             "detail": {
-              "days_since_push": 17,
+              "days_since_push": 24,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -24518,14 +24527,14 @@
       "repo_id": 837911756,
       "name": "Jobs_Applier_AI_Agent",
       "url": "https://github.com/feder-cr/Jobs_Applier_AI_Agent",
-      "stars": 32410,
+      "stars": 32541,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-09-20",
-      "last_update": "2026-11-08T17:22:59Z",
-      "description": "AI job application bot: automated job search and job hunting, auto-apply to resume-matching jobs while you sleep.",
+      "last_update": "2026-11-15T18:00:10Z",
+      "description": "AIHawk: AI job application bot, automated job search, job hunting, auto-apply to resume-matching jobs while you sleep.",
       "language": "Python",
-      "topics": "agentic-ai, ai-agent, ai-automation, automation, autonomous-agents, browser-automation, cv, firefox, gemini, hr, job-board, job-search, jobs, linkedin, playwright, python, recruiting, recruitment, resume, terminal-app",
+      "topics": "agentic-ai, ai-agent, ai-automation, aihawk, automation, autonomous-agents, browser-automation, cv, firefox, hr, job-board, job-search, jobs, linkedin, playwright, python, recruiting, recruitment, resume, terminal-app",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 72,
@@ -24582,10 +24591,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 32410,
-        "pushed_at": "2026-11-08T17:18:43Z",
+        "stars": 32541,
+        "pushed_at": "2026-11-13T15:13:52Z",
         "created_at": "2024-08-04T12:15:06Z",
         "archived": false,
         "disabled": false,
@@ -24597,26 +24606,26 @@
         "health_percentage": 85,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 4111,
+        "readme_chars": 4866,
         "readme_headings": 2,
         "readme_has_code_block": true,
         "pipe_to_shell": true,
         "repo_id": 837911756,
         "default_branch": "main",
         "owner_login": "feder-cr",
-        "description": "AI job application bot: automated job search and job hunting, auto-apply to resume-matching jobs while you sleep.",
+        "description": "AIHawk: AI job application bot, automated job search, job hunting, auto-apply to resume-matching jobs while you sleep.",
         "language": "Python",
-        "topics": "agentic-ai, ai-agent, ai-automation, automation, autonomous-agents, browser-automation, cv, firefox, gemini, hr, job-board, job-search, jobs, linkedin, playwright, python, recruiting, recruitment, resume, terminal-app",
-        "last_update": "2026-11-08T17:22:59Z",
+        "topics": "agentic-ai, ai-agent, ai-automation, aihawk, automation, autonomous-agents, browser-automation, cv, firefox, hr, job-board, job-search, jobs, linkedin, playwright, python, recruiting, recruitment, resume, terminal-app",
+        "last_update": "2026-11-15T18:00:10Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 48,
+          "files_scanned": 53,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 67,
         "grade": "B",
         "subscores": {
@@ -24635,7 +24644,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 2,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -24643,7 +24652,7 @@
           "popularity": {
             "score": 100,
             "detail": {
-              "stars": 32410
+              "stars": 32541
             },
             "weight": 0.1667
           },
@@ -25099,7 +25108,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
         "pushed_at": "2026-09-16T14:48:57Z",
@@ -25133,8 +25142,8 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 48,
+        "computed_at": "2026-11-15",
+        "final": 47,
         "grade": "F",
         "subscores": {
           "ai": {
@@ -25150,9 +25159,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 66,
+            "score": 63,
             "detail": {
-              "days_since_push": 53,
+              "days_since_push": 60,
               "commits_90d": 5
             },
             "weight": 0.2222
@@ -25194,18 +25203,18 @@
         "fatal": false
       },
       "prompt_version": 4,
-      "listed": true
+      "listed": false
     },
     {
       "full_name": "apify/apify-mcp-server",
       "repo_id": 911256711,
       "name": "apify-mcp-server",
       "url": "https://github.com/apify/apify-mcp-server",
-      "stars": 15291,
+      "stars": 16376,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-09-27",
-      "last_update": "2026-11-08T17:30:45Z",
+      "last_update": "2026-11-15T17:56:16Z",
       "description": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
       "language": "TypeScript",
       "topics": "agents, ai, mcp, mcp-server",
@@ -25275,10 +25284,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 15291,
-        "pushed_at": "2026-11-08T17:30:42Z",
+        "stars": 16376,
+        "pushed_at": "2026-11-13T22:31:34Z",
         "created_at": "2025-01-02T15:43:09Z",
         "archived": false,
         "disabled": false,
@@ -25290,7 +25299,7 @@
         "health_percentage": 87,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 36845,
+        "readme_chars": 37046,
         "readme_headings": 22,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -25300,16 +25309,16 @@
         "description": "The Apify MCP server enables your AI agents to extract data from social media, search engines, maps, e-commerce sites, or any other website using thousands of ready-made scrapers, crawlers, and automation tools available on the Apify Store.",
         "language": "TypeScript",
         "topics": "agents, ai, mcp, mcp-server",
-        "last_update": "2026-11-08T17:30:45Z",
+        "last_update": "2026-11-15T17:56:16Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 255,
+          "files_scanned": 257,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 96,
         "grade": "A",
         "subscores": {
@@ -25328,15 +25337,15 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 0,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2222
           },
           "popularity": {
-            "score": 93,
+            "score": 94,
             "detail": {
-              "stars": 15291
+              "stars": 16376
             },
             "weight": 0.1667
           },
@@ -25662,7 +25671,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 10,
         "pushed_at": "2026-11-02T20:37:29Z",
@@ -25696,7 +25705,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 48,
         "grade": "F",
         "subscores": {
@@ -25715,7 +25724,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 5,
+              "days_since_push": 12,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -25842,7 +25851,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 0,
         "pushed_at": "2026-11-02T17:42:02Z",
@@ -25876,7 +25885,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 56,
         "grade": "C",
         "subscores": {
@@ -25895,7 +25904,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 5,
+              "days_since_push": 13,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -26296,11 +26305,11 @@
       "repo_id": 966185288,
       "name": "12306-mcp",
       "url": "https://github.com/Joooook/12306-mcp",
-      "stars": 2430,
+      "stars": 2446,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-10-11",
-      "last_update": "2026-11-08T05:12:25Z",
+      "last_update": "2026-11-15T15:40:16Z",
       "description": "This is a 12306 ticket search server based on the Model Context Protocol (MCP).",
       "language": "JavaScript",
       "topics": "12306, mcp, mcp-server, train-tickets",
@@ -26354,9 +26363,9 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 2430,
+        "stars": 2446,
         "pushed_at": "2026-07-31T06:22:59Z",
         "created_at": "2025-04-14T14:31:32Z",
         "archived": false,
@@ -26379,7 +26388,7 @@
         "description": "This is a 12306 ticket search server based on the Model Context Protocol (MCP).",
         "language": "JavaScript",
         "topics": "12306, mcp, mcp-server, train-tickets",
-        "last_update": "2026-11-08T05:12:25Z",
+        "last_update": "2026-11-15T15:40:16Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 8,
@@ -26388,7 +26397,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 65,
         "grade": "B",
         "subscores": {
@@ -26405,9 +26414,9 @@
             "weight": 0.3889
           },
           "maintenance": {
-            "score": 34,
+            "score": 31,
             "detail": {
-              "days_since_push": 100,
+              "days_since_push": 107,
               "commits_90d": 0
             },
             "weight": 0.2222
@@ -26415,7 +26424,7 @@
           "popularity": {
             "score": 76,
             "detail": {
-              "stars": 2430
+              "stars": 2446
             },
             "weight": 0.1667
           },
@@ -26650,8 +26659,8 @@
         "issue_number": 66
       },
       "last_checked": "2026-10-18",
-      "last_update": "2026-11-08T08:54:44Z",
-      "description": "DCPI (Data Center Power Index): a daily score of where data centers can get grid power, across 300+ markets. Live power-grid, energy, queue, fiber, gas & M&A data for AI agents: 94 tools, global facility map, 1,800+ tracked M&A deals. Capacity to buy or lease via source_capacity. Remote MCP at dchub.cloud/mcp. Query & cite (CC-BY-4.0).",
+      "last_update": "2026-11-14T10:25:05Z",
+      "description": "DCPI (Data Center Power Index): a daily score of where data centers can get grid power, across 300+ markets. Live power-grid, energy, queue, fiber, gas & M&A data for AI agents: 96 tools, global facility map, 1,900+ tracked M&A deals. Capacity to buy or lease via source_capacity. Remote MCP at dchub.cloud/mcp. Query & cite (CC-BY-4.0).",
       "language": "JavaScript",
       "topics": "colocation, data-center, datacenter, electricity, energy, ercot, fiber, gemini-cli-extension, interconnection, mcp, mcp-server, model-context-protocol, natural-gas, pjm, power-grid, site-selection",
       "analysis": {
@@ -26722,10 +26731,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 3,
-        "pushed_at": "2026-11-08T11:12:06Z",
+        "pushed_at": "2026-11-15T13:57:14Z",
         "created_at": "2026-02-06T16:08:44Z",
         "archived": false,
         "disabled": false,
@@ -26737,26 +26746,26 @@
         "health_percentage": 57,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 26599,
-        "readme_headings": 31,
+        "readme_chars": 27731,
+        "readme_headings": 32,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 1151560013,
         "default_branch": "main",
         "owner_login": "azmartone67",
-        "description": "DCPI (Data Center Power Index): a daily score of where data centers can get grid power, across 300+ markets. Live power-grid, energy, queue, fiber, gas & M&A data for AI agents: 94 tools, global facility map, 1,800+ tracked M&A deals. Capacity to buy or lease via source_capacity. Remote MCP at dchub.cloud/mcp. Query & cite (CC-BY-4.0).",
+        "description": "DCPI (Data Center Power Index): a daily score of where data centers can get grid power, across 300+ markets. Live power-grid, energy, queue, fiber, gas & M&A data for AI agents: 96 tools, global facility map, 1,900+ tracked M&A deals. Capacity to buy or lease via source_capacity. Remote MCP at dchub.cloud/mcp. Query & cite (CC-BY-4.0).",
         "language": "JavaScript",
         "topics": "colocation, data-center, datacenter, electricity, energy, ercot, fiber, gemini-cli-extension, interconnection, mcp, mcp-server, model-context-protocol, natural-gas, pjm, power-grid, site-selection",
-        "last_update": "2026-11-08T08:54:44Z",
+        "last_update": "2026-11-14T10:25:05Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 282,
+          "files_scanned": 330,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 68,
         "grade": "B",
         "subscores": {
@@ -26824,11 +26833,11 @@
       "repo_id": 1284653133,
       "name": "xerj",
       "url": "https://github.com/xerj-org/xerj",
-      "stars": 18621,
+      "stars": 19115,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-10-25",
-      "last_update": "2026-11-08T17:28:28Z",
+      "last_update": "2026-11-15T17:09:30Z",
       "description": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
       "language": "Rust",
       "topics": "agent-memory, ai-agents, bm25, claude-code, cli, code-search, cursor, database, elasticsearch, full-text-search, hybrid-search, jsonl, local-first, mcp, mcp-server, model-context-protocol, rag, rust, search-engine, vector-search",
@@ -26894,10 +26903,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 18621,
-        "pushed_at": "2026-11-08T16:25:20Z",
+        "stars": 19115,
+        "pushed_at": "2026-11-15T16:32:05Z",
         "created_at": "2026-06-30T04:32:45Z",
         "archived": false,
         "disabled": false,
@@ -26919,7 +26928,7 @@
         "description": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
         "language": "Rust",
         "topics": "agent-memory, ai-agents, bm25, claude-code, cli, code-search, cursor, database, elasticsearch, full-text-search, hybrid-search, jsonl, local-first, mcp, mcp-server, model-context-protocol, rag, rust, search-engine, vector-search",
-        "last_update": "2026-11-08T17:28:28Z",
+        "last_update": "2026-11-15T17:09:30Z",
         "source_scan": {
           "checked": false,
           "files_scanned": 0,
@@ -26928,7 +26937,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 81,
         "grade": "A",
         "subscores": {
@@ -26953,9 +26962,9 @@
             "weight": 0.2222
           },
           "popularity": {
-            "score": 95,
+            "score": 96,
             "detail": {
-              "stars": 18621
+              "stars": 19115
             },
             "weight": 0.1667
           },
@@ -27175,11 +27184,11 @@
       "repo_id": 1061403997,
       "name": "mcpvault",
       "url": "https://github.com/bitbonsai/mcpvault",
-      "stars": 1718,
+      "stars": 1724,
       "source": "github",
       "discovered_via": "github-search",
       "last_checked": "2026-11-01",
-      "last_update": "2026-11-06T19:30:15Z",
+      "last_update": "2026-11-15T15:43:27Z",
       "description": "A lightweight Model Context Protocol (MCP) server for safe Obsidian vault access",
       "language": "TypeScript",
       "topics": "",
@@ -27247,10 +27256,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 1718,
-        "pushed_at": "2026-11-02T12:06:37Z",
+        "stars": 1724,
+        "pushed_at": "2026-11-14T12:56:14Z",
         "created_at": "2025-09-21T20:50:15Z",
         "archived": false,
         "disabled": false,
@@ -27263,11 +27272,11 @@
         "security_policy": true,
         "scorecard": {
           "score": 6.3,
-          "date": "2026-11-02T02:55:25Z",
+          "date": "2026-11-14T12:36:30Z",
           "checks": {
-            "Dangerous-Workflow": 10,
-            "Maintained": 10,
             "Code-Review": 0,
+            "Maintained": 10,
+            "Dangerous-Workflow": 10,
             "Vulnerabilities": 0
           }
         },
@@ -27281,7 +27290,7 @@
         "description": "A lightweight Model Context Protocol (MCP) server for safe Obsidian vault access",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-06T19:30:15Z",
+        "last_update": "2026-11-15T15:43:27Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 138,
@@ -27290,7 +27299,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 80,
         "grade": "A",
         "subscores": {
@@ -27309,7 +27318,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 6,
+              "days_since_push": 1,
               "commits_90d": 30
             },
             "weight": 0.2
@@ -27317,7 +27326,7 @@
           "popularity": {
             "score": 72,
             "detail": {
-              "stars": 1718
+              "stars": 1724
             },
             "weight": 0.15
           },
@@ -27410,7 +27419,7 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
         "stars": 1,
         "pushed_at": "2026-11-05T07:17:58Z",
@@ -27444,7 +27453,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 53,
         "grade": "C",
         "subscores": {
@@ -27463,7 +27472,7 @@
           "maintenance": {
             "score": 100,
             "detail": {
-              "days_since_push": 3,
+              "days_since_push": 10,
               "commits_90d": 30
             },
             "weight": 0.2222
@@ -27519,7 +27528,7 @@
       "repo_id": 1349176124,
       "name": "agent-payment-node",
       "url": "https://github.com/nuanu-ai/agent-payment-node",
-      "stars": 75,
+      "stars": 72,
       "source": "nominated",
       "discovered_via": "nomination",
       "nominated_by": {
@@ -27528,7 +27537,7 @@
         "issue_number": 69
       },
       "last_checked": "2026-11-01",
-      "last_update": "2026-11-08T01:13:46Z",
+      "last_update": "2026-11-13T19:22:03Z",
       "description": "Open-source local-first payment runtime for AI agents",
       "language": "TypeScript",
       "topics": "",
@@ -27592,10 +27601,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 75,
-        "pushed_at": "2026-11-08T01:23:18Z",
+        "stars": 72,
+        "pushed_at": "2026-11-15T07:42:36Z",
         "created_at": "2026-08-28T03:52:19Z",
         "archived": false,
         "disabled": false,
@@ -27607,7 +27616,7 @@
         "health_percentage": 75,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 41235,
+        "readme_chars": 53549,
         "readme_headings": 15,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
@@ -27617,7 +27626,7 @@
         "description": "Open-source local-first payment runtime for AI agents",
         "language": "TypeScript",
         "topics": "",
-        "last_update": "2026-11-08T01:13:46Z",
+        "last_update": "2026-11-13T19:22:03Z",
         "source_scan": {
           "checked": true,
           "files_scanned": 400,
@@ -27626,7 +27635,7 @@
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
+        "computed_at": "2026-11-15",
         "final": 75,
         "grade": "B",
         "subscores": {
@@ -27653,7 +27662,7 @@
           "popularity": {
             "score": 42,
             "detail": {
-              "stars": 75
+              "stars": 72
             },
             "weight": 0.1667
           },
@@ -27694,7 +27703,7 @@
       "repo_id": 1279148792,
       "name": "zambo-mcp",
       "url": "https://github.com/zambodotdev/zambo-mcp",
-      "stars": 0,
+      "stars": 1,
       "source": "nominated",
       "discovered_via": "nomination",
       "nominated_by": {
@@ -27703,10 +27712,10 @@
         "issue_number": 55
       },
       "last_checked": "2026-11-01",
-      "last_update": "2026-11-07T19:50:34Z",
-      "description": "Zambo is the verifiable work layer for AI, created by Brennan Zambo: 153 tools (36 default) behind one MCP endpoint at https://zambo.dev/mcp, with a verifiable AER-1 receipt for every job. Free: 20 calls plus 1 wrap-up free every day, pickup in another AI always free.",
+      "last_update": "2026-11-15T01:34:15Z",
+      "description": "Zambo is the verifiable work layer for AI, created by Brennan Zambo: 153 tools (37 default) behind one MCP endpoint at https://zambo.dev/mcp, with a verifiable AER-1 receipt for every job. Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.",
       "language": "Dockerfile",
-      "topics": "a2a, agent-skills, ai-agents, ai-infrastructure, ai-tools, claude, cline, cursor, developer-tools, execution-receipts, gemini-cli-extension, llm-tools, mcp, mcp-server, mcp-servers, mcp-tools, model-context-protocol, remote-mcp, windsurf, x402",
+      "topics": "a2a, aer-1, agent-execution-receipts, agent-receipts, agent-skills, ai-agents, ai-infrastructure, claude, developer-tools, execution-receipts, gemini-cli-extension, handover, mcp, mcp-server, mcp-servers, model-context-protocol, receipts, remote-mcp, verification, x402",
       "analysis": {
         "is_valid_mcp_server": true,
         "confidence": 72,
@@ -27769,10 +27778,10 @@
         ]
       },
       "metrics": {
-        "fetched_at": "2026-11-08",
+        "fetched_at": "2026-11-15",
         "gone": false,
-        "stars": 0,
-        "pushed_at": "2026-11-07T19:50:30Z",
+        "stars": 1,
+        "pushed_at": "2026-11-15T12:45:08Z",
         "created_at": "2026-06-24T12:21:04Z",
         "archived": false,
         "disabled": false,
@@ -27784,27 +27793,27 @@
         "health_percentage": 100,
         "security_policy": true,
         "scorecard": null,
-        "readme_chars": 5832,
-        "readme_headings": 9,
+        "readme_chars": 8193,
+        "readme_headings": 10,
         "readme_has_code_block": true,
         "pipe_to_shell": false,
         "repo_id": 1279148792,
         "default_branch": "main",
         "owner_login": "zambodotdev",
-        "description": "Zambo is the verifiable work layer for AI, created by Brennan Zambo: 153 tools (36 default) behind one MCP endpoint at https://zambo.dev/mcp, with a verifiable AER-1 receipt for every job. Free: 20 calls plus 1 wrap-up free every day, pickup in another AI always free.",
+        "description": "Zambo is the verifiable work layer for AI, created by Brennan Zambo: 153 tools (37 default) behind one MCP endpoint at https://zambo.dev/mcp, with a verifiable AER-1 receipt for every job. Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.",
         "language": "Dockerfile",
-        "topics": "a2a, agent-skills, ai-agents, ai-infrastructure, ai-tools, claude, cline, cursor, developer-tools, execution-receipts, gemini-cli-extension, llm-tools, mcp, mcp-server, mcp-servers, mcp-tools, model-context-protocol, remote-mcp, windsurf, x402",
-        "last_update": "2026-11-07T19:50:34Z",
+        "topics": "a2a, aer-1, agent-execution-receipts, agent-receipts, agent-skills, ai-agents, ai-infrastructure, claude, developer-tools, execution-receipts, gemini-cli-extension, handover, mcp, mcp-server, mcp-servers, model-context-protocol, receipts, remote-mcp, verification, x402",
+        "last_update": "2026-11-15T01:34:15Z",
         "source_scan": {
           "checked": true,
-          "files_scanned": 41,
+          "files_scanned": 46,
           "markers": []
         }
       },
       "trust": {
         "formula_version": "1.0",
-        "computed_at": "2026-11-08",
-        "final": 66,
+        "computed_at": "2026-11-15",
+        "final": 67,
         "grade": "B",
         "subscores": {
           "ai": {
@@ -27828,9 +27837,9 @@
             "weight": 0.2222
           },
           "popularity": {
-            "score": 0,
+            "score": 7,
             "detail": {
-              "stars": 0
+              "stars": 1
             },
             "weight": 0.1667
           },
@@ -28197,8 +28206,188 @@
       },
       "prompt_version": 4,
       "listed": false
+    },
+    {
+      "full_name": "ory/hydra",
+      "repo_id": 36071697,
+      "name": "hydra",
+      "url": "https://github.com/ory/hydra",
+      "stars": 17668,
+      "source": "github",
+      "discovered_via": "github-search",
+      "last_checked": "2026-11-15",
+      "last_update": "2026-11-15T16:25:14Z",
+      "description": "Internet-scale OpenID Certified™ OpenID Connect and OAuth2.1 provider that integrates with your user management through headless APIs. Solve OIDC/OAuth2 user cases over night. Consume as a service on Ory Network or self-host. Trusted by OpenAI and many others for scale and security. Written in Go.",
+      "language": "Go",
+      "topics": "authorization, cloud, docker, federation, hydra, identity, mcp, oauth, oauth-provider, oauth2, oauth2-provider, oauth2-server, oidc, openid, openid-connect, openid-connect-provider, openid-provider, security, server, sso",
+      "analysis": {
+        "is_valid_mcp_server": false,
+        "confidence": 95,
+        "category": "security",
+        "rubric": {
+          "documentation": 3,
+          "utility": 4,
+          "maturity": 4
+        },
+        "transport": [],
+        "tools_count_estimate": 0,
+        "server_entrypoint": "unknown",
+        "security_concerns": [],
+        "injection_attempt": false,
+        "reason": "Ory Hydra is a standalone OpenID Certified OAuth 2.0 / OpenID Connect provider server written in Go; 'mcp' appears only as a topic tag and the README describes no MCP entrypoint, transport, or tools. It is an identity/authorization server, not an MCP server exposing tools/resources to MCP clients.",
+        "short_description": "A hardened OAuth 2.0 and OpenID Connect provider server for self-hosting or Ory Network.",
+        "model": "deepseek-flash",
+        "quality_score": 8
+      },
+      "mcp_signals": {
+        "sdk_dependencies": [],
+        "manifests_checked": [
+          "package.json",
+          "go.mod"
+        ],
+        "package_name": "@oryd/hydra",
+        "has_mcp_manifest": false,
+        "topics_mcp_server": false,
+        "root_files": [
+          ".cobra.yaml",
+          ".codeclimate.yml",
+          ".docker",
+          ".dockerignore",
+          ".editorconfig",
+          ".gitattributes",
+          ".github",
+          ".gitignore",
+          ".goimportsignore",
+          ".golangci.yml",
+          ".goreleaser.yml",
+          ".grype.yml",
+          ".mailmap",
+          ".nancy-ignore",
+          ".npmignore",
+          ".orycli.yml",
+          ".prettierignore",
+          ".reference-ignore",
+          ".reports",
+          ".schema",
+          "AUTHORS",
+          "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "DEVELOP.md",
+          "LICENSE",
+          "MAINTAINERS",
+          "Makefile",
+          "README.md",
+          "SECURITY.md"
+        ]
+      },
+      "metrics": {
+        "fetched_at": "2026-11-15",
+        "gone": false,
+        "stars": 17668,
+        "pushed_at": "2026-07-29T09:30:11Z",
+        "created_at": "2015-05-22T12:42:08Z",
+        "archived": false,
+        "disabled": false,
+        "license_spdx": "Apache-2.0",
+        "owner_type": "Organization",
+        "owner_created_at": "2017-01-24T23:37:48Z",
+        "commits_90d": 0,
+        "contributors": 301,
+        "health_percentage": 87,
+        "security_policy": true,
+        "scorecard": {
+          "score": 5.4,
+          "date": "2026-10-26",
+          "checks": {
+            "Maintained": 6,
+            "Dangerous-Workflow": 10,
+            "Code-Review": 0
+          }
+        },
+        "readme_chars": 37377,
+        "readme_headings": 25,
+        "readme_has_code_block": true,
+        "pipe_to_shell": false,
+        "repo_id": 36071697,
+        "default_branch": "master",
+        "owner_login": "ory",
+        "description": "Internet-scale OpenID Certified™ OpenID Connect and OAuth2.1 provider that integrates with your user management through headless APIs. Solve OIDC/OAuth2 user cases over night. Consume as a service on Ory Network or self-host. Trusted by OpenAI and many others for scale and security. Written in Go.",
+        "language": "Go",
+        "topics": "authorization, cloud, docker, federation, hydra, identity, mcp, oauth, oauth-provider, oauth2, oauth2-provider, oauth2-server, oidc, openid, openid-connect, openid-connect-provider, openid-provider, security, server, sso",
+        "last_update": "2026-11-15T16:25:14Z",
+        "source_scan": {
+          "checked": true,
+          "files_scanned": 400,
+          "markers": []
+        }
+      },
+      "trust": {
+        "formula_version": "1.0",
+        "computed_at": "2026-11-15",
+        "final": 78,
+        "grade": "B",
+        "subscores": {
+          "ai": {
+            "score": 92,
+            "detail": {
+              "source": "rubric",
+              "rubric": {
+                "documentation": 3,
+                "utility": 4,
+                "maturity": 4
+              }
+            },
+            "weight": 0.35
+          },
+          "maintenance": {
+            "score": 30,
+            "detail": {
+              "days_since_push": 109,
+              "commits_90d": 0
+            },
+            "weight": 0.2
+          },
+          "popularity": {
+            "score": 95,
+            "detail": {
+              "stars": 17668
+            },
+            "weight": 0.15
+          },
+          "docs": {
+            "score": 99,
+            "detail": {
+              "health_percentage": 87,
+              "license": "Apache-2.0",
+              "security_policy": true
+            },
+            "weight": 0.15
+          },
+          "security": {
+            "score": 54,
+            "detail": {
+              "scorecard": 5.4,
+              "note": null
+            },
+            "weight": 0.1
+          },
+          "community": {
+            "score": 100,
+            "detail": {
+              "contributors": 301
+            },
+            "weight": 0.05
+          }
+        },
+        "flags": [],
+        "penalty": 0,
+        "fatal": false
+      },
+      "prompt_version": 4,
+      "listed": false
     }
   ],
-  "last_scan": "2026-11-08",
+  "last_scan": "2026-11-15",
   "schema_version": 2
 }
